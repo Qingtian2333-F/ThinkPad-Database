@@ -40,8 +40,8 @@
       },
       "Ethernet": ["RTL8111F"],
       "WLAN": [
-        "11b/g/n (1x1)",
-        "11a/b/g/n (2x2)",
+        "11bgn",
+        "11abgn",
         "2230"
       ],
       "Bluetooth": [
