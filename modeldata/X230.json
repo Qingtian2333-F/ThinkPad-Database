@@ -1,0 +1,113 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-x230",
+      "model_name": "ThinkPad X230",
+      "model_family": "X",
+      "model_generation": "xx30",
+      "update_date": "November 2012",
+      "processor_options": [
+        "i5-3210M",
+        "i5-3320M",
+        "i5-3360M",
+        "i7-3520M"
+      ],
+      "graphics": {
+        "integrated": "Intel HD Graphics 4000",
+        "discrete": null,
+        "max_resolution": {
+          "vga": "2048x1536@75Hz",
+          "mini_dp": "2560x1600@60Hz"
+        },
+        "multi_display": "Supports dual independent displays"
+      },
+      "memory": {
+        "max_capacity": "16GB max",
+        "type": "PC3-12800 1600MHz DDR3",
+        "slots": "Two 204-pin SO-DIMM sockets",
+        "features": "dual-channel capable, non-parity"
+      },
+      "display_options": [],
+      "storage": {
+        "ssd_sata": "SATA 6.0Gb/s, 2.5\" wide, 7mm high",
+        "ssd_pcie": null,
+        "hdd": "SATA 3.0Gb/s, 2.5\" wide, 7mm high, Active Protection System",
+        "sshd": null
+      },
+      "Ethernet": ["Intel 82579LM"],
+      "WLAN": ["Intel Centrino Wireless-N 2200", "Intel Centrino Advanced-N 6205"],
+      "Bluetooth": [
+        {
+          "type": "Integrated",
+          "form": "Integrated in Wi-Fi + Bluetooth combo adapter",
+          "feature": "Bluetooth 4.0 wireless"
+        }
+      ],
+      "WWAN": ["WWAN_Upgradeable", "Qualcomm Gobi 3000"],
+      "SIM_Card": [],
+      "Battery": [
+        {
+          "type": "4-cell",
+          "capacity": "28.8Wh",
+          "form": "4-cell",
+          "tech": "Li-Ion"
+        },
+        {
+          "type": "6-cell",
+          "capacity": "62.4Wh",
+          "form": "6-cell",
+          "tech": "Li-Ion"
+        },
+        {
+          "type": "9-cell",
+          "capacity": "93.6Wh",
+          "form": "9-cell",
+          "tech": "Li-Ion"
+        },
+        {
+          "type": "External Battery (optional)",
+          "capacity": "64Wh",
+          "form": "Slim External",
+          "tech": "Li-Ion"
+        }
+      ],
+      "ports": [
+        "2 x USB 3.0",
+        "1 x USB 2.0 (Always On)",
+        "VGA DB-15",
+        "Mini DisplayPort",
+        "Ethernet (RJ-45)",
+        "4-in-1 reader (MMC, SD, SDHC, SDXC)",
+        "ExpressCard/34 slot",
+        "Headphone/microphone combo jack"
+      ],
+      "camera": [
+        "HD 720p resolution, low light sensitive, fixed focus"
+      ],
+      "audio": [
+        "HD Audio, Realtek ALC3202 codec, stereo speakers 1W x2, dual array microphone, combo audio/mic jack"
+      ],
+      "keyboard": [
+        "6-row, 84-key, spill-resistant, multimedia Fn keys, optional LED backlight",
+        "TrackPoint pointing device, UltraNav touchpad"
+      ],
+      "physical": {
+        "dimensions": "305mm x 206.5mm x 19.0-26.6mm",
+        "weight": "Starting at 1.34kg (4-cell)",
+        "case_material": "Display cover: Magnesium + PCABS; Bottom: Magnesium alloy"
+      },
+      "security": [
+        "Power-on password",
+        "Hard disk password",
+        "Supervisor password",
+        "Security keyhole",
+        "Trusted Platform Module (TPM 1.2)",
+        "Fingerprint reader (optional)"
+      ],
+      "system": [
+        "Windows 7 Professional 64",
+        "Windows 8 Pro 64"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-t430",
+      "model_name": "ThinkPad T430",
+      "model_family": "T",
+      "model_generation": "xx30",
+      "update_date": "August 2014",
+      "processor_options": [
+        "i3-2370M",
+        "i5-2520M",
+        "i5-3210M",
+        "i5-3230M",
+        "i5-3320M",
+        "i5-3360M",
+        "i7-3520M"
+      ],
+      "graphics": {
+        "integrated": "Intel HD Graphics 4000",
+        "discrete": "NVIDIA NVS 5400M (1GB, Optimus) on selected models",
+        "max_resolution": {
+          "vga": "2048x1536@75Hz",
+          "mini_dp": "2560x1600@60Hz"
+        },
+        "multi_display": "Supports up to 3 independent displays (with discrete graphics) or 2 (integrated only)"
+      },
+      "memory": {
+        "max_capacity": "16GB max",
+        "type": "PC3-12800 1600MHz DDR3",
+        "slots": "Two 204-pin SO-DIMM sockets",
+        "features": "dual-channel capable, non-parity"
+      },
+      "display_options": [],
+      "storage": {
+        "ssd_sata": "SATA 6.0Gb/s, 2.5\" wide, 7mm high",
+        "ssd_pcie": null,
+        "hdd": "SATA 3.0Gb/s, 2.5\" wide, 7mm high, Active Protection System",
+        "sshd": null
+      },
+      "Ethernet": ["Intel 82579LM"],
+      "WLAN": ["Intel Centrino Wireless-N 2200", "Intel Centrino Advanced-N 6205"],
+      "Bluetooth": [
+        {
+          "type": "Integrated",
+          "form": "Integrated in Wi-Fi + Bluetooth combo adapter",
+          "feature": "Bluetooth 4.0 wireless"
+        }
+      ],
+      "WWAN": ["WWAN_Upgradeable", "Qualcomm Gobi 3000"],
+      "SIM_Card": [],
+      "Battery": [
+        {
+          "type": "6-cell",
+          "capacity": "57Wh",
+          "form": "6-cell",
+          "tech": "Li-Ion"
+        },
+        {
+          "type": "9-cell",
+          "capacity": "94Wh",
+          "form": "9-cell",
+          "tech": "Li-Ion"
+        },
+        {
+          "type": "Slice Battery (optional)",
+          "capacity": "94Wh",
+          "form": "9-cell slice",
+          "tech": "Li-Ion"
+        }
+      ],
+      "ports": [
+        "2 x USB 3.0",
+        "2 x USB 2.0 (one Always On)",
+        "VGA DB-15",
+        "Mini DisplayPort",
+        "Ethernet (RJ-45)",
+        "4-in-1 reader (MMC, SD, SDHC, SDXC)",
+        "ExpressCard/34 slot",
+        "Smart card reader (optional)",
+        "Headphone/microphone combo jack"
+      ],
+      "camera": [
+        "HD 720p resolution, low light sensitive, fixed focus"
+      ],
+      "audio": [
+        "HD Audio, Realtek ALC3202 codec, Dolby Advanced Audio v2, stereo speakers 1W x2, dual array microphone, combo audio/mic jack"
+      ],
+      "keyboard": [
+        "6-row, 84-key, spill-resistant, multimedia Fn keys, optional LED backlight",
+        "TrackPoint pointing device, UltraNav touchpad"
+      ],
+      "physical": {
+        "dimensions": "340.5mm x 232.0mm x 29.8-29.9mm",
+        "weight": "Starting at 2.17kg (6-cell)",
+        "case_material": "Display cover: Carbon-fiber/Glass-fiber hybrid; Bottom: Carbon-Fiber Reinforced Plastic"
+      },
+      "security": [
+        "Power-on password",
+        "Hard disk password",
+        "Supervisor password",
+        "Security keyhole",
+        "Trusted Platform Module (TPM 1.2)",
+        "Optional fingerprint reader (swipe style)"
+      ],
+      "system": [
+        "Windows 7 Professional 64",
+        "Windows 8 Pro 64"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-w540",
+      "model_name": "ThinkPad W540",
+      "model_family": "W",
+      "model_generation": "xx40",
+      "update_date": "April 2014",
+      "processor_options": [
+        "i5-4200M",
+        "i5-4210M",
+        "i5-4330M",
+        "i7-4600M",
+        "i7-4700MQ",
+        "i7-4710MQ",
+        "i7-4800MQ",
+        "i7-4810MQ",
+        "i7-4900MQ",
+        "i7-4910MQ",
+        "i7-4930MX"
+      ],
+      "graphics": {
+        "integrated": "Intel HD Graphics 4600",
+        "discrete": "NVIDIA Quadro K1100M (2GB) or K2100M (2GB), Optimus",
+        "max_resolution": {
+          "vga": "1920x1200@60Hz",
+          "mini_dp": "3840x2160@60Hz",
+          "thunderbolt": "3840x2160@60Hz"
+        },
+        "multi_display": "Supports up to 3 independent displays"
+      },
+      "memory": {
+        "max_capacity": "32GB max",
+        "type": "DDR3L-1600",
+        "slots": "Four 204-pin SO-DIMM sockets (quad-core) / two (dual-core)",
+        "features": "dual-channel capable, non-parity"
+      },
+      "display_options": [],
+      "storage": {
+        "ssd_sata": "SATA 6.0Gb/s, 2.5\" wide, 7mm high",
+        "ssd_pcie": null,
+        "hdd": "SATA 6.0Gb/s, 2.5\" wide, 7mm or 9.5mm high, Active Protection System",
+        "sshd": null
+      },
+      "Ethernet": ["Intel I217-LM"],
+      "WLAN": [
+        "ThinkPad 11b/g/n",
+        "Intel Wireless-N 7260",
+        "Intel Dual Band Wireless-N 7260",
+        "Intel Dual Band Wireless-AC 7260"
+      ],
+      "Bluetooth": [
+        {
+          "type": "Integrated",
+          "form": "Integrated in Wi-Fi + Bluetooth combo adapter",
+          "feature": "Bluetooth 4.0 wireless"
+        }
+      ],
+      "WWAN": ["WWAN_Upgradeable", "Sierra Wireless EM7355", "Ericsson N5321", "Sierra Wireless EM7345"],
+      "SIM_Card": [
+        {
+          "type": "Optional SIM card slot (Micro-SIM)"
+        }
+      ],
+      "Battery": [
+        {
+          "type": "6-cell",
+          "capacity": "56Wh",
+          "form": "6-cell",
+          "tech": "Li-Ion"
+        },
+        {
+          "type": "9-cell",
+          "capacity": "99.9Wh",
+          "form": "9-cell",
+          "tech": "Li-Ion"
+        }
+      ],
+      "ports": [
+        "2 x USB 3.0",
+        "2 x USB 2.0 (one Always On)",
+        "VGA DB-15",
+        "Mini DisplayPort / Thunderbolt",
+        "Ethernet (RJ-45)",
+        "4-in-1 reader (MMC, SD, SDHC, SDXC) UHS-II",
+        "ExpressCard/34 slot",
+        "Dock connector",
+        "Smart card reader (optional)",
+        "Headphone/microphone combo jack"
+      ],
+      "camera": [
+        "HD 720p resolution, low light sensitive, fixed focus"
+      ],
+      "audio": [
+        "HD Audio, Realtek ALC3232 codec, Dolby Home Theater v4, stereo speakers 1W x2, dual array microphone, combo audio/mic jack"
+      ],
+      "keyboard": [
+        "6-row, spill-resistant, multimedia Fn keys, numeric keypad, optional LED backlight",
+        "TrackPoint pointing device, Mylar surface touchpad with integrated buttons"
+      ],
+      "physical": {
+        "dimensions": "376.6mm x 248.1mm x 27.9-29.5mm",
+        "weight": "Starting at 2.53kg (6-cell)",
+        "case_material": "Glass-Fiber Reinforced Plastic"
+      },
+      "security": [
+        "Power-on password",
+        "Hard disk password",
+        "Supervisor password",
+        "Security keyhole",
+        "Trusted Platform Module (TPM 1.2)",
+        "Intel vPro Technology (on selected models)",
+        "Optional fingerprint reader (swipe style)",
+        "Optional Smart card reader",
+        "Optional NFC"
+      ],
+      "system": [
+        "Windows 7 Professional 64 (downgrade)",
+        "Windows 8 / 8.1 64",
+        "Windows 8 / 8.1 Pro 64"
+      ]
+    }
+  ]
+}

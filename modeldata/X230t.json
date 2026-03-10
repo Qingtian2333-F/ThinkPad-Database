@@ -1,0 +1,105 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-x230-tablet",
+      "model_name": "ThinkPad X230 Tablet",
+      "model_family": "X",
+      "model_generation": "xx30",
+      "update_date": "August 2012",
+      "processor_options": [
+        "i5-3320M",
+        "i7-3520M"
+      ],
+      "graphics": {
+        "integrated": "Intel HD Graphics 4000",
+        "discrete": null,
+        "max_resolution": {
+          "vga": "2048x1536@75Hz",
+          "displayport": "2560x1600@60Hz"
+        },
+        "multi_display": "Supports dual independent displays"
+      },
+      "memory": {
+        "max_capacity": "16GB max",
+        "type": "PC3-12800 1600MHz DDR3",
+        "slots": "Two 204-pin SO-DIMM sockets",
+        "features": "dual-channel capable, non-parity"
+      },
+      "display_options": [],
+      "storage": {
+        "ssd_sata": "SATA 6.0Gb/s, 2.5\" wide, 7mm high",
+        "ssd_pcie": null,
+        "hdd": "SATA 3.0Gb/s, 2.5\" wide, 7mm high, Active Protection System",
+        "sshd": null
+      },
+      "Ethernet": ["Intel 82579LM"],
+      "WLAN": ["Intel Centrino Advanced-N 6205"],
+      "Bluetooth": [
+        {
+          "type": "Integrated",
+          "form": "Integrated in Wi-Fi + Bluetooth combo adapter",
+          "feature": "Bluetooth 4.0 wireless"
+        }
+      ],
+      "WWAN": ["WWAN_Upgradeable"],
+      "SIM_Card": [],
+      "Battery": [
+        {
+          "type": "3-cell",
+          "capacity": "30Wh",
+          "form": "3-cell",
+          "tech": "Li-Polymer"
+        },
+        {
+          "type": "6-cell",
+          "capacity": "66Wh",
+          "form": "6-cell",
+          "tech": "Li-Ion"
+        },
+        {
+          "type": "External Battery (optional)",
+          "capacity": "64Wh",
+          "form": "Slim External",
+          "tech": "Li-Ion"
+        }
+      ],
+      "ports": [
+        "2 x USB 3.0",
+        "1 x USB 2.0 (Always On)",
+        "VGA DB-15",
+        "DisplayPort",
+        "Ethernet (RJ-45)",
+        "4-in-1 reader (MMC, SD, SDHC, SDXC)",
+        "ExpressCard/34 slot",
+        "Headphone/microphone combo jack"
+      ],
+      "camera": [
+        "HD 720p resolution, low light sensitive, fixed focus"
+      ],
+      "audio": [
+        "HD Audio, Realtek ALC3202 codec, stereo speakers 1W x2, dual array microphone, combo audio/mic jack"
+      ],
+      "keyboard": [
+        "6-row, 84-key, spill-resistant, multimedia Fn keys, optional LED backlight",
+        "TrackPoint pointing device, UltraNav touchpad"
+      ],
+      "physical": {
+        "dimensions": "305mm x 228.7mm x 27-31.3mm",
+        "weight": "Starting at 1.66kg (3-cell)",
+        "case_material": "Display cover: Magnesium + PCABS; Bottom: Magnesium alloy"
+      },
+      "security": [
+        "Power-on password",
+        "Hard disk password",
+        "Supervisor password",
+        "Security keyhole",
+        "Trusted Platform Module (TPM 1.2)",
+        "Fingerprint reader (integrated in display bezel)"
+      ],
+      "system": [
+        "Windows 7 Professional 64",
+        "Windows 8 Pro 64"
+      ]
+    }
+  ]
+}
