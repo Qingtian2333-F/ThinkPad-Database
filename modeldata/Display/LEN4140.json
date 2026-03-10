@@ -3,6 +3,5 @@
           "tech": "OLED, Glare",
           "brightness": "300 nits",
           "contrast": "2000000:1",
-          "viewing_angle": "160°",
-          "touch": "Capacitive touch panel, supports 10-finger gesture,AES Pen Support"
+          "viewing_angle": "160°"
         }

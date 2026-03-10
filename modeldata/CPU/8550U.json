@@ -1,0 +1,10 @@
+        {
+          "model": "i7-8550U",
+          "cores_threads": "4 / 8",
+          "base_freq": "1.8 GHz",
+          "turbo_freq": "4.0 GHz",
+          "cache": "8MB",
+          "graphics": "Intel UHD 620",
+          "iconfamily":"i7-6~9",
+          "ark":"https://www.intel.cn/content/www/cn/zh/products/sku/124971/intel-core-i78550u-processor-8m-cache-up-to-4-00-ghz/specifications.html"
+        }

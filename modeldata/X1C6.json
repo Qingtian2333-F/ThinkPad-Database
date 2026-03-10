@@ -1,0 +1,98 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-x1-carbon-6th-gen",
+      "model_name": "ThinkPad X1 Carbon (6th Gen)",
+      "model_family": "X1",
+      "model_generation": "xx80",
+      "update_date": "January 2018",
+      "processor_options": ["i5-7300U", "i5-8250U", "i5-8350U", "i7-8550U", "i7-8650U"],
+      "graphics": {
+        "integrated": "Intel UHD Graphics 620",
+        "discrete": null,
+        "max_resolution": {
+          "hdmi": "4096x2304@24Hz",
+          "displayport": "4096x2304@60Hz (via USB-C)",
+          "thunderbolt": "5120x2880@60Hz"
+        },
+        "multi_display": "Supports up to 3 independent displays"
+      },
+      "memory": {
+        "max_capacity": "16GB max",
+        "type": "LPDDR3-2133",
+        "slots": "None (soldered)",
+        "features": "Dual-channel capable"
+      },
+      "display_options": ["LEN40A9","LEN40AA","LEN40AE","LEN40AF"],
+      "storage": {
+        "ssd_pcie": "M.2 2280 PCIe NVMe, up to 1TB",
+        "ssd_sata": null,
+        "hdd": null,
+        "sshd": null,
+        "emmc": null
+      },
+      "Ethernet": ["I219-V","I219LM"],
+      "WLAN": ["8265AC"],
+      "Bluetooth": [
+        {
+          "type": "Integrated",
+          "form": "Integrated in Wi-Fi + Bluetooth combo adapter",
+          "feature": "Bluetooth 4.1 / 4.2 wireless"
+        }
+      ],
+      "WWAN": ["L850-GL","EM7455","WWAN_NOT_Upgradeable"],
+      "SIM_Card": [
+        {
+          "type": "Nano-SIM card slot"
+        }
+      ],
+      "Battery": [
+        {
+          "type": "Integrated",
+          "capacity": "57Wh",
+          "form": "4-cell",
+          "tech": "Li-Polymer"
+        }
+      ],
+      "ports": [
+        "2 x USB 3.1 Gen 1 (Type-A)",
+        "2 x USB-C Thunderbolt 3 40Gbps (support data transfer, Power Delivery, DisplayPort)",
+        "HDMI 1.4",
+        "Mini Ethernet (requires dongle for RJ-45)",
+        "microSD card reader (UHS-II)",
+        "Headphone/microphone combo jack (3.5mm)",
+        "Kensington Security Slot",
+        "Docking connector (side)"
+      ],
+      "camera": [
+        "HD 720p with ThinkShutter privacy cover",
+        "Optional IR camera for Windows Hello (not capable with HDR models)"
+      ],
+      "audio": [
+        "HD Audio, stereo speakers (2 x 1W), Dolby Audio Premium, dual array far-field microphone (360°), combo audio/microphone jack"
+      ],
+      "keyboard": [
+        "6-row, spill-resistant, multimedia Fn keys, LED backlight (2-level)",
+        "TrackPoint pointing device and glass surface multi-touch touchpad"
+      ],
+      "physical": {
+        "dimensions": "323.5mm x 217.1mm x 15.95mm (12.74\" x 8.55\" x 0.63\")",
+        "weight": "Starting at 1.13 kg (2.49 lbs)",
+        "case_material": "Carbon Fiber Reinforced Polymer (top), Magnesium Alloy / PPS (bottom)"
+      },
+      "security": [
+        "Power-on password",
+        "Hard disk password",
+        "Supervisor password",
+        "dTPM 2.0",
+        "Touch style fingerprint reader (match-on-chip)",
+        "Kensington Security Slot",
+        "ThinkShutter camera cover (720p camera models only)"
+      ],
+      "system": [
+        "Windows 10 Home 64",
+        "Windows 10 Pro 64"
+      ]
+    }
+  ]
+}

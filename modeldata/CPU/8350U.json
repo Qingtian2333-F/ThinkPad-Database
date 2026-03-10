@@ -1,0 +1,10 @@
+        {
+          "model": "i5-8350U",
+          "cores_threads": "4 / 8",
+          "base_freq": "1.7 GHz",
+          "turbo_freq": "3.6 GHz",
+          "cache": "6MB",
+          "graphics": "Intel UHD 620",
+          "iconfamily":"i5-6~9",
+          "ark":"https://www.intel.cn/content/www/cn/zh/products/sku/124969/intel-core-i58350u-processor-8m-cache-up-to-3-70-ghz/specifications.html"
+        }

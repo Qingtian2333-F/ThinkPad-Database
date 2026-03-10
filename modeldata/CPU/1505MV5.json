@@ -5,6 +5,6 @@
           "turbo_freq": "3.7 GHz",
           "cache": "8MB",
           "graphics": "Intel HD P530",
-                                        "iconfamily":"E3-6~9",
- "ark":"https://www.intel.cn/content/www/cn/zh/products/sku/89608/intel-xeon-processor-e31505m-v5-8m-cache-2-80-ghz/specifications.html"
+          "iconfamily":"E3-6~9",
+          "ark":"https://www.intel.cn/content/www/cn/zh/products/sku/89608/intel-xeon-processor-e31505m-v5-8m-cache-2-80-ghz/specifications.html"
         }

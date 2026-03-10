@@ -3,6 +3,5 @@
           "tech": "OLED, Anti-reflection,Anti-smudge",
           "brightness": "400 nits",
           "contrast": "100000:1",
-          "viewing_angle": "170°",
-          "touch": "Capacitive touch panel, supports 10-finger gesture,AES Pen Support"
+          "viewing_angle": "170°"
         }

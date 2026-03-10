@@ -1,0 +1,14 @@
+        {
+          "type": "WQHD (2560x1440)",
+          "tech": "IPS, glare, LED backlight, Dolby Vision",
+          "brightness": "500 nits",
+          "contrast": "1500:1",
+          "viewing_angle": "170°",
+          "color_gamut":"100% Adobe RGB",
+          "refresh_rate":"60 Hz",
+          "FRUs":[
+            {
+             "01YU646":"LPM140M420B"
+            }
+          ]
+        }
