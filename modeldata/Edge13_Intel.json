@@ -1,0 +1,103 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-edge-13-intel",
+      "model_name": "ThinkPad Edge 13 (Intel)",
+      "model_family": "Edge",
+      "model_generation": "13\" Intel",
+      "update_date": "January 2010",
+      "processor_options": [
+        "Intel Core 2 Duo SU7300"
+      ],
+      "graphics_options": [
+        "Intel GMA 4500MHD"
+      ],
+      "Display": {
+        "max_resolution": {
+          "vga": "2048x1536@60Hz",
+          "hdmi": "1920x1080@60Hz"
+        },
+        "multi_display": "Supports dual independent displays"
+      },
+      "memory": {
+        "max_capacity": "4GB max",
+        "type": "DDR3-1066",
+        "slots": "Two 204-pin SO-DIMM sockets",
+        "features": "dual-channel capable, non-parity"
+      },
+      "display_options": [],
+      "storage": {
+        "ssd_sata": null,
+        "ssd_pcie": null,
+        "hdd": "SATA 3.0Gb/s, 2.5\" wide, 9.5mm high, 250/320/500GB 5400rpm or 320GB 7200rpm",
+        "sshd": null,
+        "mSATA": null
+      },
+      "Ethernet": [
+        "RTL8111DL"
+      ],
+      "WLAN": [
+        "1000",
+        "11bgn",
+        "6250"
+      ],
+      "Bluetooth": [
+        {
+          "type": "BDC",
+          "form": "Broadcom BCM2046 or BCM2070 Bluetooth Controller",
+          "feature": "Bluetooth 2.1"
+        }
+      ],
+      "WWAN": [
+        "Gobi2000"
+      ],
+      "SIM_Card": [
+        {
+          "type": "SIM card slot (for WWAN models)"
+        }
+      ],
+      "Battary": [
+        {
+          "type": "6-cell",
+          "capacity": "63Wh",
+          "form": "6-cell",
+          "tech": "Li-Ion"
+        }
+      ],
+      "ports": [
+        "3 x USB 2.0 (1 powered)",
+        "VGA DB-15",
+        "HDMI",
+        "Ethernet (RJ-45)",
+        "5-in-1 card reader (MMC, MS, MS Pro, SD, XD)",
+        "Headphone/microphone combo jack",
+        "Kensington lock slot"
+      ],
+      "camera": [
+        "1.3MP webcam (optional)"
+      ],
+      "audio": [
+        "HD Audio, CX20582 codec, stereo speakers (1W x2)"
+      ],
+      "keyboard": [
+        "6-row, spill-resistant, island-style, multimedia Fn keys",
+        "TrackPoint pointing device, multi-touch touchpad"
+      ],
+      "physical": {
+        "dimensions": "332mm x 228mm x 17-31.3mm (WxDxH)",
+        "weight": "Starting at 1.73kg (with 6-cell battery)",
+        "case_material": "ABS plastic (glossy or matte finish)"
+      },
+      "security": [
+        "Power-on password",
+        "Hard disk password",
+        "Supervisor password",
+        "Security keyhole"
+      ],
+      "system": [
+        "Windows 7 Home Premium 64",
+        "Windows 7 Professional 64"
+      ]
+    }
+  ]
+}

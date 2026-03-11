@@ -1,0 +1,100 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-edge-13-amd",
+      "model_name": "ThinkPad Edge 13 (AMD)",
+      "model_family": "Edge",
+      "model_generation": "13\" AMD",
+      "update_date": "February 2010",
+      "processor_options": [
+        "Turion_X2_L625",
+        "Turion_II_Neo K685"
+      ],
+      "graphics_options": [
+        "HD3200",
+        "HD4225"
+      ],
+      "Display": {
+        "max_resolution": {
+          "vga": "2048x1536@75Hz",
+          "hdmi": "1920x1080@60Hz"
+        },
+        "multi_display": "Supports dual independent displays"
+      },
+      "memory": {
+        "max_capacity": "4GB max",
+        "type": "DDR2-667",
+        "slots": "Two 200-pin SO-DIMM sockets",
+        "features": "dual-channel capable, non-parity"
+      },
+      "display_options": [],
+      "storage": {
+        "ssd_sata": null,
+        "ssd_pcie": null,
+        "hdd": "SATA 3.0Gb/s, 2.5\" wide, 9.5mm high, 320GB 5400rpm",
+        "sshd": null
+      },
+      "Ethernet": [
+        "RTL8111DL"
+      ],
+      "WLAN": [
+        "11abg"
+      ],
+      "Bluetooth": [
+        {
+          "type": "BDC",
+          "form": "Broadcom BCM2046 or BCM2070 Bluetooth Controller",
+          "feature": "Bluetooth 2.1"
+        }
+      ],
+      "WWAN": [
+        "WWAN upgradable"
+      ],
+      "SIM_Card": [
+        {
+          "type": "SIM card slot (optional)"
+        }
+      ],
+      "Battary": [
+        {
+          "type": "6-cell",
+          "capacity": "63Wh",
+          "form": "6-cell",
+          "tech": "Li-Ion"
+        }
+      ],
+      "ports": [
+        "3 x USB 2.0",
+        "VGA",
+        "HDMI",
+        "Ethernet (RJ-45)",
+        "Memory Stick/SD Card Reader",
+        "Headphone/microphone combo jack"
+      ],
+      "camera": [
+        "Integrated camera (optional)"
+      ],
+      "audio": [
+        "HD Audio, stereo speakers"
+      ],
+      "keyboard": [
+        "6-row, spill-resistant, multimedia Fn keys",
+        "TrackPoint pointing device, touchpad"
+      ],
+      "physical": {
+        "dimensions": "332mm x 228mm x 17-31.3mm",
+        "weight": "Starting at 1.73kg",
+        "case_material": "ABS plastic"
+      },
+      "security": [
+        "Power-on password",
+        "Hard disk password",
+        "Supervisor password",
+        "Security keyhole"
+      ],
+      "system": [
+        "Windows 7 Home Premium 32"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-edge-e220s",
+      "model_name": "ThinkPad Edge E220s",
+      "model_family": "E",
+      "model_generation": "*220",
+      "update_date": "February 2013",
+      "processor_options": [
+        "2357M",
+        "2367M",
+        "2467M",
+        "2537M",
+        "2617M"
+      ],
+      "graphics_options": [
+        "HD3000"
+      ],
+      "Display": {
+        "max_resolution": {
+          "vga": "2048x1536@75Hz",
+          "hdmi": "1920x1200@60Hz"
+        },
+        "multi_display": "Supports dual independent displays"
+      },
+      "memory": {
+        "max_capacity": "4GB max officially, but can be upgraded to 16GB",
+        "type": "PC3-10600 1333MHz DDR3",
+        "slots": "One 204-pin SO-DIMM socket",
+        "features": "non-parity"
+      },
+      "display_options": [],
+      "storage": {
+        "ssd_sata": "SATA 3.0Gb/s, 2.5\" wide, 7mm high",
+        "ssd_pcie": null,
+        "hdd": "SATA 3.0Gb/s, 2.5\" wide, 7mm high, Active Protection System",
+        "sshd": null
+      },
+      "Ethernet": [
+        "RTL8111E"
+      ],
+      "WLAN": [
+        "11b/g/n",
+        "1000"
+      ],
+      "Bluetooth": [
+        {
+          "type": "BDC",
+          "form": "Broadcom BCM2070 Bluetooth Controller",
+          "feature": "Bluetooth 3.0 wireless"
+        }
+      ],
+      "WWAN": [],
+      "SIM_Card": [],
+      "Battary": [
+        {
+          "type": "Integrated",
+          "capacity": "40.7Wh",
+          "form": "8-cell",
+          "tech": "Li-Ion"
+        }
+      ],
+      "ports": [
+        "2 x USB 2.0 (one powered)",
+        "1 x USB 2.0/eSATA combo",
+        "VGA DB-15",
+        "HDMI",
+        "Ethernet (RJ-45)",
+        "4-in-1 reader (MMC, SD, SDHC, SDXC)",
+        "Headphone/microphone combo jack"
+      ],
+      "camera": [
+        "HD 720p resolution, wide view angle, low light sensitive, fixed focus"
+      ],
+      "audio": [
+        "HD Audio, Conexant 20671 codec, Dolby Home Theater v4, stereo speakers 1W x2, mono digital microphone, combo audio/mic jack"
+      ],
+      "keyboard": [
+        "6-row, spill-resistant, multimedia Fn keys",
+        "TrackPoint pointing device, UltraNav touchpad"
+      ],
+      "physical": {
+        "dimensions": "313mm x 213.5mm x 21.9mm",
+        "weight": "Starting at 1.46kg",
+        "case_material": "Magnesium/Aluminum + PPS"
+      },
+      "security": [
+        "Power-on password",
+        "Hard disk password",
+        "Supervisor password",
+        "Security keyhole",
+        "Fingerprint reader (optional)"
+      ],
+      "system": [
+        "Windows 7 Home Premium 64",
+        "Windows 7 Professional 64"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-twist-s230u",
+      "model_name": "ThinkPad Twist S230u",
+      "model_family": "Twist",
+      "model_generation": "1st Gen",
+      "update_date": "July 2014",
+      "processor_options": [
+        "3217U",
+        "3227U",
+        "3317U",
+        "3337U",
+        "3427U",
+        "3517U",
+        "3537U",
+        "3667U"
+      ],
+      "graphics_options": ["HD4000"],
+      "Display": {
+        "max_resolution": {
+          "mini_dp": "2560x1600@60Hz",
+          "mini_hdmi": "1920x1200@60Hz"
+        },
+        "multi_display": "Supports dual independent displays"
+      },
+      "memory": {
+        "max_capacity": "8GB max",
+        "type": "1333MHz DDR3",
+        "slots": "None (soldered)",
+        "features": "4GB or 8GB soldered to systemboard, no SO-DIMM sockets"
+      },
+      "display_options": [],
+      "storage": {
+        "ssd_sata": "SATA 6.0Gb/s, 2.5\" wide, 7mm high",
+        "ssd_pcie": null,
+        "hdd": "SATA 3.0Gb/s, 2.5\" wide, 7mm high, Active Protection System",
+        "sshd": null
+      },
+      "Ethernet": [" RTL8111F"],
+      "WLAN": ["11abgn", "2230"],
+      "Bluetooth": [
+        {
+          "type": "BDC",
+          "form": "Broadcom BCM20702 Bluetooth Controller",
+          "feature": "Bluetooth 4.0 wireless"
+        }
+      ],
+      "WWAN": [],
+      "SIM_Card": [],
+      "Battary": [
+        {
+          "type": "Integrated",
+          "capacity": "42.4Wh",
+          "form": "8-cell",
+          "tech": "Li-Polymer"
+        }
+      ],
+      "ports": [
+        "2 x USB 3.0",
+        "mini-HDMI",
+        "mini-DisplayPort",
+        "Ethernet (RJ-45)",
+        "4-in-1 reader (MMC, SD, SDHC, SDXC)",
+        "Headphone/microphone combo jack"
+      ],
+      "camera": [
+        "HD 720p resolution, wide view angle, low light sensitive, face tracking, fixed focus"
+      ],
+      "audio": [
+        "HD Audio, Realtek ALC3202 codec, Dolby Home Theater v4, stereo speakers 2W x2, dual array microphone, combo audio/mic jack"
+      ],
+      "keyboard": [
+        "6-row, 83-key, spill-resistant, multimedia Fn keys",
+        "TrackPoint pointing device, UltraNav touchpad"
+      ],
+      "physical": {
+        "dimensions": "313mm x 236mm x 20mm",
+        "weight": "from 3.50 lb (1.60kg)",
+        "case_material": "Display cover: Magnesium + Polyphenylene sulfide (PPS); Bottom: Magnesium + PPS"
+      },
+      "security": [
+        "Power-on password",
+        "Hard disk password",
+        "Supervisor password",
+        "Security keyhole",
+        "Trusted Platform Module (TPM 1.2)"
+      ],
+      "system": [
+        "Windows 8 64-bit",
+        "Windows 8 Pro 64-bit"
+      ]
+    }
+  ]
+}

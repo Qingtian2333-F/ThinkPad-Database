@@ -1,0 +1,122 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-sl400",
+      "model_name": "ThinkPad SL400",
+      "model_family": "SL",
+      "model_generation": "SL400",
+      "update_date": "September 2009",
+      "processor_options": [
+        "585",
+        "T1600",
+        "T5670",
+        "T5870",
+        "P7370",
+        "P8400",
+        "P8600",
+        "T9400"
+      ],
+      "graphics_options": [
+        "GMA_4500M",
+        "GMA_4500MHD",
+        "GeForce_9300M"
+      ],
+      "Display": {
+        "max_resolution": {
+          "vga": "2048x1536@75Hz",
+          "hdmi": "1920x1080@60Hz"
+        },
+        "multi_display": "Supports dual independent displays"
+      },
+      "memory": {
+        "max_capacity": "4GB max",
+        "type": "PC2-5300 667MHz DDR2",
+        "slots": "Two 200-pin SO-DIMM sockets",
+        "features": "dual-channel capable, non-parity"
+      },
+      "display_options": [],
+      "storage": {
+        "ssd_sata": null,
+        "ssd_pcie": null,
+        "hdd": "SATA 1.5Gb/s, 2.5\" wide, 9.5mm high, Active Protection System",
+        "sshd": null,
+        "Optical": "DVD burner, 12.7mm high, fixed, not removable, tray-in"
+      },
+      "Ethernet": [
+        "RTL8111C"
+      ],
+      "WLAN": [
+        "5100",
+        "11bg"
+      ],
+      "Bluetooth": [
+        {
+          "type": "BDC",
+          "form": "Broadcom BCM2045 Bluetooth Controller",
+          "feature": "Bluetooth 2.0"
+        }
+      ],
+      "WWAN": [
+        "F3507g",
+        "WWAN_Upgradeable",
+        "WWAN_NOT_Upgradeable"
+      ],
+      "SIM_Card": [
+        {
+          "type": "SIM card slot"
+        }
+      ],
+      "Battary": [
+        {
+          "type": "6-cell",
+          "capacity": null,
+          "form": "6-cell",
+          "tech": "Li-Ion"
+        },
+        {
+          "type": "9-cell",
+          "capacity": null,
+          "form": "9-cell",
+          "tech": "Li-Ion"
+        }
+      ],
+      "ports": [
+        "4 x USB 2.0",
+        "VGA",
+        "HDMI",
+        "Modem (RJ-11)",
+        "Ethernet (RJ-45)",
+        "IEEE 1394 FireWire",
+        "7-in-1 reader",
+        "ExpressCard/34"
+      ],
+      "camera": [
+        "2.0-megapixel (optional)"
+      ],
+      "audio": [
+        "HD Audio, CX20561-15Z codec, stereo speakers 2W, dual array microphone"
+      ],
+      "keyboard": [
+        "89-key, Lenovo Care button, spill-resistant, multimedia Fn keys",
+        "TrackPoint, UltraNav"
+      ],
+      "physical": {
+        "dimensions": "336mm x 247mm x 34-37mm",
+        "weight": "Starting at 2.5kg",
+        "case_material": "Scratch-resistant ABS plastic, high-gloss top cover"
+      },
+      "security": [
+        "Power-on password",
+        "Hard disk password",
+        "Supervisor password",
+        "Security keyhole",
+        "Fingerprint reader (optional)"
+      ],
+      "system": [
+        "Windows Vista Home Basic",
+        "Windows Vista Business",
+        "Windows XP Professional (downgrade)"
+      ]
+    }
+  ]
+}

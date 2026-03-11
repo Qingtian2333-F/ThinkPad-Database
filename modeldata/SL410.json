@@ -1,0 +1,114 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-sl410",
+      "model_name": "ThinkPad SL410",
+      "model_family": "SL",
+      "model_generation": "SL410",
+      "update_date": "February 2013",
+      "processor_options": [
+        "T5870",
+        "T6570",
+        "T6670",
+        "P8700"
+      ],
+      "graphics_options": [
+        "GMA_4500MHD"
+      ],
+      "Display": {
+        "max_resolution": {
+          "vga": "2048x1536@75Hz",
+          "hdmi": "1920x1080@60Hz"
+        },
+        "multi_display": "Supports dual independent displays"
+      },
+      "memory": {
+        "max_capacity": "8GB max",
+        "type": "PC3-8500 1066MHz DDR3",
+        "slots": "Two 204-pin SO-DIMM sockets",
+        "features": "dual-channel capable, non-parity"
+      },
+      "display_options": [],
+      "storage": {
+        "ssd_sata": null,
+        "ssd_pcie": null,
+        "hdd": "SATA 3.0Gb/s, 2.5\" wide, 9.5mm high, Active Protection System",
+        "sshd": null,
+        "Optical": "DVD burner, 12.7mm high, fixed, not removable, tray-in"
+      },
+      "Ethernet": [
+        "RTL8111DL"
+      ],
+      "WLAN": [
+        "1000",
+        "5100"
+      ],
+      "Bluetooth": [
+        {
+          "type": "BDC",
+          "form": "Broadcom BCM2046 or BCM2070 Bluetooth Controller",
+          "feature": "Bluetooth 2.1"
+        }
+      ],
+      "WWAN": [
+        "F3507g",
+        "MC5725",
+        "WWAN_Upgradeable",
+        "WWAN_NOT_Upgradeable"
+      ],
+      "SIM_Card": [
+        {
+          "type": "SIM card slot"
+        }
+      ],
+      "Battary": [
+        {
+          "type": "4-cell",
+          "capacity": null,
+          "form": "4-cell",
+          "tech": "Li-Ion"
+        },
+        {
+          "type": "6-cell",
+          "capacity": null,
+          "form": "6-cell",
+          "tech": "Li-Ion"
+        }
+      ],
+      "ports": [
+        "3 x USB 2.0",
+        "1 x eSATA/USB combo",
+        "VGA",
+        "HDMI",
+        "Ethernet (RJ-45)",
+        "7-in-1 reader",
+        "ExpressCard/34"
+      ],
+      "camera": [
+        "0.3-megapixel or 2.0-megapixel"
+      ],
+      "audio": [
+        "HD Audio, ALC269Q codec, stereo speakers 1.5W"
+      ],
+      "keyboard": [
+        "6-row, ThinkVantage button, spill-resistant, multimedia Fn keys",
+        "TrackPoint, UltraNav"
+      ],
+      "physical": {
+        "dimensions": "344mm x 233mm x 32-36mm",
+        "weight": "Starting at 2.08kg",
+        "case_material": "Scratch-resistant ABS plastic"
+      },
+      "security": [
+        "Power-on password",
+        "Hard disk password",
+        "Supervisor password",
+        "Security keyhole",
+        "Fingerprint reader (optional)"
+      ],
+      "system": [
+        "Windows 7 Professional 32/64"
+      ]
+    }
+  ]
+}

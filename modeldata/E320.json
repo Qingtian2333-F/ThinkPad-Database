@@ -1,0 +1,109 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-edge-e320",
+      "model_name": "ThinkPad Edge E320",
+      "model_family": "Edge",
+      "model_generation": "E320",
+      "update_date": "July 2011",
+      "processor_options": [
+        "2310M",
+        "2350M",
+        "2370M",
+        "2410M",
+        "2430M",
+        "2450M"
+      ],
+      "graphics_options": [
+        "HD3000",
+        "HD6630M"
+      ],
+      "Display": {
+        "max_resolution": {
+          "vga": "2048x1536@60Hz",
+          "hdmi": "1920x1080@60Hz"
+        },
+        "multi_display": "Supports dual independent displays"
+      },
+      "memory": {
+        "max_capacity": "8GB max",
+        "type": "DDR3-1333",
+        "slots": "Two 204-pin SO-DIMM sockets",
+        "features": "dual-channel capable, non-parity"
+      },
+      "display_options": [],
+      "storage": {
+        "ssd_sata": null,
+        "ssd_pcie": null,
+        "hdd": "SATA 3.0Gb/s, 2.5\" wide, 7mm high, 320GB 5400rpm or 7200rpm, Optional mSATA SSD (shares slot with WWAN)",
+        "sshd": null,
+        "Optical": "DVD burner, 12.7mm high, fixed, not removable, tray-in"
+      },
+      "Ethernet": [
+        "AR8151"
+      ],
+      "WLAN": [
+        "1000"
+      ],
+      "Bluetooth": [
+        {
+          "type": "BDC",
+          "form": "Broadcom BCM2070 Bluetooth Controller",
+          "feature": "Bluetooth 3.0 wireless"
+        }
+      ],
+      "WWAN": [
+        "5521GW"
+      ],
+      "SIM_Card": [
+        {
+          "type": "SIM card slot (under battery, for WWAN models)"
+        }
+      ],
+      "Battery": [
+        {
+          "type": "6-cell",
+          "capacity": "63Wh",
+          "form": "6-cell",
+          "tech": "Li-Ion"
+        }
+      ],
+      "ports": [
+        "3 x USB 2.0 (one yellow Always On USB charging)",
+        "1 x eSATA/USB 2.0 combo",
+        "VGA DB-15",
+        "HDMI 1.4",
+        "Ethernet (RJ-45)",
+        "4-in-1 reader (SD, MMC, SDHC, SDXC)",
+        "Headphone/microphone combo jack",
+        "Kensington lock slot"
+      ],
+      "camera": [
+        "HD 720p camera, low light sensitive"
+      ],
+      "audio": [
+        "HD Audio, stereo speakers, dual array microphone, combo audio/mic jack"
+      ],
+      "keyboard": [
+        "6-row, island-style, spill-resistant, multimedia Fn keys",
+        "TrackPoint pointing device, multi-touch touchpad (supports PalmCheck)"
+      ],
+      "physical": {
+        "dimensions": "322mm x 228mm x 27.4-32.5mm (WxDxH)",
+        "weight": "Starting at 1.85kg",
+        "case_material": "ABS plastic with soft-touch coating (black or red)"
+      },
+      "security": [
+        "Power-on password",
+        "Hard disk password",
+        "Supervisor password",
+        "Security keyhole"
+      ],
+      "system": [
+        "Windows 7 Home Basic 32/64",
+        "Windows 7 Home Premium 32/64",
+        "Windows 7 Professional 32/64"
+      ]
+    }
+  ]
+}
