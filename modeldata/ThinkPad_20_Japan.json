@@ -24,21 +24,21 @@
         "slots": "None (soldered)",
         "features": "non-parity"
       },
-      "display_options": [],
+      "display_options": ["LEN40A2"],
       "storage": {
         "ssd_pcie": null,
-        "ssd_sata": "256GB SATA 6.0Gb/s SSD",
+        "ssd_sata": "256GB SATA 6.0Gb/s, Small Form Factor",
         "hdd": null,
         "sshd": null
       },
       "Ethernet": [],
       "WLAN": [
-        "Intel Centrino Advanced-N 6205S"
+        "6205S"
       ],
       "Bluetooth": [
         {
-          "type": "Integrated",
-          "form": "Integrated in Wi-Fi + Bluetooth combo adapter",
+          "type": "BDC",
+          "form": "Broadcom BCM20702 Bluetooth Controller",
           "feature": "Bluetooth 4.0 wireless"
         }
       ],

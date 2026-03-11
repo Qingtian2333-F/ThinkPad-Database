@@ -25,7 +25,8 @@
         "slots": "None (soldered)",
         "features": "non-parity"
       },
-      "display_options": [],
+      "display_options": ["LEN40A2","LEN40A0"],
+      "touch": ["Selected model has Capacitive-type multi-touch, supports 10-finger gesture"],
       "storage": {
         "ssd_sata": "SATA 6.0Gb/s, Small Form Factor",
         "ssd_pcie": null,

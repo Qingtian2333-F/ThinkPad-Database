@@ -1,0 +1,16 @@
+        {
+          "type": "HD+ (1600x900)",
+          "tech": "TN, Anti-glare, LED backlight, Max Bright",
+          "brightness": "300 nits",
+          "contrast": "400:1",
+          "viewing_angle": "90°",
+          "FRUs":[
+            {
+             "04X1756":"LP140WD2-TLE2",
+             "04W6859":"LP140WD2-TLE2"
+            }
+          ],
+          "color_gamut":"72% NTSC",
+          "refresh_rate":"60 Hz"
+
+        }
