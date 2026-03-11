@@ -558,7 +558,7 @@
             if (part.type === 'cpu') {
                 const cpuData = part.data.thinkpad_database?.[0] || part.data;
                 if (cpuData.ark) {
-                    arkMenuItem = `<div class="card-menu-item" onclick="window.open('${encodeURI(cpuData.ark)}', '_blank'); document.getElementById('${menuId}').classList.add('hidden'); event.stopPropagation();">查看 ARK</div>`;
+                    arkMenuItem = `<div class="card-menu-item" onclick="window.open('${encodeURI(cpuData.ark)}', '_blank', 'width=1200,height=800,scrollbars=yes,resizable=yes'); document.getElementById('${menuId}').classList.add('hidden'); event.stopPropagation();">查看 ARK</div>`;
                 }
             }
             // 图标支持：CPU 和显卡
@@ -916,13 +916,13 @@
             const addonsHtml = data.addons ? `<p class="addons-note">${data.addons}</p>` : '';
 
             // 底部按钮
-            const buttonsHtml = `
-                <div class="footer-buttons">
-                    ${psrefUrl ? `<a href="${psrefUrl}" target="_blank" class="footer-btn">PSREF网站</a>` : ''}
-                    ${userGuideUrl ? `<a href="${userGuideUrl}" target="_blank" download class="footer-btn">用户手册</a>` : ''}
-                    ${hmmUrl ? `<a href="${hmmUrl}" target="_blank" download class="footer-btn">硬件维护指南</a>` : ''}
-                </div>
-            `;
+const buttonsHtml = `
+    <div class="footer-buttons">
+        ${psrefUrl ? `<a href="${psrefUrl}" class="footer-btn" onclick="window.open('${psrefUrl}', '_blank', 'width=1200,height=800,scrollbars=yes,resizable=yes'); return false;">PSREF网站</a>` : ''}
+        ${userGuideUrl ? `<a href="${userGuideUrl}" class="footer-btn" onclick="window.open('${userGuideUrl}', '_blank', 'width=1200,height=800,scrollbars=yes,resizable=yes'); return false;">用户手册</a>` : ''}
+        ${hmmUrl ? `<a href="${hmmUrl}" class="footer-btn" onclick="window.open('${hmmUrl}', '_blank', 'width=1200,height=800,scrollbars=yes,resizable=yes'); return false;">硬件维护指南</a>` : ''}
+    </div>
+`;
 
             // ---------- 最终渲染 ----------
             specDisplayEl.innerHTML = `
