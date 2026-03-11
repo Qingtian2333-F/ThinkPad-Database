@@ -7,9 +7,9 @@
       "model_generation": "E420s",
       "update_date": "January 2011",
       "processor_options": [
-        "i3-2310M",
-        "i5-2410M",
-        "i7-2620M"
+        "2310M",
+        "2410M",
+        "2620M"
       ],
       "graphics_options": [
         "Intel HD Graphics 3000",
@@ -30,23 +30,23 @@
       },
       "display_options": [],
       "storage": {
-        "ssd_sata": "SATA 3.0Gb/s, 2.5\" wide, 7mm high, up to 128GB SSD",
+        "ssd_sata": "SATA 3.0Gb/s, 2.5\" wide, 7mm high, up to 128GB SSD,80GB mSATA SSD optional",
         "ssd_pcie": null,
         "hdd": "SATA 3.0Gb/s, 2.5\" wide, 7mm high, up to 320GB 7200rpm",
         "sshd": null,
-        "mSATA": "80GB mSATA SSD optional"
+        "Optical": "DVD burner, 9.5mm high, fi xed, not removable, slot-in"
       },
       "Ethernet": [
-        "Realtek RTL8111E"
+        "RTL8111E"
       ],
       "WLAN": [
-        "ThinkPad 11b/g/n",
-        "Intel Centrino Wireless-N 1000"
+        "11bgn",
+        "1000"
       ],
       "Bluetooth": [
         {
-          "type": "Integrated",
-          "form": "Integrated in Wi-Fi + Bluetooth combo adapter",
+          "type": "BDC",
+          "form": "Broadcom BCM2070 Bluetooth Controller",
           "feature": "Bluetooth 3.0 wireless"
         }
       ],

@@ -7,11 +7,11 @@
       "model_generation": "E325",
       "update_date": "July 2011",
       "processor_options": [
-        "AMD E-350",
-        "AMD E-450"
+        "E-350",
+        "E-450"
       ],
       "graphics_options": [
-        "AMD Radeon HD 6310"
+        "HD6310"
       ],
       "Display": {
         "max_resolution": {
@@ -34,17 +34,17 @@
         "sshd": null
       },
       "Ethernet": [
-        "Realtek RTL8111E"
+        "RTL8111E"
       ],
       "WLAN": [
-        "ThinkPad 11b/g/n",
-        "Intel Centrino Wireless-N 1000"
+        "11bgn",
+        "1000"
       ],
       "Bluetooth": [
         {
-          "type": "Integrated",
-          "form": "Integrated",
-          "feature": "Bluetooth 3.0"
+          "type": "BDC",
+          "form": "Broadcom BCM2070 Bluetooth Controller",
+          "feature": "Bluetooth 3.0 wireless"
         }
       ],
       "WWAN": [],

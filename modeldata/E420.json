@@ -7,10 +7,10 @@
       "model_generation": "E420",
       "update_date": "February 2013",
       "processor_options": [
-        "i3-2310M",
-        "i3-2350M",
-        "i5-2450M",
-        "i5-2520M"
+        "2310M",
+        "2350M",
+        "2450M",
+        "2520M"
       ],
       "graphics_options": [
         "HD3000"
