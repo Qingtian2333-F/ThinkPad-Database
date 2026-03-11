@@ -1,0 +1,14 @@
+ {
+      "model": "ThinkPad Wigig Dock",
+      "ports": [
+        "3x USB 3.0 (Type-A) port , one as 'always-on' charging port",
+        "2x USB 2.0 (Type-A) port",
+        "1x Ethernet (RJ-45) port",
+        "1x DisplayPort 1.2 out port",
+        "1x HDMI 1.4 out port",
+        "1x Headphone/Microphone combo (3.5mm, TRRS, CTIA) port",
+        "1x DC-in (slim-tip) socket",
+        "1x Kensington security lock slot"
+      ],
+          "power": "45W"
+        }

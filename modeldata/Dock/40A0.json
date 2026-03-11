@@ -1,0 +1,13 @@
+ {
+      "model": "ThinkPad Basic Dock",
+      "ports": [
+        "1x USB 3.0 (Type-A) port",
+        "1x USB 2.0 (Type-A) 'always-on' charging port",
+        "2x USB 2.0 (Type-A) port",
+        "1x Ethernet (RJ-45) port",
+        "1x VGA-out (DE-15) port",
+        "1x DC-in (slim-tip) socket",
+        "1x Kensington security lock slot"
+      ],
+          "power": "65W / 90W"
+        }

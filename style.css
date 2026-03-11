@@ -1001,3 +1001,76 @@ td br {
     font-style: italic;
     margin-top: 4px;
 }
+
+/* 内部型号徽章 */
+.model-code-badge {
+    background: #2a2a2a;
+    padding: 4px 14px;
+    border-radius: 30px;
+    border: 1px solid #444;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #ddd;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+    display: inline-block;
+    line-height: 1.4;
+}
+
+@media (max-width: 600px) {
+    .model-code-badge {
+        white-space: normal;
+        word-break: break-word;
+        padding: 4px 10px;
+        font-size: 0.75rem;
+    }
+}
+
+/* 底部按钮区域 */
+.footer-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+}
+
+.footer-btn {
+    background: #2a2a2a;
+    border: 1px solid #444;
+    color: #e0e0e0;
+    padding: 10px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    display: inline-block;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.footer-btn:hover {
+    background: var(--tp-red);
+    border-color: var(--tp-red);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(225,25,55,0.3);
+}
+
+.footer-btn:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+    .footer-buttons {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+    }
+    .footer-btn {
+        text-align: center;
+    }
+}

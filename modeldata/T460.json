@@ -6,6 +6,7 @@
       "model_family": "T",
       "model_generation":"xx60",
       "update_date": "November 2016",
+      "model_code":["20FM/20FN"],
       "processor_options": ["6100U","6200U","6300U","6500U","6600U"],
       "graphics_options": ["HD520","GeForce_940MX"],
       "Display": {
@@ -69,6 +70,7 @@
           "tech":"Li-Ion"
         }
     ],
+      "ACadapter":["45W or 65W Slim AC adapter"],
       "ports": [
         "3 x USB 3.0 (One Always On)",
         "Mini DisplayPort",
@@ -102,7 +104,12 @@
       "system": [
         "Windows 7 Professional 64 preinstalled through downgrade rights in Windows 10 Pro 64",
         "Windows 10 Pro 64"
-      ]
+      ],
+      "PSREF_link":["https://psref.lenovo.com/WDProduct/ThinkPad/ThinkPad_T460"],
+      "user_guide_link":["https://download.lenovo.com/pccbbs/mobiles_pdf/t460_ug_zh-cn.pdf"],
+      "HMM_link":["https://download.lenovo.com/pccbbs/mobiles_pdf/t460_hmm_en_sp40k04896_03.pdf"],
+      "dock_support":["40A0","40A1","40A2","40A6"],
+      "add_on_tips":["点击输入文字"]
     }
   ]
 }

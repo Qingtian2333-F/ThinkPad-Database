@@ -1,0 +1,17 @@
+ {
+      "model": "ThinkPad Ultra Dock",
+      "ports": [
+        "3x USB 3.0 (Type-A) port",
+        "1x USB 2.0 (Type-A) 'always-on' charging port",
+        "2x USB 2.0 (Type-A) port",
+        "1x Ethernet (RJ-45) port",
+        "2x DisplayPort 1.2 out port",
+        "1x HDMI 1.4 out port",
+        "1x DVI-D (dual-link) out port",
+        "1x VGA-out (DE-15) port",
+        "1x Headphone/Microphone combo (3.5mm, TRRS, CTIA) port",
+        "1x DC-in (slim-tip) socket",
+        "1x Kensington security lock slot"
+      ],
+          "power": "90W / 135W / 170W"
+        }
