@@ -1,0 +1,108 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-edge-e520",
+      "model_name": "ThinkPad Edge E520",
+      "model_family": "E",
+      "model_generation": "**20",
+      "update_date": "February 2013",
+      "processor_options": [
+        "2310M",
+        "2350M",
+        "2410M",
+        "2430M",
+        "2450M",
+        "2520M"
+      ],
+      "graphics_options": [
+        "HD3000"
+      ],
+      "Display": {
+        "max_resolution": {
+          "vga": "2048x1536@75Hz",
+          "hdmi": "1920x1200@60Hz"
+        },
+        "multi_display": "Supports dual independent displays"
+      },
+      "memory": {
+        "max_capacity": "8GB max officially, but can be upgraded to 16GB",
+        "type": "PC3-10600 1333MHz DDR3",
+        "slots": "Two 204-pin SO-DIMM sockets",
+        "features": "dual-channel capable, non-parity"
+      },
+      "display_options": [],
+      "storage": {
+        "ssd_sata": null,
+        "ssd_pcie": null,
+        "hdd": "SATA 3.0Gb/s, 2.5\" wide, 7mm or 9.5mm high, Active Protection System",
+        "sshd": null,
+        "Optical": "DVD burner, 12.7mm high, fixed, not removable, tray-in"
+      },
+      "Ethernet": [
+        "RTL8111E"
+      ],
+      "WLAN": [
+        "11b/g/n",
+        "1000"
+      ],
+      "Bluetooth": [
+        {
+          "type": "BDC",
+          "form": "Broadcom BCM2070 Bluetooth Controller",
+          "feature": "Bluetooth 3.0 wireless"
+        }
+      ],
+      "WWAN": [],
+      "SIM_Card": [],
+      "Battary": [
+        {
+          "type": "6-cell",
+          "capacity": "48Wh",
+          "form": "6-cell",
+          "tech": "Li-Ion"
+        },
+        {
+          "type": "9-cell",
+          "capacity": "94Wh",
+          "form": "9-cell",
+          "tech": "Li-Ion"
+        }
+      ],
+      "ports": [
+        "3 x USB 2.0 (one powered)",
+        "1 x USB 2.0/eSATA combo",
+        "VGA",
+        "HDMI",
+        "Ethernet (RJ-45)",
+        "4-in-1 reader",
+        "ExpressCard/34"
+      ],
+      "camera": [
+        "HD 720p"
+      ],
+      "audio": [
+        "HD Audio, Conexant 20671 codec, stereo speakers 1W x2, mono digital microphone"
+      ],
+      "keyboard": [
+        "6-row, spill-resistant, multimedia Fn keys, numeric keypad",
+        "TrackPoint, UltraNav"
+      ],
+      "physical": {
+        "dimensions": "380mm x 248.5mm x 29.3-33.7mm",
+        "weight": "Starting at 2.5kg",
+        "case_material": "ABS plastic"
+      },
+      "security": [
+        "Power-on password",
+        "Hard disk password",
+        "Supervisor password",
+        "Security keyhole",
+        "Fingerprint reader (optional)"
+      ],
+      "system": [
+        "Windows 7 Home Premium 64",
+        "Windows 7 Professional 64"
+      ]
+    }
+  ]
+}

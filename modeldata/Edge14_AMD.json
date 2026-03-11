@@ -1,0 +1,104 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-edge-14-amd",
+      "model_name": "ThinkPad Edge 14 (AMD)",
+      "model_family": "Edge",
+      "model_generation": "14\" AMD",
+      "update_date": "July 2010",
+      "processor_options": [
+        "Athlon_II_P320",
+        "Athlon_II_P520",
+        "Phenom_II_P820"
+      ],
+      "graphics_options": [
+        "HD3400",
+        "HD4250"
+      ],
+      "Display": {
+        "max_resolution": {
+          "vga": "2048x1536@75Hz",
+          "hdmi": "1920x1080@60Hz"
+        },
+        "multi_display": "Supports dual independent displays"
+      },
+      "memory": {
+        "max_capacity": "8GB max",
+        "type": "DDR3-1066",
+        "slots": "Two 204-pin SO-DIMM sockets",
+        "features": "dual-channel capable, non-parity"
+      },
+      "display_options": [],
+      "storage": {
+        "ssd_sata": null,
+        "ssd_pcie": null,
+        "hdd": "SATA 3.0Gb/s, 2.5\" wide, 9.5mm high, up to 500GB",
+        "sshd": null,
+        "Optical": "DVD burner, 12.7mm high, fixed, not removable, tray-in"
+      },
+      "Ethernet": [
+        "RTL8111DL"
+      ],
+      "WLAN": [
+        "11bgn"
+      ],
+      "Bluetooth": [
+        {
+          "type": "BDC",
+          "form": "Broadcom BCM2046 or BCM2070 Bluetooth Controller",
+          "feature": "Bluetooth 2.1"
+        }
+      ],
+      "WWAN": [],
+      "SIM_Card": [],
+      "Battary": [
+        {
+          "type": "4-cell",
+          "capacity": null,
+          "form": "4-cell",
+          "tech": "Li-Ion"
+        },
+        {
+          "type": "6-cell",
+          "capacity": null,
+          "form": "6-cell",
+          "tech": "Li-Ion"
+        }
+      ],
+      "ports": [
+        "3 x USB 2.0 (one powered)",
+        "1 x USB 2.0/eSATA combo",
+        "VGA",
+        "HDMI",
+        "Ethernet (RJ-45)",
+        "7-in-1 reader",
+        "ExpressCard/34",
+        "Headphone/microphone combo jack"
+      ],
+      "camera": [
+        "2.0-megapixel (optional)"
+      ],
+      "audio": [
+        "HD Audio, stereo speakers 1.5W x2"
+      ],
+      "keyboard": [
+        "6-row, spill-resistant, multimedia Fn keys",
+        "TrackPoint pointing device, UltraNav touchpad"
+      ],
+      "physical": {
+        "dimensions": "344mm x 233mm x 31.8-37.0mm",
+        "weight": "Starting at 2.17kg",
+        "case_material": "ABS plastic"
+      },
+      "security": [
+        "Power-on password",
+        "Hard disk password",
+        "Supervisor password",
+        "Security keyhole"
+      ],
+      "system": [
+        "Windows 7 Professional 64"
+      ]
+    }
+  ]
+}

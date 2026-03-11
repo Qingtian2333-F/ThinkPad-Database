@@ -1,0 +1,5 @@
+        {
+          "type": "Intel WiMAX/WiFi Link 5150 controller",
+          "form": "1x2, Mini PCIe card",
+          "feature":"11abgn+WiMAX"
+        }

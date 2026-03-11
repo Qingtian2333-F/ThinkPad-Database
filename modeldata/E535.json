@@ -1,0 +1,99 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-edge-e535",
+      "model_name": "ThinkPad Edge E535",
+      "model_family": "Edge",
+      "model_generation": "E535",
+      "update_date": "January 2014",
+      "processor_options": [
+        "A4-4300M",
+        "A6-4400M",
+        "A8-4500M",
+        "A10-4600M"
+      ],
+      "graphics_options": [
+        "HD7420G",
+        "HD7520G",
+        "HD7640G",
+        "HD7660G"
+      ],
+      "Display": {
+        "max_resolution": {
+          "vga": "1920x1600@60Hz",
+          "hdmi": "1920x1200@60Hz"
+        },
+        "multi_display": "Supports dual independent displays"
+      },
+      "memory": {
+        "max_capacity": "16GB max",
+        "type": "PC3-12800 1600MHz DDR3",
+        "slots": "Two 204-pin SO-DIMM sockets",
+        "features": "dual-channel capable, non-parity"
+      },
+      "display_options": [],
+      "storage": {
+        "ssd_sata": null,
+        "ssd_pcie": null,
+        "hdd": "SATA 3.0Gb/s, 2.5\" wide, 7mm or 9.5mm high, Active Protection System",
+        "sshd": null,
+        "Optical": "DVD burner, 12.7mm high, fixed, not removable, tray-in"
+      },
+      "Ethernet": ["RTL8111F"],
+      "WLAN": ["11b/g/n"],
+      "Bluetooth": [
+        {
+          "type": "BDC",
+          "form": "Broadcom BCM20702 Bluetooth Controller",
+          "feature": "Bluetooth 4.0 wireless"
+        }
+      ],
+      "WWAN": [],
+      "SIM_Card": [],
+      "Battary": [
+        {
+          "type": "6-cell",
+          "capacity": "48Wh",
+          "form": "6-cell",
+          "tech": "Li-Ion"
+        }
+      ],
+      "ports": [
+        "3 x USB 3.0",
+        "1 x USB 2.0 (Always On)",
+        "VGA",
+        "HDMI",
+        "Ethernet (RJ-45)",
+        "4-in-1 reader (MMC, SD, SDHC, SDXC)",
+        "Headphone/microphone combo jack"
+      ],
+      "camera": [
+        "HD 720p resolution, face tracking, low light sensitive, fixed focus, LED indicator"
+      ],
+      "audio": [
+        "HD Audio, Conexant 20671 codec / stereo speakers, 2W x 2 / stereo digital microphone, combo audio/mic jack"
+      ],
+      "keyboard": [
+        "6-row, spill-resistant, multimedia Fn keys, numeric keypad",
+        "TrackPoint pointing device, UltraNav touchpad"
+      ],
+      "physical": {
+        "dimensions": "377mm x 245mm x 28.5-35.3mm",
+        "weight": "Starting at 2.45kg",
+        "case_material": "Matte black or Matte red (top): ABS plastic; Black aluminum (top): Aluminum"
+      },
+      "security": [
+        "Power-on password",
+        "Hard disk password",
+        "Supervisor password",
+        "Security keyhole",
+        "Optional fingerprint reader"
+      ],
+      "system": [
+        "Windows 7 Professional 64",
+        "Windows 8 64",
+        "Windows 8 Pro 64"
+      ]
+    }
+  ]
+}

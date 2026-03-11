@@ -1,0 +1,103 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-edge-15-AMD",
+      "model_name": "ThinkPad Edge 15 (AMD)",
+      "model_family": "Edge",
+      "model_generation": "**10",
+      "update_date": "December 2010",
+      "processor_options": [
+        "Athlon_II_P320",
+        "Athlon_II_P520",
+        "Phenom_II_P820"
+      ],
+      "graphics_options": [
+        "HD4250"
+      ],
+      "Display": {
+        "max_resolution": {
+          "vga": "2456x1536@60Hz",
+          "hdmi": "1920x1080@60Hz"
+        },
+        "multi_display": "Supports dual independent displays"
+      },
+      "memory": {
+        "max_capacity": "8GB max",
+        "type": "PC3-8500 1066MHz DDR3",
+        "slots": "Two 204-pin SO-DIMM sockets",
+        "features": "dual-channel capable, non-parity"
+      },
+      "display_options": [],
+      "storage": {
+        "ssd_sata": null,
+        "ssd_pcie": null,
+        "hdd": "SATA 3.0Gb/s, 2.5\" wide, 9.5mm high, Active Protection System",
+        "sshd": null,
+        "Optical": "DVD burner, 12.7mm high, fixed, not removable, tray-in"
+      },
+      "Ethernet": [
+        "RTL8111DL"
+      ],
+      "WLAN": [
+        "11bgn"
+      ],
+      "Bluetooth": [
+        {
+          "type": "BDC",
+          "form": "Broadcom BCM2046 or BCM2070 Bluetooth Controller",
+          "feature": "Bluetooth 2.1 wireless"
+        }
+      ],
+      "WWAN": [],
+      "SIM_Card": [],
+      "Battary": [
+        {
+          "type": "4-cell",
+          "capacity": "32Wh",
+          "form": "4-cell",
+          "tech": "Li-Ion"
+        },
+        {
+          "type": "6-cell",
+          "capacity": "48Wh",
+          "form": "6-cell",
+          "tech": "Li-Ion"
+        }
+      ],
+      "ports": [
+        "3 x USB 2.0 (one powered)",
+        "1 x USB 2.0/eSATA combo",
+        "VGA",
+        "HDMI",
+        "Ethernet (RJ-45)",
+        "7-in-1 reader"
+      ],
+      "camera": [
+        "2.0-megapixel"
+      ],
+      "audio": [
+        "HD Audio, Realtek ALC269 codec, stereo speakers 1.5W x2, mono digital microphone"
+      ],
+      "keyboard": [
+        "6-row, spill-resistant, multimedia Fn keys",
+        "TrackPoint, UltraNav"
+      ],
+      "physical": {
+        "dimensions": "380mm x 247mm x 32.3-37.5mm",
+        "weight": "Starting at 2.45kg",
+        "case_material": "ABS plastic"
+      },
+      "security": [
+        "Power-on password",
+        "Hard disk password",
+        "Supervisor password",
+        "Security keyhole",
+        "Fingerprint reader (optional)"
+      ],
+      "system": [
+        "Windows 7 Home Premium 64",
+        "Windows 7 Professional 64"
+      ]
+    }
+  ]
+}

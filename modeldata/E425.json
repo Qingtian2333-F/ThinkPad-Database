@@ -1,0 +1,97 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-edge-e425",
+      "model_name": "ThinkPad Edge E425",
+      "model_family": "Edge",
+      "model_generation": "**20",
+      "update_date": "February 2013",
+      "processor_options": [
+        "E2-3000M",
+        "A4-3300M"
+      ],
+      "graphics_options": [
+        "HD6380G",
+        "HD6480G",
+        "HD6470M"
+      ],
+      "Display": {
+        "max_resolution": {
+          "vga": "1920x1600@60Hz",
+          "hdmi": "1920x1080p@60Hz"
+        },
+        "multi_display": "Supports dual independent displays"
+      },
+      "memory": {
+        "max_capacity": "8GB max officially, but can be upgraded to 16GB",
+        "type": "PC3-10600 1333MHz DDR3",
+        "slots": "Two 204-pin SO-DIMM sockets",
+        "features": "dual-channel capable, non-parity"
+      },
+      "display_options": [],
+      "storage": {
+        "ssd_sata": null,
+        "ssd_pcie": null,
+        "hdd": "SATA 3.0Gb/s, 2.5\" wide, 7mm or 9.5mm high, Active Protection System",
+        "sshd": null,
+        "Optical": "DVD burner, 12.7mm high, fixed, not removable, tray-in"
+      },
+      "Ethernet": [
+        "RTL8111E"
+      ],
+      "WLAN": [
+        "11b/g/n"
+      ],
+      "Bluetooth": [],
+      "WWAN": [],
+      "SIM_Card": [],
+      "Battary": [
+        {
+          "type": "6-cell",
+          "capacity": "48Wh",
+          "form": "6-cell",
+          "tech": "Li-Ion"
+        },
+        {
+          "type": "9-cell",
+          "capacity": "94Wh",
+          "form": "9-cell",
+          "tech": "Li-Ion"
+        }
+      ],
+      "ports": [
+        "3 x USB 2.0 (one powered)",
+        "1 x USB 2.0/eSATA combo",
+        "VGA",
+        "HDMI",
+        "Ethernet (RJ-45)",
+        "4-in-1 reader",
+        "ExpressCard/34"
+      ],
+      "camera": [
+        "HD 720p"
+      ],
+      "audio": [
+        "HD Audio, Conexant 20671 codec, stereo speakers 1W x2, mono digital microphone"
+      ],
+      "keyboard": [
+        "6-row, spill-resistant, multimedia Fn keys",
+        "TrackPoint, UltraNav"
+      ],
+      "physical": {
+        "dimensions": "343.4mm x 233.6mm x 28.7-36.4mm",
+        "weight": "Starting at 2.2kg",
+        "case_material": "ABS plastic"
+      },
+      "security": [
+        "Power-on password",
+        "Hard disk password",
+        "Supervisor password",
+        "Security keyhole"
+      ],
+      "system": [
+        "Windows 7 Professional 64"
+      ]
+    }
+  ]
+}

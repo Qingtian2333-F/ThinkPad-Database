@@ -1,0 +1,96 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-edge-e325",
+      "model_name": "ThinkPad Edge E325",
+      "model_family": "Edge",
+      "model_generation": "E325",
+      "update_date": "July 2011",
+      "processor_options": [
+        "AMD E-350",
+        "AMD E-450"
+      ],
+      "graphics_options": [
+        "AMD Radeon HD 6310"
+      ],
+      "Display": {
+        "max_resolution": {
+          "vga": "2048x1536@75Hz",
+          "hdmi": "1920x1080@60Hz"
+        },
+        "multi_display": "Supports dual independent displays"
+      },
+      "memory": {
+        "max_capacity": "8GB max",
+        "type": "DDR3-1333",
+        "slots": "Two 204-pin SO-DIMM sockets",
+        "features": "dual-channel capable, non-parity"
+      },
+      "display_options": [],
+      "storage": {
+        "ssd_sata": null,
+        "ssd_pcie": null,
+        "hdd": "SATA 3.0Gb/s, 2.5\" wide, 7mm high, up to 320GB 5400rpm",
+        "sshd": null
+      },
+      "Ethernet": [
+        "Realtek RTL8111E"
+      ],
+      "WLAN": [
+        "ThinkPad 11b/g/n",
+        "Intel Centrino Wireless-N 1000"
+      ],
+      "Bluetooth": [
+        {
+          "type": "Integrated",
+          "form": "Integrated",
+          "feature": "Bluetooth 3.0"
+        }
+      ],
+      "WWAN": [],
+      "SIM_Card": [],
+      "Battary": [
+        {
+          "type": "6-cell",
+          "capacity": "63Wh",
+          "form": "6-cell",
+          "tech": "Li-Ion"
+        }
+      ],
+      "ports": [
+        "3 x USB 2.0",
+        "1 x USB 2.0/eSATA combo",
+        "VGA",
+        "HDMI",
+        "Ethernet (RJ-45)",
+        "4-in-1 reader",
+        "Headphone/microphone combo jack"
+      ],
+      "camera": [
+        "HD 720p camera"
+      ],
+      "audio": [
+        "HD Audio, Conexant CX20582 codec, stereo speakers"
+      ],
+      "keyboard": [
+        "6-row, spill-resistant, multimedia Fn keys",
+        "TrackPoint pointing device, UltraNav touchpad"
+      ],
+      "physical": {
+        "dimensions": "322mm x 228mm x 27.4mm",
+        "weight": "Starting at 1.77kg",
+        "case_material": "ABS plastic"
+      },
+      "security": [
+        "Power-on password",
+        "Hard disk password",
+        "Supervisor password",
+        "Security keyhole"
+      ],
+      "system": [
+        "Windows 7 Home Basic",
+        "Windows 7 Professional"
+      ]
+    }
+  ]
+}

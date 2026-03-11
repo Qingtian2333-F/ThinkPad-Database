@@ -1,0 +1,106 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-edge-e430",
+      "model_name": "ThinkPad Edge E430",
+      "model_family": "Edge",
+      "model_generation": "E430",
+      "update_date": "January 2014",
+      "processor_options": [
+        "3110M",
+        "3120M",
+        "3130M",
+        "3210M",
+        "3230M",
+        "3612QM",
+        "3632QM"
+      ],
+      "graphics_options": [
+        "HD4000",
+        "GeForce_610M"
+      ],
+      "Display": {
+        "max_resolution": {
+          "vga": "2048x1536@75Hz",
+          "hdmi": "1920x1200@60Hz"
+        },
+        "multi_display": "Supports dual independent displays"
+      },
+      "memory": {
+        "max_capacity": "16GB max",
+        "type": "PC3-12800 1600MHz DDR3",
+        "slots": "Two 204-pin SO-DIMM sockets",
+        "features": "dual-channel capable, non-parity, automatically clocks down for 1333MHz processors"
+      },
+      "display_options": [],
+      "storage": {
+        "ssd_sata": "SATA 6.0Gb/s (2.5\" or mSATA)",
+        "ssd_pcie": null,
+        "hdd": "SATA 3.0Gb/s, 2.5\" wide, 7mm or 9.5mm high, Active Protection System",
+        "sshd": null,
+        "Optical": "DVD burner, 12.7mm high, fixed, not removable, tray-in"
+      },
+      "Ethernet": ["RTL8111F"],
+      "WLAN": ["2230", "11b/g/n"],
+      "Bluetooth": [
+        {
+          "type": "BDC",
+          "form": "Broadcom BCM20702 Bluetooth Controller",
+          "feature": "Bluetooth 4.0 wireless"
+        }
+      ],
+      "WWAN": [],
+      "SIM_Card": [],
+      "Battary": [
+        {
+          "type": "6-cell",
+          "capacity": "48Wh",
+          "form": "6-cell",
+          "tech": "Li-Ion"
+        },
+        {
+          "type": "6-cell",
+          "capacity": "62Wh",
+          "form": "6-cell",
+          "tech": "Li-Ion"
+        }
+      ],
+      "ports": [
+        "3 x USB 3.0",
+        "1 x USB 2.0 (Always On)",
+        "VGA",
+        "HDMI",
+        "Ethernet (RJ-45)",
+        "4-in-1 reader (MMC, SD, SDHC, SDXC)",
+        "Headphone/microphone combo jack"
+      ],
+      "camera": [
+        "HD 720p resolution, face tracking, low light sensitive, fixed focus, LED indicator"
+      ],
+      "audio": [
+        "HD Audio, Conexant 20671 codec / stereo speakers, 2W x 2 / stereo digital microphone, combo audio/mic jack"
+      ],
+      "keyboard": [
+        "6-row, spill-resistant, multimedia Fn keys",
+        "TrackPoint pointing device, UltraNav touchpad"
+      ],
+      "physical": {
+        "dimensions": "339.4mm x 234mm x 27.4-33.9mm",
+        "weight": "Starting at 2.15kg",
+        "case_material": "Matte black or Matte red (top): ABS plastic; Black aluminum (top): Aluminum"
+      },
+      "security": [
+        "Power-on password",
+        "Hard disk password",
+        "Supervisor password",
+        "Security keyhole",
+        "Optional fingerprint reader"
+      ],
+      "system": [
+        "Windows 7 Professional 64",
+        "Windows 8 64",
+        "Windows 8 Pro 64"
+      ]
+    }
+  ]
+}

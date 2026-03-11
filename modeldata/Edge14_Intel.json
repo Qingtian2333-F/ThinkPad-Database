@@ -1,0 +1,115 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-edge-14",
+      "model_name": "ThinkPad Edge 14",
+      "model_family": "Edge",
+      "model_generation": "14",
+      "update_date": "October 2010",
+      "processor_options": [
+        "P4500",
+        "P6200",
+        "330M",
+        "350M",
+        "370M",
+        "380M",
+        "390M",
+        "450M",
+        "480M",
+        "540M"
+      ],
+      "graphics_options": [
+        "HD_Graphics_1st_Core"
+      ],
+      "Display": {
+        "max_resolution": {
+          "vga": "2048x1536@75Hz",
+          "hdmi": "1920x1080@60Hz"
+        },
+        "multi_display": "Supports dual independent displays"
+      },
+      "memory": {
+        "max_capacity": "8GB max",
+        "type": "PC3-8500 1066MHz DDR3",
+        "slots": "Two 204-pin SO-DIMM sockets",
+        "features": "dual-channel capable, non-parity"
+      },
+      "display_options": [],
+      "storage": {
+        "ssd_sata": null,
+        "ssd_pcie": null,
+        "hdd": "SATA 3.0Gb/s, 2.5\" wide, 9.5mm high, Active Protection System",
+        "sshd": null,
+        "Optical": "DVD burner, 12.7mm high, fixed, not removable, tray-in"
+      },
+      "Ethernet": [
+        "RTL8111DL"
+      ],
+      "WLAN": [
+        "1000",
+        "11bgn"
+      ],
+      "Bluetooth": [
+        {
+          "type": "BDC",
+          "form": "Broadcom BCM2046 or BCM2070 Bluetooth Controller",
+          "feature": "Bluetooth 2.1 wireless"
+        }
+      ],
+      "WWAN": [
+        "Gobi2000"
+      ],
+      "SIM_Card": [],
+      "Battary": [
+        {
+          "type": "4-cell",
+          "capacity": "32Wh",
+          "form": "4-cell",
+          "tech": "Li-Ion"
+        },
+        {
+          "type": "6-cell",
+          "capacity": "48Wh",
+          "form": "6-cell",
+          "tech": "Li-Ion"
+        }
+      ],
+      "ports": [
+        "3 x USB 2.0 (one powered)",
+        "1 x USB 2.0/eSATA combo",
+        "VGA DB-15",
+        "HDMI",
+        "Ethernet (RJ-45)",
+        "7-in-1 reader (MMC, Memory Stick, Mem Stick Pro, SD, SDHC, XD, XD Type H)",
+        "Headphone/microphone combo jack"
+      ],
+      "camera": [
+        "2.0-megapixel or 0.3-megapixel, fixed focus"
+      ],
+      "audio": [
+        "HD Audio, Realtek ALC269 codec, stereo speakers 1.5W x2, mono digital microphone, combo audio/mic jack"
+      ],
+      "keyboard": [
+        "6-row, spill-resistant, multimedia Fn keys",
+        "TrackPoint pointing device, UltraNav touchpad"
+      ],
+      "physical": {
+        "dimensions": "344mm x 233mm x 31.8-37.0mm",
+        "weight": "Starting at 2.14kg (4-cell)",
+        "case_material": "ABS plastic"
+      },
+      "security": [
+        "Power-on password",
+        "Hard disk password",
+        "Supervisor password",
+        "Security keyhole",
+        "Fingerprint reader (optional)"
+      ],
+      "system": [
+        "Windows 7 Home Premium 64",
+        "Windows 7 Professional 32/64",
+        "Windows XP Professional (downgrade)"
+      ]
+    }
+  ]
+}
