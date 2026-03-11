@@ -3,8 +3,8 @@
     {
       "id": "thinkpad-sl510",
       "model_name": "ThinkPad SL510",
-      "model_family": "SL",
-      "model_generation": "SL510",
+      "model_family": "L",
+      "model_generation": "xx10",
       "update_date": "October 2010",
       "processor_options": [
         "T5870",

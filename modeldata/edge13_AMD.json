@@ -3,8 +3,8 @@
     {
       "id": "thinkpad-edge-13-amd",
       "model_name": "ThinkPad Edge 13 (AMD)",
-      "model_family": "Edge",
-      "model_generation": "13\" AMD",
+      "model_family": "E",
+      "model_generation": "xx10",
       "update_date": "February 2010",
       "processor_options": [
         "Turion_X2_L625",

@@ -3,8 +3,8 @@
     {
       "id": "thinkpad-edge-e320",
       "model_name": "ThinkPad Edge E320",
-      "model_family": "Edge",
-      "model_generation": "E320",
+      "model_family": "E",
+      "model_generation": "xx20",
       "update_date": "July 2011",
       "processor_options": [
         "2310M",

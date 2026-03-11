@@ -3,8 +3,8 @@
     {
       "id": "thinkpad-edge-e530c",
       "model_name": "ThinkPad Edge E530c",
-      "model_family": "Edge",
-      "model_generation": "E530c",
+      "model_family": "E",
+      "model_generation": "xx30",
       "update_date": "January 2014",
       "processor_options": [
         "2328M",

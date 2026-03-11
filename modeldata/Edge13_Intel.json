@@ -3,8 +3,8 @@
     {
       "id": "thinkpad-edge-13-intel",
       "model_name": "ThinkPad Edge 13 (Intel)",
-      "model_family": "Edge",
-      "model_generation": "13\" Intel",
+      "model_family": "E",
+      "model_generation": "xx10",
       "update_date": "January 2010",
       "processor_options": [
         "Intel Core 2 Duo SU7300"

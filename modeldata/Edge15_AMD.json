@@ -3,8 +3,8 @@
     {
       "id": "thinkpad-edge-15-AMD",
       "model_name": "ThinkPad Edge 15 (AMD)",
-      "model_family": "Edge",
-      "model_generation": "**10",
+      "model_family": "E",
+      "model_generation": "xx10",
       "update_date": "December 2010",
       "processor_options": [
         "Athlon_II_P320",

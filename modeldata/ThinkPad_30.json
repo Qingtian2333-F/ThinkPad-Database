@@ -8,7 +8,8 @@
       "model_generation": "Anniversary Edition",
       "update_date": "December 2022",
       "processor_options": [
-        "1260P"
+        "1260P",
+        "1270P"
       ],
       "graphics": {
         "integrated": "Intel Iris Xe Graphics",
@@ -25,7 +26,7 @@
         "slots": "None (soldered)",
         "features": "dual-channel capable"
       },
-      "display_options": [],
+      "display_options": ["LEN4149","LEN41C2"],
       "storage": {
         "ssd_pcie": "1TB PCIe 4.0 NVMe SSD",
         "ssd_sata": null,
@@ -96,9 +97,11 @@
         "Windows 11 Professional 64"
       ],
       "Extra":[
-        "On side B, there is the text '30th anniversery edition' instead of 'Dolby Atmos'.",
+        "On side C, there is the text '30th anniversery edition' instead of 'Dolby Atmos'.",
         "The hinge have a limited edition number engraved on it.",
-        "The vintage RGB ThinkPad logo is used on sides A and C."
+        "The vintage RGB ThinkPad logo is used on sides A and C.",
+        "The specific configuration may vary depending on the region.",
+        "The Japanese version is made in Japan by NEC's Yonezawa Factory."
       ]
     }
   ]

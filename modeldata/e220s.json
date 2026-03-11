@@ -4,7 +4,7 @@
       "id": "thinkpad-edge-e220s",
       "model_name": "ThinkPad Edge E220s",
       "model_family": "E",
-      "model_generation": "*220",
+      "model_generation": "*xx20",
       "update_date": "February 2013",
       "processor_options": [
         "2357M",

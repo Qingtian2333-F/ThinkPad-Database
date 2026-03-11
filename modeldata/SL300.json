@@ -3,8 +3,8 @@
     {
       "id": "thinkpad-sl300",
       "model_name": "ThinkPad SL300",
-      "model_family": "SL",
-      "model_generation": "SL300",
+      "model_family": "L",
+      "model_generation": "x61",
       "update_date": "September 2009",
       "processor_options": [
         "T5670",

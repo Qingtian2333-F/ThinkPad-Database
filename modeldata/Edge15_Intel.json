@@ -3,8 +3,8 @@
     {
       "id": "thinkpad-edge-15-Intel",
       "model_name": "ThinkPad Edge 15 (Intel)",
-      "model_family": "Edge",
-      "model_generation": "**10",
+      "model_family": "E",
+      "model_generation": "xx10",
       "update_date": "June 2011",
       "processor_options": [
         "P4500",

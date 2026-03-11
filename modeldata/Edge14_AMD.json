@@ -3,8 +3,8 @@
     {
       "id": "thinkpad-edge-14-amd",
       "model_name": "ThinkPad Edge 14 (AMD)",
-      "model_family": "Edge",
-      "model_generation": "14\" AMD",
+      "model_family": "E",
+      "model_generation": "xx10",
       "update_date": "July 2010",
       "processor_options": [
         "Athlon_II_P320",

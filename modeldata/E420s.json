@@ -3,8 +3,8 @@
     {
       "id": "thinkpad-edge-e420s",
       "model_name": "ThinkPad Edge E420s",
-      "model_family": "Edge",
-      "model_generation": "E420s",
+      "model_family": "E",
+      "model_generation": "xx20",
       "update_date": "January 2011",
       "processor_options": [
         "2310M",

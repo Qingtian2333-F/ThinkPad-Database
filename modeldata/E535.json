@@ -3,8 +3,8 @@
     {
       "id": "thinkpad-edge-e535",
       "model_name": "ThinkPad Edge E535",
-      "model_family": "Edge",
-      "model_generation": "E535",
+      "model_family": "E",
+      "model_generation": "xx30",
       "update_date": "January 2014",
       "processor_options": [
         "A4-4300M",

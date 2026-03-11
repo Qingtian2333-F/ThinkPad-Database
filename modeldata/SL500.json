@@ -3,8 +3,8 @@
     {
       "id": "thinkpad-sl500",
       "model_name": "ThinkPad SL500",
-      "model_family": "SL",
-      "model_generation": "SL500",
+      "model_family": "L",
+      "model_generation": "xx00",
       "update_date": "December 2008",
       "processor_options": [
         "585",
