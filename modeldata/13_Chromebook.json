@@ -1,0 +1,85 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-13-1st-gen-chromebook",
+      "model_name": "ThinkPad 13 Chromebook (1st Gen)",
+      "model_family": "C",
+      "model_generation": "xx60",
+      "Base_Model": "ThinkPad 13",
+      "update_date": "January 2016",
+      "processor_options": [
+        "3855U",
+        "6100U",
+        "6300U"
+      ],
+      "graphics_options":["HD510","HD520"],      
+      "Display": {
+        "max_resolution": {
+          "usb_type_c": "3840x2160@60Hz (via USB-C to DisplayPort)"
+        },
+        "multi_display": "Supports multiple displays via USB-C"
+      },
+      "memory": {
+        "max_capacity": "8GB max",
+        "type": "LPDDR3-1600",
+        "slots": "None (soldered)",
+        "features": "Dual-channel capable, non-upgradable"
+      },
+      "display_options": [],
+      "storage": {
+        "ssd_sata": null,
+        "ssd_pcie": null,
+        "hdd": null,
+        "emmc": "16GB or 32GB eMMC 5.1"
+      },
+      "Ethernet": [],
+      "WLAN": ["7265AC"],
+      "Bluetooth": [
+        {
+          "type": "Integrated",
+          "form": "Integrated in Wi-Fi + Bluetooth combo adapter",
+          "feature": "Bluetooth 4.0 wireless"
+        }
+      ],
+      "WWAN": [],
+      "SIM_Card": [],
+      "Battery": [
+        {
+          "type": "Integrated",
+          "capacity": "42Wh",
+          "form": "3-cell",
+          "tech": "Li-Ion"
+        }
+      ],
+      "ports": [
+        "2 x USB 3.0",
+        "2 x USB Type-C (support charging and DisplayPort)",
+        "SD card reader",
+        "Headphone/microphone combo jack",
+        "Kensington Security Slot"
+      ],
+      "camera": [
+        "HD 720p camera"
+      ],
+      "audio": [
+        "HD Audio, stereo speakers, dual array microphone, combo audio/mic jack"
+      ],
+      "keyboard": [
+        "6-row, spill-resistant, multimedia Fn keys (Chrome OS layout), no backlight",
+        "multi-touch touchpad"
+      ],
+      "physical": {
+        "dimensions": "323mm x 225mm x 20mm",
+        "weight": "Starting at 1.418 kg (3.13 lbs)",
+        "case_material": "PC/ABS plastic"
+      },
+      "security": [
+        "TPM security chip",
+        "Kensington Security Slot"
+      ],
+      "system": [
+        "Google Chrome OS"
+      ]
+    }
+  ]
+}

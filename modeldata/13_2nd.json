@@ -1,0 +1,97 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-13-2nd-gen",
+      "model_name": "ThinkPad 13 (2nd Gen)",
+      "Nickname":"ThinkPad S2 Gen2",
+      "model_family": "L",
+      "model_family_nickname": "S",
+      "model_generation": "xx70",
+      "update_date": "April 2017",
+      "processor_options": [
+        "3865U",
+        "7100U",
+        "7200U",
+        "7300U",
+        "7500U"
+      ],
+      "graphics": {
+        "integrated": "Intel HD610 / 620",
+        "discrete": null,
+        "max_resolution": {
+          "hdmi": "1920x1080@60Hz",
+          "usb_type_c": "3840x2160@60Hz"
+        },
+        "multi_display": "Supports up to 3 independent displays"
+      },
+      "memory": {
+        "max_capacity": "32GB max",
+        "type": "DDR4-2133",
+        "slots": "Two DDR4 SO-DIMM sockets",
+        "features": "Dual-channel capable"
+      },
+      "display_options": [],
+      "storage": {
+        "ssd_sata": "M.2 SATA SSD, up to 512GB",
+        "ssd_pcie": "M.2 PCIe NVMe SSD, up to 1TB",
+        "hdd": null,
+        "sshd": null
+      },
+      "Ethernet": ["I219-V", "I219-LM"],
+      "WLAN": ["8265AC"],
+      "Bluetooth": [
+        {
+          "type": "Integrated",
+          "form": "Integrated in Wi-Fi + Bluetooth combo adapter",
+          "feature": "Bluetooth 4.1 wireless"
+        }
+      ],
+      "WWAN": [],
+      "SIM_Card": [],
+      "Battery": [
+        {
+          "type": "Integrated",
+          "capacity": "42Wh",
+          "form": "3-cell",
+          "tech": "Li-Polymer"
+        }
+      ],
+      "ports": [
+        "3 x USB 3.0",
+        "1 x USB Type-C",
+        "HDMI",
+        "Lenovo OneLink+ connector",
+        "4-in-1 reader (MMC, SD, SDHC, SDXC)",
+        "Headphone/microphone combo jack",
+        "Kensington Security Slot"
+      ],
+      "camera": [
+        "HD 720p camera"
+      ],
+      "audio": [
+        "HD Audio, Realtek ALC3268 codec, stereo speakers 2W x2, dual array microphone, combo audio/mic jack"
+      ],
+      "keyboard": [
+        "6-row, spill-resistant, multimedia Fn keys, optional LED backlight",
+        "TrackPoint pointing device, multi-touch touchpad"
+      ],
+      "physical": {
+        "dimensions": "322.4mm x 222.8mm x 19.1mm (silver) / 19.8mm (black)",
+        "weight": "Starting at 1.44 kg (3.17 lbs)",
+        "case_material": "Black: PC/ABS plastic; Silver: Aluminum"
+      },
+      "security": [
+        "Power-on password",
+        "Hard disk password",
+        "Supervisor password",
+        "Kensington Security Slot",
+        "dTPM 2.0",
+        "Optional fingerprint reader"
+      ],
+      "system": [
+        "Windows 10 Home 64",
+        "Windows 10 Pro 64"
+      ]
+    }
+  ]
+}

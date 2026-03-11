@@ -1,0 +1,98 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-13-windows",
+      "model_name": "ThinkPad 13 (1st Gen, Windows)",
+      "Nickname": "ThinkPad S2",
+      "model_family": "L",
+      "model_family_nickname": "S",
+      "Base_For": "ThinkPad 13 Chromebook",
+      "model_generation": "xx60",
+      "update_date": "January 2016",
+      "processor_options": [
+        "3855U",
+        "6100U",
+        "6200U",
+        "6300U",
+        "6500U"
+      ],
+      "graphics_options":["HD510","HD520"],      
+      "Display": {
+        "max_resolution": {
+          "hdmi": "1920x1080@60Hz",
+          "usb_type_c": "3840x2160@60Hz"
+        },
+        "multi_display": "Supports up to 3 independent displays"
+      },
+      "memory": {
+        "max_capacity": "16GB max",
+        "type": "DDR4-2133",
+        "slots": "Two DDR4 SO-DIMM sockets",
+        "features": "Dual-channel capable"
+      },
+      "display_options": [],
+      "storage": {
+        "ssd_sata": "SATA 6.0Gb/s SSD, up to 512GB",
+        "ssd_pcie": null,
+        "hdd": null,
+        "sshd": null
+      },
+      "Ethernet": ["I219-V"],
+      "WLAN": ["8260AC"],
+      "Bluetooth": [
+        {
+          "type": "Integrated",
+          "form": "Integrated in Wi-Fi + Bluetooth combo adapter",
+          "feature": "Bluetooth 4.1 wireless"
+        }
+      ],
+      "WWAN": [],
+      "SIM_Card": [],
+      "Battery": [
+        {
+          "type": "Integrated",
+          "capacity": "42Wh",
+          "form": "3-cell",
+          "tech": "Li-Polymer"
+        }
+      ],
+      "ports": [
+        "1 x USB 2.0",
+        "2 x USB 3.0",
+        "1 x USB Type-C",
+        "HDMI",
+        "Lenovo OneLink+ connector",
+        "4-in-1 reader (MMC, SD, SDHC, SDXC)",
+        "Headphone/microphone combo jack",
+        "Kensington Security Slot"
+      ],
+      "camera": [
+        "HD 720p resolution, fixed focus"
+      ],
+      "audio": [
+        "HD Audio, Realtek ALC3245 codec, stereo speakers 2W x2, dual array microphone, combo audio/mic jack"
+      ],
+      "keyboard": [
+        "6-row, spill-resistant, multimedia Fn keys",
+        "TrackPoint pointing device, buttonless Mylar surface multi-touch touchpad"
+      ],
+      "physical": {
+        "dimensions": "322.4mm x 222.8mm x 19.1mm (silver) / 19.8mm (black)",
+        "weight": "Starting at 1.44 kg (3.17 lbs)",
+        "case_material": "Black cover: PC/ABS plastic; Silver cover: Aluminum"
+      },
+      "security": [
+        "Power-on password",
+        "Hard disk password",
+        "Supervisor password",
+        "Security keyhole",
+        "dTPM 2.0",
+        "Optional fingerprint reader"
+      ],
+      "system": [
+        "Windows 10 Home 64",
+        "Windows 10 Professional 64"
+      ]
+    }
+  ]
+}
