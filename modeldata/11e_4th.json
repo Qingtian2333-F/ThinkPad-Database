@@ -1,0 +1,95 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-11e-4th-gen",
+      "model_name": "ThinkPad 11e (4th Gen)",
+      "model_family": "11e",
+      "model_generation": "4th Gen",
+      "update_date": "2017",
+      "processor_options": [
+        "N3450",
+        "7100U"
+      ],
+      "graphics_options":["HD500","HD620"],
+      "Display": {
+        "max_resolution": {
+          "hdmi": "4096x2160@30Hz"
+        },
+        "multi_display": "Supports dual independent displays"
+      },
+      "memory": {
+        "max_capacity": "8GB max",
+        "type": "DDR3L-1600 or LPDDR4 (Celeron models) / DDR4-2133 (Core i3 models)",
+        "slots": "One SO-DIMM socket (Celeron/Pentium) or soldered (Core i3)",
+        "features": "4GB or 8GB configurable"
+      },
+      "display_options": [],
+      "storage": {
+        "ssd_sata": "M.2 SATA 6.0Gb/s SSD",
+        "ssd_pcie": null,
+        "hdd": null,
+        "sshd": null,
+        "emmc": null
+      },
+      "Ethernet": [
+        "RTL8111GUS-CG"
+      ],
+      "WLAN": [
+        "3165AC",
+        "8265AC"
+      ],
+      "Bluetooth": [
+        {
+          "type": "Integrated",
+          "form": "Integrated in Wi-Fi + Bluetooth combo adapter",
+          "feature": "Bluetooth 4.1/4.2 wireless"
+        }
+      ],
+      "WWAN": [],
+      "SIM_Card": [],
+      "Battary": [
+        {
+          "type": "Integrated",
+          "capacity": "42Wh",
+          "form": "3-cell",
+          "tech": "Li-Polymer"
+        }
+      ],
+      "ports": [
+        "2 x USB 3.1 Gen 1",
+        "HDMI 1.4b",
+        "Ethernet (RJ-45)",
+        "4-in-1 reader (MMC, SD, SDHC, SDXC)",
+        "Headphone/microphone combo jack",
+        "Kensington Security Slot"
+      ],
+      "camera": [
+        "HD 720p resolution, low light sensitive, fixed focus"
+      ],
+      "audio": [
+        "HD Audio, Realtek ALC3268 codec, stereo speakers 2W x2, monaural digital microphone, combo audio/mic jack"
+      ],
+      "keyboard": [
+        "ThinkPad Windows keyboard, 6-row, multimedia Fn keys",
+        "Buttonless multi-touch touchpad"
+      ],
+      "physical": {
+        "dimensions": "300mm x 210mm x 22.3mm",
+        "weight": "Starting at 1.5 kg",
+        "case_material": "Polycarbonate + glass-fiber reinforced plastic"
+      },
+      "security": [
+        "Power-on password",
+        "Hard disk password",
+        "Supervisor password",
+        "Security keyhole",
+        "Discrete TPM 2.0",
+        "MIL-STD-810G tested"
+      ],
+      "system": [
+        "Windows 10 Home 64",
+        "Windows 10 Pro 64"
+      ]
+    }
+  ]
+}

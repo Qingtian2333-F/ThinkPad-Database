@@ -1,0 +1,96 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-11e-3rd-gen",
+      "model_name": "ThinkPad 11e (3rd Gen)",
+      "model_family": "11e",
+      "model_generation": "3rd Gen",
+      "update_date": "2016",
+      "processor_options": [
+        "N3150",
+        "N3160",
+        "6100U"
+      ],
+      "graphics_options": ["Intel HD Graphics","HD520"],
+      "Display": {
+        "max_resolution": {
+          "hdmi": "3840x2160@30Hz (estimated)"
+        },
+        "multi_display": "Supports dual independent displays"
+      },
+      "memory": {
+        "max_capacity": "8GB max",
+        "type": "DDR3L-1600",
+        "slots": "One DDR3L SO-DIMM socket",
+        "features": "Single-channel capable, non-parity, 4GB or 8GB configurable"
+      },
+      "display_options": [],
+      "storage": {
+        "ssd_sata": "M.2 SATA 6.0Gb/s SSD, up to 256GB (Opal 2.0 capable)",
+        "ssd_pcie": null,
+        "hdd": null,
+        "sshd": null,
+        "emmc": null
+      },
+      "Ethernet": [
+        "RTL8111GUS-CG"
+      ],
+      "WLAN": [
+        "7265AC"
+      ],
+      "Bluetooth": [
+        {
+          "type": "Integrated",
+          "form": "Integrated in Wi-Fi + Bluetooth combo adapter",
+          "feature": "Bluetooth 4.0 wireless"
+        }
+      ],
+      "WWAN": [],
+      "SIM_Card": [],
+      "Battery": [
+        {
+          "type": "Integrated",
+          "capacity": "42Wh",
+          "form": "3-cell",
+          "tech": "Li-Polymer"
+        }
+      ],
+      "ports": [
+        "2 x USB 3.0",
+        "HDMI",
+        "Ethernet (RJ-45)",
+        "4-in-1 reader (SD, MMC, SDHC, SDXC)",
+        "Headphone/microphone combo jack",
+        "Kensington Security Slot"
+      ],
+      "camera": [
+        "HD 720p resolution, fixed focus"
+      ],
+      "audio": [
+        "HD Audio, Realtek ALC3245 codec, stereo speakers 2W x2, microphone, combo audio/mic jack"
+      ],
+      "keyboard": [
+        "6-row, spill-resistant, multimedia Fn keys, non-backlight",
+        "Buttonless multi-touch touchpad, volume control buttons"
+      ],
+      "physical": {
+        "dimensions": "300mm x 210mm x 22.3mm",
+        "weight": "Starting at 1.5 kg",
+        "case_material": "Polycarbonate, glass-fiber reinforced plastic"
+      },
+      "security": [
+        "Power-on password",
+        "Hard disk password",
+        "Supervisor password",
+        "Kensington Security Slot",
+        "Trusted Platform Module (TPM 1.2)",
+        "MIL-STD-810G tested"
+      ],
+      "system": [
+        "Windows 7 Professional 64 (downgrade rights)",
+        "Windows 10 Pro 64",
+        "Windows 10 Home 64"
+      ]
+    }
+  ]
+}

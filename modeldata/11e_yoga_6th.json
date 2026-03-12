@@ -1,0 +1,99 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-11e-yoga-gen-6",
+      "model_name": "ThinkPad 11e Yoga Gen 6",
+      "model_family": "11e",
+      "model_generation": "Gen 6",
+      "update_date": "October 2022",
+      "processor_options": [
+        "m3-8100Y",
+        "i5-8200Y"
+      ],
+      "graphics_options": [
+        "UHD615"
+      ],
+      "Display": {
+        "max_resolution": {
+          "hdmi": "3840x2160@30Hz",
+          "usb_c": "3840x2160@60Hz"
+        },
+        "multi_display": "Supports up to 3 independent displays"
+      },
+      "memory": {
+        "max_capacity": "8GB max",
+        "type": "LPDDR3-1866",
+        "slots": "None (soldered)",
+        "features": "4GB or 8GB soldered to systemboard, not upgradable"
+      },
+      "display_options": [],
+      "storage": {
+        "ssd_sata": null,
+        "ssd_pcie": "M.2 2242 PCIe NVMe, PCIe 3.0 x2, up to 256GB",
+        "hdd": null,
+        "sshd": null,
+        "emmc": null
+      },
+      "Ethernet": [],
+      "WLAN": [
+        "Realtek RTL8852AE",
+        "Intel Dual Band Wireless-AC 8265",
+        "Intel Wireless-AC 9260",
+        "Intel Wi-Fi 6 AX200"
+      ],
+      "Bluetooth": [
+        {
+          "type": "Integrated",
+          "form": "Integrated in Wi-Fi + Bluetooth combo adapter",
+          "feature": "Bluetooth 4.2 / 5.1 wireless"
+        }
+      ],
+      "WWAN": [],
+      "SIM_Card": [],
+      "Battary": [
+        {
+          "type": "Integrated",
+          "capacity": "46Wh",
+          "form": "Li-Polymer",
+          "tech": "Li-Polymer"
+        }
+      ],
+      "ports": [
+        "2 x USB 3.2 Gen 1",
+        "1 x USB-C 3.2 Gen 1 (Power Delivery, DisplayPort 1.4)",
+        "HDMI 1.4",
+        "microSD card reader",
+        "Headphone/microphone combo jack (3.5mm)",
+        "Kensington Security Slot"
+      ],
+      "camera": [
+        "Front HD 720p, fixed focus",
+        "Rear 5.0-megapixel, autofocus (optional)"
+      ],
+      "audio": [
+        "HD Audio, Realtek ALC3287 codec, stereo speakers 2W x2, Dolby Advanced Audio, single microphone, combo audio/mic jack"
+      ],
+      "keyboard": [
+        "6-row, spill-resistant, multimedia Fn keys, non-backlight",
+        "Buttonless Mylar surface multi-touch touchpad"
+      ],
+      "physical": {
+        "dimensions": "293mm x 207mm x 19.9mm",
+        "weight": "Starting at 1.41 kg",
+        "case_material": "PC + ABS (top), PC + ABS (bottom)"
+      },
+      "security": [
+        "Power-on password",
+        "Supervisor password",
+        "Hard disk password",
+        "Discrete TPM 2.0",
+        "Kensington Security Slot"
+      ],
+      "system": [
+        "Windows 11 Pro 64",
+        "Windows 11 Home 64",
+        "Windows 10 Pro 64"
+      ]
+    }
+  ]
+}

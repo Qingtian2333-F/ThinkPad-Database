@@ -1,0 +1,102 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-11e-2nd-gen-amd",
+      "model_name": "ThinkPad 11e (2nd Gen, AMD)",
+      "model_family": "11e",
+      "model_generation": "2nd Gen",
+      "update_date": "2015",
+      "processor_options": [
+        "A4-6210",
+        "E2-6110"
+      ],
+      "graphics_options": [
+        "R3_Graphics",
+        "R2_Graphics"
+      ],
+      "Display": {
+        "max_resolution": {
+          "hdmi": "4096x2160@30Hz"
+        },
+        "multi_display": "Supports dual independent displays"
+      },
+      "memory": {
+        "max_capacity": "8GB max",
+        "type": "DDR3L-1600",
+        "slots": "One DDR3L SO-DIMM socket",
+        "features": "Single-channel capable, one socket available"
+      },
+      "display_options": [],
+      "storage": {
+        "ssd_sata": "2.5\" SATA 6.0Gb/s SSD",
+        "ssd_pcie": null,
+        "hdd": "2.5\" SATA 6.0Gb/s HDD, 7mm, Active Protection System",
+        "sshd": null
+      },
+      "Ethernet": [
+        "RTL8111GUS-CG"
+      ],
+      "WLAN": [
+        "11bgn",
+        "11ac",
+        "7265AC"
+      ],
+      "Bluetooth": [
+        {
+          "type": "Integrated",
+          "form": "Integrated in Wi-Fi + Bluetooth combo adapter",
+          "feature": "Bluetooth 4.0 wireless"
+        }
+      ],
+      "WWAN": [],
+      "SIM_Card": [],
+      "Battary": [
+        {
+          "type": "Integrated",
+          "capacity": "35Wh",
+          "form": "4-cell",
+          "tech": "Li-Polymer"
+        }
+      ],
+      "ports": [
+        "1 x USB 3.0",
+        "1 x USB 2.0 (Always On)",
+        "HDMI",
+        "Ethernet (RJ-45)",
+        "4-in-1 reader (MMC, SD, SDHC, SDXC)",
+        "Headphone/microphone combo jack",
+        "Power button",
+        "Volume control button"
+      ],
+      "camera": [
+        "HD 720p resolution, low light sensitive, fixed focus"
+      ],
+      "audio": [
+        "HD Audio, Realtek ALC283 codec, Dolby Advanced Audio v2, stereo speakers 2W x2, monaural digital microphone, combo audio/mic jack"
+      ],
+      "keyboard": [
+        "ThinkPad Windows keyboard, 6-row, multimedia Fn keys",
+        "Buttonless touchpad below keyboard, multi-touch"
+      ],
+      "physical": {
+        "dimensions": "300mm x 216mm x 22.3mm",
+        "weight": "Starting at 1.49 kg",
+        "case_material": "PC/ABS plastic"
+      },
+      "security": [
+        "Power-on password",
+        "Hard disk password",
+        "Supervisor password",
+        "Security keyhole",
+        "Trusted Platform Module (TPM 1.2)"
+      ],
+      "system": [
+        "Windows 7 Professional 64",
+        "Windows 8.1 64",
+        "Windows 8.1 Pro 64",
+        "Windows 10 Home 64",
+        "Windows 10 Pro 64"
+      ]
+    }
+  ]
+}

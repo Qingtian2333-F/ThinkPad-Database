@@ -1,0 +1,95 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-e14-ice-lake",
+      "model_name": "ThinkPad E14 ICL",
+      "model_family": "E",
+      "model_generation": "Gen1",
+      "update_date": "November 2020",
+      "processor_options": [
+        "1005G1",
+        "1035G1",
+        "1065G7"
+      ],
+      "graphics_options":["UHD_IceLake","Iris_IceLake","RX640"],  
+      "Display": {
+        "max_resolution": {
+          "hdmi": "4096x2304@24Hz",
+          "usb_type_c": "4096x2304@60Hz (DisplayPort alternate mode)"
+        },
+        "multi_display": "Supports up to 3 independent displays"
+      },
+      "memory": {
+        "max_capacity": "32GB max",
+        "type": "DDR4-2666",
+        "slots": "One DDR4 SO-DIMM socket",
+        "features": "Single-channel capable"
+      },
+      "display_options": [],
+      "storage": {
+        "ssd_sata": "2.5\" SATA HDD (5400rpm)",
+        "ssd_pcie": "M.2 2280 PCIe NVMe SSD",
+        "hdd": "2.5\" SATA HDD (5400rpm)",
+        "sshd": null
+      },
+      "Ethernet": [
+        "100/1000M Gigabit Ethernet"
+      ],
+      "WLAN": [
+        "8822CE"
+      ],
+      "Bluetooth": [
+        {
+          "type": "Integrated",
+          "form": "Integrated in Wi-Fi + Bluetooth combo adapter",
+          "feature": "Bluetooth 5.0 / 5.1 wireless"
+        }
+      ],
+      "WWAN": [],
+      "SIM_Card": [],
+      "Battary": [
+        {
+          "type": "Integrated",
+          "capacity": "45Wh",
+          "form": "3-cell",
+          "tech": "Li-Polymer"
+        }
+      ],
+      "ports": [
+        "2 x USB 3.2 Gen 1",
+        "1 x USB 2.0",
+        "1 x USB-C 3.2 Gen 1 (Power Delivery, DisplayPort)",
+        "HDMI 1.4b",
+        "Ethernet (RJ-45)",
+        "Headphone/microphone combo jack",
+        "Kensington Security Slot"
+      ],
+      "camera": [
+        "HD 720p with ThinkShutter privacy cover"
+      ],
+      "audio": [
+        "HD Audio, Realtek ALC codec, Dolby Audio, stereo speakers 2W x2, dual array microphone, combo audio/mic jack"
+      ],
+      "keyboard": [
+        "6-row, spill-resistant, multimedia Fn keys",
+        "TrackPoint pointing device, mylar surface multi-touch touchpad"
+      ],
+      "physical": {
+        "dimensions": "325mm x 232mm x 20.9mm",
+        "weight": "Starting at 1.77 kg",
+        "case_material": "Aluminum or PC/ABS plastic (top), ABS plastic (bottom)"
+      },
+      "security": [
+        "Power-on password",
+        "Hard disk password",
+        "Supervisor password",
+        "Kensington Security Slot",
+        "Firmware TPM 2.0"
+      ],
+      "system": [
+        "Windows 10 Home 64",
+        "Windows 10 Pro 64"
+      ]
+    }
+  ]
+}

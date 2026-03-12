@@ -1,0 +1,104 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-c14-gen-1-chromebook",
+      "model_name": "ThinkPad C14 Gen 1 Chromebook",
+      "model_family": "C",
+      "model_generation": "Gen 3",
+      "update_date": "2022",
+      "processor_options": [
+        "1215U",
+        "1235U",
+        "1245U",
+        "1265U"
+      ],
+      "graphics_options": [
+        "UHD_AlderLake",
+        "Iris_Xe_AlderLake"
+      ],
+      "Display": {
+        "max_resolution": {
+          "hdmi": "3840x2160@60Hz",
+          "thunderbolt": "5120x3200@60Hz"
+        },
+        "multi_display": "Supports up to 4 independent displays"
+      },
+      "memory": {
+        "max_capacity": "16GB max",
+        "type": "LPDDR4x-4266",
+        "slots": "None (soldered)",
+        "features": "4GB/8GB/16GB soldered, dual-channel on 8/16GB models"
+      },
+      "display_options": [],
+      "storage": {
+        "ssd_sata": null,
+        "ssd_pcie": "M.2 2242 PCIe NVMe, PCIe 4.0 x4, up to 256GB (Opal 2.0)",
+        "hdd": null,
+        "sshd": null,
+        "emmc": "64GB or 128GB eMMC 5.1"
+      },
+      "Ethernet": [],
+      "WLAN": [
+        "AX211"
+      ],
+      "Bluetooth": [
+        {
+          "type": "Integrated",
+          "form": "Integrated in Wi-Fi + Bluetooth combo adapter",
+          "feature": "Bluetooth 5.1 wireless"
+        }
+      ],
+      "WWAN": [
+        "L850-GL"
+      ],
+      "SIM_Card": [
+        {
+          "type": "Nano-SIM card slot (optional)"
+        }
+      ],
+      "Battary": [
+        {
+          "type": "Integrated",
+          "capacity": "57Wh",
+          "form": "Li-Polymer",
+          "tech": "Li-Polymer"
+        }
+      ],
+      "ports": [
+        "2 x USB 3.2 Gen 2 ",
+        "2 x Thunderbolt 4 (For vPro models) / USB4 (For Non vPro models) (Power Delivery, DisplayPort)",
+        "HDMI 2.1",
+        "microSD card reader",
+        "Headphone/microphone combo jack (3.5mm)",
+        "Kensington Nano Security Slot",
+        "Nano-SIM card slot (optional)"
+      ],
+      "camera": [
+        "FHD 1080p with privacy shutter, fixed focus"
+      ],
+      "audio": [
+        "HD Audio, Realtek ALC5682I codec, stereo speakers 2W x2, optimized with Waves MaxxAudio, dual-mic array, combo audio/mic jack"
+      ],
+      "keyboard": [
+        "Chrome keyboard, 6-row, spill-resistant, LED backlight",
+        "TrackPoint pointing device and Mylar surface multi-touch touchpad (56 x 115mm)"
+      ],
+      "physical": {
+        "dimensions": "325.4mm x 217mm x 19.83mm",
+        "weight": "Starting at 1.56 kg",
+        "case_material": "PC-ABS (top), PC-ABS (bottom)"
+      },
+      "security": [
+        "Google Security Chip H1",
+        "Kensington Nano Security Slot",
+        "Camera privacy shutter",
+        "Optional touch style fingerprint reader integrated in power button"
+      ],
+      "system": [
+        "ChromeOS",
+        "ChromeOS with Chrome Education Upgrade",
+        "ChromeOS with Chrome Enterprise Upgrade"
+      ]
+    }
+  ]
+}

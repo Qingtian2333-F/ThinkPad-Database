@@ -24,7 +24,7 @@
         "features": "Single-channel capable, non-parity"
       },
       "display_options": ["LEN40E2","LEN40E4"],
-      "touch":["Supports 10-finger gesture"],
+      "touch":["Supports 10-finger gesture, Touching Windows button"],
       "pen":["ThinkPad Pen Pro, active pen for multi-touch display"],
       "storage": {
         "ssd_sata": "M.2 6.0Gb/s ",

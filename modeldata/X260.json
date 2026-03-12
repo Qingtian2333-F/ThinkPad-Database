@@ -109,7 +109,7 @@
       "user_guide_link":["https://download.lenovo.com/pccbbs/mobiles_pdf/x260_ug_zh-chs.pdf"],
       "HMM_link":["https://download.lenovo.com/pccbbs/mobiles_pdf/x260_hmm_en_sp40j47622_02.pdf"],
       "dock_support":["40A0","40A1","40A2"],
-      "add_on_tips":["本机的WWAN无法安装M.2 2242 SSD,硬盘位为SATA Express接口，安装M.2 SSD需要转接盒。","仍然存在由于外壳变形导致内存接触不良的单手蓝问题。"]
+      "add_on_tips":["本机的WWAN无法安装M.2 2242 SSD,硬盘位为SATA Express接口，在该位置安装硬盘需要转接盒。","仍然存在由于外壳变形导致内存接触不良的单手蓝问题。"]
     }
   ]
 }

@@ -1,0 +1,90 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-yoga-11e-3rd-gen-chromebook",
+      "model_name": "ThinkPad Yoga 11e (3rd Gen) Chromebook",
+      "model_family": "Yoga",
+      "model_generation": "3rd Gen",
+      "update_date": "2016",
+      "processor_options": [
+        "N3160"
+      ],
+      "graphics_options":["HD400"],
+      "Display": {
+        "max_resolution": {
+          "hdmi": "1920x1080@60Hz"
+        },
+        "multi_display": "Supports dual independent displays"
+      },
+      "memory": {
+        "max_capacity": "4GB max",
+        "type": "LPDDR3-1600",
+        "slots": "None (soldered)",
+        "features": "Soldered to systemboard, not upgradable"
+      },
+      "display_options": [],
+      "storage": {
+        "ssd_sata": null,
+        "ssd_pcie": null,
+        "hdd": null,
+        "sshd": null,
+        "emmc": "16GB eMMC"
+      },
+      "Ethernet": [],
+      "WLAN": [
+        "7265AC"
+      ],
+      "Bluetooth": [
+        {
+          "type": "Integrated",
+          "form": "Integrated in Wi-Fi + Bluetooth combo adapter",
+          "feature": "Bluetooth 4.0 wireless"
+        }
+      ],
+      "WWAN": [],
+      "SIM_Card": [],
+      "Battery": [
+        {
+          "type": "Integrated",
+          "capacity": "42Wh",
+          "form": "3-cell",
+          "tech": "Li-Polymer"
+        }
+      ],
+      "ports": [
+        "1 x USB 3.0",
+        "1 x USB 3.0 (Always On)",
+        "HDMI",
+        "4-in-1 reader (SD, MMC, SDHC, SDXC)",
+        "Headphone/microphone combo jack",
+        "Kensington Security Slot"
+      ],
+      "camera": [
+        "HD 720p resolution, fixed focus"
+      ],
+      "audio": [
+        "HD Audio, Realtek ALC5650 codec, stereo speakers 2W x2, microphone, combo audio/mic jack"
+      ],
+      "keyboard": [
+        "6-row, spill-resistant, multimedia Fn keys, non-backlight",
+        "TrackPoint pointing device, UltraNav, buttonless touchpad, volume control buttons"
+      ],
+      "physical": {
+        "dimensions": "300mm x 210mm x 22.3mm",
+        "weight": "Starting at 1.5 kg",
+        "case_material": "Polycarbonate, glass-fiber reinforced plastic"
+      },
+      "security": [
+        "Power-on password",
+        "Hard disk password",
+        "Supervisor password",
+        "Kensington Security Slot",
+        "Trusted Platform Module (TPM 1.2)",
+        "MIL-STD-810G tested"
+      ],
+      "system": [
+        "Google Chrome OS"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-11e-chromebook-4th-gen",
+      "model_name": "ThinkPad 11e Chromebook (4th Gen)",
+      "model_family": "11e",
+      "model_generation": "4th Gen",
+      "update_date": "July 2017",
+      "processor_options": [
+        "N3450"
+      ],
+      "graphics_options": [
+        "HD500"
+      ],
+      "Display": {
+        "max_resolution": {
+          "usb_c": "3840x2160@60Hz"
+        },
+        "multi_display": "Supports up to 2 independent displays (native + 1 external via USB-C or HDMI?)"
+      },
+      "memory": {
+        "max_capacity": "4GB max",
+        "type": "LPDDR4-2400",
+        "slots": "None (soldered)",
+        "features": "4GB soldered to systemboard, not upgradable"
+      },
+      "display_options": [],
+      "storage": {
+        "ssd_sata": null,
+        "ssd_pcie": null,
+        "hdd": null,
+        "sshd": null,
+        "emmc": "32GB eMMC"
+      },
+      "Ethernet": [],
+      "WLAN": [
+        "7265AC"
+      ],
+      "Bluetooth": [
+        {
+          "type": "Integrated",
+          "form": "Integrated in Wi-Fi + Bluetooth combo adapter",
+          "feature": "Bluetooth 4.1 wireless"
+        }
+      ],
+      "WWAN": [],
+      "SIM_Card": [],
+      "Battary": [
+        {
+          "type": "Integrated",
+          "capacity": "42Wh",
+          "form": "3-cell",
+          "tech": "Li-Polymer"
+        }
+      ],
+      "ports": [
+        "1 x USB 3.1 Gen 1",
+        "2 x USB Type-C",
+        "microSD card reader",
+        "Headphone/microphone combo jack"
+      ],
+      "camera": [
+        "HD 720p resolution, low light sensitive, fixed focus"
+      ],
+      "audio": [
+        "Dialog Semiconductor DA7219 audio codec, stereo speakers 2W x2, monaural digital microphone, combo audio/mic jack"
+      ],
+      "keyboard": [
+        "ThinkPad Chrome keyboard, 6-row",
+        "Buttonless touchpad below keyboard, multi-touch"
+      ],
+      "physical": {
+        "dimensions": "300mm x 210mm x 22.8mm",
+        "weight": "Starting at 1.45 kg",
+        "case_material": "Display cover: PC+40%GF+TPU; Bottom: PC/ABS plastic"
+      },
+      "security": [
+        "Power-on password",
+        "Hard disk password",
+        "Supervisor password",
+        "Security keyhole",
+        "Discrete TPM 2.0"
+      ],
+      "system": [
+        "Google Chrome OS"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-11e-chromebook-1st-gen",
+      "model_name": "ThinkPad 11e Chromebook (1st Gen)",
+      "model_family": "11e",
+      "model_generation": "1st Gen",
+      "update_date": "2014",
+      "processor_options": [
+        "N2920",
+        "N2930",
+        "N2940"
+      ],
+      "graphics_options": [
+        "HD_Graphics"
+      ],
+      "Display": {
+        "max_resolution": {
+          "hdmi": "1920x1080@60Hz"
+        },
+        "multi_display": "Supports dual independent displays"
+      },
+      "memory": {
+        "max_capacity": "4GB max",
+        "type": "DDR3L-1600",
+        "slots": "None (soldered)",
+        "features": "2GB or 4GB soldered to systemboard, not upgradable"
+      },
+      "display_options": [],
+      "storage": {
+        "ssd_sata": null,
+        "ssd_pcie": null,
+        "hdd": null,
+        "sshd": null,
+        "emmc": "16GB eMMC"
+      },
+      "Ethernet": [],
+      "WLAN": [
+        "11abgn",
+        "7260AC"
+      ],
+      "Bluetooth": [
+        {
+          "type": "Integrated",
+          "form": "Integrated in Wi-Fi + Bluetooth combo adapter",
+          "feature": "Bluetooth 4.0 wireless"
+        }
+      ],
+      "WWAN": [],
+      "SIM_Card": [],
+      "Battary": [
+        {
+          "type": "Integrated",
+          "capacity": "35Wh",
+          "form": "4-cell",
+          "tech": "Li-Ion"
+        }
+      ],
+      "ports": [
+        "1 x USB 3.0",
+        "1 x USB 2.0",
+        "HDMI",
+        "4-in-1 reader (MMC, SD, SDHC, SDXC)",
+        "Headphone/microphone combo jack",
+        "Power button",
+        "Volume control button"
+      ],
+      "camera": [
+        "HD 720p resolution, low light sensitive"
+      ],
+      "audio": [
+        "HD Audio, Maxim MAX98090AETL+T codec, stereo speakers 2W x2, monaural digital microphone, combo audio/mic jack"
+      ],
+      "keyboard": [
+        "ThinkPad Chrome keyboard, 6-row",
+        "Buttonless touchpad below keyboard, multi-touch"
+      ],
+      "physical": {
+        "dimensions": "300mm x 216mm x 22.3mm",
+        "weight": "Starting at 1.4 kg",
+        "case_material": "Display cover: PolyCarbonate/Glass-Fiber Reinforced Plastic; Bottom: PC/ABS plastic"
+      },
+      "security": [
+        "Power-on password",
+        "Hard disk password",
+        "Supervisor password",
+        "Security keyhole",
+        "Trusted Platform Module (TPM 1.2)"
+      ],
+      "system": [
+        "Google Chrome OS"
+      ]
+    }
+  ]
+}

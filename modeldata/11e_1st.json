@@ -1,0 +1,99 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-11e-1st-gen-windows",
+      "model_name": "ThinkPad 11e (1st Gen)",
+      "model_family": "11e",
+      "model_generation": "1st Gen",
+      "update_date": "2014",
+      "processor_options": [
+        "N2920",
+        "N2930",
+        "N2940"
+      ],
+      "graphics_options":["HD Graphics"],
+      "Display": {
+        "max_resolution": {
+          "hdmi": "1920x1080@60Hz"
+        },
+        "multi_display": "Supports dual independent displays"
+      },
+      "memory": {
+        "max_capacity": "8GB max",
+        "type": "DDR3L-1600",
+        "slots": "One SO-DIMM socket",
+        "features": "2GB or 4GB standard, one socket available"
+      },
+      "display_options": [],
+      "storage": {
+        "ssd_sata": "M.2 SATA 6.0Gb/s SSD, up to 256GB",
+        "ssd_pcie": null,
+        "hdd": null,
+        "sshd": null,
+        "emmc": null
+      },
+      "Ethernet": [
+        "RTL8111GUS-CG"
+      ],
+      "WLAN": [
+        "11bgn",
+        "7260N"
+      ],
+      "Bluetooth": [
+        {
+          "type": "Integrated",
+          "form": "Integrated in Wi-Fi + Bluetooth combo adapter",
+          "feature": "Bluetooth 4.0 wireless"
+        }
+      ],
+      "WWAN": [],
+      "SIM_Card": [],
+      "Battary": [
+        {
+          "type": "Integrated",
+          "capacity": "35Wh",
+          "form": "4-cell",
+          "tech": "Li-Ion"
+        }
+      ],
+      "ports": [
+        "1 x USB 3.0",
+        "1 x USB 2.0 (Always On)",
+        "HDMI",
+        "Ethernet (RJ-45)",
+        "4-in-1 reader (MMC, SD, SDHC, SDXC)",
+        "Headphone/microphone combo jack",
+        "Kensington Security Slot"
+      ],
+      "camera": [
+        "HD 720p resolution, low light sensitive, fixed focus"
+      ],
+      "audio": [
+        "HD Audio, Realtek codec, stereo speakers 2W x2, monaural digital microphone, combo audio/mic jack"
+      ],
+      "keyboard": [
+        "ThinkPad Windows keyboard, 6-row, multimedia Fn keys",
+        "Buttonless multi-touch touchpad"
+      ],
+      "physical": {
+        "dimensions": "300mm x 216mm x 22.3mm",
+        "weight": "Starting at 1.5 kg",
+        "case_material": "Polycarbonate/Glass-Fiber Reinforced Plastic (top), PC/ABS (bottom)"
+      },
+      "security": [
+        "Power-on password",
+        "Hard disk password",
+        "Supervisor password",
+        "Security keyhole",
+        "Trusted Platform Module (TPM 1.2) (optional)",
+        "vPro optional"
+      ],
+      "system": [
+        "Windows 7 Professional 64",
+        "Windows 8.1 64",
+        "Windows 8.1 Pro 64",
+        "Windows 10 Pro 64"
+      ]
+    }
+  ]
+}

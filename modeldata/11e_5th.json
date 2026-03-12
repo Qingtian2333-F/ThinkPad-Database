@@ -1,0 +1,100 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-11e-5th-gen",
+      "model_name": "ThinkPad 11e (5th Gen)",
+      "model_family": "11e",
+      "model_generation": "5th Gen",
+      "update_date": "2020",
+      "processor_options": [
+        "N4120",
+        "N5030"
+      ],
+      "graphics_options": [
+        "UHD600",
+        "UHD605"
+      ],
+      "Display": {
+        "max_resolution": {
+          "hdmi": "4096x2160@30Hz",
+          "usb_c": "3840x2160@60Hz"
+        },
+        "multi_display": "Supports up to 2 independent displays"
+      },
+      "memory": {
+        "max_capacity": "8GB max",
+        "type": "DDR4-2400",
+        "slots": "None (soldered)",
+        "features": "4GB or 8GB soldered to systemboard, not upgradable"
+      },
+      "display_options": [],
+      "storage": {
+        "ssd_sata": null,
+        "ssd_pcie": "M.2 2242 PCIe NVMe, PCIe 3.0 x2, up to 256GB",
+        "hdd": null,
+        "sshd": null,
+        "emmc": "64GB or 128GB eMMC"
+      },
+      "Ethernet": [
+        "RTL8111GUS"
+      ],
+      "WLAN": [
+        "9260AC",
+        "RTL8852AE"
+      ],
+      "Bluetooth": [
+        {
+          "type": "Integrated",
+          "form": "Integrated in Wi-Fi + Bluetooth combo adapter",
+          "feature": "Bluetooth 5.1 wireless"
+        }
+      ],
+      "WWAN": [],
+      "SIM_Card": [],
+      "Battary": [
+        {
+          "type": "Integrated",
+          "capacity": "42Wh",
+          "form": "Li-Polymer",
+          "tech": "Li-Polymer"
+        }
+      ],
+      "ports": [
+        "2 x USB 3.1 Gen 1",
+        "1 x USB-C 3.1 Gen 1 (Power Delivery, DisplayPort)",
+        "HDMI 1.4b",
+        "Ethernet (RJ-45)",
+        "microSD card reader",
+        "Headphone/microphone combo jack (3.5mm)",
+        "Kensington Security Slot"
+      ],
+      "camera": [
+        "HD 720p, fixed focus"
+      ],
+      "audio": [
+        "HD Audio, Realtek ALC3287 codec, stereo speakers 2W x2, Dolby Audio, single microphone, combo audio/mic jack"
+      ],
+      "keyboard": [
+        "6-row, spill-resistant, multimedia Fn keys, non-backlight",
+        "Buttonless Mylar surface multi-touch touchpad"
+      ],
+      "physical": {
+        "dimensions": "300mm x 210mm x 21.9mm",
+        "weight": "Starting at 1.36 kg",
+        "case_material": "PC-ABS + CF (top), PC-ABS (bottom)"
+      },
+      "security": [
+        "Power-on password",
+        "Supervisor password",
+        "Hard disk password",
+        "Discrete TPM 2.0",
+        "Kensington Security Slot"
+      ],
+      "system": [
+        "Windows 10 Pro 64",
+        "Windows 10 Home 64",
+        "Ubuntu Linux"
+      ]
+    }
+  ]
+}
