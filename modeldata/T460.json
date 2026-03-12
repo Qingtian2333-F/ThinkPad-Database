@@ -109,7 +109,7 @@
       "user_guide_link":["https://download.lenovo.com/pccbbs/mobiles_pdf/t460_ug_zh-cn.pdf"],
       "HMM_link":["https://download.lenovo.com/pccbbs/mobiles_pdf/t460_hmm_en_sp40k04896_03.pdf"],
       "dock_support":["40A0","40A1","40A2","40A6"],
-      "add_on_tips":["本机的WWAN和Wigig不共存","本机的WWAN无法安装M.2 2242 SSD,硬盘位为SATA Express接口，安装M.2 SSD需要转接盒。"]
+      "add_on_tips":["本机的WWAN和Wigig不共存","本机的WWAN无法安装M.2 2242 SSD,硬盘位为SATA接口。"]
     }
   ]
 }
