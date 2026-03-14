@@ -4,5 +4,6 @@
           "base_freq": "2.6 GHz",
           "turbo_freq": "3.5 GHz",
           "cache": "4MB",
-          "graphics": "AMD Radeon RX Vega 3"
+          "graphics": "AMD Radeon RX Vega 3",
+          "iconfamily": "ryzen3_1-3+"
         }

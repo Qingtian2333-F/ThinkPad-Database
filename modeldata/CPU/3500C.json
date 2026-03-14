@@ -4,5 +4,6 @@
           "base_freq": "2.1 GHz",
           "turbo_freq": "3.7 GHz",
           "cache": "4MB",
-          "graphics": "AMD Radeon RX Vega 8"
+          "graphics": "AMD Radeon RX Vega 8",
+          "iconfamily": "ryzen5_1-3+"
         }
