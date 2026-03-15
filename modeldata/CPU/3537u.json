@@ -1,0 +1,10 @@
+{
+  "model": "i7-3537U",
+  "cores_threads": "2 / 4",
+  "base_freq": "2.0 GHz",
+  "turbo_freq": "3.1 GHz",
+  "cache": "4MB",
+  "graphics": "Intel HD Graphics 4000",
+  "iconfamily": "i7-2~3",
+  "ark": "https://www.intel.cn/content/www/cn/zh/products/sku/72056/intel-core-i7-3537u-processor-4m-cache-up-to-3-1-ghz/specifications.html"
+}

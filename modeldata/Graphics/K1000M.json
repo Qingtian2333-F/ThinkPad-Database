@@ -1,0 +1,9 @@
+        {
+          "model": "NVIDIA Quadro K1000M",
+          "Shading Units": "192",
+          "base_freq": "850 Mhz",
+          "turbo_freq": "-",
+          "VRAM":"2GB DDR3 128bits",
+          "Generation": "Kepler",
+          "Feature":"DX 12.0 (11_0), OpenGL 4.6, OpenCL 3.0, Vulkan 1.2, CUDA 3.0"
+        }

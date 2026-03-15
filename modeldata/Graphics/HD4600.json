@@ -1,0 +1,10 @@
+        {
+          "model": "Intel HD 4600",
+          "Shading Units": "160",
+          "base_freq": "400 Mhz",
+          "turbo_freq": "900~1350 MHz",
+          "VRAM":"-",
+          "Generation": "Gen 7.5",
+          "Feature":"DX 11.1 (11_1), OpenGL 4.2, OpenCL 1.2, Vulkan 1.0",
+          "iconfamily":"Intel_HD_Graphics"
+        }

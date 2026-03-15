@@ -1,0 +1,10 @@
+{
+  "model": "i7-3630QM",
+  "cores_threads": "4 / 8",
+  "base_freq": "2.4 GHz",
+  "turbo_freq": "3.4 GHz",
+  "cache": "6MB",
+  "graphics": "Intel HD Graphics 4000",
+  "iconfamily": "i7-2~3",
+  "ark": "https://www.intel.cn/content/www/cn/zh/products/sku/71459/intel-core-i7-3630qm-processor-6m-cache-up-to-3-40-ghp/specifications.html"
+}

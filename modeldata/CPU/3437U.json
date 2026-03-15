@@ -1,0 +1,10 @@
+{
+  "model": "i7-3437U",
+  "cores_threads": "2 / 4",
+  "base_freq": "1.9 GHz",
+  "turbo_freq": "2.9 GHz",
+  "cache": "4MB",
+  "graphics": "Intel HD Graphics 4000",
+  "iconfamily": "i7-2~3",
+  "ark": "https://www.intel.cn/content/www/cn/zh/products/sku/72054/intel-core-i7-3437u-processor-4m-cache-up-to-2-90-ghz/specifications.html"
+}

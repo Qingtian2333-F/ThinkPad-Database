@@ -1,0 +1,9 @@
+        {
+          "model": "NVIDIA Quadro K2100M",
+          "Shading Units": "576",
+          "base_freq": "667 Mhz",
+          "turbo_freq": "-",
+          "VRAM":"2GB GDDR5 128bits",
+          "Generation": "Kepler",
+          "Feature":"DX 12.0 (11_0), OpenGL 4.6, OpenCL 3.0, Vulkan 1.2, CUDA 3.0"
+        }

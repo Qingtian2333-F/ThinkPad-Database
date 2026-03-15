@@ -6,8 +6,8 @@
       "model_family": "X1",
       "model_generation": "xx80",
       "update_date": "January 2018",
-      "processor_options": ["i5-7300U", "i5-8250U", "i5-8350U", "i7-8550U", "i7-8650U"],
-      "graphics_options": ["UHD630"],
+      "processor_options": ["7300U", "8250U", "8350U", "8550U", "8650U"],
+      "graphics_options": ["HD620", "UHD620"],
       "Display": {
         "max_resolution": {
           "hdmi": "4096x2304@24Hz",

@@ -1,0 +1,10 @@
+{
+  "model": "i7-4810MQ",
+  "cores_threads": "4 / 8",
+  "base_freq": "2.8 GHz",
+  "turbo_freq": "3.8 GHz",
+  "cache": "6MB",
+  "graphics": "Intel HD Graphics 4600",
+  "iconfamily": "i7-4~5",
+  "ark": "https://www.intel.cn/content/www/cn/zh/products/sku/78930/intel-core-i7-4810mq-processor-6m-cache-up-to-3-80-ghz/specifications.html"
+}

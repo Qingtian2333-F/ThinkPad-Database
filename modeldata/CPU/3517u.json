@@ -1,0 +1,10 @@
+{
+  "model": "i7-3517U",
+  "cores_threads": "2 / 4",
+  "base_freq": "1.9 GHz",
+  "turbo_freq": "3.0 GHz",
+  "cache": "4MB",
+  "graphics": "Intel HD Graphics 4000",
+  "iconfamily": "i7-2~3",
+  "ark": "https://www.intel.cn/content/www/cn/zh/products/sku/65714/intel-core-i7-3517u-processor-4m-cache-up-to-3-0-ghz/specifications.html"
+}

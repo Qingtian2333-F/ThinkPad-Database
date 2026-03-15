@@ -1,0 +1,10 @@
+{
+  "model": "i7-4700MQ",
+  "cores_threads": "4 / 8",
+  "base_freq": "2.4 GHz",
+  "turbo_freq": "3.4 GHz",
+  "cache": "6MB",
+  "graphics": "Intel HD Graphics 4600",
+  "iconfamily": "i7-4~5",
+  "ark": "https://www.intel.cn/content/www/cn/zh/products/sku/75116/intel-core-i7-4700mq-processor-6m-cache-up-to-3-40-ghz/specifications.html"
+}

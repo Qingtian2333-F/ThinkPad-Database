@@ -1,0 +1,10 @@
+{
+  "model": "i7-3687U",
+  "cores_threads": "2 / 4",
+  "base_freq": "2.1 GHz",
+  "turbo_freq": "3.3 GHz",
+  "cache": "4MB",
+  "graphics": "Intel HD Graphics 4000",
+  "iconfamily": "i7-2~3",
+  "ark": "https://www.intel.cn/content/www/cn/zh/products/sku/75905/intel-core-i7-3687u-processor-4m-cache-up-to-3-3-ghz/specifications.html"
+}

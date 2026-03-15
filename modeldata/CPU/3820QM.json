@@ -1,0 +1,10 @@
+{
+  "model": "i7-3820QM",
+  "cores_threads": "4 / 8",
+  "base_freq": "2.7 GHz",
+  "turbo_freq": "3.7 GHz",
+  "cache": "8MB",
+  "graphics": "Intel HD Graphics 4000",
+  "iconfamily": "i7-2~3",
+  "ark": "https://www.intel.cn/content/www/cn/zh/products/sku/64889/intel-core-i7-3820qm-processor-8m-cache-up-to-3-70-ghz/specifications.html"
+}

@@ -1,0 +1,10 @@
+        {
+          "model": "Intel HD 4000",
+          "Shading Units": "128",
+          "base_freq": "350~650 Mhz",
+          "turbo_freq": "850~1300 MHz",
+          "VRAM":"-",
+          "Generation": "Gen 7.0",
+          "Feature":"DX 11.1 (11_0), OpenGL 4.2, OpenCL 1.2, Vulkan 1.0",
+          "iconfamily":"Intel_HD_Graphics"
+        }

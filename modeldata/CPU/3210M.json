@@ -1,0 +1,10 @@
+{
+  "model": "i5-3210M",
+  "cores_threads": "2 / 4",
+  "base_freq": "2.5 GHz",
+  "turbo_freq": "3.1 GHz",
+  "cache": "3MB",
+  "graphics": "Intel HD Graphics 4000",
+  "iconfamily": "i5-2~3",
+  "ark": "https://www.intel.cn/content/www/cn/zh/products/sku/67357/intel-core-i5-3210m-processor-3m-cache-up-to-3-10-ghz/specifications.html"
+}

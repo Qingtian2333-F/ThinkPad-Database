@@ -1,0 +1,10 @@
+{
+  "model": "i5-3230M",
+  "cores_threads": "2 / 4",
+  "base_freq": "2.6 GHz",
+  "turbo_freq": "3.2 GHz",
+  "cache": "3MB",
+  "graphics": "Intel HD Graphics 4000",
+  "iconfamily": "i5-2~3",
+  "ark": "https://www.intel.cn/content/www/cn/zh/products/sku/72164/intel-core-i5-3230m-processor-3m-cache-up-to-3-20-ghz/specifications.html"
+}

@@ -1,0 +1,10 @@
+{
+  "model": "i7-3720QM",
+  "cores_threads": "4 / 8",
+  "base_freq": "2.6 GHz",
+  "turbo_freq": "3.6 GHz",
+  "cache": "6MB",
+  "graphics": "Intel HD Graphics 4000",
+  "iconfamily": "i7-2~3",
+  "ark": "https://www.intel.cn/content/www/cn/zh/products/sku/64891/intel-core-i7-3720qm-processor-6m-cache-up-to-3-60-ghz/specifications.html"
+}

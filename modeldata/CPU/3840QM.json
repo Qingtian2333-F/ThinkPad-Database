@@ -1,0 +1,10 @@
+{
+  "model": "i7-3840QM",
+  "cores_threads": "4 / 8",
+  "base_freq": "2.8 GHz",
+  "turbo_freq": "3.8 GHz",
+  "cache": "8MB",
+  "graphics": "Intel HD Graphics 4000",
+  "iconfamily": "i7-2~3",
+  "ark": "https://www.intel.cn/content/www/cn/zh/products/sku/70846/intel-core-i7-3840qm-processor-8m-cache-up-to-3-80-ghz/specifications.html"
+}

@@ -1,0 +1,10 @@
+{
+  "model": "i7-3520M",
+  "cores_threads": "2 / 4",
+  "base_freq": "2.9 GHz",
+  "turbo_freq": "3.6 GHz",
+  "cache": "3MB",
+  "graphics": "Intel HD Graphics 4000",
+  "iconfamily": "i7-2~3",
+  "ark": "https://www.intel.cn/content/www/cn/zh/products/sku/64899/intel-core-i7-3520m-processor-3m-cache-up-to-3-60-ghz/specifications.html"
+}

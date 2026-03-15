@@ -1,0 +1,10 @@
+{
+  "model": "i5-4200M",
+  "cores_threads": "2 / 4",
+  "base_freq": "2.5 GHz",
+  "turbo_freq": "3.1 GHz",
+  "cache": "3MB",
+  "graphics": "Intel HD Graphics 4600",
+  "iconfamily": "i5-4~5",
+  "ark": "https://www.intel.cn/content/www/cn/zh/products/sku/75458/intel-core-i5-4200m-processor-3m-cache-up-to-3-10-ghz/specifications.html"
+}

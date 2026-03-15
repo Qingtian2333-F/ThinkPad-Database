@@ -1,0 +1,10 @@
+{
+  "model": "i7-4930MX",
+  "cores_threads": "4 / 8",
+  "base_freq": "3.0 GHz",
+  "turbo_freq": "3.9 GHz",
+  "cache": "8MB",
+  "graphics": "Intel HD Graphics 4600",
+  "iconfamily": "i7-4~5",
+  "ark": "https://www.intel.cn/content/www/cn/zh/products/sku/75120/intel-core-i7-4930mx-processor-8m-cache-up-to-3-90-ghz/specifications.html"
+}

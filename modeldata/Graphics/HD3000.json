@@ -1,0 +1,10 @@
+        {
+          "model": "Intel HD 3000",
+          "Shading Units": "96",
+          "base_freq": "650~850 Mhz",
+          "turbo_freq": "1300~1350 MHz",
+          "VRAM":"-",
+          "Generation": "Gen 6.0",
+          "Feature":"DX 10.1 (10_1), OpenGL 3.3",
+          "iconfamily":"Intel_HD_Graphics"
+        }
