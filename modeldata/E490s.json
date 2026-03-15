@@ -1,0 +1,93 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-e490s",
+      "model_name": "ThinkPad E490s",
+      "nickname": "ThinkPad S3-490",
+      "addons":"Also as ThinkPad S3-490 Or ThinkPad NEW S3锋芒",
+      "model_family": "E",
+      "nickfamily": "S",
+      "model_generation": "xx90",
+      "update_date": "",
+      "model_code": ["20NG"],
+      "nickmodel":["20QC"],
+      "processor_options": ["8265U", "8565U"],
+      "graphics_options": ["UHD620", "RX540X"],
+      "Display": {
+        "max_resolution": {
+          "mini_dp": "4096x2304@60Hz",
+          "hdmi": "4096x2160@24Hz"
+        },
+        "multi_display": "Supports 3 independent displays"
+      },
+      "memory": {
+        "max_capacity": "32GB max",
+        "type": "2400MHz DDR4",
+        "slots": "two DDR4 SO-DIMM sockets",
+        "features": "Installed memory is actually 2666MHz but run at 2400MHz due to Intel limitation"
+      },
+      "display_options": ["TN FHD", "IPS FHD"],
+      "storage": {
+        "ssd_sata": "6.0Gb/s",
+        "ssd_pcie": "PCIe NVMe, PCIe 3.0 x 2/x4 (2280 limited to x2)"
+      },
+      "Ethernet": ["Realtek R8111GUS"],
+      "WLAN": ["RTL8822BE", "9260AC"],
+      "Bluetooth": [
+        {
+          "type": "Integrated",
+          "form": "Integrated in Wi-Fi + Bluetooth combo adapter",
+          "feature": "Bluetooth 4.2 (Realtek) or Bluetooth 5.0 (Intel)"
+        }
+      ],
+      "WWAN": [],
+      "SIM_Card": [],
+      "Battary": [
+        {
+          "type": "Integrated",
+          "capacity": "42Wh",
+          "form": "",
+          "tech": "Li-ion"
+        }
+      ],
+      "ACadapter": ["45W or 65W USB-C AC adapter"],
+      "ports": [
+        "One USB 2.0",
+        "Two USB 3.1 Gen 1 (One Always On)",
+        "One USB 3.1 Type-C Gen 2 (Power Delivery & DisplayPort)",
+        "HDMI 1.4b",
+        "Ethernet (RJ-45)",
+        "headphone/microphone combo jack",
+        "microSD card reader",
+        "security keyhole"
+      ],
+      "camera": ["HD720p resolution, fixed focus"],
+      "audio": [
+        "HD Audio, Synaptic CX11880 codec / stereo speakers, 2W x 2, Dolby Audio Premium / dual array microphone, headphone/microphone combo jack"
+      ],
+      "keyboard": [
+        "6-row, spill-resistant, multimedia Fn keys, optional LED backlight",
+        "TrackPoint pointing device and buttonless Mylar surface multi-touch touchpad"
+      ],
+      "physical": {
+        "dimensions": "329mm x 232mm x 17.9mm",
+        "weight": "Starting at 3.68 lb / 1.67 kg",
+        "case_material": "Aluminum"
+      },
+      "security": [
+        "Power-on/Hard disk/Supervisor password",
+        "Firmware TPM 2.0 integrated or discrete TPM 2.0 TCG Certified",
+        "Fingerprint reader (Optional)"
+      ],
+      "system": ["Windows 10 Home 64", "Windows 10 Pro 64"],
+      "PSREF_link": [],
+      "user_guide_link": [],
+      "HMM_link": [],
+      "dock_support": [],
+      "add_on_tips": [
+        "Installed memory is actually 2666MHz but runs at 2400MHz due to Intel limitation",
+        "Installed M.2 2280 SSD is PCIe 3x4 but runs at PCIe 3x2 due to M.2 SSD adapter limitation"
+      ]
+    }
+  ]
+}

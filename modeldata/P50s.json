@@ -3,6 +3,7 @@
     {
       "id": "thinkpad-p50s",
       "model_name": "ThinkPad P50s",
+      "addons": "Based on ThinkPad T460",
       "model_family": "P",
       "model_generation": "xx60",
       "update_date": "November 2016",
