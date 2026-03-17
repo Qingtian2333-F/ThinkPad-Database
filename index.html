@@ -13,7 +13,6 @@
     <aside>
         <div class="logo">
             ThinkPad <span>Specs</span>
-            <!-- 已移除折叠按钮，桌面模式下侧边栏始终可见 -->
         </div>
 
         <!-- 筛选切换区域 -->
@@ -134,10 +133,26 @@
         </div>
     </div>
 
+    <!-- 收藏模态框 -->
+    <div id="favoritesModal" class="modal-overlay">
+        <div class="modal-content favorites-modal-content">
+            <div class="modal-header">
+                <h3>我的收藏</h3>
+                <button class="modal-close" onclick="closeFavoritesModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div id="favoritesModalList" class="favorites-modal-list">
+                    <!-- 动态收藏列表 -->
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- 浮动按钮组（右下角） -->
     <div class="float-buttons">
         <button id="expandSidebarBtn" class="float-btn sidebar-expand-btn" title="显示侧边栏">☰</button>
         <button id="compareFloatBtn" class="float-btn" title="选择对比型号">📊</button>
+        <button id="favoritesFloatBtn" class="float-btn" title="我的收藏">★</button>
         <button id="searchFloatBtn" class="float-btn" title="搜索型号">🔍</button>
         <button id="themeToggleFloat" class="float-btn" title="切换深色/浅色模式">🌙</button>
     </div>
@@ -152,8 +167,13 @@
         let selectedModels = [];                   // 对比选中的型号对象
         let menuCounter = 0;                        // 用于生成唯一菜单ID
         let currentDeviceParts = null;               // 当前设备所有部件数据
-        let secretTipsEnabled = false;      // 是否显示秘密提示
-        let lastEnterTime = 0;              // 上次回车时间（用于检测两次回车）
+
+        // 收藏相关
+        let favorites = JSON.parse(localStorage.getItem('thinkpad_favorites')) || [];
+
+        // 秘密提示相关
+        let secretTipsEnabled = false;
+        let lastEnterTime = 0;
 
         // 对比选择模态框中的筛选状态
         let selectFilterType = 'family';
@@ -193,6 +213,11 @@
         const confirmCompareBtn = document.getElementById('confirmCompareBtn');
         const clearSelectedBtn = document.getElementById('clearSelectedBtn');
 
+        // 收藏相关
+        const favoritesFloatBtn = document.getElementById('favoritesFloatBtn');
+        const favoritesModal = document.getElementById('favoritesModal');
+        const favoritesModalList = document.getElementById('favoritesModalList');
+
         // 主题切换
         const themeToggle = document.getElementById('themeToggleFloat');
 
@@ -208,18 +233,15 @@
         function toggleSidebar() {
             body.classList.toggle('sidebar-hidden');
         }
-        // 展开按钮（右下角）点击：切换侧边栏
         if (expandBtn) {
             expandBtn.addEventListener('click', (e) => {
                 e.stopPropagation();
                 toggleSidebar();
             });
         }
-        // 遮罩点击：关闭侧边栏
         if (overlay) {
             overlay.addEventListener('click', closeSidebar);
         }
-        // 响应式：窗口宽度变化时自动隐藏侧边栏（≤900px）
         function handleResponsiveSidebar() {
             if (window.innerWidth <= 900) {
                 body.classList.add('sidebar-hidden');
@@ -474,7 +496,6 @@
             }
         }
 
-        // 清空对比选择
         function clearCompare() {
             selectedModels = [];
             if (compareSelectModal.classList.contains('show')) {
@@ -550,7 +571,19 @@
                 selectFamilySelect.appendChild(opt);
             });
 
-            const gens = [...new Set(masterModelList.map(m => m.model_generation).filter(Boolean))].sort((a,b) => (parseInt(b)||0) - (parseInt(a)||0));
+            const gens = [...new Set(masterModelList.map(m => m.model_generation).filter(Boolean))].sort((a, b) => {
+                const getPriority = (s) => {
+                    if (s.length === 3) return 1;
+                    if (s.length === 4) return 2;
+                    if (s.toLowerCase().startsWith('gen')) return 3;
+                    return 4;
+                };
+                const pa = getPriority(a);
+                const pb = getPriority(b);
+                if (pa !== pb) return pa - pb;
+                return a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' });
+            });
+
             selectGenerationSelect.innerHTML = '<option value="">全部代数</option>';
             gens.forEach(g => {
                 let opt = document.createElement('option');
@@ -962,83 +995,50 @@
                 masterModelList = allModels;
                 populateFilterOptions();
                 applyFilterAndRender();
+                renderFavoritesList(); // 初始化收藏列表（模态框内）
             } catch (err) {
                 console.error('致命错误:', err);
                 specDisplayEl.innerHTML = '<div class="empty-message">加载数据失败</div>';
             }
         }
 
-function populateFilterOptions() {
-    const families = [...new Set(masterModelList.map(m => m.model_family).filter(Boolean))].sort();
-    familySelect.innerHTML = '<option value="">全部系列</option>';
-    families.forEach(f => { 
-        let opt = document.createElement('option'); 
-        opt.value = f; 
-        opt.textContent = f; 
-        familySelect.appendChild(opt); 
-    });
+        function populateFilterOptions() {
+            const families = [...new Set(masterModelList.map(m => m.model_family).filter(Boolean))].sort();
+            familySelect.innerHTML = '<option value="">全部系列</option>';
+            families.forEach(f => { 
+                let opt = document.createElement('option'); 
+                opt.value = f; 
+                opt.textContent = f; 
+                familySelect.appendChild(opt); 
+            });
 
-    // 代数排序：先三位，再四位，再 Gen 开头，其余最后
-    const gens = [...new Set(masterModelList.map(m => m.model_generation).filter(Boolean))].sort((a, b) => {
-        const getPriority = (s) => {
-            if (s.length === 3) return 1;
-            if (s.length === 4) return 2;
-            if (s.toLowerCase().startsWith('gen')) return 3;
-            return 4;
-        };
-        const pa = getPriority(a);
-        const pb = getPriority(b);
-        if (pa !== pb) return pa - pb;
-        // 相同优先级内按自然顺序排序（识别数字）
-        return a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' });
-    });
+            // 代数排序：先三位，再四位，再 Gen 开头，其余最后
+            const gens = [...new Set(masterModelList.map(m => m.model_generation).filter(Boolean))].sort((a, b) => {
+                const getPriority = (s) => {
+                    if (s.length === 3) return 1;
+                    if (s.length === 4) return 2;
+                    if (s.toLowerCase().startsWith('gen')) return 3;
+                    return 4;
+                };
+                const pa = getPriority(a);
+                const pb = getPriority(b);
+                if (pa !== pb) return pa - pb;
+                return a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' });
+            });
 
-    generationSelect.innerHTML = '<option value="">全部代数</option>';
-    gens.forEach(g => { 
-        let opt = document.createElement('option'); 
-        opt.value = g; 
-        opt.textContent = g; 
-        generationSelect.appendChild(opt); 
-    });
+            generationSelect.innerHTML = '<option value="">全部代数</option>';
+            gens.forEach(g => { 
+                let opt = document.createElement('option'); 
+                opt.value = g; 
+                opt.textContent = g; 
+                generationSelect.appendChild(opt); 
+            });
 
-    familySelect.value = ''; 
-    generationSelect.value = ''; 
-    currentFamilyValue = ''; 
-    currentGenValue = '';
-}
-
-function populateSelectFilterOptions() {
-    const families = [...new Set(masterModelList.map(m => m.model_family).filter(Boolean))].sort();
-    selectFamilySelect.innerHTML = '<option value="">全部系列</option>';
-    families.forEach(f => {
-        let opt = document.createElement('option');
-        opt.value = f;
-        opt.textContent = f;
-        selectFamilySelect.appendChild(opt);
-    });
-
-    // 相同的代数优先级排序
-    const gens = [...new Set(masterModelList.map(m => m.model_generation).filter(Boolean))].sort((a, b) => {
-        const getPriority = (s) => {
-            if (s.length === 3) return 1;
-            if (s.length === 4) return 2;
-            if (s.toLowerCase().startsWith('gen')) return 3;
-            return 4;
-        };
-        const pa = getPriority(a);
-        const pb = getPriority(b);
-        if (pa !== pb) return pa - pb;
-        return a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' });
-    });
-
-    selectGenerationSelect.innerHTML = '<option value="">全部代数</option>';
-    gens.forEach(g => {
-        let opt = document.createElement('option');
-        opt.value = g;
-        opt.textContent = g;
-        selectGenerationSelect.appendChild(opt);
-    });
-}
+            familySelect.value = ''; 
+            generationSelect.value = ''; 
+            currentFamilyValue = ''; 
+            currentGenValue = '';
+        }
 
         function setFilterType(type) {
             currentFilterType = type;
@@ -1094,7 +1094,7 @@ function populateSelectFilterOptions() {
 
         // ---------- 部件卡片渲染（根据屏幕宽度决定初始折叠状态）----------
         function renderPartCard(parts, title, type) {
-            const isMobile = window.innerWidth <= 900; // 判断是否为移动端
+            const isMobile = window.innerWidth <= 900;
             const foldedClass = isMobile ? 'folded' : '';
             const icon = isMobile ? '▶' : '▼';
 
@@ -1128,7 +1128,6 @@ function populateSelectFilterOptions() {
                         arkMenuItem = `<div class="card-menu-item" onclick="window.open('${encodeURI(cpuData.ark)}', '_blank', 'width=1200,height=800,scrollbars=yes,resizable=yes'); document.getElementById('${menuId}').classList.add('hidden'); event.stopPropagation();">查看 ARK</div>`;
                     }
                 }
-                // 图标支持：CPU 和显卡
                 let iconHtml = '';
                 if (part.type === 'cpu' || part.type === 'graphics') {
                     const partData = part.data.thinkpad_database?.[0] || part.data;
@@ -1171,6 +1170,80 @@ function populateSelectFilterOptions() {
             `;
         }
 
+        // ---------- 收藏相关函数 ----------
+        function isFavorite(modelName) {
+            return favorites.includes(modelName);
+        }
+
+        function toggleFavorite(modelName) {
+            const index = favorites.indexOf(modelName);
+            if (index === -1) {
+                favorites.push(modelName);
+            } else {
+                favorites.splice(index, 1);
+            }
+            localStorage.setItem('thinkpad_favorites', JSON.stringify(favorites));
+            renderFavoritesList();
+            updateFavoriteButton(modelName);
+        }
+
+        function updateFavoriteButton(modelName) {
+            const btn = document.querySelector('.favorite-toggle-btn');
+            if (btn && btn.dataset.model === modelName) {
+                btn.textContent = isFavorite(modelName) ? '★ 取消收藏' : '☆ 收藏';
+            }
+        }
+
+        function renderFavoritesList() {
+            if (!favoritesModalList) return;
+            
+            const favoriteModels = masterModelList.filter(m => favorites.includes(m.model_name));
+            
+            if (favoriteModels.length === 0) {
+                favoritesModalList.innerHTML = '<div class="favorites-empty">暂无收藏型号</div>';
+                return;
+            }
+            
+            let html = '';
+            favoriteModels.forEach(model => {
+                html += `
+                    <div class="favorite-item" data-model="${model.model_name}">
+                        <span class="favorite-name" onclick="selectFavoriteModel('${model.model_name}'); closeFavoritesModal();">${model.model_name}</span>
+                        <button class="favorite-remove" onclick="removeFromFavorites('${model.model_name}')" title="取消收藏">✕</button>
+                    </div>
+                `;
+            });
+            favoritesModalList.innerHTML = html;
+        }
+
+        window.selectFavoriteModel = function(modelName) {
+            const model = masterModelList.find(m => m.model_name === modelName);
+            if (model) {
+                document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+                const targetItem = Array.from(document.querySelectorAll('.nav-item')).find(item => item.dataset.modelId === modelName);
+                if (targetItem) targetItem.classList.add('active');
+                renderSpecs(model);
+            }
+        };
+
+        window.removeFromFavorites = function(modelName) {
+            toggleFavorite(modelName);
+            const activeItem = document.querySelector('.nav-item.active');
+            if (activeItem && activeItem.dataset.modelId === modelName) {
+                updateFavoriteButton(modelName);
+            }
+        };
+
+        // 收藏模态框控制
+        window.closeFavoritesModal = function() {
+            favoritesModal.classList.remove('show');
+        };
+
+        function openFavoritesModal() {
+            renderFavoritesList();
+            favoritesModal.classList.add('show');
+        }
+
         // ---------- 切换型号的全局函数 ----------
         window.switchToModel = function(modelName) {
             const targetModel = masterModelList.find(m => m.model_name === modelName);
@@ -1193,7 +1266,7 @@ function populateSelectFilterOptions() {
                 currentDeviceParts = parts;
 
                 const physicalMaterial = data.physical?.case_material || data.case_material || '未知';
-                const isMobile = window.innerWidth <= 900; // 判断移动端
+                const isMobile = window.innerWidth <= 900;
                 const foldedClass = isMobile ? 'folded' : '';
                 const icon = isMobile ? '▶' : '▼';
 
@@ -1209,16 +1282,18 @@ function populateSelectFilterOptions() {
                 // 查找对应型号（原始 ↔ 别名）
                 const counterpart = (() => {
                     if (data._isNickname) {
-                        // 当前是别名，查找原始型号（没有 _isNickname 且 model_name 等于 _originalName）
                         return masterModelList.find(m => m.model_name === data._originalName && !m._isNickname);
                     } else {
-                        // 当前是原始型号，查找别名（_isNickname 为 true 且 _originalName 等于当前 model_name）
                         return masterModelList.find(m => m._isNickname && m._originalName === data.model_name);
                     }
                 })();
                 const switchButtonHtml = counterpart
                     ? `<button class="switch-model-btn" onclick="switchToModel('${counterpart.model_name}')">${data._isNickname ? '切换到原始型号' : '切换到别名'}</button>`
                     : '';
+
+                // 收藏按钮
+                const isFav = isFavorite(data.model_name);
+                const favoriteBtnHtml = `<button class="favorite-toggle-btn" data-model="${data.model_name}" onclick="toggleFavorite('${data.model_name}')">${isFav ? '★ 取消收藏' : '☆ 收藏'}</button>`;
 
                 // 辅助函数：获取第一个有效 URL
                 function getFirstUrl(urlField) {
@@ -1250,7 +1325,7 @@ function populateSelectFilterOptions() {
                     }
                 }
 
-                // 内存卡片（动态折叠）
+                // 内存卡片
                 const memoryCard = `
                     <div class="part-card foldable-card ${foldedClass}">
                         <div class="part-card-header" onclick="toggleCard(this)">
@@ -1271,7 +1346,7 @@ function populateSelectFilterOptions() {
                     </div>
                 `;
 
-                // 存储卡片（动态折叠）
+                // 存储卡片
                 const storageCard = (() => {
                     if (!data.storage) {
                         return `
@@ -1334,7 +1409,7 @@ function populateSelectFilterOptions() {
                     `;
                 })();
 
-                // 电池卡片（动态折叠）
+                // 电池卡片
                 const batteryCard = `
                     <div class="part-card foldable-card ${foldedClass}">
                         <div class="part-card-header" onclick="toggleCard(this)">
@@ -1362,7 +1437,7 @@ function populateSelectFilterOptions() {
                     </div>
                 `;
 
-                // 触摸与笔卡片（动态折叠）
+                // 触摸与笔卡片
                 let touchPenHtml = '';
                 if (data.touch || data.pen) {
                     const items = [];
@@ -1387,13 +1462,13 @@ function populateSelectFilterOptions() {
                     `;
                 }
 
-                // 显卡卡片（已通过 renderPartCard 生成，不需要修改）
+                // 显卡卡片
                 let graphicsCardHtml = '';
                 if (parts.graphics?.length > 0) {
                     graphicsCardHtml = renderPartCard(parts.graphics, '显卡', 'graphics');
                 }
 
-                // 显示输出卡片（动态折叠）
+                // 显示输出卡片
                 let outputInterfaceCardHtml = '';
                 if (data.Display && (data.Display.max_resolution || data.Display.multi_display)) {
                     const interfaceLines = [];
@@ -1442,21 +1517,21 @@ function populateSelectFilterOptions() {
                 const addOnTipsHtml = formatAddOnTips(data.add_on_tips);
                 const addOnTipsRow = addOnTipsHtml ? `<tr><th>附加信息</th><td>${addOnTipsHtml}</td></tr>` : '';
 
-// 其他卡片表格行
-const otherRows = `
-    <tr><th>尺寸</th><td>${data.physical?.dimensions || 'N/A'}</td></tr>
-    <tr><th>重量</th><td>${data.physical?.weight || 'N/A'}</td></tr>
-    <tr><th>材质</th><td>${physicalMaterial}</td></tr>
-    <tr><th>安全特性</th><td>${Array.isArray(data.security) ? data.security.join('<br>') : data.security || 'N/A'}</td></tr>
-    <tr><th>预装系统</th><td>${Array.isArray(data.system) ? data.system.join('<br>') : data.system || 'N/A'}</td></tr>
-    ${data.ACadapter ? `
-    <tr><th>电源适配器</th><td>${Array.isArray(data.ACadapter) ? data.ACadapter.join('、') : data.ACadapter}</td></tr>
-    ` : ''}
-    ${addOnTipsRow}
-    ${secretTipsEnabled && data.secret_tips ? `<tr><th>神秘文字</th><td>${data.secret_tips}</td></tr>` : ''}
-`;
+                // 其他卡片表格行（含秘密提示）
+                const otherRows = `
+                    <tr><th>尺寸</th><td>${data.physical?.dimensions || 'N/A'}</td></tr>
+                    <tr><th>重量</th><td>${data.physical?.weight || 'N/A'}</td></tr>
+                    <tr><th>材质</th><td>${physicalMaterial}</td></tr>
+                    <tr><th>安全特性</th><td>${Array.isArray(data.security) ? data.security.join('<br>') : data.security || 'N/A'}</td></tr>
+                    <tr><th>预装系统</th><td>${Array.isArray(data.system) ? data.system.join('<br>') : data.system || 'N/A'}</td></tr>
+                    ${data.ACadapter ? `
+                    <tr><th>电源适配器</th><td>${Array.isArray(data.ACadapter) ? data.ACadapter.join('、') : data.ACadapter}</td></tr>
+                    ` : ''}
+                    ${addOnTipsRow}
+                    ${secretTipsEnabled && data.secret_tips ? `<tr><th>🔒 秘密提示</th><td>${data.secret_tips}</td></tr>` : ''}
+                `;
 
-                // 物理接口与多媒体卡片（动态折叠）
+                // 物理接口与多媒体卡片
                 const portsCard = `
                     <div class="part-card foldable-card ${foldedClass}">
                         <div class="part-card-header" onclick="toggleCard(this)">
@@ -1471,7 +1546,7 @@ const otherRows = `
                     </div>
                 `;
 
-                // 其他卡片（动态折叠）
+                // 其他卡片
                 const otherCard = `
                     <div class="part-card foldable-card ${foldedClass}">
                         <div class="part-card-header" onclick="toggleCard(this)">
@@ -1489,7 +1564,7 @@ const otherRows = `
                 // 附加信息（标题下方的小字）
                 const addonsHtml = data.addons ? `<p class="addons-note">${data.addons}</p>` : '';
 
-                // 底部按钮
+                // 底部按钮（已移除导出PDF按钮）
                 const buttonsHtml = `
                     <div class="footer-buttons">
                         ${psrefUrl ? `<a href="${psrefUrl}" class="footer-btn" onclick="window.open('${psrefUrl}', '_blank', 'width=1200,height=800,scrollbars=yes,resizable=yes'); return false;">PSREF网站</a>` : ''}
@@ -1498,12 +1573,13 @@ const otherRows = `
                     </div>
                 `;
 
-                // 构建标题 HTML（包含切换按钮）
+                // 构建标题 HTML（包含切换按钮和收藏按钮）
                 const headerHtml = `
                     <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 4px;">
                         <h1 style="margin:0;">${data.model_name || '未知型号'}</h1>
                         ${modelCodeHtml}
                         ${switchButtonHtml}
+                        ${favoriteBtnHtml}
                     </div>
                 `;
 
@@ -1539,6 +1615,32 @@ const otherRows = `
             }
         }
 
+        // ---------- 秘密提示功能（搜索框双击回车）----------
+        searchModalInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                const currentTime = Date.now();
+                const inputValue = searchModalInput.value.trim();
+                
+                if (inputValue === 'SDEZ1.65-A') {
+                    if (currentTime - lastEnterTime < 500) {
+                        secretTipsEnabled = true;
+                        const activeItem = document.querySelector('.nav-item.active');
+                        if (activeItem) {
+                            const modelName = activeItem.dataset.modelId;
+                            const model = masterModelList.find(m => m.model_name === modelName);
+                            if (model) renderSpecs(model);
+                        }
+                        closeSearchModal();
+                        lastEnterTime = 0;
+                    } else {
+                        lastEnterTime = currentTime;
+                    }
+                } else {
+                    lastEnterTime = 0;
+                }
+            }
+        });
+
         // ---------- 事件绑定 ----------
         filterFamilyBtn.addEventListener('click', () => setFilterType('family'));
         filterGenBtn.addEventListener('click', () => setFilterType('generation'));
@@ -1556,41 +1658,6 @@ const otherRows = `
         // 搜索按钮
         searchFloatBtn.addEventListener('click', openSearchModal);
         searchModalInput.addEventListener('input', (e) => renderSearchResults(e.target.value.trim()));
-        // 搜索框双击回车检测（触发秘密提示）
-searchModalInput.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter') {
-        const currentTime = Date.now();
-        const inputValue = searchModalInput.value.trim();
-        
-        // 检查输入内容是否为指定字符串
-        if (inputValue === 'SDEZ1.65-A') {
-            // 如果两次回车间隔小于 500ms，视为有效触发
-            if (currentTime - lastEnterTime < 500) {
-                secretTipsEnabled = true;   // 启用秘密提示
-                
-                // 重新渲染当前显示的型号（如果有）
-                const activeItem = document.querySelector('.nav-item.active');
-                if (activeItem) {
-                    const modelName = activeItem.dataset.modelId;
-                    const model = masterModelList.find(m => m.model_name === modelName);
-                    if (model) renderSpecs(model);
-                }
-                
-                // 可选：关闭搜索模态框
-                closeSearchModal();
-                
-                // 重置计数器
-                lastEnterTime = 0;
-            } else {
-                // 第一次回车，记录时间
-                lastEnterTime = currentTime;
-            }
-        } else {
-            // 输入内容不匹配，重置计数器
-            lastEnterTime = 0;
-        }
-    }
-});
         searchModal.addEventListener('click', function(e) { if (e.target === this) closeSearchModal(); });
 
         // 对比选择按钮
@@ -1630,6 +1697,12 @@ searchModalInput.addEventListener('keydown', (e) => {
 
         compareSelectModal.addEventListener('click', function(e) {
             if (e.target === this) closeCompareSelectModal();
+        });
+
+        // 收藏按钮
+        favoritesFloatBtn.addEventListener('click', openFavoritesModal);
+        favoritesModal.addEventListener('click', function(e) {
+            if (e.target === this) closeFavoritesModal();
         });
 
         // 主题切换

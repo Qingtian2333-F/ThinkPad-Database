@@ -180,20 +180,15 @@ aside {
     font-family: var(--font-primary);
     margin-bottom: var(--spacing-sm);
     transition: all 0.2s;
-
-    /* 隐藏所有浏览器原生箭头 */
-    -webkit-appearance: none;
-    -moz-appearance: none;
     appearance: none;
-
-    /* 移除自定义箭头背景图 */
-    background-image: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23aaa'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 20px;
 }
 
-/* 浅色模式无需额外背景图，直接继承即可 */
 .light-mode .filter-options select {
-    /* 如果之前有背景图，这里也置空 */
-    background-image: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23333'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
 }
 
 .filter-options select:hover {
@@ -1473,6 +1468,7 @@ body.sidebar-hidden aside {
     display: none;
 }
 
+/* 切换型号按钮 */
 .switch-model-btn {
     background: var(--tp-bg-tertiary);
     border: 1px solid var(--tp-border-light);
@@ -1490,4 +1486,99 @@ body.sidebar-hidden aside {
     background: var(--tp-red);
     border-color: var(--tp-red);
     color: white;
+}
+
+/* 收藏按钮（标题区） */
+.favorite-toggle-btn {
+    background: var(--tp-bg-tertiary);
+    border: 1px solid var(--tp-border-light);
+    color: var(--tp-text-secondary);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-weight: 500;
+    white-space: nowrap;
+}
+.favorite-toggle-btn:hover {
+    background: var(--tp-red);
+    border-color: var(--tp-red);
+    color: white;
+}
+
+/* 收藏模态框样式 */
+.favorites-modal-content {
+    max-width: 500px;
+    width: 90%;
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.favorites-modal-list {
+    overflow-y: auto;
+    max-height: 60vh;
+    padding-right: 4px;
+}
+
+.favorites-modal-list .favorite-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    background: var(--tp-bg-tertiary);
+    border-radius: 8px;
+    margin-bottom: 8px;
+    border-left: 4px solid var(--tp-red);
+    transition: all 0.2s ease;
+}
+
+.favorites-modal-list .favorite-item:hover {
+    background: var(--tp-bg-hover);
+    transform: translateX(4px);
+}
+
+.favorites-modal-list .favorite-name {
+    cursor: pointer;
+    flex: 1;
+    font-size: 1rem;
+    font-weight: var(--font-medium);
+    color: var(--tp-text-primary);
+}
+
+.favorites-modal-list .favorite-name:hover {
+    text-decoration: underline;
+}
+
+.favorites-modal-list .favorite-remove {
+    background: transparent;
+    border: none;
+    color: var(--tp-text-secondary);
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0 8px;
+    line-height: 1;
+    transition: color 0.2s;
+}
+
+.favorites-modal-list .favorite-remove:hover {
+    color: var(--tp-red);
+}
+
+.favorites-modal-list .favorites-empty {
+    color: var(--tp-text-secondary);
+    font-style: italic;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* 移动端适配 */
+@media (max-width: 600px) {
+    .favorites-modal-content {
+        width: 95%;
+    }
+    .favorites-modal-list .favorite-item {
+        padding: 10px 12px;
+    }
 }

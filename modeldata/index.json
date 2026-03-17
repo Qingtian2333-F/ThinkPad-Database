@@ -1,8 +1,5 @@
 [
     "T460.json",
-    "E490s.json",
-    "E14_Gen7_Intel.json",
-    "E14_Gen1_ICL.json",
     "C14.json",
     "L430.json",
     "L530.json",
@@ -65,6 +62,8 @@
     "E535.json",
     "E320.json",
     "E325.json",
+    "E490s.json",
+    "E14_Gen7_Intel.json",
     "E14_Gen1_ICL.json",
     "S230u.json",
     "SL300.json",
