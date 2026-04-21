@@ -1,0 +1,102 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-a475",
+      "model_name": "ThinkPad A475",
+      "model_family": "A",
+      "model_generation": "xx70",
+      "update_date": "September 2017",
+      "model_code": ["20KL", "20KM"],
+      "processor_options": ["PRO A12-9800B", "PRO A10-9700B", "PRO A8-9600B"],
+      "graphics_options": ["Radeon R7 Graphics", "Radeon R5 Graphics"],
+      "Display": {
+        "max_resolution": {
+          "usb_c": "3840x2160@60Hz",
+          "hdmi": "4096x2160@24Hz"
+        },
+        "multi_display": "Supports 3 independent displays"
+      },
+      "memory": {
+        "max_capacity": "32GB max",
+        "type": "PC4-19200 2400MHz DDR4 (runs at 1866MHz)",
+        "slots": "Two DDR4 SO-DIMM sockets",
+        "features": "Dual-channel capable"
+      },
+      "display_options": ["HD_TN", "FHD_IPS", "FHD_Touch"],
+      "storage": {
+        "ssd_sata": "SATA 6.0Gb/s, 2.5\" wide, 7mm high",
+        "ssd_pcie": "M.2 SSD / PCIe NVMe, PCIe 3.0 x 2, 16Gb/s",
+        "hdd": "SATA 6.0Gb/s, 2.5\" wide, 7mm high"
+      },
+      "Ethernet": ["Realtek RTL8111EPV"],
+      "WLAN": ["8265AC", "Realtek RTL8822BE"],
+      "Bluetooth": [
+        {
+          "type": "Integrated",
+          "form": "Integrated in Wi-Fi + Bluetooth combo adapter",
+          "feature": "Bluetooth 4.1"
+        }
+      ],
+      "WWAN": ["EM7455"],
+      "SIM_Card": [
+        {
+          "type": "Micro-SIM card slot (models with WWAN)"
+        }
+      ],
+      "Battary": [
+        {
+          "type": "Internal battery",
+          "capacity": "24Wh",
+          "form": "3-cell",
+          "tech": "Li-Ion"
+        },
+        {
+          "type": "External battery",
+          "capacity": "24Wh / 48Wh / 72Wh",
+          "form": "3-cell / 6-cell / 6-cell",
+          "tech": "Li-Ion"
+        }
+      ],
+      "ACadapter": ["45W or 65W Slim Tip AC adapter", "45W or 65W USB-C AC adapter"],
+      "ports": [
+        "3 x USB 3.1 Gen 1 (One Always On)",
+        "1 x USB 3.1 Type-C Gen 1",
+        "HDMI 1.4b",
+        "Ethernet (RJ-45)",
+        "Dock connector",
+        "4-in-1 reader (MMC, SD, SDHC, SDXC)",
+        "Smart card reader (Optional)",
+        "Combo audio/microphone jack"
+      ],
+      "camera": [
+        "720p HD camera"
+      ],
+      "audio": [
+        "HD Audio, Realtek ALC3268 codec / stereo speakers, 2W x 2 / dual array microphone"
+      ],
+      "keyboard": [
+        "6-row, spill-resistant, multimedia Fn keys, optional LED backlight",
+        "TrackPoint pointing device and Mylar surface multi-touch touchpad"
+      ],
+      "physical": {
+        "dimensions": "336.6mm x 232.5mm x 19.95mm",
+        "weight": "Starting at 3.63 lb / 1.65 kg",
+        "case_material": "Glass-Fiber Reinforced Plastic"
+      },
+      "security": [
+        "Power-on/Hard disk/Supervisor password",
+        "Discrete TPM 2.0",
+        "Fingerprint reader (Optional)",
+        "Kensington lock slot"
+      ],
+      "system": [
+        "Windows 10 Pro 64"
+      ],
+      "PSREF_link": ["https://psref.lenovo.com/syspool/Sys/PDF/ThinkPad/ThinkPad_A475/ThinkPad_A475_Spec.pdf"],
+      "user_guide_link": ["https://download.lenovo.com/pccbbs/mobiles_pdf/a475_ug_en.pdf"],
+      "HMM_link": ["https://download.lenovo.com/pccbbs/mobiles_pdf/a475_hmm_en.pdf"],
+      "add_on_tips": ["点击输入文字"],
+      "secret_tips": ["点击输入文字"]
+    }
+  ]
+}

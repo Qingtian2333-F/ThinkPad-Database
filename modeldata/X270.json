@@ -1,0 +1,102 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-x270",
+      "model_name": "ThinkPad X270",
+      "model_family": "X",
+      "model_generation": "xx70",
+      "update_date": "February 2017",
+      "model_code": ["20HN", "20HM", "20K5", "20K6"],
+      "processor_options": ["6200U", "6300U", "6500U", "6600U", "7100U", "7200U", "7300U", "7500U", "7600U"],
+      "graphics_options": ["HD520", "HD620"],
+      "Display": {
+        "max_resolution": {
+          "usb_c": "4096x2304@60Hz",
+          "hdmi": "4096x2160@24Hz"
+        },
+        "multi_display": "Supports 3 independent displays"
+      },
+      "memory": {
+        "max_capacity": "16GB max",
+        "type": "PC4-17000 2133MHz DDR4",
+        "slots": "One DDR4 SO-DIMM socket",
+        "features": "Single-channel"
+      },
+      "display_options": ["HD_TN", "HD_IPS", "FHD_IPS"],
+      "storage": {
+        "ssd_sata": "SATA 6.0Gb/s, 2.5\" wide, 7mm high",
+        "ssd_pcie": "M.2 SSD / PCIe NVMe, PCIe 3.0 x 2, 16Gb/s",
+        "hdd": "SATA 6.0Gb/s, 2.5\" wide, 7mm high",
+        "optane": "16GB M.2 PCIe NVMe (Optional)"
+      },
+      "Ethernet": ["I219V", "I219LM"],
+      "WLAN": ["8260AC", "8265AC", "18265AC"],
+      "Bluetooth": [
+        {
+          "type": "Integrated",
+          "form": "Integrated in Wi-Fi + Bluetooth combo adapter",
+          "feature": "Bluetooth 4.1 or 4.2"
+        }
+      ],
+      "WWAN": ["EM7455", "ME906S"],
+      "SIM_Card": [
+        {
+          "type": "Micro-SIM card slot (models with WWAN)"
+        }
+      ],
+      "Battary": [
+        {
+          "type": "Internal battery",
+          "capacity": "23Wh",
+          "form": "3-cell",
+          "tech": "Li-Ion"
+        },
+        {
+          "type": "External battery",
+          "capacity": "23Wh / 48Wh / 72Wh",
+          "form": "3-cell / 6-cell / 6-cell",
+          "tech": "Li-Ion"
+        }
+      ],
+      "ACadapter": ["45W or 65W Slim Tip AC adapter", "45W or 65W USB-C AC adapter"],
+      "ports": [
+        "2 x USB 3.1 Gen 1 (One Always On)",
+        "1 x USB 3.1 Type-C Gen 1",
+        "HDMI 1.4b",
+        "Ethernet (RJ-45)",
+        "Dock connector",
+        "4-in-1 reader (MMC, SD, SDHC, SDXC)",
+        "Smart card reader (Optional)",
+        "Combo audio/microphone jack"
+      ],
+      "camera": [
+        "720p HD camera"
+      ],
+      "audio": [
+        "HD Audio, Realtek ALC3268 codec / stereo speakers, 1.5W x 2 / dual array microphone"
+      ],
+      "keyboard": [
+        "6-row, spill-resistant, multimedia Fn keys, optional LED backlight",
+        "TrackPoint pointing device and Mylar surface multi-touch touchpad"
+      ],
+      "physical": {
+        "dimensions": "305.5mm x 208.5mm x 20.3mm",
+        "weight": "Starting at 2.9 lb / 1.31 kg",
+        "case_material": "Glass-Fiber Reinforced Plastic"
+      },
+      "security": [
+        "Power-on/Hard disk/Supervisor password",
+        "Discrete TPM 2.0",
+        "Fingerprint reader (Optional)",
+        "Kensington lock slot"
+      ],
+      "system": [
+        "Windows 10 Pro 64",
+        "Windows 10 Home 64"
+      ],
+      "PSREF_link": ["https://psref.lenovo.com/syspool/Sys/PDF/ThinkPad/ThinkPad_X270/ThinkPad_X270_Spec.pdf"],
+      "add_on_tips": ["点击输入文字"],
+      "secret_tips": ["点击输入文字"]
+    }
+  ]
+}
