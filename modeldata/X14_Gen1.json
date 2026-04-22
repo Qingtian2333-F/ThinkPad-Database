@@ -18,13 +18,13 @@
       },
       "memory": {
         "max_capacity": "64GB max",
-        "type": "LPDDR5X 9600MHz (Runs at 7467MHz on Ultra5 336H and 8533MHz on Ultra 5 338H CPU)",
+        "type": "LPDDR5X 8533MHz (Runs at 7467MHz on Ultra5 336H CPU)",
         "slots": "Memory soldered to systemboard",
         "features": "Dual-channel capable"
       },
-      "display_options": ["FHD_OLED", "2.8K_AG OLED"],
+      "display_options": ["FHD_OLED", "2.8K_AG_OLED"],
       "storage": {
-        "ssd_pcie": "Dual M.2 SSD / PCIe NVMe, PCIe 5.0 x 4+PCIe 4.0 x 4, 128Gb/s"
+        "ssd_pcie": "Dual M.2 2280 SSD / PCIe NVMe, PCIe 5.0 x 4 + PCIe 4.0 x 4, Up to 128Gb/s"
       },
       "WLAN": ["BE213"],
       "Bluetooth": [
@@ -51,7 +51,7 @@
       "ACadapter": ["100W USB-C AC adapter"],
       "ports": [
         "2 x USB 3.1 Gen 1 (One Always On)",
-        "1 x MagicBay (USB 3.1 Gen 1 )",
+        "1 x MagicBay (USB 3.1 Gen 1)",
         "2 x USB 3.1 Type-C Gen 2 / Thunderbolt 4",
         "HDMI 2.0 TMDS",
         "Combo audio/microphone jack"
@@ -84,7 +84,7 @@
       "user_guide_link": ["https://chinakb.lenovo.com.cn/chinakb/prod-api/file/downloadFile?key=uniko/FILE/4de430519636ff9bd11ce9cd0adc1ffb-1773825239802.pdf&name=ThinkPad%20X14%20Gen%201%20%E7%94%A8%E6%88%B7%E6%8C%87%E5%8D%97%EF%BC%8821XM%EF%BC%8C22A5%EF%BC%89.pdf"],
       "HMM_link": [""],
       "add_on_tips": ["Product for China Mainland Only. The listed configurations may contain errors."],
-      "secret_tips": ["点击输入文字"]
+      "secret_tips": ["你知道的这种机器虽说没有PSREF但是一般来说FRU是可以查的。"]
     }
   ]
 }
