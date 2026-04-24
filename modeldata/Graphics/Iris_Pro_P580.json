@@ -1,0 +1,10 @@
+        {
+          "model": "intel® iris™ Pro Graphics P580",
+          "Shading Units": "576",
+          "base_freq": "350 Mhz",
+          "turbo_freq": "1.1 GHz",
+          "VRAM":"128MB eDRAM",
+          "Generation": "Gen 9.0",
+          "Feature":"DX 12.0 (12_1), OpenGL 4.6, OpenCL 2.1, Vulkan 1.3",
+          "iconfamily":"Intel_iris"
+        }

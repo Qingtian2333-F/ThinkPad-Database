@@ -21,7 +21,7 @@
         "max_capacity": "64GB max",
         "type": "PC4-19200 2400MHz DDR4, ECC or non-ECC",
         "slots": "Four DDR4 SO-DIMM sockets",
-        "features": "Dual-channel or Quad-channel capable"
+        "features": "ECC or non-ECC (ECC function supported only on Xeon processor), Dual-channel capable"
       },
       "display_options": ["FHD_IPS", "4K_UHD_IPS"],
       "storage": {

@@ -87,7 +87,12 @@
       "system": [
         "Windows 7 Professional 64",
         "Windows 8 Pro 64"
-      ]
+      ],
+      "PSREF_link": ["https://psref.lenovo.com/syspool/Sys/PDF/withdrawnbook/ThinkPad_T430u.pdf"],
+      "user_guide_link": ["https://download.lenovo.com/ibmdl/pub/pc/pccbbs/mobiles_pdf/t430u_ug_zh-chs.pdf"],
+      "HMM_link": ["https://download.lenovo.com/ibmdl/pub/pc/pccbbs/mobiles_pdf/t430u_hmm_en_0b48901_02.pdf"],
+      "add_on_tips": [""],
+      "secret_tips": ["本机和扬天V490u共用模具。"]
     }
   ]
 }

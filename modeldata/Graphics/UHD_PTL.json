@@ -1,0 +1,10 @@
+        {
+          "model": "Intel® Graphics",
+          "Shading Units": "512 (4Xe)",
+          "base_freq": "300 Mhz",
+          "turbo_freq": "2.45~2.5 Ghz",
+          "VRAM":"-",
+          "Generation": "Xe3-LPG",
+          "Feature":"DX 12.0 (12_2), OpenGL 4.6, OpenCL 2.1, Vulkan 1.4",
+          "iconfamily":"Intel_Graphics_New"
+        }

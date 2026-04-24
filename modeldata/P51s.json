@@ -3,6 +3,7 @@
     {
       "id": "thinkpad-p51s",
       "model_name": "ThinkPad P51s",
+      "addons": "Based on ThinkPad T570",
       "model_family": "P",
       "model_generation": "xx70",
       "update_date": "March 2017",

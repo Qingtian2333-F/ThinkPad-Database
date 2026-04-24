@@ -1,0 +1,90 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-x14-Gen1",
+      "model_name": "ThinkPad X14 Gen1",
+      "model_family": "X",
+      "model_generation": "Gen7",
+      "update_date": "April 2026",
+      "model_code": ["21XM", "22A5"],
+      "processor_options": ["336H", "338H", "358H", "388H"],
+      "graphics_options": ["UHD_PTL", "Arc_B370","Arc_B390"],
+      "Display": {
+        "max_resolution": {
+          "hdmi": "4096x2160@60Hz",
+          "usb_c_tbt": "7680x4320@60Hz"
+        },
+        "multi_display": "Supports 4 independent displays"
+      },
+      "memory": {
+        "max_capacity": "64GB max",
+        "type": "LPDDR5X 8533MHz (Runs at 7467MHz on Ultra5 336H CPU)",
+        "slots": "Memory soldered to systemboard",
+        "features": "Dual-channel capable"
+      },
+      "display_options": ["FHD_OLED", "2.8K_AG_OLED"],
+      "storage": {
+        "ssd_pcie": "Dual M.2 2280 SSD / PCIe NVMe, PCIe 5.0 x 4 + PCIe 4.0 x 4, Up to 128Gb/s"
+      },
+      "WLAN": ["BE213"],
+      "Bluetooth": [
+        {
+          "type": "Integrated",
+          "form": "Integrated in Wi-Fi + Bluetooth combo adapter",
+          "feature": "Bluetooth 6.0"
+        }
+      ],
+      "WWAN": ["MagicBay", "WWAN_Upgradeable_MagicBay"],
+      "SIM_Card": [
+        {
+          "type": "Nano-SIM card slot On MagicBay Module"
+        }
+      ],
+      "Battary": [
+        {
+          "type": "Internal battery",
+          "capacity": "74Wh",
+          "form": "4-cell",
+          "tech": "Li-Ion"
+        }
+      ],
+      "ACadapter": ["100W USB-C AC adapter"],
+      "ports": [
+        "2 x USB 3.1 Gen 1 (One Always On)",
+        "1 x MagicBay (USB 3.1 Gen 1)",
+        "2 x USB 3.1 Type-C Gen 2 / Thunderbolt 4",
+        "HDMI 2.0 TMDS",
+        "Combo audio/microphone jack"
+      ],
+      "camera": [
+        "FHD IR camera with ThinkShutter"
+      ],
+      "audio": [
+        "HD Audio, Realtek codec / stereo speakers, 2W x 2 / dual array microphone, Dolby Atmos®"
+      ],
+      "keyboard": [
+        "6-row, spill-resistant, multimedia Fn keys, LED backlight",
+        "TrackPoint pointing device and Galss-Like Mylar surface multi-touch touchpad"
+      ],
+      "physical": {
+        "dimensions": "313mm x 217.3mm x 15.3mm",
+        "weight": "Starting at 2.76 lb / 1.25 kg",
+        "case_material": "Carbon-Fiber (Top), aluminium (Bottom)"
+      },
+      "security": [
+        "Power-on/Hard disk/Supervisor password",
+        "Discrete TPM 2.0",
+        "Fingerprint reader On Power Bottom",
+        "Kensington lock slot",
+        "ThinkShutter camera privacy"
+      ],
+      "system": [
+        "Windows 11 Home China 64"
+      ],
+      "user_guide_link": ["https://chinakb.lenovo.com.cn/chinakb/prod-api/file/downloadFile?key=uniko/FILE/4de430519636ff9bd11ce9cd0adc1ffb-1773825239802.pdf&name=ThinkPad%20X14%20Gen%201%20%E7%94%A8%E6%88%B7%E6%8C%87%E5%8D%97%EF%BC%8821XM%EF%BC%8C22A5%EF%BC%89.pdf"],
+      "HMM_link": [""],
+      "add_on_tips": ["Product for China Mainland Only. The listed configurations may contain errors."],
+      "secret_tips": ["你知道的这种机器虽说没有PSREF但是一般来说FRU是可以查的。"]
+    }
+  ]
+}

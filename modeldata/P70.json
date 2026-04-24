@@ -18,9 +18,9 @@
         "multi_display": "Supports 5 independent displays "
       },
       "memory": {
-        "max_capacity": "64GB max ",
+        "max_capacity": "64GB max",
         "type": "2133MHz DDR4",
-        "slots": "Four DDR4 SO-DIMM sockets ",
+        "slots": "Four DDR4 SO-DIMM sockets",
         "features": "ECC or non-ECC (ECC function supported only on Xeon processor), dual-channel capable"
       },
       "display_options": ["LEN4121","LEN4123"],
