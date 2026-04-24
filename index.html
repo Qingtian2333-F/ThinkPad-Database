@@ -12,7 +12,7 @@
 
     <aside>
         <div class="logo">
-            ThinkPad <span>Specs</span>
+            ThinkPad Specs</span>
         </div>
 
         <!-- 筛选切换区域 -->
@@ -155,6 +155,7 @@
         <button id="favoritesFloatBtn" class="float-btn" title="我的收藏">★</button>
         <button id="searchFloatBtn" class="float-btn" title="搜索型号">🔍</button>
         <button id="themeToggleFloat" class="float-btn" title="切换深色/浅色模式">🌙</button>
+        <a id="generatorFloatBtn" class="float-btn" title="JSON生成器（但是我没写完）" href="generator.html" target="_blank">🛠️</a>
     </div>
 
     <script>
@@ -1528,7 +1529,7 @@
                     <tr><th>电源适配器</th><td>${Array.isArray(data.ACadapter) ? data.ACadapter.join('、') : data.ACadapter}</td></tr>
                     ` : ''}
                     ${addOnTipsRow}
-                    ${secretTipsEnabled && data.secret_tips ? `<tr><th>🔒 秘密提示</th><td>${data.secret_tips}</td></tr>` : ''}
+                    ${secretTipsEnabled && data.secret_tips ? `<tr><th>秘密提示</th><td>${data.secret_tips}</td></tr>` : ''}
                 `;
 
                 // 物理接口与多媒体卡片

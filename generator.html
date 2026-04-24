@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThinkPad 机型配置工具</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: #f1f5f9;
+            font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            padding: 24px;
+        }
+        .app-container {
+            max-width: 1440px;
+            margin: 0 auto;
+        }
+        .toolbar {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 16px 24px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03), 0 1px 2px rgba(0, 0, 0, 0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .toolbar h1 {
+            font-size: 1.6rem;
+            font-weight: 600;
+            letter-spacing: -0.3px;
+            background: linear-gradient(135deg, #1e293b, #2d3a4e);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .toolbar p {
+            font-size: 0.75rem;
+            color: #5b6e8c;
+            margin-top: 4px;
+        }
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        button {
+            background: #f1f3f7;
+            border: none;
+            padding: 8px 18px;
+            border-radius: 40px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            color: #1e2a3e;
+        }
+        button.primary {
+            background: #1e3a5f;
+            color: white;
+        }
+        button.primary:hover {
+            background: #0f2c48;
+            transform: translateY(-1px);
+        }
+        button:hover {
+            background: #e4e8ef;
+            transform: translateY(-1px);
+        }
+        .two-columns {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+        .form-panel {
+            flex: 2;
+            min-width: 300px;
+            background: #ffffff;
+            border-radius: 28px;
+            padding: 20px 24px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+            max-height: 85vh;
+            overflow-y: auto;
+        }
+        .preview-panel {
+            flex: 1.2;
+            min-width: 320px;
+            position: sticky;
+            top: 20px;
+            align-self: flex-start;
+        }
+        .section {
+            margin-bottom: 28px;
+            border-bottom: 1px solid #eef2f6;
+            padding-bottom: 20px;
+        }
+        .section-title {
+            font-weight: 700;
+            font-size: 1.05rem;
+            margin-bottom: 16px;
+            color: #0f172a;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .field-group {
+            margin-bottom: 16px;
+        }
+        .field-group label {
+            display: block;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: #4a5b6e;
+            margin-bottom: 6px;
+            letter-spacing: 0.3px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px 14px;
+            border: 1px solid #e2e8f0;
+            border-radius: 18px;
+            font-size: 0.85rem;
+            background: #fefefe;
+            transition: 0.15s;
+        }
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59,130,246,0.15);
+        }
+        .array-control {
+            background: #fafcff;
+            border-radius: 20px;
+            padding: 10px 12px;
+            margin-top: 6px;
+        }
+        .array-item {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+            align-items: center;
+        }
+        .array-item input {
+            flex: 1;
+            background: white;
+        }
+        .remove-item {
+            background: #fee9e6;
+            color: #c2410c;
+            padding: 4px 12px;
+            font-size: 0.7rem;
+            border-radius: 40px;
+            font-weight: 500;
+        }
+        .add-btn {
+            background: transparent;
+            color: #2563eb;
+            padding: 6px 0;
+            font-size: 0.75rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            border-radius: 30px;
+        }
+        .chip-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 12px;
+            margin-top: 8px;
+        }
+        .chip-card {
+            background: #ffffff;
+            border: 1px solid #e2edf2;
+            border-radius: 20px;
+            padding: 10px 14px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+        }
+        .chip-card:hover {
+            background: #f8fafc;
+            border-color: #94a3b8;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px -6px rgba(0, 0, 0, 0.1);
+        }
+        .chip-card.selected {
+            background: #eef2ff;
+            border-color: #3b82f6;
+            box-shadow: 0 4px 12px rgba(59,130,246,0.15);
+        }
+        .chip-card input {
+            width: 18px;
+            height: 18px;
+            accent-color: #2563eb;
+            margin: 0;
+            flex-shrink: 0;
+        }
+        .chip-card span {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #1e293b;
+            word-break: break-word;
+        }
+        .badge-count {
+            background: #e2e8f0;
+            display: inline-block;
+            padding: 2px 12px;
+            border-radius: 30px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            margin-top: 10px;
+            color: #334155;
+        }
+        .json-box {
+            background: #0f172a;
+            color: #e2e8f0;
+            padding: 18px;
+            border-radius: 24px;
+            font-family: 'SF Mono', 'Fira Code', monospace;
+            font-size: 12px;
+            white-space: pre-wrap;
+            overflow: auto;
+            max-height: 80vh;
+            box-shadow: 0 12px 24px -12px rgba(0,0,0,0.25);
+        }
+        .mt-2 { margin-top: 8px; }
+        .mt-3 { margin-top: 16px; }
+    </style>
+</head>
+<body>
+<div class="app-container">
+    <div class="toolbar">
+        <div>
+            <h1>ThinkPad 机型配置生成器</h1>
+            <p>喵喵咕噜咕噜</p>
+        </div>
+        <div class="action-buttons">
+            <button id="resetAllBtn">重置全部</button>
+            <button id="copyJsonBtn">复制 JSON</button>
+            <button id="exportJsonBtn" class="primary">导出JSON</button>
+        </div>
+    </div>
+
+    <div class="two-columns">
+        <div class="form-panel" id="formPanel"></div>
+        <div class="preview-panel">
+            <div class="json-box" id="jsonPreview">{}</div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // ---------- 状态管理 ----------
+    const defaultModel = {
+        identity: { 
+            id: "", model_name: "", family: "", generation: "", update_date: "",
+            model_code: ""
+        },
+        cpu_choices: [],
+        gpu_choices: [],
+        display_choices: [],
+        dock_choices: [],
+        ethernet_choices: [],
+        wlan_choices: [],
+        wwan_choices: [],
+        video_output: { mini_dp: "", hdmi: "", multi_monitor: "" },
+        mem_spec: { max_cap: "", mem_type: "", slots_desc: "", features: "" },
+        storage_spec: { sata_ssd: "", pcie_ssd: "", hdd_desc: "", sshd_desc: "" },
+        network: { sim_slots: [], bluetooth_devices: [] },
+        batteries: [],
+        ports_list: [],
+        power_adapters: [],
+        guides: [],
+        hmm_links: [],
+        psref_links: [],
+        camera_specs: [],
+        audio_specs: [],
+        keyboard_desc: [],
+        security_features: [],
+        os_list: [],
+        extra_notes: [],
+        internal_hints: [],
+        physical: { dimensions: "", weight: "", casing: "" }
+    };
+
+    let appState = JSON.parse(JSON.stringify(defaultModel));
+    let cpuOptions = [];
+    let gpuOptions = [];
+    let displayOptions = [];
+    let dockOptions = [];
+    let ethernetOptions = [];
+    let wlanOptions = [];
+    let wwanOptions = [];
+
+    // 辅助：去除 .json 后缀
+    function stripJson(str) { return typeof str === 'string' ? str.replace(/\.json$/i, '') : str; }
+
+    // 通用加载函数
+    async function loadOptions(url) {
+        try {
+            const res = await fetch(url);
+            if (!res.ok) throw new Error(`HTTP ${res.status}`);
+            const data = await res.json();
+            if (Array.isArray(data)) {
+                return data.map(item => {
+                    let raw = typeof item === 'string' ? item : (item.model || item.name || item.label || JSON.stringify(item));
+                    raw = stripJson(raw);
+                    return { value: raw, label: raw };
+                }).filter(v => v.value);
+            } else throw new Error('格式错误');
+        } catch(e) { console.warn(`加载失败 ${url}`, e); return []; }
+    }
+
+    async function loadCPU() { cpuOptions = await loadOptions('/ThinkPad-Database/modeldata/CPU/CPU.json'); renderForm(); }
+    async function loadGPU() { gpuOptions = await loadOptions('/ThinkPad-Database/modeldata/graphics/GPU.json'); renderForm(); }
+    async function loadDisplay() { displayOptions = await loadOptions('/ThinkPad-Database/modeldata/Display/Display.json'); renderForm(); }
+    async function loadDock() { dockOptions = await loadOptions('/ThinkPad-Database/modeldata/Dock/Dock.json'); renderForm(); }
+    async function loadEthernet() { ethernetOptions = await loadOptions('/ThinkPad-Database/modeldata/Ethernet/Ethernet.json'); renderForm(); }
+    async function loadWLAN() { wlanOptions = await loadOptions('/ThinkPad-Database/modeldata/WLAN/WLAN.json'); renderForm(); }
+    async function loadWWAN() { wwanOptions = await loadOptions('/ThinkPad-Database/modeldata/WWAN/WWAN.json'); renderForm(); }
+
+    // 渲染对象数组 (SIM卡槽、蓝牙、电池等)
+    function renderObjArrayField(fieldKey, objArr, fieldsDef) {
+        let items = objArr.length ? objArr : [Object.fromEntries(fieldsDef.map(f => [f.key, '']))];
+        let html = `<div class="array-control" data-obj-wrapper="${fieldKey}">`;
+        items.forEach((obj, idx) => {
+            let inner = '';
+            fieldsDef.forEach(def => {
+                inner += `<div><label style="font-size:10px; margin-bottom:2px;">${def.placeholder}</label><input type="text" value="${escapeHtml(obj[def.key] || '')}" data-obj-field="${fieldKey}" data-idx="${idx}" data-key="${def.key}" class="obj-input"></div>`;
+            });
+            html += `<div class="array-item" data-obj-group="${fieldKey}" data-idx="${idx}">${inner}<button type="button" class="remove-item" data-remove-obj="${fieldKey}" data-idx="${idx}">删除</button></div>`;
+        });
+        html += `<button type="button" class="add-btn" data-add-obj="${fieldKey}">➕ 添加对象</button></div>`;
+        return html;
+    }
+
+    // 美观的卡片网格 (通用)
+    function renderChipGrid(options, selectedValues, type) {
+        if (!options.length) return `<div style="padding:12px; background:#f8f9fc; border-radius:24px; text-align:center; color:#6c7a91;">暂无数据，请检查服务器路径</div>`;
+        let gridHtml = `<div class="chip-grid" data-chip-type="${type}">`;
+        options.forEach(opt => {
+            const isSelected = selectedValues.includes(opt.value);
+            gridHtml += `
+                <div class="chip-card ${isSelected ? 'selected' : ''}" data-chip-value="${escapeHtml(opt.value)}" data-chip-parent="${type}">
+                    <input type="checkbox" ${isSelected ? 'checked' : ''} value="${escapeHtml(opt.value)}">
+                    <span>${escapeHtml(opt.label)}</span>
+                </div>
+            `;
+        });
+        gridHtml += `</div><div class="badge-count">✅ 已选 ${selectedValues.length} 项</div>`;
+        return gridHtml;
+    }
+
+    // 渲染简单数组字段 (端口、电源适配器、链接等)
+    function renderArrayField(fieldKey, arr, placeholder) {
+        const items = arr.length ? arr : [''];
+        let html = `<div class="array-control" data-array-wrapper="${fieldKey}">`;
+        items.forEach((val, idx) => {
+            html += `
+                <div class="array-item" data-array-field="${fieldKey}" data-idx="${idx}">
+                    <input type="text" value="${escapeHtml(val)}" placeholder="${escapeHtml(placeholder)}" class="array-input">
+                    <button type="button" class="remove-item" data-remove-array="${fieldKey}" data-idx="${idx}">删除</button>
+                </div>
+            `;
+        });
+        html += `<button type="button" class="add-btn" data-add-array="${fieldKey}">添加项</button></div>`;
+        return html;
+    }
+
+    // 主渲染函数
+    function renderForm() {
+        const container = document.getElementById('formPanel');
+        if (!container) return;
+        let html = `
+            <!-- 基础信息 -->
+            <div class="section">
+                <div class="section-title">基础标识</div>
+                <div class="field-group"><label>ID</label><input id="f_id" value="${escapeHtml(appState.identity.id)}"></div>
+                <div class="field-group"><label>型号名称</label><input id="f_modelName" value="${escapeHtml(appState.identity.model_name)}"></div>
+                <div class="field-group"><label>家族</label><input id="f_family" value="${escapeHtml(appState.identity.family)}"></div>
+                <div class="field-group"><label>世代</label><input id="f_generation" value="${escapeHtml(appState.identity.generation)}"></div>
+                <div class="field-group"><label>更新日期</label><input id="f_update" value="${escapeHtml(appState.identity.update_date)}"></div>
+                <div class="field-group"><label>型号代码</label><input id="f_modelCode" value="${escapeHtml(appState.identity.model_code)}"></div>
+            </div>
+
+            <!-- CPU 卡片网格 -->
+            <div class="section">
+                <div class="section-title">处理器选项</div>
+                <div id="cpuGridContainer">${renderChipGrid(cpuOptions, appState.cpu_choices, 'cpu')}</div>
+            </div>
+
+            <!-- GPU 卡片网格 -->
+            <div class="section">
+                <div class="section-title">显卡选项</div>
+                <div id="gpuGridContainer">${renderChipGrid(gpuOptions, appState.gpu_choices, 'gpu')}</div>
+            </div>
+
+            <!-- 显示屏卡片网格 -->
+            <div class="section">
+                <div class="section-title">显示屏选项</div>
+                <div id="displayGridContainer">${renderChipGrid(displayOptions, appState.display_choices, 'display')}</div>
+            </div>
+
+            <!-- 扩展坞卡片网格 -->
+            <div class="section">
+                <div class="section-title">扩展坞支持</div>
+                <div id="dockGridContainer">${renderChipGrid(dockOptions, appState.dock_choices, 'dock')}</div>
+            </div>
+
+            <!-- Ethernet 卡片网格 -->
+            <div class="section">
+                <div class="section-title">以太网控制器</div>
+                <div id="ethernetGridContainer">${renderChipGrid(ethernetOptions, appState.ethernet_choices, 'ethernet')}</div>
+            </div>
+
+            <!-- WLAN 卡片网格 -->
+            <div class="section">
+                <div class="section-title">WLAN</div>
+                <div id="wlanGridContainer">${renderChipGrid(wlanOptions, appState.wlan_choices, 'wlan')}</div>
+            </div>
+
+            <!-- WWAN 卡片网格 -->
+            <div class="section">
+                <div class="section-title">WWAN</div>
+                <div id="wwanGridContainer">${renderChipGrid(wwanOptions, appState.wwan_choices, 'wwan')}</div>
+            </div>
+
+            <!-- 显示输出规格 -->
+            <div class="section">
+                <div class="section-title">显示输出规格</div>
+                <div class="field-group"><label>Mini DP 最大分辨率</label><input id="vid_minidp" value="${escapeHtml(appState.video_output.mini_dp)}"></div>
+                <div class="field-group"><label>HDMI 最大分辨率</label><input id="vid_hdmi" value="${escapeHtml(appState.video_output.hdmi)}"></div>
+                <div class="field-group"><label>多屏支持</label><input id="vid_multi" value="${escapeHtml(appState.video_output.multi_monitor)}"></div>
+            </div>
+
+            <!-- 内存 / 存储 -->
+            <div class="section">
+                <div class="section-title">内存规格</div>
+                <div class="field-group"><label>最大容量</label><input id="mem_max" value="${escapeHtml(appState.mem_spec.max_cap)}"></div>
+                <div class="field-group"><label>类型</label><input id="mem_type" value="${escapeHtml(appState.mem_spec.mem_type)}"></div>
+                <div class="field-group"><label>插槽信息</label><input id="mem_slots" value="${escapeHtml(appState.mem_spec.slots_desc)}"></div>
+                <div class="field-group"><label>特性</label><input id="mem_features" value="${escapeHtml(appState.mem_spec.features)}"></div>
+                <div class="section-title mt-3">存储配置</div>
+                <div class="field-group"><label>SSD SATA</label><input id="st_sata" value="${escapeHtml(appState.storage_spec.sata_ssd)}"></div>
+                <div class="field-group"><label>SSD PCIe</label><input id="st_pcie" value="${escapeHtml(appState.storage_spec.pcie_ssd)}"></div>
+                <div class="field-group"><label>HDD</label><input id="st_hdd" value="${escapeHtml(appState.storage_spec.hdd_desc)}"></div>
+                <div class="field-group"><label>SSHD</label><input id="st_sshd" value="${escapeHtml(appState.storage_spec.sshd_desc)}"></div>
+            </div>
+
+            <!-- 网络其他 (SIM卡, 蓝牙) -->
+            <div class="section">
+                <div class="section-title">SIM卡槽 & 蓝牙</div>
+                <div class="field-group"><label>SIM卡槽</label>${renderObjArrayField('sim_slots', appState.network.sim_slots, [{key:'type', placeholder:'卡槽类型'}])}</div>
+                <div class="field-group"><label>蓝牙模块</label>${renderObjArrayField('bluetooth_devices', appState.network.bluetooth_devices, [{key:'type',placeholder:'类型'},{key:'form',placeholder:'形态'},{key:'feature',placeholder:'特性'}])}</div>
+            </div>
+
+            <!-- 电池 -->
+            <div class="section">
+                <div class="section-title">电池选项</div>
+                ${renderObjArrayField('batteries', appState.batteries, [{key:'type',placeholder:'类型'},{key:'capacity',placeholder:'容量(Wh)'},{key:'form',placeholder:'电芯'},{key:'tech',placeholder:'技术'}])}
+            </div>
+
+            <!-- 端口 / 适配器 / 其他链接 -->
+            <div class="section">
+                <div class="section-title">端口</div>
+                ${renderArrayField('ports_list', appState.ports_list, '')}
+                <div class="section-title mt-3">电源适配器</div>
+                ${renderArrayField('power_adapters', appState.power_adapters, '')}
+                <div class="section-title mt-3">用户指南链接</div>
+                ${renderArrayField('guides', appState.guides, '')}
+                <div class="section-title mt-3">HMM手册</div>
+                ${renderArrayField('hmm_links', appState.hmm_links, '')}
+                <div class="section-title mt-3">PSREF链接</div>
+                ${renderArrayField('psref_links', appState.psref_links, '')}
+            </div>
+
+            <!-- 其他特性 -->
+            <div class="section">
+                <div class="section-title">摄像头</div>
+                ${renderArrayField('camera_specs', appState.camera_specs, '')}
+                <div class="section-title mt-2">音频</div>
+                ${renderArrayField('audio_specs', appState.audio_specs, '')}
+                <div class="section-title mt-2">⌨键盘</div>
+                ${renderArrayField('keyboard_desc', appState.keyboard_desc, '')}
+                <div class="section-title mt-2">安全</div>
+                ${renderArrayField('security_features', appState.security_features, '')}
+                <div class="section-title mt-2">预装系统</div>
+                ${renderArrayField('os_list', appState.os_list, '')}
+                <div class="section-title mt-2">附加提示</div>
+                ${renderArrayField('extra_notes', appState.extra_notes, '')}
+                <div class="section-title mt-2">内部提示</div>
+                ${renderArrayField('internal_hints', appState.internal_hints, '')}
+            </div>
+
+            <!-- 物理规格 -->
+            <div class="section">
+                <div class="section-title">物理规格</div>
+                <div class="field-group"><label>尺寸</label><input id="phy_dim" value="${escapeHtml(appState.physical.dimensions)}"></div>
+                <div class="field-group"><label>重量</label><input id="phy_weight" value="${escapeHtml(appState.physical.weight)}"></div>
+                <div class="field-group"><label>机身材质</label><input id="phy_material" value="${escapeHtml(appState.physical.casing)}"></div>
+            </div>
+        `;
+        container.innerHTML = html;
+        attachAllEvents();
+        updateJsonPreview();
+    }
+
+    // 事件绑定 (包含所有卡片的选择逻辑)
+    function attachAllEvents() {
+        // 基础 input 绑定
+        const basicIds = ['f_id','f_modelName','f_family','f_generation','f_update','f_modelCode',
+                          'vid_minidp','vid_hdmi','vid_multi',
+                          'mem_max','mem_type','mem_slots','mem_features','st_sata','st_pcie','st_hdd','st_sshd',
+                          'phy_dim','phy_weight','phy_material'];
+        basicIds.forEach(id => {
+            const el = document.getElementById(id);
+            if (el) el.addEventListener('input', () => { syncBasicInputs(); updateJsonPreview(); });
+        });
+
+        // 数组字段增删
+        document.querySelectorAll('[data-add-array]').forEach(btn => {
+            btn.removeEventListener('click', arrayAddHandler);
+            btn.addEventListener('click', arrayAddHandler);
+        });
+        document.querySelectorAll('[data-remove-array]').forEach(btn => {
+            btn.removeEventListener('click', arrayRemoveHandler);
+            btn.addEventListener('click', arrayRemoveHandler);
+        });
+        document.querySelectorAll('.array-input').forEach(inp => {
+            inp.removeEventListener('input', arrayInputChanged);
+            inp.addEventListener('input', arrayInputChanged);
+        });
+        // 对象数组
+        document.querySelectorAll('[data-add-obj]').forEach(btn => {
+            btn.removeEventListener('click', objAddHandler);
+            btn.addEventListener('click', objAddHandler);
+        });
+        document.querySelectorAll('[data-remove-obj]').forEach(btn => {
+            btn.removeEventListener('click', objRemoveHandler);
+            btn.addEventListener('click', objRemoveHandler);
+        });
+        document.querySelectorAll('.obj-input').forEach(inp => {
+            inp.removeEventListener('input', objInputChanged);
+            inp.addEventListener('input', objInputChanged);
+        });
+
+        // 通用卡片事件
+        document.querySelectorAll('.chip-card').forEach(card => {
+            const checkbox = card.querySelector('input[type="checkbox"]');
+            const type = card.getAttribute('data-chip-parent');
+            const val = card.getAttribute('data-chip-value');
+            if (!checkbox) return;
+            const updateSelected = () => {
+                if (type === 'cpu') {
+                    if (checkbox.checked) { if (!appState.cpu_choices.includes(val)) appState.cpu_choices.push(val); }
+                    else appState.cpu_choices = appState.cpu_choices.filter(v => v !== val);
+                } else if (type === 'gpu') {
+                    if (checkbox.checked) { if (!appState.gpu_choices.includes(val)) appState.gpu_choices.push(val); }
+                    else appState.gpu_choices = appState.gpu_choices.filter(v => v !== val);
+                } else if (type === 'display') {
+                    if (checkbox.checked) { if (!appState.display_choices.includes(val)) appState.display_choices.push(val); }
+                    else appState.display_choices = appState.display_choices.filter(v => v !== val);
+                } else if (type === 'dock') {
+                    if (checkbox.checked) { if (!appState.dock_choices.includes(val)) appState.dock_choices.push(val); }
+                    else appState.dock_choices = appState.dock_choices.filter(v => v !== val);
+                } else if (type === 'ethernet') {
+                    if (checkbox.checked) { if (!appState.ethernet_choices.includes(val)) appState.ethernet_choices.push(val); }
+                    else appState.ethernet_choices = appState.ethernet_choices.filter(v => v !== val);
+                } else if (type === 'wlan') {
+                    if (checkbox.checked) { if (!appState.wlan_choices.includes(val)) appState.wlan_choices.push(val); }
+                    else appState.wlan_choices = appState.wlan_choices.filter(v => v !== val);
+                } else if (type === 'wwan') {
+                    if (checkbox.checked) { if (!appState.wwan_choices.includes(val)) appState.wwan_choices.push(val); }
+                    else appState.wwan_choices = appState.wwan_choices.filter(v => v !== val);
+                }
+                updateJsonPreview();
+                renderForm();
+            };
+            checkbox.addEventListener('change', updateSelected);
+            card.addEventListener('click', (e) => {
+                if (e.target.tagName !== 'INPUT') {
+                    checkbox.checked = !checkbox.checked;
+                    updateSelected();
+                }
+            });
+        });
+    }
+
+    // ----- 状态同步函数 -----
+    function syncBasicInputs() {
+        appState.identity.id = getVal('f_id');
+        appState.identity.model_name = getVal('f_modelName');
+        appState.identity.family = getVal('f_family');
+        appState.identity.generation = getVal('f_generation');
+        appState.identity.update_date = getVal('f_update');
+        appState.identity.model_code = getVal('f_modelCode');
+        appState.video_output.mini_dp = getVal('vid_minidp');
+        appState.video_output.hdmi = getVal('vid_hdmi');
+        appState.video_output.multi_monitor = getVal('vid_multi');
+        appState.mem_spec.max_cap = getVal('mem_max');
+        appState.mem_spec.mem_type = getVal('mem_type');
+        appState.mem_spec.slots_desc = getVal('mem_slots');
+        appState.mem_spec.features = getVal('mem_features');
+        appState.storage_spec.sata_ssd = getVal('st_sata');
+        appState.storage_spec.pcie_ssd = getVal('st_pcie');
+        appState.storage_spec.hdd_desc = getVal('st_hdd');
+        appState.storage_spec.sshd_desc = getVal('st_sshd');
+        appState.physical.dimensions = getVal('phy_dim');
+        appState.physical.weight = getVal('phy_weight');
+        appState.physical.casing = getVal('phy_material');
+    }
+    function getVal(id) { return document.getElementById(id)?.value || ''; }
+
+    function arrayAddHandler(e) { const field = e.currentTarget.getAttribute('data-add-array'); addArrayItem(field); renderForm(); }
+    function arrayRemoveHandler(e) { const field = e.currentTarget.getAttribute('data-remove-array'); const idx = parseInt(e.currentTarget.getAttribute('data-idx'),10); removeArrayItem(field, idx); renderForm(); }
+    function arrayInputChanged(e) { const wrapper = e.target.closest('[data-array-field]'); if(wrapper){ const field = wrapper.getAttribute('data-array-field'); const idx = parseInt(wrapper.getAttribute('data-idx'),10); const newVal = e.target.value; updateArrayItem(field, idx, newVal); updateJsonPreview(); } }
+    function objAddHandler(e) { const field = e.currentTarget.getAttribute('data-add-obj'); addObjItem(field); renderForm(); }
+    function objRemoveHandler(e) { const field = e.currentTarget.getAttribute('data-remove-obj'); const idx = parseInt(e.currentTarget.getAttribute('data-idx'),10); removeObjItem(field, idx); renderForm(); }
+    function objInputChanged(e) { const inp = e.target; const field = inp.getAttribute('data-obj-field'); const idx = parseInt(inp.getAttribute('data-idx'),10); const key = inp.getAttribute('data-key'); const newVal = inp.value; updateObjField(field, idx, key, newVal); updateJsonPreview(); }
+
+    function addArrayItem(field) { getArrayRef(field).push(''); }
+    function removeArrayItem(field, idx) { const arr = getArrayRef(field); if(idx>=0 && idx<arr.length) arr.splice(idx,1); }
+    function updateArrayItem(field, idx, val) { const arr = getArrayRef(field); if(arr[idx] !== undefined) arr[idx] = val; }
+    function addObjItem(field) { getObjRef(field).push(createEmptyObj(field)); }
+    function removeObjItem(field, idx) { const arr = getObjRef(field); if(idx>=0 && idx<arr.length) arr.splice(idx,1); }
+    function updateObjField(field, idx, key, val) { const arr = getObjRef(field); if(arr[idx] && key) arr[idx][key] = val; }
+    function createEmptyObj(field) {
+        if (field === 'sim_slots') return { type: '' };
+        if (field === 'bluetooth_devices') return { type: '', form: '', feature: '' };
+        if (field === 'batteries') return { type: '', capacity: '', form: '', tech: '' };
+        return {};
+    }
+    function getArrayRef(field) {
+        const map = {
+            ports_list: () => appState.ports_list,
+            power_adapters: () => appState.power_adapters,
+            guides: () => appState.guides,
+            hmm_links: () => appState.hmm_links,
+            psref_links: () => appState.psref_links,
+            camera_specs: () => appState.camera_specs,
+            audio_specs: () => appState.audio_specs,
+            keyboard_desc: () => appState.keyboard_desc,
+            security_features: () => appState.security_features,
+            os_list: () => appState.os_list,
+            extra_notes: () => appState.extra_notes,
+            internal_hints: () => appState.internal_hints
+        };
+        return map[field] ? map[field]() : [];
+    }
+    function getObjRef(field) {
+        if (field === 'sim_slots') return appState.network.sim_slots;
+        if (field === 'bluetooth_devices') return appState.network.bluetooth_devices;
+        if (field === 'batteries') return appState.batteries;
+        return [];
+    }
+
+    function buildFinalJson() {
+        syncBasicInputs();
+        let modelCodeArray = [];
+        if (appState.identity.model_code && appState.identity.model_code.trim() !== '') {
+            modelCodeArray = [appState.identity.model_code.trim()];
+        }
+        return {
+            id: appState.identity.id,
+            model_name: appState.identity.model_name,
+            model_family: appState.identity.family,
+            model_generation: appState.identity.generation,
+            update_date: appState.identity.update_date,
+            model_code: modelCodeArray,
+            processor_options: appState.cpu_choices,
+            graphics_options: appState.gpu_choices,
+            display_options: appState.display_choices,
+            dock_support: appState.dock_choices,
+            Ethernet: appState.ethernet_choices,
+            WLAN: appState.wlan_choices,
+            WWAN: appState.wwan_choices,
+            Display: {
+                max_resolution: { mini_dp: appState.video_output.mini_dp, hdmi: appState.video_output.hdmi },
+                multi_display: appState.video_output.multi_monitor
+            },
+            memory: { max_capacity: appState.mem_spec.max_cap, type: appState.mem_spec.mem_type, slots: appState.mem_spec.slots_desc, features: appState.mem_spec.features },
+            storage: { ssd_sata: appState.storage_spec.sata_ssd, ssd_pcie: appState.storage_spec.pcie_ssd, hdd: appState.storage_spec.hdd_desc, sshd: appState.storage_spec.sshd_desc },
+            SIM_Card: appState.network.sim_slots,
+            Bluetooth: appState.network.bluetooth_devices,
+            Battary: appState.batteries,
+            ACadapter: appState.power_adapters,
+            ports: appState.ports_list,
+            camera: appState.camera_specs,
+            audio: appState.audio_specs,
+            keyboard: appState.keyboard_desc,
+            security: appState.security_features,
+            system: appState.os_list,
+            PSREF_link: appState.psref_links,
+            user_guide_link: appState.guides,
+            HMM_link: appState.hmm_links,
+            add_on_tips: appState.extra_notes,
+            secret_tips: appState.internal_hints,
+            physical: { dimensions: appState.physical.dimensions, weight: appState.physical.weight, case_material: appState.physical.casing }
+        };
+    }
+
+    function updateJsonPreview() {
+        const final = buildFinalJson();
+        document.getElementById('jsonPreview').innerText = JSON.stringify(final, null, 2);
+    }
+
+    function resetAll() {
+        appState = JSON.parse(JSON.stringify(defaultModel));
+        appState.cpu_choices = [];
+        appState.gpu_choices = [];
+        appState.display_choices = [];
+        appState.dock_choices = [];
+        appState.ethernet_choices = [];
+        appState.wlan_choices = [];
+        appState.wwan_choices = [];
+        renderForm();
+        updateJsonPreview();
+    }
+
+    function copyJson() {
+        const text = document.getElementById('jsonPreview').innerText;
+        navigator.clipboard.writeText(text).then(() => alert('JSON 已复制')).catch(() => alert('复制失败'));
+    }
+    function exportJson() {
+        const content = document.getElementById('jsonPreview').innerText;
+        const blob = new Blob([content], {type: 'application/json'});
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = 'thinkpad_model_data.json';
+        a.click();
+        URL.revokeObjectURL(a.href);
+    }
+    function escapeHtml(str) { return String(str).replace(/[&<>]/g, function(m){ if(m==='&') return '&amp;'; if(m==='<') return '&lt;'; if(m==='>') return '&gt;'; return m;}); }
+
+    // 启动
+    window.onload = () => {
+        renderForm();
+        Promise.all([loadCPU(), loadGPU(), loadDisplay(), loadDock(), loadEthernet(), loadWLAN(), loadWWAN()]).then(() => {});
+        document.getElementById('resetAllBtn').addEventListener('click', resetAll);
+        document.getElementById('copyJsonBtn').addEventListener('click', copyJson);
+        document.getElementById('exportJsonBtn').addEventListener('click', exportJson);
+    };
+</script>
+</body>
+</html>

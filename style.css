@@ -1582,3 +1582,21 @@ body.sidebar-hidden aside {
         padding: 10px 12px;
     }
 }
+
+.generator-link {
+    display: block;
+    padding: 12px;
+    margin: 10px 0;
+    background: var(--tp-bg-tertiary);
+    border-radius: 8px;
+    color: var(--tp-red);
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid var(--tp-border);
+    text-decoration: none;
+}
+.generator-link:hover {
+    background: var(--tp-red);
+    color: white;
+}

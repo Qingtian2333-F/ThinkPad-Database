@@ -1,0 +1,77 @@
+{
+  "id": "Debug",
+  "model_name": "Debug",
+  "model_family": "Debug",
+  "model_generation": "Debug",
+  "update_date": "正常来说应该全是Debug,如果没有显示，那就是生成器有问题。",
+  "model_code": [
+    "Debug"
+  ],
+  "processor_options": [
+    "1505MV5",
+    "1535MV5"
+  ],
+  "graphics_options": [
+    "GeForce_930M",
+    "GeForce_940MX"
+  ],
+  "display_options": [
+    "LEN40A0",
+    "LEN40A2"
+  ],
+  "dock_support": [
+    "40A0",
+    "40A1"
+  ],
+  "Ethernet": [
+    "82579LM",
+    "I219LM"
+  ],
+  "WLAN": [
+    "8260",
+    "18260"
+  ],
+  "WWAN": [
+    "ME906S",
+    "EM7455"
+  ],
+  "Display": {
+    "max_resolution": {
+      "mini_dp": "Debug",
+      "hdmi": "Debug"
+    },
+    "multi_display": "Debug"
+  },
+  "memory": {
+    "max_capacity": "Debug",
+    "type": "Debug",
+    "slots": "Debug",
+    "features": "Debug"
+  },
+  "storage": {
+    "ssd_sata": "Debug",
+    "ssd_pcie": "Debug",
+    "hdd": "Debug",
+    "sshd": "Debug"
+  },
+  "SIM_Card": [],
+  "Bluetooth": [],
+  "Battary": [],
+  "ACadapter": [],
+  "ports": [],
+  "camera": [],
+  "audio": [],
+  "keyboard": [],
+  "security": [],
+  "system": [],
+  "PSREF_link": [],
+  "user_guide_link": [],
+  "HMM_link": [],
+  "add_on_tips": [],
+  "secret_tips": [],
+  "physical": {
+    "dimensions": "Debug",
+    "weight": "Debug",
+    "case_material": "Debug"
+  }
+}
