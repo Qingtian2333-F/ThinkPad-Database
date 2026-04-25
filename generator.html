@@ -519,7 +519,7 @@
     function attachAllEvents() {
         // 基础 input 绑定
         const basicIds = ['f_id','f_modelName','f_family','f_generation','f_update','f_modelCode',
-                          'vid_minidp','vid_usb_c_tbt','vid_hdmi','vid_multi',
+                          'vid_minidp','vid_tbt','vid_hdmi','vid_multi',
                           'mem_max','mem_type','mem_slots','mem_features','st_sata','st_pcie','st_hdd','st_sshd',
                           'phy_dim','phy_weight','phy_material'];
         basicIds.forEach(id => {
@@ -605,7 +605,7 @@
         appState.identity.update_date = getVal('f_update');
         appState.identity.model_code = getVal('f_modelCode');
         appState.video_output.mini_dp = getVal('vid_minidp');
-        appState.video_output.usb_c_tbt = getVal('vid_usb_c_tbt');
+        appState.video_output.usb_c_tbt = getVal('vid_tbt');
         appState.video_output.hdmi = getVal('vid_hdmi');
         appState.video_output.multi_monitor = getVal('vid_multi');
         appState.mem_spec.max_cap = getVal('mem_max');
