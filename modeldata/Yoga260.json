@@ -3,14 +3,14 @@
     {
       "id": "thinkpad-yoga-260",
       "model_name": "ThinkPad Yoga 260",
-      "nickname": "ThinkPad S1 2016",
+      "nickname": "ThinkPad S1 Gen2",
       "addons":"Also as ThinkPad New S1 or ThinkPad S1 2016",
       "model_family": "Yoga",
       "nickfamily": "S",
       "model_generation":"xx60",
       "update_date": "July 2016",
-      "model_code":["20FD/20FE"],
-      "addon_model_code": ["20GS"],
+      "model_code":["20FD/20FE/20GS/20GT"],
+      "addon_model_code": ["20FS/20FT"],
       "processor_options": ["6100U","6200U","6300U","6500U","6600U"],
       "graphics_options": ["HD520"],
       "Display": {

@@ -10,6 +10,7 @@
       "model_generation": "xx70",
       "update_date": "February 2017",
       "model_code": ["20JH", "20JJ"],
+      "addon_model_code": ["20JK", "20JL"],
       "processor_options": ["7100U", "7200U", "7300U", "7500U", "7600U"],
       "graphics_options": ["HD620"],
       "Display": {
