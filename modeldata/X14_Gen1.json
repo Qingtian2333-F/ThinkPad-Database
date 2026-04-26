@@ -22,7 +22,7 @@
         "slots": "Memory soldered to systemboard",
         "features": "Dual-channel capable"
       },
-      "display_options": ["FHD_OLED", "2.8K_AG_OLED"],
+      "display_options": ["LEN414C", "2.8K_AG_OLED"],
       "storage": {
         "ssd_pcie": "Dual M.2 2280 SSD / PCIe NVMe, PCIe 5.0 x 4 + PCIe 4.0 x 4, Up to 128Gb/s"
       },

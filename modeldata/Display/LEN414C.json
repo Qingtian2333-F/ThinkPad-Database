@@ -1,0 +1,15 @@
+        {
+          "type": "WUXGA (1920x1200)",
+          "tech": "OLED, Anti-glare, HDR500, Dolby Vision, EyeSafe",
+          "brightness": "400 nits",
+          "contrast": "100000:1",
+          "viewing_angle": "170°",
+          "color_gamut":"100% DCI-P3",
+          "refresh_rate":"60 Hz",
+          "FRUs":[
+            {
+             "5M11R88000":"ATNA40CT04-0 (For X9-14 Gen1)",
+             "Unknown":"- (For X14 Gen1)"
+            }
+          ]
+        }

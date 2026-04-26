@@ -1137,8 +1137,9 @@
                         if (part.type === 'cpu') iconFolder = 'CPU/cpu_icon';
                         else if (part.type === 'graphics') iconFolder = 'Graphics/Graphics_icons';
                         const iconBase = `modeldata/${iconFolder}/${encodeURIComponent(partData.iconfamily)}`;
-                        iconHtml = `<img src="${iconBase}.jpg" class="cpu-icon-bg" alt="" 
-                            onerror="this.onerror=null; this.src='${iconBase}.png'; this.onerror=function(){ this.style.display='none'; };">`;
+                        iconHtml = `<img src="${iconBase}.webp" class="cpu-icon-bg" alt="" 
+                            onerror="this.onerror=null; this.src='${iconBase}.jpg'; this.onerror=function(){ this.src='${iconBase}.png'; this.onerror=function(){ this.style.display='none'; }; };">`;
+                            
                     }
                 }
                 const menuItems = (fruMenuItem + arkMenuItem).trim();
@@ -1477,13 +1478,26 @@
                         for (const [port, res] of Object.entries(data.Display.max_resolution)) {
                             if (res && typeof res === 'string') {
                                 const portName = port.replace(/_/g, ' ');
-                                interfaceLines.push(`<div><span class="field-name">${portName}:</span> <span class="field-value">${res}</span></div>`);
+                                if (portName.toLowerCase().includes('hdmi')) {
+                                    interfaceLines.push(`<div><span class="field-name">HDMI:</span> <span class="field-value">${res}</span></div>`);
+                                } else if (portName.toLowerCase().includes('dp')) {
+                                    interfaceLines.push(`<div><span class="field-name">DisplayPort:</span> <span class="field-value">${res}</span></div>`);
+                                } else if (portName.toLowerCase().includes('minidp')) {
+                                    interfaceLines.push(`<div><span class="field-name">Mini DisplayPort:</span> <span class="field-value">${res}</span></div>`);
+                                } else if (portName.toLowerCase().includes('usb_c_tbt') || portName.toLowerCase().includes('usb'))  {
+                                    interfaceLines.push(`<div><span class="field-name">USB-C/雷电:</span> <span class="field-value">${res}</span></div>`);
+                                } else if (portName.toLowerCase().includes('thunderbolt')) {
+                                    interfaceLines.push(`<div><span class="field-name">雷电:</span> <span class="field-value">${res}</span></div>`);
+                                } else {
+                                    interfaceLines.push(`<div><span class="field-name">${portName}:</span> <span class="field-value">${res}</span></div>`);
+                                }
                             }
                         }
                     }
                     if (data.Display.multi_display) {
                         interfaceLines.push(`<div><span class="field-name">多屏支持:</span> <span class="field-value">${data.Display.multi_display}</span></div>`);
                     }
+                    
                     if (interfaceLines.length > 0) {
                         outputInterfaceCardHtml = `
                             <div class="part-card foldable-card ${foldedClass}">
