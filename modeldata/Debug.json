@@ -3,44 +3,53 @@
   "model_name": "Debug",
   "model_family": "Debug",
   "model_generation": "Debug",
-  "update_date": "正常来说应该全是Debug,如果没有显示，那就是生成器有问题。",
+  "update_date": "Debug",
   "model_code": [
     "Debug"
   ],
   "processor_options": [
-    "1505MV5",
-    "1535MV5"
+    "3820QM",
+    "3840QM"
   ],
   "graphics_options": [
-    "GeForce_930M",
+    "HD3000",
     "GeForce_940MX"
   ],
   "display_options": [
-    "LEN40A0",
-    "LEN40A2"
+    "LEN40AE",
+    "LEN40AF"
   ],
   "dock_support": [
     "40A0",
-    "40A1"
+    "40A1",
+    "40A6",
+    "40A2"
   ],
   "Ethernet": [
     "82579LM",
-    "I219LM"
+    "I219LM",
+    "I219V",
+    "RTL8111F"
   ],
   "WLAN": [
-    "8260",
-    "18260"
+    "11abgn",
+    "11bg",
+    "11bgn_ii",
+    "11bgn_iii"
   ],
   "WWAN": [
-    "ME906S",
-    "EM7455"
+    "EM7345",
+    "EM7355",
+    "EM7455",
+    "F3507g"
   ],
   "Display": {
     "max_resolution": {
       "mini_dp": "Debug",
-      "hdmi": "Debug"
+      "hdmi": "Debug",
+      "usb_c_tbt": "Debug"
     },
-    "multi_display": "Debug"
+    "multi_display": "DebugDebugDebugDebugDebugDebug"
   },
   "memory": {
     "max_capacity": "Debug",
@@ -54,24 +63,77 @@
     "hdd": "Debug",
     "sshd": "Debug"
   },
-  "SIM_Card": [],
-  "Bluetooth": [],
-  "Battary": [],
-  "ACadapter": [],
-  "ports": [],
-  "camera": [],
-  "audio": [],
-  "keyboard": [],
-  "security": [],
-  "system": [],
-  "PSREF_link": [],
-  "user_guide_link": [],
-  "HMM_link": [],
-  "add_on_tips": [],
-  "secret_tips": [],
+  "SIM_Card": [
+    {
+      "type": "Debug"
+    }
+  ],
+  "Bluetooth": [
+    {
+      "type": "Debug",
+      "feature": "Debug",
+      "form": ""
+    }
+  ],
+  "Battary": [
+    {
+      "type": "Debug",
+      "capacity": "Debug",
+      "tech": "Debug",
+      "form": ""
+    },
+    {
+      "type": "DebugDebug",
+      "capacity": "DebugDebug",
+      "tech": "DebugDebug",
+      "form": ""
+    }
+  ],
+  "ACadapter": [
+    "Debug",
+    "Debug",
+    "Debug"
+  ],
+  "ports": [
+    "Debug",
+    "Debug",
+    "Debug",
+    "Debug",
+    "Debug"
+  ],
+  "camera": [
+    "Debug"
+  ],
+  "audio": [
+    "Debug"
+  ],
+  "keyboard": [
+    "Debug"
+  ],
+  "security": [
+    "Debug"
+  ],
+  "system": [
+    "Debug"
+  ],
   "physical": {
     "dimensions": "Debug",
     "weight": "Debug",
     "case_material": "Debug"
-  }
+  },
+  "PSREF_link": [
+    "Debug"
+  ],
+  "HMM_link": [
+    "Debug"
+  ],
+  "user_guide_link": [
+    "Debug"
+  ],
+  "add_on_tips": [
+    "Debug"
+  ],
+  "secret_tips": [
+    "Debug"
+  ]
 }
