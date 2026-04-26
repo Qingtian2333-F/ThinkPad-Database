@@ -1369,21 +1369,25 @@
                         ssd_pcie: 'PCIe SSD',
                         hdd: '2.5" HDD',
                         sshd: 'SSHD',
-                        optical: '光驱'
+                        optical: '光驱',
+                        emmc: 'EMMC'
                     };
                     const items = [];
                     for (const [key, value] of Object.entries(data.storage)) {
-                        if (value && typeof value === 'string' && value.trim() !== '') {
-                            const title = fieldLabels[key] || key.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
-                            const content = value.replace(/"/g, '&quot;');
-                            items.push(`
-                                <div class="part-item">
-                                    <div class="part-info">
-                                        <div class="part-title">${title}</div>
-                                        <div>${content}</div>
+                        if (value && typeof value === 'string') {
+                            const trimmed = value.trim();
+                            if (trimmed !== '' && !/^(Not supported)$/i.test(trimmed)) {
+                                const title = fieldLabels[key] || key.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+                                const content = trimmed.replace(/"/g, '&quot;');
+                                items.push(`
+                                    <div class="part-item">
+                                        <div class="part-info">
+                                            <div class="part-title">${title}</div>
+                                            <div>${content}</div>
+                                        </div>
                                     </div>
-                                </div>
-                            `);
+                                `);
+                            }
                         }
                     }
                     if (items.length === 0) {
@@ -1523,7 +1527,7 @@
                     <tr><th>接口</th><td>${Array.isArray(data.ports) ? data.ports.join('、') : data.ports || '无'}</td></tr>
                     <tr><th>摄像头</th><td>${Array.isArray(data.camera) ? data.camera.join('、') : data.camera || '无'}</td></tr>
                     <tr><th>音频</th><td>${Array.isArray(data.audio) ? data.audio.join('<br>') : data.audio || 'N/A'}</td></tr>
-                    <tr><th>键盘</th><td>${Array.isArray(data.keyboard) ? data.keyboard.join('<br>') : data.keyboard || 'N/A'}</td></tr>
+                    <tr><th>键盘和UltraNav</th><td>${Array.isArray(data.keyboard) ? data.keyboard.join('<br>') : data.keyboard || 'N/A'}</td></tr>
                     ${data['color calibration'] ? `
                     <tr><th>校色仪</th><td>${Array.isArray(data['color calibration']) ? data['color calibration'].join('、') : data['color calibration']}</td></tr>
                     ` : ''}
