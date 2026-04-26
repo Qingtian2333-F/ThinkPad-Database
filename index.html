@@ -1274,10 +1274,11 @@
 
                 // 内部型号徽章
                 let modelCodeHtml = '';
-                if (data.model_code) {
-                    const codeStr = Array.isArray(data.model_code)
-                        ? data.model_code.join(' / ')
-                        : data.model_code;
+                const modelCodeField = data._isNickname ? data.addon_model_code : data.model_code;
+                if (modelCodeField) {
+                    const codeStr = Array.isArray(modelCodeField)
+                        ? modelCodeField.join(' / ')
+                        : modelCodeField;
                     modelCodeHtml = `<span class="model-code-badge">${codeStr}</span>`;
                 }
 
