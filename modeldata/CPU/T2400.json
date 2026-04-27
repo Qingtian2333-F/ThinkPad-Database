@@ -1,0 +1,9 @@
+{
+  "model": "T2400",
+  "cores_threads": "2 / 2",
+  "base_freq": "1.83 GHz",
+  "turbo_freq": "-",
+  "cache": "2MB",
+  "iconfamily": "Core_Duo",
+  "ark": ""
+}
