@@ -22,7 +22,7 @@
         "slots": "Memory soldered to systemboard",
         "features": "Dual-channel capable"
       },
-      "display_options": ["LEN414C", "2.8K_AG_OLED"],
+      "display_options": ["LEN414C", "LEN41F5"],
       "storage": {
         "ssd_pcie": "Dual M.2 2280 SSD / PCIe NVMe, PCIe 5.0 x 4 + PCIe 4.0 x 4, Up to 128Gb/s"
       },
@@ -63,8 +63,8 @@
         "HD Audio, Realtek codec / stereo speakers, 2W x 2 / dual array microphone, Dolby Atmos®"
       ],
       "keyboard": [
-        "6-row, spill-resistant, multimedia Fn keys, LED backlight",
-        "TrackPoint pointing device and Galss-Like Mylar surface multi-touch touchpad"
+        "6-row, spill-resistant, multimedia Fn keys, Copilot key, LED backlight",
+        "TrackPoint pointing device, double-tap Quick Menu, Galss-Like Mylar surface multi-touch touchpad"
       ],
       "physical": {
         "dimensions": "313mm x 217.3mm x 15.3mm",

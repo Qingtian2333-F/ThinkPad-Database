@@ -1,0 +1,15 @@
+        {
+          "type": "2.8K (2880x1920)",
+          "tech": "OLED, Anti-glare, HDR1000 True Black, Dolby Vision, EyeSafe",
+          "brightness": "500 nits",
+          "contrast": "100000:1",
+          "viewing_angle": "170°",
+          "color_gamut":"100% DCI-P3",
+          "refresh_rate":"30 Hz ~ 120 Hz VRR",
+          "FRUs":[
+            {
+             "5D11U08392":"ATNA40HQ10-0 (For X14 Gen1)",
+             "5M11V58267":"ATNA40HQ10-0 (For T14 Gen7 / P14s Gen7 AMD)"
+            }
+          ]
+        }
