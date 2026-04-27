@@ -10,7 +10,7 @@
       "processor_options": [
         "603e_100"
       ],
-      "graphics_options":["WD90C24A Rev C (G10 Graphics Adapter)"],      
+      "graphics_options":["WD90C24A"],      
       "Display": {
         "max_resolution": {
           "vga": "1024x768@75Hz",
