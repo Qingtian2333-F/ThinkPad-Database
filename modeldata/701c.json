@@ -1,0 +1,71 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-701c",
+      "model_name": "ThinkPad 701C",
+      "model_family": "7",
+      "model_generation": "Unknow",
+      "update_date": "September 1995",
+      "model_code": ["2630"],
+      "processor_options": ["486DX2_25", "486DX2_50", "486DX4_25", "486DX4_75"],
+      "graphics_options": ["CT65545"],
+      "Display": {
+        "max_resolution": {
+          "vga": "1024x768@70Hz, 256 Colors"
+        },
+        "multi_display": "Supports 1 independent displays"
+      },
+      "memory": {
+        "max_capacity": "36MB max for DX2 model and 40MB max for DX4 model",
+        "type": "LPDDR5X 8533MHz (Runs at 7467MHz on Ultra5 336H CPU)",
+        "slots": "4 (DX2 Model) / 8 (DX4 Model) Memory soldered to systemboard, One slot left for upgrade",
+        "features": ""
+      },
+      "display_options": ["TFT"],
+      "storage": {
+        "hdd": "IDE"
+      },
+      "Battary": [
+        {
+          "type": "Removeable battery",
+          "capacity": "16.2Wh",
+          "form": "9-Cells",
+          "tech": "Super NiCad or NiMH (DX4 mdls built after 9/95)"
+        }
+      ],
+      "ACadapter": ["Wallmount AC adapter (30 watts) w/ 2 prongs"],
+      "ports": [
+        "CS93 standard docking Port",
+        "IrDA 1.0",
+        "(2) Type II, or (1) Type III PCMCIA slot",
+        "Power Port",
+        "RJ11",
+        "Input jack / microphone jack / output jack"
+      ],
+      "audio": [
+        "16 bit audio chip on planar (ESS688 and Yamaha OPL3) / FM Synthesis Internal speaker (with Fn key volume control) and internal microphone"
+      ],
+      "keyboard": [
+        "7-row, Full sized, folding TrackWrite keyboard",
+        "TrackPoint III "
+      ],
+      "physical": {
+        "dimensions": "246.4mm x 200.7mm x 43.8mm",
+        "weight": "Starting at 4.5 lb / 2.04 kg",
+        "case_material": "ABS"
+      },
+      "security": [
+        "Power-on password",
+        "locking device keyhole also called MicroSaver security connector (Kensington lock)"
+      ],
+      "system": [
+        "IBM DOS 6.3",
+        "Windows 3.11",
+        "OS/2 Warp (on DX4 models)"
+      ],
+      "HMM_link": ["https://download.lenovo.com/ibmdl/pub/pc/pccbbs/mobiles/tpvol2.pdf"],
+      "add_on_tips": [""],
+      "secret_tips": [""]
+    }
+  ]
+}

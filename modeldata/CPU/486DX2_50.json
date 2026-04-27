@@ -1,0 +1,9 @@
+{
+  "model": "Intel 80486DX2 50MHz",
+  "cores_threads": "1 / 1",
+  "base_freq": "50 MHz",
+  "turbo_freq": "-",
+  "cache": "8KB",
+  "iconfamily": "i486",
+  "ark": ""
+}
