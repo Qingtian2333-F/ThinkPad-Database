@@ -1,0 +1,9 @@
+{
+  "model": "PowerPC 603e 100MHz",
+  "cores_threads": "1 / 1",
+  "base_freq": "100MHz",
+  "turbo_freq": "-",
+  "cache": "256KB (L2)",
+  "iconfamily": "PPC",
+  "ark": "https://www.nxp.com/docs/en/data-sheet/MPC603EEC.pdf"
+}
