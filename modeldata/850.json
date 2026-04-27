@@ -1,0 +1,85 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-850",
+      "model_name": "ThinkPad Power Series 850",
+      "model_family": "ThinkPad Power Series",  
+      "model_code":["6042"],
+      "model_generation": "unknown",
+      "update_date": "Augest 1995",
+      "processor_options": [
+        "603e_100"
+      ],
+      "graphics_options":["WD90C24A Rev C (G10 Graphics Adapter)"],      
+      "Display": {
+        "max_resolution": {
+          "vga": "1024x768@75Hz",
+          "composite_out": "1024x768@75Hz"
+        },
+        "multi_display": "Mirroring only"
+      },
+      "memory": {
+        "max_capacity": "96MB max",
+        "type": "EDO SO-DIMM + FPM SIMM",
+        "slots": "Two SO-DIMM sockets + Two IC-DRAM sockets",
+        "features": "Must be installed in matched pairs, parity"
+      },
+      "display_options": [],
+      "storage": {
+        "ssd_sata": null,
+        "ssd_pcie": null,
+        "hdd": "SCSI-2 Fast",
+        "sshd": null
+      },
+      "Ethernet": [],
+      "WLAN": [],
+      "Bluetooth": [],
+      "WWAN": [],
+      "SIM_Card": [],
+      "Battery": [
+        {
+          "type": "Nickel hydride (NiMH)",
+          "capacity": null,
+          "form": null,
+          "tech": "Nickel hydride (NiMH)"
+        }
+      ],
+      "ports": [
+        "PCMCIA 2.1 2 x Type I & 2 x Type II & 1 x Type III",
+        "1 x RS232",
+        "1 x IEEE 1284",
+        "VGA",
+        "composite In/out",
+        "3.5mm Input jack & output jack & line in & line out"
+      ],
+      "camera": [
+        "CCD camera, white balance, iris, lens focus"
+      ],
+      "audio": [
+        "CD quality audio, Crystal Semiconductor CS4231 / Internal stereo speakers 1W"
+      ],
+      "keyboard": [
+        "Full size 84 keys, No Fn keys",
+        "TrackPoint III"
+      ],
+      "physical": {
+        "dimensions": "297.1mm x 259.0mm x 60.9mm / 11.7 x 10.2 x 2.4in",
+        "weight": "7.69 pounds (3.49kg)"
+      },
+      "security": [
+        "Power-on password",
+        "Supervisor password",
+        "Hardware security loop",
+        "Keyboard Lock",
+        "Locking device keyhole",
+        "PCMCIA card lock"
+      ],
+      "system": [
+        "IBM AIX Version 4 for Clients",
+        "Microsoft Windows NT 3.51 Workstation",
+        "IBM OS/2 Warp Connect",
+        "Solaris"
+      ]
+    }
+  ]
+}
