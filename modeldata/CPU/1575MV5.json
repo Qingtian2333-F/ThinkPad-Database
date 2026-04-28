@@ -1,10 +1,10 @@
-        {
+﻿        {
           "model": "i7-6700HQ",
           "cores_threads": "4 / 8",
           "base_freq": "3 GHz",
           "turbo_freq": "3.9 GHz",
           "cache": "8MB",
-          "graphics": "Intel Iris Pro Graphics P580",
-          "iconfamily":"E3-6~9",
-          "ark":"https://www.intel.cn/content/www/cn/zh/products/sku/93354/intel-xeon-processor-e31575m-v5-8m-cache-3-00-ghz/specifications.html"
+          "graphics": "Intel Iris Pro Graphics P580",
+          "iconfamily": "E3-6~9",
+          "ark": "https://www.intel.cn/content/www/cn/zh/products/sku/93354/intel-xeon-processor-e31575m-v5-8m-cache-3-00-ghz/specifications.html"
         }

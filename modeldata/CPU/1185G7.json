@@ -1,0 +1,10 @@
+﻿{
+  "model": "i7-1185G7",
+  "cores_threads": "4 / 8",
+  "base_freq": "3.0 GHz",
+  "turbo_freq": "4.8 GHz",
+  "cache": "12MB",
+  "graphics": "Intel Iris Xe Graphics",
+  "iconfamily": "i7-11~14",
+  "ark": "https://www.intel.cn/content/www/cn/zh/products/sku/208664/intel-core-i71185g7-processor-12m-cache-up-to-4-80-ghz-with-ipu/specifications.html"
+}

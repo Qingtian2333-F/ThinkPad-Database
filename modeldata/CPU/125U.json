@@ -1,0 +1,10 @@
+﻿{
+  "model": "Core Ultra 5 125U",
+  "cores_threads": "12 / 14",
+  "base_freq": "1.3 GHz",
+  "turbo_freq": "4.3 GHz",
+  "cache": "12MB",
+  "graphics": "Intel Graphics",
+  "iconfamily": "U5-1~2",
+  "ark": "https://www.intel.cn/content/www/cn/zh/products/sku/237330/intel-core-ultra-5-processor-125u-12m-cache-up-to-4-30-ghz/specifications.html"
+}

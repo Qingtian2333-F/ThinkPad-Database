@@ -1,0 +1,10 @@
+﻿{
+  "model": "Pentium Gold 6405U",
+  "cores_threads": "2 / 4",
+  "base_freq": "2.4 GHz",
+  "turbo_freq": null,
+  "cache": "2MB",
+  "graphics": "Intel UHD Graphics",
+  "iconfamily": "Pentium",
+  "ark": "https://www.intel.cn/content/www/cn/zh/products/sku/197888/intel-pentium-gold-6405u-processor-2m-cache-2-40-ghz/specifications.html"
+}

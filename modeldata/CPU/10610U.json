@@ -1,0 +1,10 @@
+﻿{
+  "model": "i7-10610U",
+  "cores_threads": "4 / 8",
+  "base_freq": "1.8 GHz",
+  "turbo_freq": "4.9 GHz",
+  "cache": "8MB",
+  "graphics": "Intel UHD Graphics",
+  "iconfamily": "i7-10",
+  "ark": "https://www.intel.cn/content/www/cn/zh/products/sku/201896/intel-core-i710610u-processor-8m-cache-up-to-4-90-ghz/specifications.html"
+}

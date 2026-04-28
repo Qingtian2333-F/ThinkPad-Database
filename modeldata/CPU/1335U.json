@@ -1,0 +1,10 @@
+﻿{
+  "model": "i5-1335U",
+  "cores_threads": "10 / 12",
+  "base_freq": "1.3 GHz",
+  "turbo_freq": "4.6 GHz",
+  "cache": "12MB",
+  "graphics": "Intel UHD Graphics",
+  "iconfamily": "i5-11~14",
+  "ark": "https://www.intel.cn/content/www/cn/zh/products/sku/232153/intel-core-i51335u-processor-12m-cache-up-to-4-60-ghz/specifications.html"
+}

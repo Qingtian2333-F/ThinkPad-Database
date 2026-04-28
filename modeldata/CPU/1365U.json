@@ -1,0 +1,10 @@
+﻿{
+  "model": "i7-1365U",
+  "cores_threads": "10 / 12",
+  "base_freq": "1.8 GHz",
+  "turbo_freq": "5.2 GHz",
+  "cache": "12MB",
+  "graphics": "Intel Iris Xe Graphics",
+  "iconfamily": "i7-11~14",
+  "ark": "https://www.intel.cn/content/www/cn/zh/products/sku/232141/intel-core-i71365u-processor-12m-cache-up-to-5-20-ghz/specifications.html"
+}

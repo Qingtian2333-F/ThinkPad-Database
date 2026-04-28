@@ -1,0 +1,10 @@
+﻿{
+  "model": "i7-1265U",
+  "cores_threads": "10 / 12",
+  "base_freq": "1.8 GHz",
+  "turbo_freq": "4.8 GHz",
+  "cache": "12MB",
+  "graphics": "Intel Iris Xe Graphics",
+  "iconfamily": "i7-11~14",
+  "ark": "https://www.intel.com.tw/content/www/tw/zh/products/sku/226258/intel-core-i71265u-processor-12m-cache-up-to-4-80-ghz/specifications.html"
+}

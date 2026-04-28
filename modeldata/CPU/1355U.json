@@ -1,0 +1,10 @@
+﻿{
+  "model": "i7-1355U",
+  "cores_threads": "10 / 12",
+  "base_freq": "1.7 GHz",
+  "turbo_freq": "5.0 GHz",
+  "cache": "12MB",
+  "graphics": "Intel Iris Xe Graphics",
+  "iconfamily": "i7-11~14",
+  "ark": "https://www.intel.com.tw/content/www/tw/zh/products/sku/232160/intel-core-i71355u-processor-12m-cache-up-to-5-00-ghz/specifications.html"
+}
