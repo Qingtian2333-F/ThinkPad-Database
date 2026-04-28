@@ -20,8 +20,8 @@
       },
       "memory": {
         "max_capacity": "96MB max",
-        "type": "72 pin FPM SO-DIMM + IC DRAM",
-        "slots": "Two SO-DIMM sockets + Two IC-DRAM sockets",
+        "type": "70 ns 5 volts IBM IC DRAM Card",
+        "slots": "Two IC-DRAM sockets",
         "features": "Must be installed in matched pairs, parity"
       },
       "display_options": [],
@@ -48,6 +48,7 @@
         "PCMCIA 2.1 2 x Type I & 2 x Type II & 1 x Type III",
         "1 x RS232",
         "1 x IEEE 1284",
+        "1 x PS/2",
         "VGA",
         "composite In/out",
         "3.5mm Input jack & output jack & line in & line out",
@@ -57,7 +58,7 @@
         "CCD camera, white balance, iris, lens focus"
       ],
       "audio": [
-        "CD quality audio, Crystal Semiconductor CS4231 / Internal stereo speakers 1W"
+        "CD quality audio, Crystal Semiconductor CS4231 / Internal stereo speakers 1W x 2"
       ],
       "keyboard": [
         "Full size 84 keys, No Fn keys",

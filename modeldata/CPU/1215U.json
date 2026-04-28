@@ -1,0 +1,10 @@
+﻿{
+  "model": "i3-1215U",
+  "cores_threads": "6 / 8",
+  "base_freq": "1.2 GHz",
+  "turbo_freq": "4.4 GHz",
+  "cache": "10MB",
+  "graphics": "Intel UHD Graphics",
+  "iconfamily": "i3-11~14",
+  "ark": "https://www.intel.cn/content/www/cn/zh/products/sku/226269/intel-core-i31215u-processor-10m-cache-up-to-4-40-ghz-with-ipu/specifications.html"
+}

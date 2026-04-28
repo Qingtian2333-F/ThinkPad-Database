@@ -1,6 +1,5 @@
-
-        {
-          "type": "Intel® Wi-Fi 6 AX200",
-          "form": "2x2, M.2 card",
-          "feature":"11ax+BT"
-        }
+﻿{
+  "type": "Intel Wi-Fi 6 AX200",
+  "form": "2x2, M.2 card",
+  "feature": "11ax+BT"
+}

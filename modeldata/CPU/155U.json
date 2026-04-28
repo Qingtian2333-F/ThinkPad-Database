@@ -1,0 +1,10 @@
+﻿{
+  "model": "Core Ultra 7 155U",
+  "cores_threads": "12 / 14",
+  "base_freq": "1.7 GHz",
+  "turbo_freq": "4.8 GHz",
+  "cache": "12MB",
+  "graphics": "Intel Graphics",
+  "iconfamily": "U7-1~2",
+  "ark": "https://www.intel.cn/content/www/cn/zh/products/sku/237327/intel-core-ultra-7-processor-155u-12m-cache-up-to-4-80-ghz/specifications.html"
+}

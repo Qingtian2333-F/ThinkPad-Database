@@ -1,0 +1,10 @@
+﻿{
+  "model": "Core Ultra 5 135U",
+  "cores_threads": "12 / 14",
+  "base_freq": "1.6 GHz",
+  "turbo_freq": "4.4 GHz",
+  "cache": "12MB",
+  "graphics": "Intel Graphics",
+  "iconfamily": "U5-1~2",
+  "ark": "https://www.intel.cn/content/www/cn/zh/products/sku/237328/intel-core-ultra-5-processor-135u-12m-cache-up-to-4-40-ghz/specifications.html"
+}

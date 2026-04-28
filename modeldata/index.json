@@ -716,6 +716,12 @@
         "generation": "legacy"
     },
     {
+        "file": "860.json",
+        "name": "IBM RS/6000 860",
+        "family": "RS/6000",
+        "generation": "legacy"
+    },
+    {
         "file": "701C.json",
         "name": "ThinkPad 701C",
         "family": "7",

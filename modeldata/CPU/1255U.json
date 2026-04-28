@@ -1,0 +1,10 @@
+﻿{
+  "model": "i7-1255U",
+  "cores_threads": "10 / 12",
+  "base_freq": "1.7 GHz",
+  "turbo_freq": "4.7 GHz",
+  "cache": "12MB",
+  "graphics": "Intel Iris Xe Graphics",
+  "iconfamily": "i7-11~14",
+  "ark": "https://www.intel.cn/content/www/cn/zh/products/sku/226259/intel-core-i71255u-processor-12m-cache-up-to-4-70-ghz/specifications.html"
+}

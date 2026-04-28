@@ -1,0 +1,157 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-l14-gen4-amd",
+      "model_name": "ThinkPad L14 Gen 4 (AMD)",
+      "model_family": "L",
+      "model_generation": "Gen 4",
+      "update_date": "August 2025",
+      "model_code": [
+        "21H5",
+        "21H6"
+      ],
+      "processor_options": [
+        "7330U",
+        "7530U",
+        "7730U"
+      ],
+      "graphics_options": [
+        "AMD_Radeon"
+      ],
+      "Display": {
+        "max_resolution": {
+          "hdmi": "3840x2160@60Hz",
+          "usb_c": "5120x2880@60Hz"
+        },
+        "multi_display": "Supports up to 4 independent displays"
+      },
+      "memory": {
+        "max_capacity": "64GB max",
+        "type": "DDR4-3200",
+        "slots": "Two DDR4 SO-DIMM sockets, dual-channel capable",
+        "features": "Dual-channel capable"
+      },
+      "display_options": [
+        "14.0\" HD (1366x768) TN 220nits anti-glare 45% NTSC",
+        "14.0\" FHD (1920x1080) IPS 250nits anti-glare 45% NTSC",
+        "14.0\" FHD (1920x1080) IPS 300nits anti-glare multi-touch 72% NTSC",
+        "14.0\" FHD (1920x1080) IPS 400nits anti-glare Low power 72% NTSC"
+      ],
+      "storage": {
+        "ssd_pcie": "M.2 2242 PCIe NVMe, PCIe 4.0 x4 (downgraded to PCIe 3.0 by platform), up to 2TB",
+        "ssd_sata": "Not supported",
+        "hdd": "Not supported"
+      },
+      "Ethernet": [
+        "Realtek RTL8111EPV Gigabit Ethernet"
+      ],
+      "WLAN": [
+        "Realtek Wi-Fi 6E RTL8852CE",
+        "AMD Wi-Fi 6E RZ616"
+      ],
+      "Bluetooth": [
+        {
+          "type": "Integrated",
+          "form": "Integrated in Wi-Fi + Bluetooth combo adapter",
+          "feature": "Bluetooth 5.3"
+        }
+      ],
+      "WWAN": [
+        "EM05-G",
+        "L860-GL-16",
+        "WWAN_Upgradeable"
+      ],
+      "SIM_Card": [
+        {
+          "type": "KDDI eSIM (Japan) or no physical SIM card"
+        }
+      ],
+      "Battary": [
+        {
+          "type": "Integrated",
+          "capacity": "46.5Wh",
+          "form": "Li-Ion",
+          "tech": "Rechargeable Li-Ion, supports Rapid Charge (80% in 1hr)"
+        },
+        {
+          "type": "Integrated",
+          "capacity": "57Wh",
+          "form": "Li-Ion",
+          "tech": "Rechargeable Li-Ion, supports Rapid Charge (80% in 1hr)"
+        },
+        {
+          "type": "Integrated",
+          "capacity": "63Wh",
+          "form": "Li-Ion",
+          "tech": "Rechargeable Li-Ion, supports Rapid Charge (80% in 1hr)"
+        }
+      ],
+      "ACadapter": [
+        "45W USB-C AC adapter",
+        "65W USB-C AC adapter",
+        "65W USB-C slim AC adapter",
+        "100W USB-C slim AC adapter"
+      ],
+      "ports": [
+        "1x USB 3.2 Gen 1",
+        "1x USB 3.2 Gen 1 (Always On)",
+        "2x USB-C 3.2 Gen 2 (PD 3.0, DisplayPort 1.4)",
+        "1x HDMI 2.1, up to 4K/60Hz",
+        "1x Headphone/microphone combo jack (3.5mm)",
+        "1x Ethernet (RJ-45)",
+        "1x microSD card reader",
+        "1x Nano-SIM card slot (optional)",
+        "1x Smart card reader (optional)"
+      ],
+      "camera": [
+        "HD 720p with privacy shutter, fixed focus",
+        "FHD 1080p + IR hybrid with privacy shutter, fixed focus",
+        "FHD 1080p with privacy shutter, fixed focus"
+      ],
+      "audio": [
+        "HD Audio, Realtek ALC3287 codec / stereo speakers, 2W x2, Dolby Audio / dual array microphone, Dolby Voice"
+      ],
+      "keyboard": [
+        "6-row, spill-resistant, multimedia Fn keys, optional LED backlight",
+        "TrackPoint pointing device and Mylar surface multi-touch 3-button Trackpad"
+      ],
+      "physical": {
+        "dimensions": "325.4 x 217 x 19.83 mm (12.81 x 8.54 x 0.78 inches)",
+        "weight": "Starting at 1.4 kg (3.09 lbs)",
+        "case_material": "Aluminium or PC-ABS (top), PC-ABS or PC-CF (bottom)"
+      },
+      "security": [
+        "Discrete TPM 2.0, TCG certified, FIPS 140-2 certified",
+        "Touch fingerprint reader in power button (optional)",
+        "Kensington Nano Security Slot",
+        "Camera privacy shutter",
+        "IR camera for Windows Hello (optional)",
+        "ThinkShield",
+        "Power-on/Supervisor/NVMe password"
+      ],
+      "system": [
+        "Windows 11 Pro",
+        "Windows 11 Home",
+        "Ubuntu Linux",
+        "No preload OS"
+      ],
+      "PSREF_link": [
+        "https://psref.lenovo.com/syspool/Sys/PDF/ThinkPad/ThinkPad_L14_Gen_4_AMD_Spec/ThinkPad_L14_Gen_4_AMD_Spec.pdf"
+      ],
+      "user_guide_link": [
+        "https://download.lenovo.com/pccbbs/mobiles_pdf/l14_l15_gen4_linux_ug.pdf"
+      ],
+      "HMM_link": [
+        "https://download.lenovo.com/pccbbs/mobiles_pdf/l14_l15_gen4_hmm_en.pdf"
+      ],
+      "add_on_tips": [
+        "DASH management",
+        "MIL-STD-810H certified",
+        "NFC optional"
+      ],
+      "secret_tips": [
+        ""
+      ]
+    }
+  ]
+}
