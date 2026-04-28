@@ -1,0 +1,85 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-760e",
+      "model_name": "ThinkPad 760E",
+      "model_family": "760",
+      "model_generation": "E series",
+      "update_date": "October 1996",
+      "model_code": ["9546-U9B"],
+      "processor_options": ["Pentium 150/60 MHz (P54CSLM)"],
+      "graphics_options": ["Trident CYBER9385 64-bit SVGA accelerator with 2 MB EDO DRAM"],
+      "Display": {
+        "max_resolution": {
+          "external": "1280x1024 w/ 256 colors or 1024x768 w/ 65,536 colors"
+        },
+        "multi_display": "Simultaneous LCD and CRT, 180 degree tilt"
+      },
+      "memory": {
+        "max_capacity": "80MB max (104MB with ThinkPad Proven option)",
+        "type": "EDO 70ns, non-parity, 3.3 volt",
+        "slots": "2 sockets for two JEDEC 144 pin EDO SO DIMMs of 8, 16, 32 MB",
+        "features": "16MB standard"
+      },
+      "display_options": [
+        "12.1\" TFT XGA color 1024x768, 65,536 simultaneous colors, Black Matrix TFT, 100 to 1 contrast ratio"
+      ],
+      "storage": {
+        "hdd": "2.1 GB / 12 ms / DMA Mode 2 or PIO Mode 4 (removable), EIDE, busmaster, PCI 2.1, supports two internal disks (4.2 GB max)",
+        "optical": "None standard / can upgrade with optional CD-ROM into UltraBay"
+      },
+      "Ethernet": ["None"],
+      "WLAN": ["None"],
+      "Bluetooth": [{"type": "None"}],
+      "WWAN": ["No_WWAN"],
+      "SIM_Card": [{"type": "None"}],
+      "Battery": [
+        {
+          "type": "Lithium Ion (intelligent, optional NiMH supported)",
+          "capacity": "2.6 hours (1 batt), 5.2 hours (2 batts)",
+          "form": "Removable",
+          "tech": "Li-Ion (optional NiMH)"
+        }
+      ],
+      "ACadapter": ["35 watt Slim AC Adapter 2 prong"],
+      "ports": [
+        "1 x Serial (16550A)",
+        "1 x Parallel (IEEE P1284-A, EPP, ECP)",
+        "2 x Type I/II or 1 x Type III PCMCIA (CardBus 32-bit PCI)",
+        "1 x External FDD port",
+        "1 x Audio line-in jack (3.5mm)",
+        "1 x Audio line-out jack (3.5mm)",
+        "Infrared ports (front and back) with IrDA 1.0, up to 115 kbs",
+        "Telephone/answering machine/full duplex speakerphone/DSVD (via Mwave DSP)"
+      ],
+      "camera": ["None"],
+      "audio": [
+        "Mwave MDSP2780 DSP with modem, fax, audio, telephony function (v.34 to 33.6 Kbps)",
+        "16-bit audio chip on planar with Mwave DSP",
+        "Internal stereo speakers (0.5W), slide volume control, internal microphone"
+      ],
+      "keyboard": [
+        "Full-size 85-key keyboard, automated tilt up (5.5 degrees)",
+        "TrackPoint III, integrated palm rest"
+      ],
+      "physical": {
+        "dimensions": "11.7 x 8.3 x 2.0 inches (194 cubic inches)",
+        "weight": "6.41 pounds (2.91 kg) with battery",
+        "case_material": "Not specified"
+      },
+      "security": [
+        "Power-on password",
+        "Hard disk password",
+        "Supervisor password",
+        "Security keyhole",
+        "Security latch for keyboard and DIMMs (requires cable lock)",
+        "PC Card lock",
+        "Personalization",
+        "Security Plate"
+      ],
+      "system": [
+        "Windows 95"
+      ]
+    }
+  ]
+}

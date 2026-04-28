@@ -1,0 +1,94 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-390x",
+      "model_name": "ThinkPad 390X",
+      "model_family": "390",
+      "model_generation": "X series",
+      "update_date": "September 1999",
+      "model_code": ["2626-F0U", "2626-H0U", "2626-HNU", "2626-J0U", "2626-JNU"],
+      "processor_options": ["Intel Mobile Celeron 400MHz", "Intel Mobile Pentium II 400MHz"],
+      "graphics_options": ["NeoMagic MagicMedia256AV (NM2200) 2.5MB SGRAM embedded"],
+      "Display": {
+        "max_resolution": {
+          "external": "1024x768 16M colors at 75Hz or 1280x1024 256 colors"
+        },
+        "multi_display": "Simultaneous LCD and CRT, 150 degree tilt, multiple-monitor support"
+      },
+      "memory": {
+        "max_capacity": "512MB max",
+        "type": "SDRAM 100MHz, PC100-compliant, non-parity, 3.3V",
+        "slots": "2 sockets for JEDEC 144-pin SO DIMMs (one used by standard memory)",
+        "features": "64MB standard; sockets accessed from bottom via screw"
+      },
+      "display_options": [
+        "12.1\" TFT SVGA 800x600, 20-30ms, 150 nits, 16.7M colors",
+        "14.1\" TFT XGA 1024x768, 20-30ms, 120 nits, 16.7M colors",
+        "15.0\" TFT XGA 1024x768, 10-30ms, 120 nits, 16.7M colors"
+      ],
+      "storage": {
+        "hdd": "4.8GB / 13ms or 6.4GB / 12ms, EIDE, removable, S.M.A.R.T.",
+        "optical": "24X-10X CD-ROM (standard) or optional 4X-1X DVD-ROM integrated with diskette drive"
+      },
+      "Ethernet": ["Not onboard (optional via Port Replicator or PC Card)"],
+      "WLAN": ["Not supported"],
+      "Bluetooth": [
+        {
+          "type": "None"
+        }
+      ],
+      "WWAN": ["No_WWAN"],
+      "SIM_Card": [
+        {
+          "type": "None"
+        }
+      ],
+      "Battery": [
+        {
+          "type": "NiMH or Li-Ion",
+          "capacity": "NiMH: 2.5 hrs (F0U); Li-Ion: 3.5-3.67 hrs",
+          "form": "Intelligent, removable from left side",
+          "tech": "NiMH / Li-Ion"
+        }
+      ],
+      "ACadapter": ["56 watt Ultraslim AC adapter, barrel, 3-prong"],
+      "ports": [
+        "1 x USB",
+        "1 x Serial 9-pin 16550A",
+        "1 x Parallel (IEEE P1284-A, EPP, ECP)",
+        "2 x PC Card slots (Type I/II/III, CardBus 32-bit, Zoomed Video)",
+        "1 x S-Video out connector",
+        "1 x Microphone jack (stereo)",
+        "1 x Headphone jack (stereo)",
+        "1 x Line-in jack",
+        "1 x Infrared port (IrDA 1.1, up to 4Mbps)"
+      ],
+      "camera": ["Not supported"],
+      "audio": [
+        "16-bit SoundBlaster Pro support (ESS 1946), PCI, full duplex",
+        "Two Altec Lansing stereo speakers (1W each) on display (front for 15\" model)",
+        "Internal microphone, dial volume control"
+      ],
+      "keyboard": [
+        "Full-size 85-key keyboard with 7 Fn key functions",
+        "TrackPoint pointing device with Internet Scroll Bar"
+      ],
+      "physical": {
+        "dimensions": "12.4 x 10.1 x 1.8 inches (225 cu in) for 12.1\"/14.1\" models; 12.9 x 10.6 x 1.8\" (246 cu in) for 15\"",
+        "weight": "7.5 lbs (3.4 kg) for 12.1\" & 14.1\" models; 7.9 lbs (3.6 kg) for 15\" models",
+        "case_material": "PC/ABS plastic"
+      },
+      "security": [
+        "Power-on password",
+        "Setup password",
+        "Disk password",
+        "Security keyhole",
+        "Security screw for UltraBay FX"
+      ],
+      "system": [
+        "Windows 98",
+        "Windows NT 4.0"
+      ]
+    }
+  ]
+}

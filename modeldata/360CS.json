@@ -1,0 +1,78 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-360cs",
+      "model_name": "ThinkPad 360Cs",
+      "model_family": "360",
+      "model_generation": "1st Gen",
+      "update_date": "May 1994",
+      "model_code": ["2620-00F", "2620-50D"],
+      "processor_options": ["80486 SX 33MHz (SL Enhanced)"],
+      "graphics_options": ["Western Digital WD90C24A2 with 1MB DRAM"],
+      "Display": {
+        "max_resolution": {
+          "external": "1024x768 256 colors"
+        },
+        "multi_display": "Simultaneous LCD and CRT"
+      },
+      "memory": {
+        "max_capacity": "20MB max",
+        "type": "IC DRAM 70ns, non-parity, 5.0 volt",
+        "slots": "1 socket",
+        "features": "4MB standard; options: 4, 8, 16 MB ICs"
+      },
+      "display_options": [
+        "9.5\" Dual Scan Color VGA 640x480, 256 simultaneous colors, STN, backlit, 20 to 1 contrast"
+      ],
+      "storage": {
+        "hdd": "170MB / 15ms or 340MB / 14ms (removable)",
+        "optical": "None"
+      },
+      "Ethernet": ["None"],
+      "WLAN": ["None"],
+      "Bluetooth": [{"type": "None"}],
+      "WWAN": ["No_WWAN"],
+      "SIM_Card": [{"type": "None"}],
+      "Battery": [
+        {
+          "type": "NiMH",
+          "capacity": "Intelligent, removable",
+          "form": "Not specified",
+          "tech": "NiMH"
+        }
+      ],
+      "ACadapter": ["30W wallmount AC adapter"],
+      "ports": [
+        "1 x Serial (16550A)",
+        "1 x Parallel (EPP)",
+        "1 x External display",
+        "1 x Keyboard/mouse",
+        "2 x PCMCIA Type II (or 1 Type III)",
+        "1 x Headphone out",
+        "1 x Microphone in"
+      ],
+      "camera": ["None"],
+      "audio": [
+        "16-bit audio chip, internal speaker (0.5W), internal microphone"
+      ],
+      "keyboard": [
+        "Full-size 85-key lift-up keyboard",
+        "TrackPoint II"
+      ],
+      "physical": {
+        "dimensions": "11.7 x 8.3 x 2.0 inches (194 cubic inches)",
+        "weight": "6.2 pounds",
+        "case_material": "Not specified"
+      },
+      "security": [
+        "Power-on password",
+        "Hard disk password",
+        "Supervisor password",
+        "Hardware security loop",
+        "PCMCIA card lock",
+        "Optional Security Base"
+      ],
+      "system": ["IBM DOS 6.3, Windows 3.1"]
+    }
+  ]
+}

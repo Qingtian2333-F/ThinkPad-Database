@@ -1,0 +1,93 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-760cd",
+      "model_name": "ThinkPad 760CD",
+      "model_family": "760",
+      "model_generation": "CD series",
+      "update_date": "1996",
+      "model_code": ["9546"],
+      "processor_options": ["Pentium 120/60 MHz", "Pentium 133/66 MHz", "Pentium MMX 166/66 MHz"],
+      "graphics_options": ["Trident CYBER9385 64-bit SVGA accelerator with 2 MB EDO DRAM"],
+      "Display": {
+        "max_resolution": {
+          "external": "1280x1024 w/ 256 colors or 1024x768 w/ 65,536 colors"
+        },
+        "multi_display": "Simultaneous LCD and CRT, 180 degree tilt"
+      },
+      "memory": {
+        "max_capacity": "80MB max (104MB with ThinkPad Proven option)",
+        "type": "EDO 70ns, non-parity, 3.3V",
+        "slots": "2 sockets for two JEDEC 144 pin EDO SO DIMMs of 8, 16, 32 MB",
+        "features": "16MB standard"
+      },
+      "display_options": [
+        "12.1\" TFT SVGA 800x600 / XGA 1024x768, 65,536 colors, Active Matrix, 100:1 contrast"
+      ],
+      "storage": {
+        "hdd": "1.2 GB / 12 ms or 2.1 GB / 12 ms, DMA Mode,
+        "optical": "5.25\" CD-ROM, 4x/6x/8x speed, multi-session, XA, bootable, EIDE (ATAPI), removable"
+      },
+      "Ethernet": ["None"],
+      "WLAN": ["None"],
+      "Bluetooth": [
+        {
+          "type": "None"
+        }
+      ],
+      "WWAN": ["No_WWAN"],
+      "SIM_Card": [
+        {
+          "type": "None"
+        }
+      ],
+      "Battery": [
+        {
+          "type": "Li-Ion (standard) / NiMH (optional)",
+          "capacity": "2-3 hours (1 battery)",
+          "form": "Intelligent, removable",
+          "tech": "Li-Ion / NiMH"
+        }
+      ],
+      "ACadapter": ["35W Slim AC Adapter, 2-prong (or 4-prong)"],
+      "ports": [
+        "1 x Serial (16550A)",
+        "1 x Parallel (IEEE P1284-A, EPP, ECP)",
+        "2 x PCMCIA Type II (or 1 Type III), CardBus 32-bit PCI",
+        "1 x Video in/out (Composite/S-Video)",
+        "1 x Game/MIDI port",
+        "1 x Mic-in / Line-in / Line-out jacks",
+        "1 x External FDD port",
+        "Infrared ports (front and back) IrDA 1.0"
+      ],
+      "camera": ["None"],
+      "audio": [
+        "Mwave MDSP2780 DSP (modem, fax, audio, telephony)",
+        "16-bit audio chip with Mwave DSP",
+        "Internal stereo speakers, internal microphone"
+      ],
+      "keyboard": [
+        "Full-size 85-key keyboard, automated tilt up (5.5 degrees)",
+        "TrackPoint III, integrated palm rest"
+      ],
+      "physical": {
+        "dimensions": "11.7 x 8.3 x 2.14 inches (208 cubic inches)",
+        "weight": "7.0 - 7.77 pounds (3.2 - 3.5 kg) with CD-ROM and battery",
+        "case_material": "Not specified"
+      },
+      "security": [
+        "Power-on password",
+        "Hard disk password",
+        "Supervisor password",
+        "Kensington lock slot",
+        "Security latch for keyboard and DIMMs",
+        "PC Card lock",
+        "Personalization/Security Plate"
+      ],
+      "system": [
+        "Windows 95 OSR2",
+        "Windows NT Workstation 4.0"
+      ]
+    }
+  ]
+}

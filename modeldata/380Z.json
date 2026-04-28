@@ -1,0 +1,92 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-380z",
+      "model_name": "ThinkPad 380Z",
+      "model_family": "380",
+      "model_generation": "Z series",
+      "update_date": "September 1998",
+      "model_code": ["2635-HGU", "2635-JGU", "2635-HBU", "2635-JBU", "2635-JCU"],
+      "processor_options": ["Mobile Pentium II 233MHz", "Mobile Pentium II 300MHz"],
+      "graphics_options": ["NeoMagic MagicMedia256AV (NM2200) 2.5MB SDRAM embedded"],
+      "Display": {
+        "max_resolution": {
+          "external": "1024x768 with 16.7 million colors at 85Hz"
+        },
+        "multi_display": "Simultaneous LCD and CRT, 150 degree tilt, multiple-monitor support"
+      },
+      "memory": {
+        "max_capacity": "96MB or 160MB max",
+        "type": "EDO 60ns, non-parity, 3.3 volt",
+        "slots": "1 socket for one JEDEC 144 pin EDO SO DIMM of 16, 32, or 64MB",
+        "features": "32MB standard; socket accessed from bottom via screw"
+      },
+      "display_options": [
+        "13.3\" TFT XGA color 1024x768, 16.7 million simultaneous colors, 100 to 1 contrast ratio"
+      ],
+      "storage": {
+        "hdd": "4.0GB / 13ms read / 14ms write / SMART or 6.4GB / Ultra DMA/33",
+        "optical": "24X-10X CD-ROM, bootable, not removable"
+      },
+      "Ethernet": ["Not supported onboard"],
+      "WLAN": ["Not supported"],
+      "Bluetooth": [
+        {
+          "type": "None"
+        }
+      ],
+      "WWAN": ["No_WWAN"],
+      "SIM_Card": [
+        {
+          "type": "None"
+        }
+      ],
+      "Battery": [
+        {
+          "type": "Li-Ion",
+          "capacity": "Non-intelligent",
+          "form": "Removable, in front",
+          "tech": "Li-Ion"
+        }
+      ],
+      "ACadapter": ["56 watt Universal AC Adapter, barrel, 3-prong"],
+      "ports": [
+        "1 x USB",
+        "1 x Serial (16550A)",
+        "1 x Parallel (IEEE P1284-A, EPP, ECP)",
+        "2 x PCMCIA Type II (or 1 Type III, CardBus 32-bit, Zoomed video)",
+        "1 x External keyboard/mouse",
+        "1 x Microphone in",
+        "1 x Headphone out",
+        "1 x Line in",
+        "1 x Infrared (IrDA 1.1, up to 4Mbps)"
+      ],
+      "camera": ["None"],
+      "audio": [
+        "16-bit audio chip (CS4237B), SRS 3D audio, FM synthesis",
+        "Two front stereo speakers (0.5W) + one subwoofer above keyboard (1W)",
+        "Internal microphone, full duplex speaker/mic"
+      ],
+      "keyboard": [
+        "Full-size 85-key keyboard (all-in-one design, does not lift up)",
+        "TrackPoint with Press-to-Select/Release-to-Select"
+      ],
+      "physical": {
+        "dimensions": "11.8 x 9.2 x 2.4 inches (260 cubic inches); 300.0mm x 233.0mm x 62.0mm",
+        "weight": "7.2 pounds (3.3 kg) with battery and disk",
+        "case_material": "Not specified"
+      },
+      "security": [
+        "Power-on password",
+        "Supervisor password",
+        "Hard disk password",
+        "Security keyhole",
+        "Personalization screen at startup"
+      ],
+      "system": [
+        "Windows 98",
+        "Windows NT 4.0"
+      ]
+    }
+  ]
+}

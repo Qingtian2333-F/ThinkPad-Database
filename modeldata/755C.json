@@ -1,0 +1,85 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-755c-755cs",
+      "model_name": "ThinkPad 755C / 755Cs",
+      "model_family": "755",
+      "model_generation": "1st Gen",
+      "update_date": "June 1994",
+      "model_code": [],
+      "processor_options": ["IntelDX4 75/25 MHz", "Intel DX2 50/25 MHz"],
+      "graphics_options": ["Western Digital WD90C24A or WD90C24A2 with 1 MB DRAM"],
+      "Display": {
+        "max_resolution": {
+          "external": "1024x768 256 colors"
+        },
+        "multi_display": "Simultaneous LCD and CRT, 180 degree tilt"
+      },
+      "memory": {
+        "max_capacity": "36MB max",
+        "type": "IC DRAM 70ns, parity or non-parity",
+        "slots": "1 socket",
+        "features": "4MB standard; up to 20MB with IC cards, up to 36MB with DIMM adapter"
+      },
+      "display_options": [
+        "9.5\" Dual Scan color VGA 640x480",
+        "10.4\" TFT color VGA 640x480"
+      ],
+      "storage": {
+        "hdd": "170MB, 340MB, or 540MB removable",
+        "optical": "Optional CD-ROM (via Dock)"
+      },
+      "Ethernet": ["None"],
+      "WLAN": ["None"],
+      "Bluetooth": [
+        {
+          "type": "None"
+        }
+      ],
+      "WWAN": ["No_WWAN"],
+      "SIM_Card": [
+        {
+          "type": "None"
+        }
+      ],
+      "Battery": [
+        {
+          "type": "NiMH",
+          "capacity": "Intelligent",
+          "form": "Removable",
+          "tech": "NiMH"
+        }
+      ],
+      "ACadapter": ["40W AC adapter"],
+      "ports": [
+        "1 x Serial 16550A",
+        "1 x Parallel EPP",
+        "1 x External display",
+        "2 x PCMCIA Type II or 1 Type III",
+        "1 x Headphone out",
+        "1 x Microphone in"
+      ],
+      "camera": ["None"],
+      "audio": [
+        "16-bit audio (Crystal CS4248 on 755C/Cs); Internal speaker and microphone"
+      ],
+      "keyboard": [
+        "Full-size 85-key lift-up keyboard",
+        "TrackPoint III"
+      ],
+      "physical": {
+        "dimensions": "11.7 x 8.3 x 2.0 inches",
+        "weight": "6.1 - 6.4 lbs",
+        "case_material": "Not specified"
+      },
+      "security": [
+        "Power-on password",
+        "Hard disk password",
+        "Supervisor password (on later models)",
+        "Hardware security loop",
+        "Kensington lock slot"
+      ],
+      "system": ["IBM DOS 6.3, Windows 3.1", "Windows 95"]
+    }
+  ]
+}

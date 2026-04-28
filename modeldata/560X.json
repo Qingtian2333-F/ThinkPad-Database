@@ -1,0 +1,89 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-560x",
+      "model_name": "ThinkPad 560X",
+      "model_family": "560",
+      "model_generation": "X series",
+      "update_date": "March 1998",
+      "model_code": ["2640-60U", "2640-70U"],
+      "processor_options": ["Pentium MMX 200/66 MHz", "Pentium MMX 233/66 MHz"],
+      "graphics_options": ["NeoMagic MagicGraph128XD (NM2160A) 128-bit SVGA accelerator with 2MB iDRAM"],
+      "Display": {
+        "max_resolution": {
+          "external": "1024x768 with 65,536 colors (or 800x600 with 16.7 million)"
+        },
+        "multi_display": "Simultaneous LCD and CRT, 135 degree tilt"
+      },
+      "memory": {
+        "max_capacity": "96MB max",
+        "type": "EDO 60ns, non-parity, 3.3 volt",
+        "slots": "1 socket for one JEDEC 144 pin EDO SO-DIMM of 8, 16, 32, 64MB",
+        "features": "32MB standard; socket accessed from bottom via screw"
+      },
+      "display_options": [
+        "11.3\" Dual Scan SVGA color 800x600, 262,144 simultaneous colors, 30 to 1 contrast",
+        "12.1\" TFT SVGA color 800x600, 262,144 simultaneous colors, 100 to 1 contrast"
+      ],
+      "storage": {
+        "hdd": "2.1GB / 14ms / SMART or 4.0GB / 13ms / Ultra DMA/33 or PIO Mode 4",
+        "optical": "None (optional external via PCMCIA or parallel port)"
+      },
+      "Ethernet": ["Not onboard"],
+      "WLAN": ["Not supported"],
+      "Bluetooth": [
+        {
+          "type": "None"
+        }
+      ],
+      "WWAN": ["No_WWAN"],
+      "SIM_Card": [
+        {
+          "type": "None"
+        }
+      ],
+      "Battery": [
+        {
+          "type": "Lithium Ion",
+          "capacity": "Intelligent",
+          "form": "Removable",
+          "tech": "Li-Ion"
+        }
+      ],
+      "ACadapter": ["56 watt Universal AC Adapter, barrel, 3-prong"],
+      "ports": [
+        "1 x USB",
+        "1 x Serial (16550A)",
+        "1 x Parallel (IEEE P1284-A, EPP, ECP)",
+        "2 x PCMCIA Type II (or 1 Type III, CardBus 32-bit PCI, Zoomed Video)",
+        "1 x External FDD port",
+        "1 x Audio line-in (3.5mm)",
+        "1 x Audio line-out (3.5mm)",
+        "1 x Infrared (IrDA 1.1, up to 4 Mbps)"
+      ],
+      "camera": ["None"],
+      "audio": [
+        "16-bit audio chip, 18 voice MIDI FM synthesis (ESS1688)",
+        "Internal mono speaker (0.5W), rotary volume control, internal microphone"
+      ],
+      "keyboard": [
+        "Full-size 85-key keyboard (flat, no slope without Port Replicator)",
+        "TrackPoint III"
+      ],
+      "physical": {
+        "dimensions": "11.7 x 8.7 x 1.22 inches (124 cubic inches)",
+        "weight": "4.17 pounds (1.89 kg) with battery",
+        "case_material": "Not specified"
+      },
+      "security": [
+        "Power-on password",
+        "Hard disk password",
+        "Security keyhole (Kensington lock)",
+        "Personalization screen at startup"
+      ],
+      "system": [
+        "Windows 95 OSR2.1 with IE 4.01"
+      ]
+    }
+  ]
+}

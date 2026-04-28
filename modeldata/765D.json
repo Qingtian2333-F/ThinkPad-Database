@@ -1,0 +1,94 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-765d",
+      "model_name": "ThinkPad 765D",
+      "model_family": "765",
+      "model_generation": "D series",
+      "update_date": "June 1997",
+      "model_code": ["9546-U9H"],
+      "processor_options": ["Pentium MMX 166/66 MHz (P55CLM)"],
+      "graphics_options": ["Trident CYBER9385 64-bit SVGA accelerator with 2 MB EDO DRAM"],
+      "Display": {
+        "max_resolution": {
+          "external": "1280x1024 w/ 256 colors or 1024x768 w/ 65,536 colors"
+        },
+        "multi_display": "Simultaneous LCD and CRT, 180 degree tilt"
+      },
+      "memory": {
+        "max_capacity": "104MB max",
+        "type": "EDO 70ns, non-parity, 3.3V",
+        "slots": "1 socket available (1 socket uses 16MB SO-DIMM); 8MB on memory module, 8MB in system",
+        "features": "32MB standard; memory module under disk accessible by opening keyboard"
+      },
+      "display_options": [
+        "13.3\" TFT XGA color 1024x768, 65,536 simultaneous colors, Black Matrix TFT, 100 to 1 contrast ratio"
+      ],
+      "storage": {
+        "hdd": "3.0 GB / 12 ms / DMA Mode 2 or PIO Mode 4 / SMART, EIDE, busmaster, PCI 2.1, supports two internal disks for 10.2 GB max",
+        "optical": "5.25\" CD-ROM, 8x speed, multi-session, XA, play with eject button, EIDE/PIO Mode 3 (ATAPI), removable"
+      },
+      "Ethernet": ["None"],
+      "WLAN": ["None"],
+      "Bluetooth": [
+        {
+          "type": "None"
+        }
+      ],
+      "WWAN": ["No_WWAN"],
+      "SIM_Card": [
+        {
+          "type": "None"
+        }
+      ],
+      "Battery": [
+        {
+          "type": "Li-Ion (intelligent, optional NiMH supported)",
+          "capacity": "2.0 hours (4.0 hours with 2 batteries)",
+          "form": "Removable",
+          "tech": "Li-Ion (optional NiMH)"
+        }
+      ],
+      "ACadapter": ["56 watt AC Adapter 4 pin 3 prong"],
+      "ports": [
+        "1 x Serial (16550A)",
+        "1 x Parallel (IEEE P1284-A, EPP, ECP)",
+        "2 x Type I/II or 1 x Type III PCMCIA (CardBus 32-bit PCI)",
+        "1 x External FDD port",
+        "1 x Video in/out (Composite and S-Video)",
+        "1 x Game/MIDI port (includes cable)",
+        "1 x Audio line-in jack (3.5mm)",
+        "1 x Audio line-out jack (3.5mm)",
+        "Infrared ports (front and back) with IrDA 1.0, up to 115 kbs",
+        "Telephone/answering machine/full duplex speakerphone/DSVD (via Mwave DSP)"
+      ],
+      "camera": ["None"],
+      "audio": [
+        "Mwave MDSP2780 DSP with modem, fax, audio, telephony function (v.34 to 33.6 Kbps)",
+        "16-bit audio chip on planar with Mwave DSP",
+        "Internal stereo speakers (0.5W), slide volume control, internal microphone"
+      ],
+      "keyboard": [
+        "Full-size 85-key keyboard, automated tilt up (5.5 degrees)",
+        "TrackPoint III, integrated palm rest"
+      ],
+      "physical": {
+        "dimensions": "11.7 x 9.3 x 2.23 inches (243 cubic inches)",
+        "weight": "7.7 pounds (3.49 kg) with CD-ROM and battery",
+        "case_material": "Not specified"
+      },
+      "security": [
+        "Power-on password",
+        "Hard disk password",
+        "Supervisor password",
+        "Kensington cable lock",
+        "Security latch for keyboard and DIMMs",
+        "PC Card lock",
+        "Personalization / Security Plate"
+      ],
+      "system": [
+        "Windows 95 OSR2 (FAT16, C: 1.99 GB, D: 885 MB)"
+      ]
+    }
+  ]
+}

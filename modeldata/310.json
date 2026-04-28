@@ -1,0 +1,90 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-310",
+      "model_name": "ThinkPad 310",
+      "nickname": "ThinkPad 310D",
+      "addons": "Model with CD-ROM drive called 310D",
+      "model_family": "3",
+      "model_generation": "Legacy",
+      "update_date": "June 1997",
+      "model_code": ["2600"],
+      "addon_model_code": ["2600"],
+      "processor_options": ["P54CSLM_133"],
+      "onboard_L2": ["256 KB / write-back / direct mapped / 7 ns / sychronous pipelined burst"],
+      "graphics_options": ["65550"],
+      "Display": {
+        "max_resolution": {
+          "external": "1024x768"
+        },
+        "multi_display": "Simultaneous LCD and CRT"
+      },
+      "memory": {
+        "max_capacity": "64MB max",
+        "type": "EDO",
+        "slots": "2 sockets (one used by 16MB SO-DIMM)",
+        "features": "60ns, non-parity, 3.3V"
+      },
+      "display_options": [
+        "11.3\" Dual Scan SVGA 800x600",
+        "11.3\" TFT SVGA 800x600"
+      ],
+      "storage": {
+        "hdd": "1.08GB / 13ms / PIO Mode 4",
+        "optical": "Optional 10x CD-ROM (310D only)"
+      },
+      "Ethernet": ["Not onboard"],
+      "WLAN": ["Not supported"],
+      "Bluetooth": [
+        {
+          "type": "None"
+        }
+      ],
+      "WWAN": ["No_WWAN"],
+      "SIM_Card": [
+        {
+          "type": "None"
+        }
+      ],
+      "Battery": [
+        {
+          "type": "NiMH",
+          "capacity": "non-intelligent",
+          "form": "unique to 310",
+          "tech": "NiMH"
+        }
+      ],
+      "ACadapter": ["45W slim AC adapter"],
+      "ports": [
+        "1 x Serial (16550A)",
+        "1 x Parallel (IEEE 1284-A, EPP, ECP)",
+        "1 x External FDD port",
+        "2 x PCMCIA Type II (or 1 Type III)",
+        "1 x Microphone in",
+        "1 x Line in",
+        "1 x Headphone out"
+      ],
+      "camera": ["None"],
+      "audio": [
+        "16-bit audio chip (Yamaha YMF715), internal stereo speakers (0.5W)"
+      ],
+      "keyboard": [
+        "Full-size 85-key keyboard, TrackPoint III"
+      ],
+      "physical": {
+        "dimensions": "11.7 x 8.9 x 1.9 inches (198 cubic inches)",
+        "weight": "Starting at 6.6 lbs (3.0 kg)",
+        "case_material": "Not specified"
+      },
+      "security": [
+        "Power-on password",
+        "Setup password",
+        "Diskette/disk write protect and disable",
+        "Kensington lock slot"
+      ],
+      "system": [
+        "Windows 95 OSR2"
+      ]
+    }
+  ]
+}

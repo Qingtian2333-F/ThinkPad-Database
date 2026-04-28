@@ -1,0 +1,96 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-770x",
+      "model_name": "ThinkPad 770X",
+      "model_family": "770",
+      "model_generation": "X series",
+      "update_date": "October 1998",
+      "model_code": ["9549-71U", "9549-72U", "9549-7AU", "9549-7BU", "9549-73U"],
+      "processor_options": ["Intel Mobile Pentium II 300MHz"],
+      "graphics_options": ["Trident CYBER9397DVD with 4MB or 8MB SGRAM (AGP 1X)"],
+      "Display": {
+        "max_resolution": {
+          "external": "1280x1024 with 64K colors at 85Hz, multiple-monitor support"
+        },
+        "multi_display": "Simultaneous LCD and CRT, multiple-monitor support"
+      },
+      "memory": {
+        "max_capacity": "320MB max",
+        "type": "SDRAM 66MHz, non-parity, 3.3V",
+        "slots": "2 available sockets (64MB on motherboard, 2 sockets for JEDEC 144-pin SDRAM SO-DIMMs)",
+        "features": "64MB or 128MB standard; sockets accessed by removing screw on bottom"
+      },
+      "display_options": [
+        "14.1\" TFT XGA 1024x768, 16.7 million simultaneous colors, Active Matrix TFT",
+        "13.7\" TFT SXGA 1280x1024, 65,536 simultaneous colors, Active Matrix TFT"
+      ],
+      "storage": {
+        "hdd": "8.1GB / 12ms read / 13ms write, EIDE, removable, S.M.A.R.T., supports two internal disks",
+        "optical": "Standard or optional: 24X-10X CD-ROM (bootable, hot swap); Standard or optional: 2X DVD drive (16X-8X CD-ROM speed)"
+      },
+      "Ethernet": ["None onboard (optional via SelectaBase or PC Card)"],
+      "WLAN": ["Not supported"],
+      "Bluetooth": [
+        {
+          "type": "None"
+        }
+      ],
+      "WWAN": ["No_WWAN"],
+      "SIM_Card": [
+        {
+          "type": "None"
+        }
+      ],
+      "Battery": [
+        {
+          "type": "Lithium Ion",
+          "capacity": "3.5 hrs (7 hrs with second battery in UltraBay II)",
+          "form": "Intelligent, removable from left side",
+          "tech": "Li-Ion"
+        }
+      ],
+      "ACadapter": ["56 watt AC Adapter, barrel, 3-prong"],
+      "ports": [
+        "1 x USB",
+        "1 x Serial 9-pin 16550A",
+        "1 x Parallel (IEEE P1284-A, EPP, ECP)",
+        "2 x PC Card slots (Type I/II/III, CardBus, PCMCIA 2.1, Zoomed Video)",
+        "1 x External diskette port",
+        "1 x Video in/out (Composite and S-Video, optional on DEVA)",
+        "1 x Dolby Digital AC-3 connector (with optional DVD and Enhanced Video Adapter)",
+        "1 x Input jack (3.5mm)",
+        "1 x Output jack (3.5mm)",
+        "Infrared ports (front and back) with IrDA 1.1, up to 4Mbps"
+      ],
+      "camera": ["None"],
+      "audio": [
+        "CS4239: ISA / SRS 3D audio / FM synthesis / 16-bit playback and record",
+        "CS4610: PCI / decodes AC3 into stereo / MPEG-2 audio decoding / acceleration of DirectX",
+        "Internal stereo speakers (front, 1W), rotary volume control (right), internal microphone"
+      ],
+      "keyboard": [
+        "Full-size 85-key keyboard, flat (does not lift up), rear legs pop up (5.5 degrees slope)",
+        "TrackPoint with Press-to-Select, Release-to-Select, center click button for scrolling/magnifying glass"
+      ],
+      "physical": {
+        "dimensions": "12.3 x 10 x 2.2 inches (270 cubic inches)",
+        "weight": "14.1\" models: 7.57 lbs (3.43 kg); 13.7\" models: 7.63 lbs (3.46 kg) with battery/diskette",
+        "case_material": "Not specified"
+      },
+      "security": [
+        "Power-on password",
+        "Hard disk password",
+        "Supervisor password",
+        "Security keyhole",
+        "Personalization",
+        "Phillips-head screws on base for battery and UltraBay II bays"
+      ],
+      "system": [
+        "Windows 98",
+        "Windows NT 4.0 (with Service Pack 3)",
+        "Blank (no disk, AAP model)"
+      ]
+    }
+  ]
+}

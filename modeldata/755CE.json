@@ -1,0 +1,87 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-755cse-755ce",
+      "model_name": "ThinkPad 755CSE / 755CE",
+      "model_family": "755",
+      "model_generation": "CSE/CE series",
+      "update_date": "December 1995",
+      "model_code": [],
+      "processor_options": ["IntelDX4 100/33 MHz (no L2 cache)", "Pentium 75/50 MHz with 256 KB L2 cache"],
+      "graphics_options": ["Western Digital WD90C24A2 with 1 MB DRAM"],
+      "Display": {
+        "max_resolution": {
+          "external": "1024x768 w/ 256 colors (up to 75 Hz)"
+        },
+        "multi_display": "Simultaneous LCD and CRT, 180 degree tilt"
+      },
+      "memory": {
+        "max_capacity": "40MB max",
+        "type": "IC DRAM / SO DIMM, 70ns, parity, 5 volt",
+        "slots": "1 socket (with Memory Module Adapter for DIMMs)",
+        "features": "8MB standard; options: 2, 4, 8, 16, 32 MB ICs or 4, 8, 16 MB DIMMs"
+      },
+      "display_options": ["10.4\" Dual Scan color VGA 640x480, 65,536 colors", "10.4\" Black Matrix TFT VGA 640x480, 65,536 colors"],
+      "storage": {
+        "hdd": "540MB / 810MB / 1.2GB (removable)",
+        "optical": "Optional CD-ROM via UltraBay"
+      },
+      "Ethernet": [],
+      "WLAN": [],
+      "Bluetooth": [
+        {
+          "type": "None"
+        }
+      ],
+      "WWAN": [],
+      "SIM_Card": [
+        {
+          "type": "None"
+        }
+      ],
+      "Battery": [
+        {
+          "type": "NiMH",
+          "capacity": "Intelligent",
+          "form": "Removable",
+          "tech": "NiMH"
+        }
+      ],
+      "ACadapter": ["40W Wallmount A/C adapter"],
+      "ports": [
+        "2 x Type I/II or 1 x Type III PCMCIA",
+        "1 x Serial (16550A)",
+        "1 x Parallel (EPP and ECP)",
+        "1 x External Display",
+        "1 x Audio In/Out jacks",
+        "1 x Telephone jack",
+        "Infrared ports (front and back) with IrDA 1.0"
+      ],
+      "camera": [],
+      "audio": [
+        "Mwave MDSP2780 DSP with modem, fax, audio, telephony",
+        "16-bit audio chip on planar with Mwave DSP",
+        "Internal speaker and microphone"
+      ],
+      "keyboard": [
+        "Full-size 85-key keyboard with lift-up design",
+        "TrackPoint III"
+      ],
+      "physical": {
+        "dimensions": "11.7 x 8.3 x 1.96 inches (190 cubic inches)",
+        "weight": "6.4 pounds",
+        "case_material": "Black"
+      },
+      "security": [
+        "Power-on password",
+        "Hard disk password",
+        "Supervisor password",
+        "Hardware security loop",
+        "Keyboard lock",
+        "Kensington MicroSaver cable lock",
+        "PCMCIA card lock"
+      ],
+      "system": ["IBM DOS 6.3, Windows 3.11, OS/2 Warp 3.0 (dual boot)"]
+    }
+  ]
+}

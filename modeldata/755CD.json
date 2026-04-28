@@ -1,0 +1,89 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-755cd",
+      "model_name": "ThinkPad 755CD",
+      "model_family": "755",
+      "model_generation": "CD series",
+      "update_date": "October 1994",
+      "model_code": ["9545-9BD", "9545-9BE", "9545-FBL"],
+      "processor_options": ["IntelDX4 100/33 MHz (no L2 cache)", "Pentium 75/50 MHz with 256 KB L2 cache"],
+      "graphics_options": ["Western Digital WD90C24A2 with 1 MB DRAM"],
+      "Display": {
+        "max_resolution": {
+          "external": "1024x768 w/ 256 colors (up to 75 Hz)"
+        },
+        "multi_display": "Simultaneous LCD and CRT, 180 degree tilt"
+      },
+      "memory": {
+        "max_capacity": "40MB max",
+        "type": "IC DRAM / SO DIMM, 70ns, parity, 5 volt",
+        "slots": "1 socket (with Memory Module Adapter for DIMMs)",
+        "features": "8MB standard; options: 2, 4, 8, 16, 32 MB ICs or 4, 8, 16 MB DIMMs"
+      },
+      "display_options": ["10.4\" Black Matrix TFT VGA color 640x480, 65,536 simultaneous colors, 100 to 1 contrast ratio"],
+      "storage": {
+        "hdd": "540MB / 14ms, 810MB / 14ms, 1.2GB / 12ms (removable)",
+        "optical": "Removable 5.25\" CD-ROM, double speed, multi-session, XA, front loaded, IDE"
+      },
+      "Ethernet": ["None"],
+      "WLAN": ["None"],
+      "Bluetooth": [
+        {
+          "type": "None"
+        }
+      ],
+      "WWAN": ["No_WWAN"],
+      "SIM_Card": [
+        {
+          "type": "None"
+        }
+      ],
+      "Battery": [
+        {
+          "type": "NiMH",
+          "capacity": "Intelligent",
+          "form": "Removable",
+          "tech": "NiMH"
+        }
+      ],
+      "ACadapter": ["35 watt Universal AC adapter"],
+      "ports": [
+        "2 x Type I/II or 1 x Type III PCMCIA",
+        "1 x Serial (16550A)",
+        "1 x Parallel (IEEE P1284-A, EPP, ECP)",
+        "1 x External Display (SVGA)",
+        "1 x Composite in/out and S-Video in/out",
+        "1 x Game port for MIDI or joystick (includes cable)",
+        "1 x Audio In/Out jacks",
+        "1 x Telephone jack",
+        "Infrared ports (front and back) with IrDA 1.0"
+      ],
+      "camera": ["None"],
+      "audio": [
+        "Mwave MDSP2780 DSP with modem, fax, audio, telephony function",
+        "16-bit audio chip with Mwave DSP",
+        "Internal stereo speakers (0.5W), internal microphone"
+      ],
+      "keyboard": [
+        "Full-size 85-key keyboard with lift-up design",
+        "TrackPoint III"
+      ],
+      "physical": {
+        "dimensions": "11.7 x 8.3 x 2.2 inches (214 cubic inches)",
+        "weight": "7.3 pounds (with battery and CD-ROM)",
+        "case_material": "Not specified"
+      },
+      "security": [
+        "Power-on password",
+        "Hard disk password",
+        "Supervisor password",
+        "Hardware security loop",
+        "Keyboard lock",
+        "Kensington MicroSaver cable lock",
+        "PCMCIA card lock"
+      ],
+      "system": ["IBM DOS, Windows 3.11, OS/2 Warp 3.0 (dual boot)"]
+    }
+  ]
+}

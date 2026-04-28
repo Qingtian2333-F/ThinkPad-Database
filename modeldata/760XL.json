@@ -1,0 +1,84 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-760xl",
+      "model_name": "ThinkPad 760XL",
+      "model_family": "760",
+      "model_generation": "XL series",
+      "update_date": "April 1997",
+      "model_code": ["9547-UPG"],
+      "processor_options": ["Pentium MMX 166/66 MHz (P55CLM)"],
+      "graphics_options": ["Trident CYBER9385 64-bit SVGA accelerator with 1 MB EDO DRAM"],
+      "Display": {
+        "max_resolution": {
+          "external": "1024x768 with 256 colors"
+        },
+        "multi_display": "Simultaneous LCD and CRT, 180 degree tilt"
+      },
+      "memory": {
+        "max_capacity": "104MB max",
+        "type": "EDO 70ns, non-parity, 3.3 volt",
+        "slots": "2 sockets available (8MB in system; 8MB on memory module with 2 SO-DIMM sockets)",
+        "features": "16MB standard (Windows 95) / 32MB standard (Windows NT); memory module under disk, accessible by opening keyboard"
+      },
+      "display_options": [
+        "12.1\" TFT SVGA color 800x600, 65,536 simultaneous colors, Black Matrix TFT, 100 to 1 contrast ratio"
+      ],
+      "storage": {
+        "hdd": "2.1 GB / 13 ms / DMA Mode 2 or PIO Mode 4, EIDE, busmaster, PCI 2.1, supports two internal disks (max 10.2 GB)",
+        "optical": "None standard / can upgrade to 4x, 6x, 8x, or 8-20x CD-ROM via UltraBay"
+      },
+      "Ethernet": ["None"],
+      "WLAN": ["None"],
+      "Bluetooth": [{"type": "None"}],
+      "WWAN": ["No_WWAN"],
+      "SIM_Card": [{"type": "None"}],
+      "Battery": [
+        {
+          "type": "Lithium Ion (intelligent, optional NiMH supported)",
+          "capacity": "2.3 hours (4.6 hours with 2 batteries)",
+          "form": "Removable",
+          "tech": "Li-Ion (optional NiMH)"
+        }
+      ],
+      "ACadapter": ["35 watt Slim AC Adapter 2 prong"],
+      "ports": [
+        "1 x Serial (16550A)",
+        "1 x Parallel (IEEE P1284-A, EPP, ECP)",
+        "2 x Type I/II or 1 x Type III PCMCIA (CardBus 32-bit PCI)",
+        "1 x External FDD port",
+        "1 x Audio line-in jack (3.5mm)",
+        "1 x Audio line-out jack (3.5mm)",
+        "Infrared ports (front and back) with IrDA 1.0, up to 115 kbs"
+      ],
+      "camera": ["None"],
+      "audio": [
+        "16-bit audio chip, 20 voice MIDI FM synthesis (ESS1688)",
+        "Internal stereo speakers (0.5W), slide volume control, internal microphone"
+      ],
+      "keyboard": [
+        "Full-size 85-key keyboard, automated tilt up (5.5 degrees)",
+        "TrackPoint III, integrated palm rest"
+      ],
+      "physical": {
+        "dimensions": "11.7 x 8.3 x 2.14 inches (208 cubic inches)",
+        "weight": "6.7 pounds (3.05 kg) with battery",
+        "case_material": "Not specified"
+      },
+      "security": [
+        "Power-on password",
+        "Hard disk password",
+        "Supervisor password",
+        "Kensington cable lock",
+        "Security latch for keyboard and DIMMs (requires Kensington)",
+        "PC Card lock",
+        "Personalization",
+        "Security Plate"
+      ],
+      "system": [
+        "Windows 95 OSR2 (FAT16)",
+        "Windows NT Workstation 4.0"
+      ]
+    }
+  ]
+}

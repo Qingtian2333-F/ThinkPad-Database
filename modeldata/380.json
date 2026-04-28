@@ -1,0 +1,96 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-380",
+      "model_name": "ThinkPad 380",
+      "model_family": "380",
+      "model_generation": "1st Gen",
+      "update_date": "May 1997",
+      "model_code": ["2635-10U", "2635-2AU", "2635-3AU", "2635-8AU", "2635-9AU", "2635-BAU", "2635-AAU"],
+      "processor_options": ["Pentium 150/60 MHz", "Pentium 150/60 MHz with MMX technology", "Pentium MMX 233/66 MHz", "Pentium MMX 266/66 MHz", "Mobile Pentium II 233/66 MHz", "Mobile Pentium II 266/66 MHz"],
+      "graphics_options": ["NeoMagic MagicGraph128ZV (NM2093) 1.125MB iDRAM", "NeoMagic MagicGraph128XD (NM2160B) 2MB iDRAM"],
+      "Display": {
+        "max_resolution": {
+          "external": "1024x768 256 colors (or 65,536 colors for 380XD)"
+        },
+        "multi_display": "Simultaneous LCD and CRT, 150 degree tilt"
+      },
+      "memory": {
+        "max_capacity": "96MB max",
+        "type": "EDO 60ns, non-parity, 3.3 volt",
+        "slots": "1 socket for one JEDEC 144 pin EDO SO DIMM of 8, 16, 32, or 64 MB",
+        "features": "16MB or 32MB standard; socket accessed from bottom via screw"
+      },
+      "display_options": [
+        "12.1\" DSTN SVGA color 800x600, 65,536 colors, 30 to 1 contrast",
+        "12.1\" TFT SVGA color 800x600, 65,536 colors, 100 to 1 contrast (380D/385D)",
+        "12.1\" HPA color 800x600, 16 mil colors, 50 to 1 contrast (380XD)",
+        "12.1\" TFT SVGA 800x600, 16.7 million colors, 100 to 1 contrast (380XD)",
+        "13.3\" TFT XGA 1024x768, Active Matrix (380Z)"
+      ],
+      "storage": {
+        "hdd": "1.08GB / 13ms (380); 1.35GB / 13ms (380D); 2.1GB / 13ms (380D); 3.2GB / 13ms (380XD); 4.0GB / 13ms (380XD); 5.1GB / 12ms (380XD); 4.0GB / 13ms or 6.4GB / 12ms (380Z)",
+        "optical": "8x CD-ROM (380D/385D); 24X-10X CD-ROM (380XD/380Z); Optional DVD-ROM option"
+      },
+      "Ethernet": ["None onboard (option via port replicator or PC Card)"],
+      "WLAN": ["Not supported"],
+      "Bluetooth": [
+        {
+          "type": "None"
+        }
+      ],
+      "WWAN": ["No_WWAN"],
+      "SIM_Card": [
+        {
+          "type": "None"
+        }
+      ],
+      "Battery": [
+        {
+          "type": "NiMH or Li-Ion",
+          "capacity": "Non-intelligent",
+          "form": "Removable, in front",
+          "tech": "NiMH (380/385D); Li-Ion (380XD/380Z)"
+        }
+      ],
+      "ACadapter": ["56 watt Universal AC Adapter, barrel, 3-prong"],
+      "ports": [
+        "1 x Serial (16550A)",
+        "1 x Parallel (IEEE P1284-A, EPP, ECP)",
+        "2 x PCMCIA Type II (or 1 Type III, CardBus on 380XD/380Z)",
+        "1 x USB (380XD/380Z)",
+        "1 x External keyboard/mouse",
+        "1 x Microphone in",
+        "1 x Headphone out",
+        "1 x Infrared (IrDA 1.1, up to 4Mbps)"
+      ],
+      "camera": ["None"],
+      "audio": [
+        "16-bit audio chip (Crystal CS4236/CS4237B), FM synthesis",
+        "Internal stereo speakers (0.5W or 2 front + 1 subwoofer on 380XD)",
+        "Internal microphone"
+      ],
+      "keyboard": [
+        "Full-size 85-key keyboard (not lift-up, all-in-one design on 380XD/380Z)",
+        "TrackPoint III / TrackPoint with Press-to-Select/Release-to-Select"
+      ],
+      "physical": {
+        "dimensions": "11.8 x 9.2 x 2.4 inches (260 cubic inches)",
+        "weight": "6.9 lbs (3.1 kg) - 7.2 lbs (3.3 kg) depending on configuration",
+        "case_material": "Not specified"
+      },
+      "security": [
+        "Power-on password",
+        "Hard disk password",
+        "Supervisor password",
+        "Security keyhole",
+        "Personalization screen at startup"
+      ],
+      "system": [
+        "Windows 95 OSR2",
+        "Windows 98",
+        "Windows NT 4.0"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-700-700c",
+      "model_name": "ThinkPad 700 / 700C",
+      "model_family": "700",
+      "model_generation": "1st Gen",
+      "update_date": "October 1992",
+      "model_code": ["2521"],
+      "processor_options": ["Intel 486SLC 25/25MHz (700)", "Intel 486SLC 25/25MHz (700C)"],
+      "graphics_options": ["Western Digital WD90C20A with 256KB or 512KB DRAM"],
+      "Display": {
+        "max_resolution": {
+          "external": "1024x768 16 colors"
+        },
+        "multi_display": "Simultaneous LCD and CRT (700C only)"
+      },
+      "memory": {
+        "max_capacity": "16MB max",
+        "type": "IC DRAM cards, 70ns",
+        "slots": "2 sockets for IC DRAM cards",
+        "features": "4MB standard; options: 2, 4, 8 MB IC DRAM cards"
+      },
+      "display_options": [
+        "9.5\" Monochrome STN VGA 640x480, 32 grey scales (ThinkPad 700)",
+        "10.4\" TFT Active Matrix color VGA 640x480, 256 colors, 100:1 contrast (ThinkPad 700C)"
+      ],
+      "touch": [],
+      "pen": [],
+      "storage": {
+        "hdd": "80MB or 120MB IDE (removable)",
+        "optical": "None (optional external CD-ROM via PCMCIA)"
+      },
+      "Ethernet": ["None"],
+      "WLAN": ["None"],
+      "Bluetooth": [{"type": "None"}],
+      "WWAN": ["No_WWAN"],
+      "SIM_Card": [{"type": "None"}],
+      "Battery": [
+        {
+          "type": "NiMH",
+          "capacity": "2-4 hours (depending on usage)",
+          "form": "Intelligent, removable from front",
+          "tech": "NiMH"
+        }
+      ],
+      "ACadapter": ["35 watt AC adapter"],
+      "ports": [
+        "1 x Serial (16550A)",
+        "1 x Parallel (EPP)",
+        "1 x External diskette drive connector",
+        "1 x External keyboard/mouse port",
+        "1 x External display port (VGA)",
+        "2 x PCMCIA Type II slots (or 1 Type III)",
+        "1 x Modem port (RJ-11)"
+      ],
+      "camera": ["None"],
+      "audio": [
+        "16-bit audio chip (Crystal CS4231)",
+        "Internal speaker (0.5W)",
+        "Internal microphone"
+      ],
+      "keyboard": [
+        "Full-size 85-key keyboard with lift-up design (first ThinkPad with this iconic feature)",
+        "TrackPoint II pointing device (first generation of the red pointing stick, a revolutionary feature at the time)"
+      ],
+      "physical": {
+        "dimensions": "11.7 x 8.3 x 2.2 inches (700), 11.7 x 8.3 x 2.2 inches (700C)",
+        "weight": "6.5 lbs (700), 7.6 lbs (700C) with battery",
+        "case_material": "Not specified"
+      },
+      "security": [
+        "Power-on password",
+        "Hard disk password",
+        "Supervisor password",
+        "Hardware security loop",
+        "Kensington lock slot"
+      ],
+      "system": [
+        "IBM DOS 5.0", 
+        "Windows 3.1", 
+        "OS/2 2.0"
+      ]
+    }
+  ]
+}
