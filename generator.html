@@ -1430,7 +1430,7 @@
     }
     
     // ---------- WWAN 配置 ----------
-    function renderWwanForm() {
+    function renderwwanForm() {
         return `
             <div class="section">
                 <div class="section-title">WWAN 配置文件生成器</div>
@@ -1442,23 +1442,23 @@
             </div>
         `;
     }
-    function updateWwanPreview() {
+    function updatewwanPreview() {
         wwanConfig.type = document.getElementById('wwan_type')?.value || "";
         wwanConfig.form = document.getElementById('wwan_form')?.value || "";
         wwanConfig.feature = document.getElementById('wwan_feature')?.value || "";
         const out = { type: wwanConfig.type, form: wwanConfig.form, feature: wwanConfig.feature };
         document.getElementById('jsonPreview').innerText = JSON.stringify(out, null, 2);
     }
-    function bindWwanEvents() {
+    function bindwwanEvents() {
         const ids = ['wwan_type','wwan_form','wwan_feature'];
         ids.forEach(id => {
             const el = document.getElementById(id);
             if(el && !el.dataset.eventsBound) {
-                el.addEventListener('input', () => updateWwanPreview());
+                el.addEventListener('input', () => updatewwanPreview());
                 el.dataset.eventsBound = 'true';
             }
         });
-        updateWwanPreview();
+        updatewwanPreview();
     }
     
     // ---------- 扩展坞配置 ----------
@@ -1594,8 +1594,8 @@
             container.innerHTML = renderWifiForm();
             bindWifiEvents();
         } else if (currentMode === 'wwan') {
-            container.innerHTML = renderWwanForm();
-            bindWwanEvents();
+            container.innerHTML = renderwwanForm();
+            bindwwanEvents();
         } else if (currentMode === 'dock') {
             container.innerHTML = renderDockForm();
             bindDockEvents();
@@ -1635,7 +1635,7 @@
         } catch(e) { console.error("加载GPU索引失败",e); gpuFullList = []; }
     }
     async function loadOtherOptions() {
-        const types = ['display','dock','ethernet','wlan','wwan'];
+        const types = ['display','dock','ethernet','WLAN','WWAN'];
         for (const t of types) {
             try {
                 const cap = t.charAt(0).toUpperCase() + t.slice(1);
