@@ -1,0 +1,10 @@
+﻿{
+  "model": "i5-10210U",
+  "cores_threads": "4 / 8",
+  "base_freq": "1.6 GHz",
+  "turbo_freq": "4.2 GHz",
+  "cache": "6MB",
+  "graphics": "Intel UHD Graphics",
+  "iconfamily": "i5-10",
+  "ark": "https://www.intel.cn/content/www/cn/zh/products/sku/195436/intel-core-i510210u-processor-6m-cache-up-to-4-20-ghz/specifications.html"
+}

@@ -1,0 +1,10 @@
+﻿{
+  "model": "i3-1115G4",
+  "cores_threads": "2 / 4",
+  "base_freq": "3.0 GHz",
+  "turbo_freq": "4.1 GHz",
+  "cache": "6MB",
+  "graphics": "Intel UHD Graphics",
+  "iconfamily": "i3-11~14",
+  "ark": "https://www.intel.cn/content/www/cn/zh/products/sku/208652/intel-core-i31115g4-processor-6m-cache-up-to-4-10-ghz/specifications.html"
+}

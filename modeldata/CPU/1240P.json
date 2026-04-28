@@ -1,0 +1,10 @@
+﻿{
+  "model": "i5-1240P",
+  "cores_threads": "12/16",
+  "base_freq": "1.7GHz",
+  "turbo_freq": "4.4GHz",
+  "cache": "12MB",
+  "graphics": "Intel Iris Xe Graphics",
+  "iconfamily": "i5-11~14",
+  "ark": "https://www.intel.cn/content/www/cn/zh/products/sku/132221/intel-core-i51240p-processor-12m-cache-up-to-4-40-ghz/specifications.html"
+}

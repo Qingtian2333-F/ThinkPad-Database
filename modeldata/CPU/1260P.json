@@ -1,0 +1,10 @@
+﻿{
+  "model": "i7-1260P",
+  "cores_threads": "12/16",
+  "base_freq": "2.1GHz",
+  "turbo_freq": "4.7GHz",
+  "cache": "18MB",
+  "graphics": "Intel Iris Xe Graphics",
+  "iconfamily": "i7-11~14",
+  "ark": "https://www.intel.com.tw/content/www/tw/zh/products/sku/226254/intel-core-i71260p-processor-18m-cache-up-to-4-70-ghz/specifications.html"
+}
