@@ -1,0 +1,10 @@
+{
+  "model": "Z3770",
+  "cores_threads": "4 / 4",
+  "base_freq": "1.46 GHz",
+  "turbo_freq": "2.39 GHz",
+  "cache": "2MB",
+  "graphics": "Intel HD Graphics (Bay Trail)",
+  "iconfamily": "Atom_Haswell",
+  "ark": "https://www.intel.com/content/www/us/en/products/sku/76760/intel-atom-processor-z3770-2m-cache-up-to-2-39-ghz/specifications.html"
+}

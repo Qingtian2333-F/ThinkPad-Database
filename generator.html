@@ -644,6 +644,7 @@
         cores_threads: "",
         base_freq: "",
         turbo_freq: "",
+        ext_freq: "",
         cache: "",
         graphics: "",
         iconfamily: "",
@@ -972,7 +973,7 @@
             <div class="section"><div class="section-title">屏幕</div>${renderChipGrid(optionLists.display, appState.display_options, 'display_options')}</div>
             <div class="section"><div class="section-title">显示输出</div><div class="row-2col"><input id="disp_minidp" placeholder="Mini DP分辨率"><input id="disp_hdmi" placeholder="HDMI分辨率"><input id="disp_usbc" placeholder="USB-C分辨率"></div><input id="disp_multi" placeholder="多屏描述"></div>
             <div class="section"><div class="section-title">内存</div><div class="row-2col"><input id="mem_max" placeholder="最大容量"><input id="mem_type" placeholder="类型"><input id="mem_slots" placeholder="插槽"><input id="mem_features" placeholder="特性"></div></div>
-            <div class="section"><div class="section-title">存储</div><div class="row-2col"><input id="st_sata" placeholder="SATA SSD"><input id="st_pcie" placeholder="PCIe SSD"><input id="st_hdd" placeholder="HDD"><input id="st_sshd" placeholder="SSHD"></div></div>
+            <div class="section"><div class="section-title">存储</div><div class="row-2col"><input id="st_sata" placeholder="SATA SSD"><input id="st_pcie" placeholder="PCIe SSD"><input id="st_hdd" placeholder="HDD"><input id="st_sshd" placeholder="SSHD"><input id="st_emmc" placeholder="eMMC"><input id="st_optical" placeholder="光驱"><input id="st_floppy" placeholder="软盘"><input id="st_optane" placeholder="傲腾"></div></div>
             <div class="section"><div class="section-title">SIM与蓝牙</div><input id="sim_type" placeholder="SIM卡槽"><input id="bt_type" placeholder="蓝牙类型"><input id="bt_feature" placeholder="蓝牙特性"></div>
             <div class="section"><div class="section-title">电池</div><div id="battery-list-container">${renderBatterySection([])}</div><button id="addBatteryBtn" class="add-btn">+ 添加电池</button></div>
             ${renderTextArrayField('ports_area','接口列表',[])}${renderTextArrayField('ac_adapter','电源适配器',[])}${renderTextArrayField('camera_area','摄像头',[])}${renderTextArrayField('audio_area','音频',[])}${renderTextArrayField('keyboard_area','键盘',[])}${renderTextArrayField('security_area','安全',[])}${renderTextArrayField('system_area','操作系统',[])}
@@ -1007,7 +1008,11 @@
             ssd_sata: get('st_sata'),
             ssd_pcie: get('st_pcie'),
             hdd: get('st_hdd'),
-            sshd: get('st_sshd')
+            sshd: get('st_sshd'),
+            emmc: get('st_emmc'),
+            optical: get('st_optical'),
+            floppy: get('st_floppy'),
+            optane: get('st_optane')
         };
         const simVal = get('sim_type');
         const SIM_Card = simVal ? [{ type: simVal }] : [];
@@ -1140,6 +1145,7 @@
                     <div class="component-form-field"><label>核心/线程数</label><input id="cpu_cores" value="${escapeHtml(cpuConfig.cores_threads)}"></div>
                     <div class="component-form-field"><label>基础频率</label><input id="cpu_base"  value="${escapeHtml(cpuConfig.base_freq)}"></div>
                     <div class="component-form-field"><label>加速频率</label><input id="cpu_turbo"value="${escapeHtml(cpuConfig.turbo_freq)}"></div>
+                    <div class="component-form-field"><label>外频</label><input id="cpu_ext" value="${escapeHtml(cpuConfig.ext_freq)}"></div>
                     <div class="component-form-field"><label>缓存</label><input id="cpu_cache" value="${escapeHtml(cpuConfig.cache)}"></div>
                     <div class="component-form-field"><label>图形处理器</label><input id="cpu_graphics" value="${escapeHtml(cpuConfig.graphics)}"></div>
                     <div class="component-form-field"><label>图标系列</label><input id="cpu_iconfamily" value="${escapeHtml(cpuConfig.iconfamily)}"></div>
@@ -1153,6 +1159,7 @@
         cpuConfig.cores_threads = document.getElementById('cpu_cores')?.value || "";
         cpuConfig.base_freq = document.getElementById('cpu_base')?.value || "";
         cpuConfig.turbo_freq = document.getElementById('cpu_turbo')?.value || "";
+        cpuConfig.ext_freq = document.getElementById('cpu_ext')?.value || "";
         cpuConfig.cache = document.getElementById('cpu_cache')?.value || "";
         cpuConfig.graphics = document.getElementById('cpu_graphics')?.value || "";
         cpuConfig.iconfamily = document.getElementById('cpu_iconfamily')?.value || "";
@@ -1160,7 +1167,7 @@
         document.getElementById('jsonPreview').innerText = JSON.stringify(cpuConfig, null, 2);
     }
     function bindCpuEvents() {
-        const ids = ['cpu_model','cpu_cores','cpu_base','cpu_turbo','cpu_cache','cpu_graphics','cpu_iconfamily','cpu_ark'];
+        const ids = ['cpu_model','cpu_cores','cpu_base','cpu_turbo','cpu_ext','cpu_cache','cpu_graphics','cpu_iconfamily','cpu_ark'];
         ids.forEach(id => {
             const el = document.getElementById(id);
             if(el && !el.dataset.eventsBound) {
