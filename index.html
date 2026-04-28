@@ -243,7 +243,7 @@
                     const protocol = navEntry.nextHopProtocol;
                     if (protocol === 'h2' || protocol === 'h3') {
                         // HTTP/2 或 HTTP/3，可以大幅提升并发数
-                        MAX_CONCURRENT_PARTS = 114;
+                        MAX_CONCURRENT_PARTS = 255;
                         console.log(`[协议检测] 当前协议 ${protocol}，并发数设置为 ${MAX_CONCURRENT_PARTS}`);
                     } else {
                         console.log(`[协议检测] 当前协议 ${protocol}，使用保守并发数 ${MAX_CONCURRENT_PARTS}`);
