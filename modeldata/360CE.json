@@ -1,13 +1,13 @@
 {
   "thinkpad_database": [
     {
-      "id": "thinkpad-360c",
-      "model_name": "ThinkPad 360C",
+      "id": "thinkpad-360ce",
+      "model_name": "ThinkPad 360CE",
       "model_family": "3",
       "model_generation": "Legacy",
-      "update_date": "May 1994",
+      "update_date": "October 1994",
       "model_code": ["2620"],
-      "processor_options": ["486SX_33MHz"],
+      "processor_options": ["486DX2_50MHz"],
       "graphics_options": ["WD90C24A"],
       "Display": {
         "max_resolution": {

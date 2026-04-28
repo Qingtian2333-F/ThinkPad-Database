@@ -1,8 +1,8 @@
 {
   "thinkpad_database": [
     {
-      "id": "thinkpad-365cs-365c",
-      "model_name": "ThinkPad 365CS / 365C",
+      "id": "thinkpad-365csd",
+      "model_name": "ThinkPad 365CSD",
       "model_family": "3",
       "model_generation": "legacy",
       "update_date": "November 1995",
@@ -22,12 +22,11 @@
         "features": "8MB standard"
       },
       "display_options": [
-        "10.4\" Dual scan VGA color 640x480, 256 colors, 30 to 1 contrast",
-        "10.4\" Black Matrix TFT VGA color 640x480, 262,144 colors, 100 to 1 contrast"
+        "10.4\" Dual scan VGA color 640x480, 256 colors, 30 to 1 contrast"
       ],
       "storage": {
         "hdd": "340MB / 13ms / EIDE or 540MB / 13ms / EIDE",
-        "floppy": "Internal 3.5\" 1.44 MB"
+        "optical": "5.25\" CD-ROM / double speed / multi-session / XA / front loaded / ATAPI"
       },
       "Ethernet": ["None"],
       "WLAN": ["None"],
@@ -56,11 +55,15 @@
         "1 x Serial (16550A)",
         "1 x Parallel (IEEE P1284, EPP, ECP)",
         "1 x External keyboard/mouse",
-        "2 x PCMCIA Type II (or 1 Type III)"
+        "2 x PCMCIA Type II (or 1 Type III)",
+        "1 x Headphone out",
+        "1 x Microphone in",
+        "1 x Joystick/MIDI port (includes Joystick/MIDI cable)"
       ],
       "camera": ["None"],
       "audio": [
-        "None"
+        "16-bit audio chip, 18 voice MIDI FM Synthesis (ESS1688 with OPL3)",
+        "Internal speaker (0.5W), internal microphone"
       ],
       "keyboard": [
         "Full-size 85-key keyboard with lift-up design",
@@ -68,7 +71,7 @@
       ],
       "physical": {
         "dimensions": "11.7 x 8.3 x 2.0 inches (194 cubic inches)",
-        "weight": "5.9 pounds",
+        "weight": "6.3-6.4 pounds",
         "case_material": "Not specified"
       },
       "security": [

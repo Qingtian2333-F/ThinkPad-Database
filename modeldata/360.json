@@ -7,7 +7,7 @@
       "model_generation": "1st Gen",
       "update_date": "May 1994",
       "model_code": ["2620"],
-      "processor_options": ["i486SX_33MHz"],
+      "processor_options": ["486SX_33MHz"],
       "graphics_options": ["WD90C24A"],
       "Display": {
         "max_resolution": {
@@ -22,14 +22,11 @@
         "features": "4MB standard, available IC DRAM: 4, 8, 16 MB (5.0 volts)"
       },
       "display_options": [
-        "9.5\" Monochrome VGA 640x480, 64 grey scales, STN, backlit",
-        "9.5\" Dual Scan color VGA 640x480, 256 colors, STN, backlit",
-        "8.4\" TFT color VGA 640x480, 256 colors, active matrix, backlit",
-        "9.5\" Dual Scan color VGA 640x480 (pen enabled, 360P)"
+        "9.5\" Monochrome VGA 640x480, 64 grey scales, STN, backlit"
       ],
       "storage": {
         "hdd": "170MB / 15ms or 340MB / 14ms, IDE, removable",
-        "optical": "None"
+        "floppy": "3.5\" 1.44MB"
       },
       "Ethernet": ["None"],
       "WLAN": ["None"],
@@ -54,6 +51,7 @@
       ],
       "ACadapter": ["30W wallmount AC adapter"],
       "ports": [
+        "CS93 standard docking Port",
         "1 x Serial (16550A)",
         "1 x Parallel (EPP)",
         "1 x External display (SVGA)",
@@ -83,6 +81,7 @@
         "PCMCIA card lock",
         "Optional security base"
       ],
+      "dock_support":["66G3510","3545","3546"],
       "system": [
         "IBM DOS 6.3, Windows 3.1 (with preloaded applications)"
       ]

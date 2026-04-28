@@ -1,0 +1,10 @@
+{
+  "model": "Pentium 150MHz",
+  "cores_threads": "1 / 1",
+  "base_freq": "150 MHz",
+  "turbo_freq": "-",
+  "ext_freq": "60 MHz",
+  "cache": "8 + 8 KB L1, 256 KB L2",
+  "iconfamily": "P5",
+  "ark": ""
+}

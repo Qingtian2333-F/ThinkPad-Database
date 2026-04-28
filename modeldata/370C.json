@@ -3,12 +3,12 @@
     {
       "id": "thinkpad-370c",
       "model_name": "ThinkPad 370C",
-      "model_family": "370",
-      "model_generation": "1st Gen",
+      "model_family": "3",
+      "model_generation": "Legacy",
       "update_date": "May 1995",
-      "model_code": ["9545-QPC"],
-      "processor_options": ["IntelDX4 75/25 MHz"],
-      "graphics_options": ["Western Digital WD90C24A Rev B with 1 MB DRAM"],
+      "model_code": ["9545"],
+      "processor_options": ["486DX4_75"],
+      "graphics_options": ["WD90C24A"],
       "Display": {
         "max_resolution": {
           "external": "1024x768 256 colors (up to 75 Hz)"
@@ -51,6 +51,7 @@
       ],
       "ACadapter": ["35 watt Universal AC Adapter"],
       "ports": [
+        "CS93 standard docking Port",
         "1 x Serial (16550B)",
         "1 x Parallel (EPP)",
         "1 x External keyboard/mouse",
@@ -80,6 +81,7 @@
         "PCMCIA card lock",
         "Optional Security Base"
       ],
+      "dock_support":["66G3510","3545","3546"],
       "system": [
         "IBM DOS 7.0, Windows 3.11 (with Lotus Suite applications)"
       ]

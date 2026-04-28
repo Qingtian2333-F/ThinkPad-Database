@@ -2,13 +2,13 @@
   "thinkpad_database": [
     {
       "id": "thinkpad-360cs",
-      "model_name": "ThinkPad 360Cs",
-      "model_family": "360",
-      "model_generation": "1st Gen",
+      "model_name": "ThinkPad 360CS",
+      "model_family": "3",
+      "model_generation": "Legacy",
       "update_date": "May 1994",
-      "model_code": ["2620-00F", "2620-50D"],
-      "processor_options": ["i486SX_33MHz"],
-      "graphics_options": ["Western Digital WD90C24A2 with 1MB DRAM"],
+      "model_code": ["2620"],
+      "processor_options": ["486SX_33MHz"],
+      "graphics_options": ["WD90C24A"],
       "Display": {
         "max_resolution": {
           "external": "1024x768 256 colors"
@@ -26,7 +26,7 @@
       ],
       "storage": {
         "hdd": "170MB / 15ms or 340MB / 14ms (removable)",
-        "optical": "None"
+        "floppy": "3.5\" 1.44MB"
       },
       "Ethernet": ["None"],
       "WLAN": ["None"],
@@ -43,6 +43,7 @@
       ],
       "ACadapter": ["30W wallmount AC adapter"],
       "ports": [
+        "CS93 standard docking Port",
         "1 x Serial (16550A)",
         "1 x Parallel (EPP)",
         "1 x External display",
@@ -72,6 +73,7 @@
         "PCMCIA card lock",
         "Optional Security Base"
       ],
+      "dock_support":["66G3510","3545","3546"],
       "system": ["IBM DOS 6.3, Windows 3.1"]
     }
   ]

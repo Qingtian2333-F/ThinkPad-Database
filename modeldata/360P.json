@@ -3,10 +3,10 @@
     {
       "id": "thinkpad-360p",
       "model_name": "ThinkPad 360P",
-      "model_family": "360",
-      "model_generation": "P series (pen)",
+      "model_family": "3",
+      "model_generation": "Legacy",
       "update_date": "May 1994",
-      "model_code": ["2620-50D"],
+      "model_code": ["2620"],
       "processor_options": ["i486SX_33MHz"],
       "graphics_options": ["Western Digital WD90C24A2 with 1MB DRAM"],
       "Display": {
@@ -28,7 +28,7 @@
       "pen": ["PenDOS, Pen Windows, Monologue preinstalled; untethered batteryless stylus"],
       "storage": {
         "hdd": "340MB / 14ms (removable)",
-        "optical": "None"
+        "floppy": "3.5\" 1.44MB"
       },
       "Ethernet": ["None"],
       "WLAN": ["None"],
@@ -45,6 +45,7 @@
       ],
       "ACadapter": ["30W wallmount AC adapter"],
       "ports": [
+        "CS93 standard docking Port",
         "1 x Serial (16550A)",
         "1 x Parallel (EPP)",
         "1 x External display",
@@ -74,6 +75,7 @@
         "PCMCIA card lock",
         "Optional Security Base"
       ],
+      "dock_support":["66G3510","3545","3546"],
       "system": ["IBM DOS 6.3, Windows 3.11, PenDOS, Pen Windows, Monologue"]
     }
   ]

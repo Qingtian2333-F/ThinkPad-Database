@@ -4,11 +4,11 @@
       "id": "thinkpad-365e",
       "model_name": "ThinkPad 365E",
       "model_family": "365",
-      "model_generation": "E series",
+      "model_generation": "Legacy",
       "update_date": "May 1996",
-      "model_code": ["2625-W9A"],
-      "processor_options": ["IBM 5x86c 100/33 MHz (Cyrix)"],
-      "graphics_options": ["Chips and Technologies 65545 with 1MB DRAM"],
+      "model_code": ["2625"],
+      "processor_options": ["5x86c_100"],
+      "graphics_options": ["CT65545"],
       "Display": {
         "max_resolution": {
           "external": "1024x768 256 colors up to 70Hz"
@@ -19,14 +19,14 @@
         "max_capacity": "24MB max",
         "type": "Fast Page 70ns, non-parity, 3.3 volt",
         "slots": "1 socket for one JEDEC 72 pin SO DIMM of 4 or 16 MB",
-        "features": "8MB standard"
+        "features": "8MB standard on board"
       },
       "display_options": [
         "10.4\" Dual scan VGA color 640x480, 256 colors, 30 to 1 contrast"
       ],
       "storage": {
         "hdd": "540MB / 13ms / EIDE / PIO Mode 3",
-        "optical": "None (cannot upgrade)"
+        "floppy": "Internal 3.5\" 1.44 MB"
       },
       "Ethernet": ["None"],
       "WLAN": ["None"],
@@ -51,12 +51,11 @@
       ],
       "ACadapter": ["35 watt Universal AC Adapter"],
       "ports": [
+        "CS93 standard docking Port",
         "1 x Serial (16550A)",
         "1 x Parallel (IEEE P1284, EPP, ECP)",
         "1 x External keyboard/mouse",
-        "2 x PCMCIA Type II (or 1 Type III)",
-        "1 x Headphone out",
-        "1 x Microphone in"
+        "2 x PCMCIA Type II (or 1 Type III)"
       ],
       "camera": ["None"],
       "audio": ["None"],
@@ -75,6 +74,7 @@
         "Kensington lock slot",
         "Keyboard lock (requires Kensington)"
       ],
+      "dock_support":["66G3510","3545","3546"],
       "system": [
         "Windows 95"
       ]

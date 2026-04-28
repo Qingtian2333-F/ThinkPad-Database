@@ -1,13 +1,13 @@
 {
   "thinkpad_database": [
     {
-      "id": "thinkpad-360c",
-      "model_name": "ThinkPad 360C",
+      "id": "thinkpad-360cse",
+      "model_name": "ThinkPad 360CSE",
       "model_family": "3",
       "model_generation": "Legacy",
-      "update_date": "May 1994",
+      "update_date": "October 1994",
       "model_code": ["2620"],
-      "processor_options": ["486SX_33MHz"],
+      "processor_options": ["486DX2_50MHz"],
       "graphics_options": ["WD90C24A"],
       "Display": {
         "max_resolution": {
@@ -22,7 +22,7 @@
         "features": "4MB standard; options: 4, 8, 16 MB ICs"
       },
       "display_options": [
-        "8.4\" TFT Active Matrix VGA 640x480, 256 simultaneous colors, 100 to 1 contrast"
+        "9.5\" Dual Scan Color VGA 640x480, 256 simultaneous colors, STN, backlit, 20 to 1 contrast"
       ],
       "storage": {
         "hdd": "170MB / 15ms or 340MB / 14ms (removable)",
@@ -61,8 +61,8 @@
         "TrackPoint II"
       ],
       "physical": {
-        "dimensions": "11.7 x 8.3 x 2.1 inches (204 cubic inches)",
-        "weight": "6.1 pounds",
+        "dimensions": "11.7 x 8.3 x 2.0 inches (194 cubic inches)",
+        "weight": "6.2 pounds",
         "case_material": "Not specified"
       },
       "security": [

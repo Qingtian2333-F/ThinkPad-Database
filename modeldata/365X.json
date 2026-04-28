@@ -3,12 +3,13 @@
     {
       "id": "thinkpad-365x",
       "model_name": "ThinkPad 365X",
-      "model_family": "365",
-      "model_generation": "X series",
+      "addons":"Model with CD-ROM drive was called 365XD",
+      "model_family": "3",
+      "model_generation": "Legacy",
       "update_date": "May 1996",
-      "model_code": ["2625-6E7", "2625-7E7", "2625-6E3", "2625-DEF", "2625-DEE", "2625-EEF"],
-      "processor_options": ["Pentium 100/66 MHz", "Pentium 120/60 MHz", "Pentium 133/66 MHz"],
-      "graphics_options": ["Trident CYBER9320 32-bit SVGA accelerator with 1MB fast page DRAM"],
+      "model_code": ["2625"],
+      "processor_options": ["P54CLSM_100", "P54CSLM_120", "P54CSLM_133"],
+      "graphics_options": ["Cyber9320"],
       "Display": {
         "max_resolution": {
           "external": "1024x768 256 colors"
@@ -28,7 +29,7 @@
       ],
       "storage": {
         "hdd": "810MB / 13ms / PIO Mode 4 or 1.08GB / 13ms / PIO Mode 4",
-        "optical": "Optional 4x or 8x CD-ROM (not customer installable)"
+        "optical": "365XD: 4x or 8x CD-ROM (not customer installable)"
       },
       "Ethernet": ["None"],
       "WLAN": ["None"],
@@ -53,6 +54,7 @@
       ],
       "ACadapter": ["35 watt Universal AC Adapter, 3 prong"],
       "ports": [
+        "CS93 standard docking Port",
         "1 x Serial (16550A)",
         "1 x Parallel (IEEE P1284-A, EPP, ECP)",
         "2 x PCMCIA Type II (or 1 Type III)",
@@ -82,6 +84,7 @@
         "Kensington lock slot",
         "Keyboard lock (requires Kensington)"
       ],
+      "dock_support":["66G3510","3545","3546"],
       "system": [
         "Windows 95",
         "OS/2 Warp Connect (2625-DEE)"

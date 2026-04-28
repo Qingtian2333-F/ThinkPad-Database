@@ -1,0 +1,10 @@
+{
+  "model": "Cyrix Cx486DX4 75MHz",
+  "cores_threads": "1 / 1",
+  "base_freq": "75 MHz",
+  "turbo_freq": "-",
+  "ext_freq": "25 MHz",
+  "cache": "8KB",
+  "iconfamily": "Cyrix",
+  "ark": ""
+}

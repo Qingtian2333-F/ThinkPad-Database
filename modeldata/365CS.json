@@ -1,8 +1,8 @@
 {
   "thinkpad_database": [
     {
-      "id": "thinkpad-365cs-365c",
-      "model_name": "ThinkPad 365CS / 365C",
+      "id": "thinkpad-365cs",
+      "model_name": "ThinkPad 365CS",
       "model_family": "3",
       "model_generation": "legacy",
       "update_date": "November 1995",
@@ -68,7 +68,7 @@
       ],
       "physical": {
         "dimensions": "11.7 x 8.3 x 2.0 inches (194 cubic inches)",
-        "weight": "5.9 pounds",
+        "weight": "5.9 pounds (non-CD model) / 6.3-6.4 pounds (CD model)",
         "case_material": "Not specified"
       },
       "security": [
