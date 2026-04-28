@@ -4,7 +4,7 @@
       "id": "thinkpad-860",
       "model_name": "IBM RS/6000 860",
       "addons":"Sometimes it has been incorrectly called ThinkPad 860",
-      "model_family": "RS/6000",  
+      "model_family": "RS/6000", 
       "model_code":["7249-860"],
       "model_generation": "legacy",
       "update_date": "1996",

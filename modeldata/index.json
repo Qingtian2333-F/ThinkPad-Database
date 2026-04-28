@@ -732,5 +732,11 @@
         "name": "ThinkPad 701CS",
         "family": "7",
         "generation": "legacy"
+    },
+    {
+        "file": "8.json",
+        "name": "ThinkPad 8",
+        "family": "Tablet",
+        "generation": "legacy"
     }
 ]
