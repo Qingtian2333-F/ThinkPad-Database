@@ -7,7 +7,7 @@
       "model_generation": "P series (pen)",
       "update_date": "May 1994",
       "model_code": ["2620-50D"],
-      "processor_options": ["80486 SX 33MHz (SL Enhanced)"],
+      "processor_options": ["i486SX_33MHz"],
       "graphics_options": ["Western Digital WD90C24A2 with 1MB DRAM"],
       "Display": {
         "max_resolution": {

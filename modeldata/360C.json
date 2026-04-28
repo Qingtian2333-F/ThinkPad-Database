@@ -6,9 +6,9 @@
       "model_family": "360",
       "model_generation": "1st Gen",
       "update_date": "May 1994",
-      "model_code": ["2620-20D", "2620-30D"],
-      "processor_options": ["80486 SX 33MHz (SL Enhanced)"],
-      "graphics_options": ["Western Digital WD90C24A2 with 1MB DRAM"],
+      "model_code": ["2620"],
+      "processor_options": ["i486SX_33MHz"],
+      "graphics_options": ["WD90C24A"],
       "Display": {
         "max_resolution": {
           "external": "1024x768 256 colors"

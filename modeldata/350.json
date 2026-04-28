@@ -8,7 +8,7 @@
       "update_date": "1993",
       "model_code": [],
       "processor_options": ["IBM 486SLC 25/25MHz"],
-      "graphics_options": ["Western Digital WD90C20 with 512KB DRAM"],
+      "graphics_options": ["WD90C20"],
       "Display": {
         "max_resolution": {
           "external": "1024x768 16 colors"
