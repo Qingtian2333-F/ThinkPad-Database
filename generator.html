@@ -1632,7 +1632,7 @@
         } catch(e) { console.error("加载GPU索引失败",e); gpuFullList = []; }
     }
     async function loadOtherOptions() {
-        const types = ['display','dock','ethernet','WLAN','WWAN'];
+        const types = ['display','dock','ethernet','wlan','wwan'];
         for (const t of types) {
             try {
                 const cap = t.charAt(0).toUpperCase() + t.slice(1);
