@@ -1,8 +1,8 @@
 {
   "thinkpad_database": [
     {
-      "id": "thinkpad-700",
-      "model_name": "ThinkPad 700",
+      "id": "thinkpad-700C",
+      "model_name": "ThinkPad 700C",
       "model_family": "7",
       "model_generation": "Legacy",
       "update_date": "October 1992",
@@ -14,7 +14,7 @@
         "max_resolution": {
           "external": "1024x768 16 colors"
         },
-        "multi_display": "Simultaneous LCD and CRT (700C only)"
+        "multi_display": "Simultaneous LCD and CRT"
       },
       "memory": {
         "max_capacity": "16MB max",
@@ -23,7 +23,7 @@
         "features": "4MB standard; options: 2, 4, 8 MB IC DRAM cards"
       },
       "display_options": [
-        "9.5\" Monochrome STN VGA 640x480, 32 grey scales"
+        "10.4\" TFT Active Matrix color VGA 640x480, 256 colors, 100:1 contrast"
       ],
       "touch": [],
       "pen": [],
@@ -63,13 +63,13 @@
       ],
       "keyboard": [
         "Full-size 85-key keyboard with lift-up design (first ThinkPad with this iconic feature)",
-        "TrackPoint II pointing device"
+        "TrackPoint II pointing device "
       ],
 
       "physical": {
         "dimensions": "11.7 x 8.3 x 2.2 inches",
-        "weight": "6.5 lbs with battery",
-        "case_material": "Not specified"
+        "weight": "7.6 lbs with battery",
+        "case_material": "Blk nylon (option)"
       },
       "security": [
         "Power-on password",

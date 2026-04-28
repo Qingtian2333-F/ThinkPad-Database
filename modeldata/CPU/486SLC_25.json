@@ -1,0 +1,10 @@
+{
+  "model": "Intel 80486SLC 25MHz",
+  "cores_threads": "1 / 1",
+  "base_freq": "25 MHz",
+  "turbo_freq": "-",
+  "ext_freq": "25 MHz",
+  "cache": "16KB",
+  "iconfamily": "i486",
+  "ark": ""
+}
