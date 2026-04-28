@@ -376,12 +376,12 @@
         }
         .battery-fields {
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
             gap: 12px;
         }
         @media (max-width: 700px) {
             .battery-fields {
-                grid-template-columns: 1fr;
+                grid-template-columns: 1fr 1fr;
             }
         }
         .empty-battery {
@@ -710,11 +710,53 @@
     // 机型模式筛选状态
     let cpuFilterState = { family: "all", architecture: "all", generationClass: "all", keyword: "" };
     let gpuFilterState = { family: "all", architecture: "all", generationClass: "all", keyword: "" };
-    
+
+    // 并发控制：根据协议动态调整
+    let MAX_CONCURRENT = 6;
+
+    // 检测协议并设置并发数
+    function detectProtocolAndSetConcurrency() {
+        try {
+            const navEntry = performance.getEntriesByType('navigation')[0];
+            if (navEntry && navEntry.nextHopProtocol) {
+                const protocol = navEntry.nextHopProtocol;
+                if (protocol === 'h2' || protocol === 'h3') {
+                    MAX_CONCURRENT = 20;
+                    console.log(`[协议检测] ${protocol}，并发数设置为 ${MAX_CONCURRENT}`);
+                } else {
+                    console.log(`[协议检测] ${protocol}，使用保守并发数 ${MAX_CONCURRENT}`);
+                }
+            }
+        } catch(e) {
+            console.warn('协议检测失败，使用默认并发数', e);
+        }
+    }
+    if (document.readyState === 'complete') {
+        detectProtocolAndSetConcurrency();
+    } else {
+        window.addEventListener('load', detectProtocolAndSetConcurrency);
+    }
+
+    // 并发池函数
+    async function asyncPool(concurrency, iterable, iteratorFn) {
+        const ret = [];
+        const executing = new Set();
+        for (const item of iterable) {
+            const p = Promise.resolve().then(() => iteratorFn(item));
+            ret.push(p);
+            executing.add(p);
+            const clean = () => executing.delete(p);
+            p.then(clean).catch(clean);
+            if (executing.size >= concurrency) {
+                await Promise.race(executing);
+            }
+        }
+        return Promise.all(ret);
+    }
+
     // ---------- 辅助函数 ----------
     function escapeHtml(str) { if(!str) return ""; return String(str).replace(/[&<>]/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[m])); }
     
-    // 安全地提取字符串，避免 [object Object]
     function safeString(value) {
         if (value == null) return '';
         if (typeof value === 'object') {
@@ -726,7 +768,6 @@
         return String(value);
     }
     
-    // 标准化 CPU/GPU 条目中的关键字段（转换为纯字符串）
     function normalizeItem(item) {
         return {
             ...item,
@@ -767,7 +808,7 @@
         });
     }
     
-    // ---------- 机型模式函数（修复筛选栏事件绑定）----------
+    // ---------- 机型模式函数 ----------
     function enrichItemsWithId(list) {
         if (!list) return [];
         list.forEach(i => { if(!i.id) i.id = (i.file || "").replace(/\.json$/i, ''); });
@@ -819,7 +860,6 @@
         });
     }
     
-    // 渲染 CPU/GPU 筛选区（返回 HTML 字符串）
     function renderFilterableSection(title, fullList, filterState, selectedIds, listType) {
         if (!fullList || !fullList.length) return `<div class="section"><div class="section-title">${title}</div><div class="helper-text">加载中...</div></div>`;
         const families = getAvailableValuesForField(listType, filterState, 'family');
@@ -859,10 +899,8 @@
             </div>${listHtml}</div>`;
     }
     
-    // 专门绑定筛选栏的事件（因为筛选栏会被动态替换）
     function bindFilterBars() {
         document.querySelectorAll('.filter-bar').forEach(bar => {
-            // 避免重复绑定
             if (bar.dataset.eventsBound === 'true') return;
             const type = bar.dataset.filterType;
             const family = bar.querySelector('.filter-family');
@@ -882,7 +920,6 @@
                     const gpuSec = renderFilterableSection("显卡选项", gpuFullList, gpuFilterState, appState.graphics_options, "gpu");
                     document.getElementById('gpuFilterSection').innerHTML = gpuSec;
                 }
-                // 重新绑定新生成的筛选栏和列表项
                 bindFilterBars();
                 bindModelListItems();
                 updateJsonPreviewModel();
@@ -911,12 +948,10 @@
         });
     }
     
-    // 绑定 CPU/GPU 列表项的点击事件
     function bindModelListItems() {
         document.querySelectorAll('.list-item[data-list-type]').forEach(item => {
             if (item.dataset.eventsBound === 'true') return;
             item.addEventListener('click', (e) => {
-                // 防止点击 checkbox 时触发两次
                 if (e.target.tagName === 'INPUT') return;
                 const type = item.dataset.listType;
                 const id = item.dataset.itemId;
@@ -948,11 +983,15 @@
     }
     
     function renderBatterySection(batteries) {
-        if(!batteries.length) return `<div class="empty-battery">暂无电池，点击下方添加</div>`;
         let html = '';
         batteries.forEach((b,idx)=> {
             html += `<div class="battery-item" data-battery-idx="${idx}"><div class="battery-item-header"><span>电池 ${idx+1}</span><button class="danger-btn remove-battery" data-remove-idx="${idx}">删除</button></div>
-            <div class="battery-fields"><input class="battery-type" placeholder="类型" value="${escapeHtml(b.type||'')}"><input class="battery-capacity" placeholder="容量" value="${escapeHtml(b.capacity||'')}"><input class="battery-tech" placeholder="技术" value="${escapeHtml(b.tech||'')}"></div></div>`;
+            <div class="battery-fields">
+                <input class="battery-type" placeholder="类型" value="${escapeHtml(b.type||'')}">
+                <input class="battery-capacity" placeholder="容量" value="${escapeHtml(b.capacity||'')}">
+                <input class="battery-tech" placeholder="技术" value="${escapeHtml(b.tech||'')}">
+                <input class="battery-form" placeholder="形态" value="${escapeHtml(b.form||'')}">
+            </div></div>`;
         });
         return html;
     }
@@ -963,7 +1002,7 @@
     
     function renderModelModeForm() {
         return `
-            <div class="section"><div class="section-title">📋 基础标识</div><div class="row-2col">
+            <div class="section"><div class="section-title">基础标识</div><div class="row-2col">
                 <input id="f_id" placeholder="ID"><input id="f_modelName" placeholder="型号名称">
                 <input id="f_modelFamily" placeholder="产品家族"><input id="f_modelGen" placeholder="世代标记">
                 <input id="f_update" placeholder="更新日期"><input id="f_modelCode" placeholder="型号代码(逗号分隔)">
@@ -971,11 +1010,11 @@
             <div id="cpuFilterSection"></div>
             <div id="gpuFilterSection"></div>
             <div class="section"><div class="section-title">屏幕</div>${renderChipGrid(optionLists.display, appState.display_options, 'display_options')}</div>
-            <div class="section"><div class="section-title">显示输出</div><div class="row-2col"><input id="disp_minidp" placeholder="Mini DP分辨率"><input id="disp_hdmi" placeholder="HDMI分辨率"><input id="disp_usbc" placeholder="USB-C分辨率"></div><input id="disp_multi" placeholder="多屏描述"></div>
+            <div class="section"><div class="section-title">显示输出</div><div class="row-2col"><input id="disp_minidp" placeholder="Mini DP分辨率"><input id="disp_hdmi" placeholder="HDMI分辨率"><input id="disp_usbc" placeholder="USB-C分辨率"><input id="disp_multi" placeholder="多屏描述"></div></div>
             <div class="section"><div class="section-title">内存</div><div class="row-2col"><input id="mem_max" placeholder="最大容量"><input id="mem_type" placeholder="类型"><input id="mem_slots" placeholder="插槽"><input id="mem_features" placeholder="特性"></div></div>
             <div class="section"><div class="section-title">存储</div><div class="row-2col"><input id="st_sata" placeholder="SATA SSD"><input id="st_pcie" placeholder="PCIe SSD"><input id="st_hdd" placeholder="HDD"><input id="st_sshd" placeholder="SSHD"><input id="st_emmc" placeholder="eMMC"><input id="st_optical" placeholder="光驱"><input id="st_floppy" placeholder="软盘"><input id="st_optane" placeholder="傲腾"></div></div>
-            <div class="section"><div class="section-title">SIM与蓝牙</div><input id="sim_type" placeholder="SIM卡槽"><input id="bt_type" placeholder="蓝牙类型"><input id="bt_feature" placeholder="蓝牙特性"></div>
-            <div class="section"><div class="section-title">电池</div><div id="battery-list-container">${renderBatterySection([])}</div><button id="addBatteryBtn" class="add-btn">+ 添加电池</button></div>
+            <div class="section"><div class="section-title">SIM与蓝牙</div><div class="row-2col"><input id="sim_type" placeholder="SIM卡槽"><input id="bt_type" placeholder="蓝牙类型"><input id="bt_feature" placeholder="蓝牙特性"></div></div>
+            <div class="section"><div class="section-title">电池</div><div id="battery-list-container">${renderBatterySection([])}</div><button id="addBatteryBtn" class="add-btn">+ 添加电池</button></div></div>
             ${renderTextArrayField('ports_area','接口列表',[])}${renderTextArrayField('ac_adapter','电源适配器',[])}${renderTextArrayField('camera_area','摄像头',[])}${renderTextArrayField('audio_area','音频',[])}${renderTextArrayField('keyboard_area','键盘',[])}${renderTextArrayField('security_area','安全',[])}${renderTextArrayField('system_area','操作系统',[])}
             <div class="section"><div class="section-title">物理规格</div><div class="row-2col"><input id="phy_dim" placeholder="尺寸"><input id="phy_weight" placeholder="重量"><input id="phy_material" placeholder="材质"></div></div>
             <div class="section"><div class="section-title">网络连接</div>${renderChipGrid(optionLists.dock, appState.dock_support, 'dock_support')}${renderChipGrid(optionLists.ethernet, appState.Ethernet, 'Ethernet')}${renderChipGrid(optionLists.wlan, appState.WLAN, 'WLAN')}${renderChipGrid(optionLists.wwan, appState.WWAN, 'WWAN')}</div>
@@ -1043,7 +1082,7 @@
                 type: el.querySelector('.battery-type')?.value || '',
                 capacity: el.querySelector('.battery-capacity')?.value || '',
                 tech: el.querySelector('.battery-tech')?.value || '',
-                form: ""
+                form: el.querySelector('.battery-form')?.value || ''
             });
         });
         const output = {
@@ -1062,9 +1101,7 @@
         document.getElementById('jsonPreview').innerText = JSON.stringify(output, null, 2);
     }
     
-    // 绑定机型表单中其他动态部分（电池、输入框等）
     function bindModelMiscEvents() {
-        // 电池添加与删除
         const addBtn = document.getElementById('addBatteryBtn');
         if(addBtn && !addBtn.dataset.eventsBound) {
             addBtn.addEventListener('click', () => {
@@ -1075,7 +1112,12 @@
                 newItem.className = 'battery-item';
                 newItem.setAttribute('data-battery-idx', newIdx);
                 newItem.innerHTML = `<div class="battery-item-header"><span>电池 ${newIdx+1}</span><button class="danger-btn remove-battery" data-remove-idx="${newIdx}">删除</button></div>
-                <div class="battery-fields"><input class="battery-type" placeholder="类型"><input class="battery-capacity" placeholder="容量"><input class="battery-tech" placeholder="技术"></div>`;
+                <div class="battery-fields">
+                    <input class="battery-type" placeholder="类型">
+                    <input class="battery-capacity" placeholder="容量">
+                    <input class="battery-tech" placeholder="技术">
+                    <input class="battery-form" placeholder="形态">
+                </div>`;
                 container.appendChild(newItem);
                 attachBatteryRemoveEvents();
                 updateJsonPreviewModel();
@@ -1106,7 +1148,6 @@
         }
         attachBatteryRemoveEvents();
         
-        // 其他输入框实时更新
         document.querySelectorAll('input, textarea, select').forEach(el => {
             if(el.id && !el.id.includes('filter') && !el.dataset.eventsBound) {
                 el.addEventListener('input', () => updateJsonPreviewModel());
@@ -1114,7 +1155,6 @@
             }
         });
         
-        // 芯片卡片点击（屏幕、网络等）
         document.querySelectorAll('.chip-card').forEach(card => {
             if(card.dataset.eventsBound) return;
             card.addEventListener('click', (e) => {
@@ -1577,7 +1617,6 @@
             let fullHtml = baseHtml.replace('<div id="cpuFilterSection"></div>', `<div id="cpuFilterSection">${cpuSec}</div>`);
             fullHtml = fullHtml.replace('<div id="gpuFilterSection"></div>', `<div id="gpuFilterSection">${gpuSec}</div>`);
             container.innerHTML = fullHtml;
-            // 绑定所有动态事件
             bindFilterBars();
             bindModelListItems();
             bindModelMiscEvents();
@@ -1606,7 +1645,6 @@
         }
     }
     
-    // 选项卡切换
     function initTabs() {
         document.querySelectorAll('.tab-btn').forEach(btn => {
             btn.addEventListener('click', async () => {
@@ -1619,7 +1657,7 @@
         });
     }
     
-    // 加载数据（机型模式需要）并进行标准化
+    // 加载数据（并发优化）
     async function loadCpuIndex() {
         try {
             const resp = await fetch('/ThinkPad-Database/modeldata/CPU/CPU.json');
@@ -1638,34 +1676,44 @@
             gpuFilterState = adjustFilterState('gpu', { family:"all", architecture:"all", generationClass:"all", keyword:"" });
         } catch(e) { console.error("加载GPU索引失败",e); gpuFullList = []; }
     }
-async function loadOtherOptions() {
-    const types = ['display', 'dock', 'ethernet', 'wlan', 'wwan'];
-    for (const t of types) {
-        try {
-            // 针对 wlan 和 wwan 使用全大写，其余首字母大写
+
+    async function loadOtherOptions() {
+        const types = ['display', 'dock', 'ethernet', 'wlan', 'wwan'];
+        const tasks = types.map(t => {
             let cap;
             if (t === 'wlan') cap = 'WLAN';
             else if (t === 'wwan') cap = 'WWAN';
-            else cap = t.charAt(0).toUpperCase() + t.slice(1); // Display, Dock, Ethernet
+            else cap = t.charAt(0).toUpperCase() + t.slice(1);
+            const url = `/ThinkPad-Database/modeldata/${cap}/${cap}.json`;
+            return (async () => {
+                try {
+                    const resp = await fetch(url);
+                    if (resp.ok) {
+                        const data = await resp.json();
+                        return {
+                            key: t,
+                            data: data.map(item => {
+                                const raw = typeof item === 'string' ? item : (item.model || item.name) || "";
+                                return { value: raw.replace(/\.json$/i, ''), label: raw.replace(/\.json$/i, '') };
+                            })
+                        };
+                    } else {
+                        console.warn(`Failed to load ${cap}.json, status: ${resp.status}`);
+                        return { key: t, data: [] };
+                    }
+                } catch(e) {
+                    console.error(`Error loading ${t}:`, e);
+                    return { key: t, data: [] };
+                }
+            })();
+        });
 
-            // 注意：如果部署在子目录（如 /ThinkPad-Database/），请使用相对路径（去掉开头的 /）
-            const resp = await fetch(`/ThinkPad-Database/modeldata/${cap}/${cap}.json`);
-            if (resp.ok) {
-                const data = await resp.json();
-                optionLists[t] = data.map(item => {
-                    const raw = typeof item === 'string' ? item : (item.model || item.name) || "";
-                    return { value: raw.replace(/\.json$/i, ''), label: raw.replace(/\.json$/i, '') };
-                });
-            } else {
-                optionLists[t] = [];
-                console.warn(`Failed to load ${cap}.json, status: ${resp.status}`);
-            }
-        } catch(e) {
-            optionLists[t] = [];
-            console.error(`Error loading ${t}:`, e);
-        }
+        const results = await asyncPool(MAX_CONCURRENT, tasks, task => task);
+
+        results.forEach(({key, data}) => {
+            optionLists[key] = data;
+        });
     }
-}
     
     // 重置与导出
     function resetAll() {

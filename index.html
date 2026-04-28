@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ThinkPad Specs</title>
     <link rel="stylesheet" href="style.css">
+    <!-- 预连接当前域名，加速后续请求 -->
+    <link rel="preconnect" href="https://rawiic.github.io">
 </head>
 <body>
     <!-- 侧边栏遮罩层（移动端使用） -->
@@ -156,7 +158,6 @@
         <button id="searchFloatBtn" class="float-btn" title="搜索型号">🔍</button>
         <button id="themeToggleFloat" class="float-btn" title="切换深色/浅色模式">🌙</button>
         <a id="generatorFloatBtn" class="float-btn" title="JSON生成器（但是我没写完）" href="generator.html" target="_blank">🛠️</a>
-        <a id="indexOldFloatBtn" class="float-btn" title="访问旧版" href="index_old.html" target="_blank">🤔</a>
     </div>
 
     <script>
@@ -185,6 +186,9 @@
 
         // 按需加载：已加载完整数据的文件集合
         const loadedFiles = new Set();
+
+        // 并发控制：根据协议版本动态调整最大并发数
+        let MAX_CONCURRENT_PARTS = 6;  // 默认 HTTP/1.1 安全值
 
         // DOM 元素
         const menuEl = document.getElementById('modelMenu');
@@ -230,6 +234,31 @@
         const expandBtn = document.getElementById('expandSidebarBtn');
         const overlay = document.getElementById('sidebar-overlay');
         const body = document.body;
+
+        // ---------- 检测协议并设置并发数 ----------
+        function detectProtocolAndSetConcurrency() {
+            try {
+                const navEntry = performance.getEntriesByType('navigation')[0];
+                if (navEntry && navEntry.nextHopProtocol) {
+                    const protocol = navEntry.nextHopProtocol;
+                    if (protocol === 'h2' || protocol === 'h3') {
+                        // HTTP/2 或 HTTP/3，可以大幅提升并发数
+                        MAX_CONCURRENT_PARTS = 255;
+                        console.log(`[协议检测] 当前协议 ${protocol}，并发数设置为 ${MAX_CONCURRENT_PARTS}`);
+                    } else {
+                        console.log(`[协议检测] 当前协议 ${protocol}，使用保守并发数 ${MAX_CONCURRENT_PARTS}`);
+                    }
+                }
+            } catch (e) {
+                console.warn('无法检测网络协议，使用默认并发数', e);
+            }
+        }
+        // 页面加载完成后立即检测
+        if (document.readyState === 'complete') {
+            detectProtocolAndSetConcurrency();
+        } else {
+            window.addEventListener('load', detectProtocolAndSetConcurrency);
+        }
 
         // ---------- 侧边栏功能 ----------
         function closeSidebar() {
@@ -327,7 +356,6 @@
             modal.classList.add('show');
 
             try {
-                // 确保所有选中的型号都已加载完整数据
                 for (const model of selectedModels) {
                     if (model._isLight) {
                         await loadModelFile(model.filename);
@@ -339,7 +367,6 @@
                     return { model, parts };
                 }));
 
-                // 辅助格式化函数（保持原样）
                 function formatMemory(model) {
                     if (!model.memory) return 'N/A';
                     let html = '<div class="part-info">';
@@ -878,62 +905,89 @@
             }
         }
 
+        // 并发池函数（使用当前 MAX_CONCURRENT_PARTS）
+        async function asyncPool(concurrency, iterable, iteratorFn) {
+            const ret = [];
+            const executing = new Set();
+            for (const item of iterable) {
+                const p = Promise.resolve().then(() => iteratorFn(item));
+                ret.push(p);
+                executing.add(p);
+                const clean = () => executing.delete(p);
+                p.then(clean).catch(clean);
+                if (executing.size >= concurrency) {
+                    await Promise.race(executing);
+                }
+            }
+            return Promise.all(ret);
+        }
+
         async function loadDeviceParts(device) {
-            console.log('[调试] 加载设备零件，型号:', device.model_name);
-            const parts = { cpu: [], ethernet: [], wlan: [], wwan: [], display: [], graphics: [], dock: [] };
+            console.log('[调试] 加载设备零件，型号:', device.model_name, '并发数:', MAX_CONCURRENT_PARTS);
+            const tasks = [];
 
             if (device.processor_options?.length) {
-                for (const cpuItem of device.processor_options) {
-                    const cpuData = await loadPartData('cpu', cpuItem);
-                    parts.cpu.push({ data: cpuData || { model: cpuItem, note: '等待补充' }, name: cpuItem, type: 'cpu' });
-                }
+                device.processor_options.forEach(cpuItem => {
+                    tasks.push({ type: 'cpu', filename: cpuItem, name: cpuItem });
+                });
             }
 
             if (device.display_options?.length) {
-                for (const dispItem of device.display_options) {
-                    const dispData = await loadPartData('display', dispItem);
-                    parts.display.push({ data: dispData || { type: dispItem, note: '等待补充' }, name: dispItem, type: 'display' });
-                }
+                device.display_options.forEach(dispItem => {
+                    tasks.push({ type: 'display', filename: dispItem, name: dispItem });
+                });
             }
 
             if (device.graphics_options?.length) {
-                for (const gpuItem of device.graphics_options) {
-                    const gpuData = await loadPartData('graphics', gpuItem);
-                    parts.graphics.push({ data: gpuData || { model: gpuItem, note: '等待补充' }, name: gpuItem, type: 'graphics' });
-                }
+                device.graphics_options.forEach(gpuItem => {
+                    tasks.push({ type: 'graphics', filename: gpuItem, name: gpuItem });
+                });
             }
 
             if (device.Ethernet) {
                 const ethItems = parseCommaSeparatedString(device.Ethernet);
-                for (const ethItem of ethItems) {
-                    const ethData = await loadPartData('ethernet', ethItem);
-                    parts.ethernet.push({ data: ethData || { type: ethItem }, name: ethItem, type: 'ethernet' });
-                }
+                ethItems.forEach(ethItem => {
+                    tasks.push({ type: 'ethernet', filename: ethItem, name: ethItem });
+                });
             }
 
             if (device.WLAN) {
                 const wlanItems = Array.isArray(device.WLAN) ? device.WLAN : [device.WLAN];
-                for (const wlanItem of wlanItems) {
-                    const wlanData = await loadPartData('wlan', wlanItem);
-                    parts.wlan.push({ data: wlanData || { type: wlanItem }, name: wlanItem, type: 'wlan' });
-                }
+                wlanItems.forEach(wlanItem => {
+                    tasks.push({ type: 'wlan', filename: wlanItem, name: wlanItem });
+                });
             }
 
             if (device.WWAN) {
                 const wwanItems = Array.isArray(device.WWAN) ? device.WWAN : [device.WWAN];
-                for (const wwanItem of wwanItems) {
-                    const wwanData = await loadPartData('wwan', wwanItem);
-                    parts.wwan.push({ data: wwanData || { type: wwanItem }, name: wwanItem, type: 'wwan' });
-                }
+                wwanItems.forEach(wwanItem => {
+                    tasks.push({ type: 'wwan', filename: wwanItem, name: wwanItem });
+                });
             }
 
             if (device.dock_support) {
                 const dockItems = Array.isArray(device.dock_support) ? device.dock_support : [device.dock_support];
-                for (const dockItem of dockItems) {
-                    const dockData = await loadPartData('dock', dockItem);
-                    parts.dock.push({ data: dockData || { model: dockItem, note: '等待补充' }, name: dockItem, type: 'dock' });
-                }
+                dockItems.forEach(dockItem => {
+                    tasks.push({ type: 'dock', filename: dockItem, name: dockItem });
+                });
             }
+
+            const results = await asyncPool(MAX_CONCURRENT_PARTS, tasks, async (task) => {
+                const data = await loadPartData(task.type, task.filename);
+                return {
+                    type: task.type,
+                    name: task.name,
+                    data: data || { model: task.name, note: '等待补充' }
+                };
+            });
+
+            const parts = { cpu: [], ethernet: [], wlan: [], wwan: [], display: [], graphics: [], dock: [] };
+            results.forEach(result => {
+                const { type, name, data } = result;
+                if (parts[type]) {
+                    parts[type].push({ data, name, type });
+                }
+            });
 
             return parts;
         }
@@ -944,11 +998,9 @@
             return str.split(',').map(s => s.trim()).filter(Boolean);
         }
 
-        // ---------- 按需加载完整型号文件（替换轻量对象）----------
+        // ---------- 按需加载完整型号文件 ----------
         async function loadModelFile(filename) {
-            if (loadedFiles.has(filename)) {
-                return;
-            }
+            if (loadedFiles.has(filename)) return;
             try {
                 const resp = await fetch(`modeldata/${filename}`);
                 if (!resp.ok) throw new Error(`无法加载文件: ${filename}`);
@@ -969,7 +1021,6 @@
                         ...laptop
                     };
 
-                    // 更新 masterModelList 中的轻量对象为完整对象
                     const idx = masterModelList.findIndex(m => m.model_name === fullModel.model_name);
                     if (idx !== -1) {
                         masterModelList[idx] = fullModel;
@@ -977,7 +1028,6 @@
                         masterModelList.push(fullModel);
                     }
 
-                    // 处理别名（JSON 内部的 nickname）
                     if (laptop.nickname && typeof laptop.nickname === 'string' && laptop.nickname.trim() !== '') {
                         const nickModel = {
                             ...fullModel,
@@ -1001,32 +1051,22 @@
 
                 loadedFiles.add(filename);
                 populateFilterOptions();
-
             } catch (err) {
                 console.error(`加载型号文件 ${filename} 失败:`, err);
             }
         }
 
-        // ---------- 初始加载：从新的 index.json 读取元数据，并处理 index 中的 nickname ----------
+        // ---------- 初始加载 ----------
         async function loadModelFiles() {
             specDisplayEl.innerHTML = '<div class="loading">加载数据中...</div>';
             try {
                 const indexResp = await fetch('modeldata/index.json');
-                if (!indexResp.ok) {
-                    throw new Error('无法加载 index.json');
-                }
+                if (!indexResp.ok) throw new Error('无法加载 index.json');
                 const indexData = await indexResp.json();
-                if (!Array.isArray(indexData)) {
-                    throw new Error('index.json 格式错误');
-                }
-
-                // 先创建一个映射，用于后续快速查找主型号的轻量对象（特别是为别名提供引用）
-                const modelMap = new Map();
+                if (!Array.isArray(indexData)) throw new Error('index.json 格式错误');
 
                 const allLightModels = [];
-
                 indexData.forEach(item => {
-                    // 创建主型号轻量对象
                     const mainModel = {
                         model_name: item.name,
                         model_family: item.family || '未指定系列',
@@ -1035,9 +1075,7 @@
                         _isLight: true
                     };
                     allLightModels.push(mainModel);
-                    modelMap.set(item.name, mainModel);
 
-                    // 如果 index 中有 nickname 字段，则创建别名轻量对象
                     if (item.nickname && typeof item.nickname === 'string' && item.nickname.trim() !== '') {
                         const nickModel = {
                             model_name: item.nickname.trim(),
@@ -1046,15 +1084,13 @@
                             filename: item.file,
                             _isLight: true,
                             _isNickname: true,
-                            _originalName: item.name  // 指向主型号名称
+                            _originalName: item.name
                         };
                         allLightModels.push(nickModel);
-                        modelMap.set(item.nickname.trim(), nickModel);
                     }
                 });
 
                 masterModelList = allLightModels;
-
                 populateFilterOptions();
                 applyFilterAndRender();
                 renderFavoritesList();
@@ -1151,7 +1187,7 @@
             document.querySelectorAll('.nav-item').forEach(n => n.classList.toggle('active', n.dataset.modelId === targetModel.model_name));
         }
 
-        // ---------- 部件卡片渲染（根据屏幕宽度决定初始折叠状态）----------
+        // ---------- 部件卡片渲染 ----------
         function renderPartCard(parts, title, type) {
             const isMobile = window.innerWidth <= 900;
             const foldedClass = isMobile ? 'folded' : '';
@@ -1196,7 +1232,7 @@
                         else if (part.type === 'graphics') iconFolder = 'Graphics/Graphics_icons';
                         const iconBase = `modeldata/${iconFolder}/${encodeURIComponent(partData.iconfamily)}`;
                         iconHtml = `<img src="${iconBase}.webp" class="cpu-icon-bg" alt="" 
-                            onerror="this.onerror=null; this.src='${iconBase}.jpg'; this.onerror=function(){ this.src='${iconBase}.png'; this.onerror=function(){ this.style.display='none'; }; };">`;
+                            onerror="this.onerror=null; this.onerror=function(){ this.style.display='none'; }; };">`;
                     }
                 }
                 const menuItems = (fruMenuItem + arkMenuItem).trim();
@@ -1229,18 +1265,13 @@
             `;
         }
 
-        // ---------- 收藏相关函数 ----------
-        function isFavorite(modelName) {
-            return favorites.includes(modelName);
-        }
+        // ---------- 收藏相关 ----------
+        function isFavorite(modelName) { return favorites.includes(modelName); }
 
         function toggleFavorite(modelName) {
             const index = favorites.indexOf(modelName);
-            if (index === -1) {
-                favorites.push(modelName);
-            } else {
-                favorites.splice(index, 1);
-            }
+            if (index === -1) favorites.push(modelName);
+            else favorites.splice(index, 1);
             localStorage.setItem('thinkpad_favorites', JSON.stringify(favorites));
             renderFavoritesList();
             updateFavoriteButton(modelName);
@@ -1255,14 +1286,11 @@
 
         function renderFavoritesList() {
             if (!favoritesModalList) return;
-            
             const favoriteModels = masterModelList.filter(m => favorites.includes(m.model_name));
-            
             if (favoriteModels.length === 0) {
                 favoritesModalList.innerHTML = '<div class="favorites-empty">暂无收藏型号</div>';
                 return;
             }
-            
             let html = '';
             favoriteModels.forEach(model => {
                 html += `
@@ -1297,17 +1325,10 @@
             }
         };
 
-        // 收藏模态框控制
-        window.closeFavoritesModal = function() {
-            favoritesModal.classList.remove('show');
-        };
+        window.closeFavoritesModal = function() { favoritesModal.classList.remove('show'); };
+        function openFavoritesModal() { renderFavoritesList(); favoritesModal.classList.add('show'); }
 
-        function openFavoritesModal() {
-            renderFavoritesList();
-            favoritesModal.classList.add('show');
-        }
-
-        // ---------- 切换型号的全局函数 ----------
+        // ---------- 切换型号 ----------
         window.switchToModel = async function(modelName) {
             let targetModel = masterModelList.find(m => m.model_name === modelName);
             if (targetModel) {
@@ -1326,14 +1347,11 @@
         async function renderSpecs(data) {
             if (!data) return;
 
-            // 如果是轻量对象，先加载完整数据
             if (data._isLight) {
                 specDisplayEl.innerHTML = '<div class="loading">加载型号数据中...</div>';
                 await loadModelFile(data.filename);
                 const updatedModel = masterModelList.find(m => m.model_name === data.model_name);
-                if (updatedModel) {
-                    data = updatedModel;
-                }
+                if (updatedModel) data = updatedModel;
             }
 
             specDisplayEl.innerHTML = '<div class="loading">加载规格数据中...</div>';
@@ -1347,17 +1365,13 @@
                 const foldedClass = isMobile ? 'folded' : '';
                 const icon = isMobile ? '▶' : '▼';
 
-                // 内部型号徽章
                 let modelCodeHtml = '';
                 const modelCodeField = data._isNickname ? data.addon_model_code : data.model_code;
                 if (modelCodeField) {
-                    const codeStr = Array.isArray(modelCodeField)
-                        ? modelCodeField.join(' / ')
-                        : modelCodeField;
+                    const codeStr = Array.isArray(modelCodeField) ? modelCodeField.join(' / ') : modelCodeField;
                     modelCodeHtml = `<span class="model-code-badge">${codeStr}</span>`;
                 }
 
-                // 查找对应型号（原始 ↔ 别名）
                 const counterpart = (() => {
                     if (data._isNickname) {
                         return masterModelList.find(m => m.model_name === data._originalName && !m._isNickname);
@@ -1369,23 +1383,18 @@
                     ? `<button class="switch-model-btn" onclick="switchToModel('${counterpart.model_name}')">${data._isNickname ? '切换到原始型号' : '切换到别名'}</button>`
                     : '';
 
-                // 收藏按钮
                 const isFav = isFavorite(data.model_name);
                 const favoriteBtnHtml = `<button class="favorite-toggle-btn" data-model="${data.model_name}" onclick="toggleFavorite('${data.model_name}')">${isFav ? '★ 取消收藏' : '☆ 收藏'}</button>`;
 
-                // 辅助函数：获取第一个有效 URL
                 function getFirstUrl(urlField) {
                     if (!urlField) return null;
-                    if (Array.isArray(urlField)) {
-                        return urlField.length > 0 ? urlField[0] : null;
-                    }
+                    if (Array.isArray(urlField)) return urlField.length > 0 ? urlField[0] : null;
                     return urlField;
                 }
                 const psrefUrl = getFirstUrl(data.PSREF_link);
                 const userGuideUrl = getFirstUrl(data.user_guide_link);
                 const hmmUrl = getFirstUrl(data.HMM_link);
 
-                // 辅助函数：格式化附加信息
                 function formatAddOnTips(tips) {
                     if (!tips) return null;
                     if (Array.isArray(tips)) {
@@ -1403,7 +1412,6 @@
                     }
                 }
 
-                // 内存卡片
                 const memoryCard = `
                     <div class="part-card foldable-card ${foldedClass}">
                         <div class="part-card-header" onclick="toggleCard(this)">
@@ -1424,7 +1432,6 @@
                     </div>
                 `;
 
-                // 存储卡片
                 const storageCard = (() => {
                     if (!data.storage) {
                         return `
@@ -1487,7 +1494,6 @@
                     `;
                 })();
 
-                // 电池卡片
                 const batteryCard = `
                     <div class="part-card foldable-card ${foldedClass}">
                         <div class="part-card-header" onclick="toggleCard(this)">
@@ -1497,9 +1503,7 @@
                         <div class="part-card-body">
                             ${(() => {
                                 const batteries = data.Battary || data.battery || [];
-                                if (batteries.length === 0) {
-                                    return '<div class="part-item"><div class="part-info">无电池信息</div></div>';
-                                }
+                                if (batteries.length === 0) return '<div class="part-item"><div class="part-info">无电池信息</div></div>';
                                 return batteries.map(b => {
                                     const type = b.type || '电池';
                                     const capacity = b.capacity || b.cap || '';
@@ -1515,7 +1519,6 @@
                     </div>
                 `;
 
-                // 触摸与笔卡片
                 let touchPenHtml = '';
                 if (data.touch || data.pen) {
                     const items = [];
@@ -1540,13 +1543,11 @@
                     `;
                 }
 
-                // 显卡卡片
                 let graphicsCardHtml = '';
                 if (parts.graphics?.length > 0) {
                     graphicsCardHtml = renderPartCard(parts.graphics, '显卡', 'graphics');
                 }
 
-                // 显示输出卡片
                 let outputInterfaceCardHtml = '';
                 if (data.Display && (data.Display.max_resolution || data.Display.multi_display)) {
                     const interfaceLines = [];
@@ -1560,7 +1561,7 @@
                                     interfaceLines.push(`<div><span class="field-name">DisplayPort:</span> <span class="field-value">${res}</span></div>`);
                                 } else if (portName.toLowerCase().includes('minidp')) {
                                     interfaceLines.push(`<div><span class="field-name">Mini DisplayPort:</span> <span class="field-value">${res}</span></div>`);
-                                } else if (portName.toLowerCase().includes('usb_c_tbt') || portName.toLowerCase().includes('usb'))  {
+                                } else if (portName.toLowerCase().includes('usb_c_tbt') || portName.toLowerCase().includes('usb')) {
                                     interfaceLines.push(`<div><span class="field-name">USB-C/雷电:</span> <span class="field-value">${res}</span></div>`);
                                 } else if (portName.toLowerCase().includes('thunderbolt')) {
                                     interfaceLines.push(`<div><span class="field-name">雷电:</span> <span class="field-value">${res}</span></div>`);
@@ -1573,7 +1574,6 @@
                     if (data.Display.multi_display) {
                         interfaceLines.push(`<div><span class="field-name">多屏支持:</span> <span class="field-value">${data.Display.multi_display}</span></div>`);
                     }
-                    
                     if (interfaceLines.length > 0) {
                         outputInterfaceCardHtml = `
                             <div class="part-card foldable-card ${foldedClass}">
@@ -1593,36 +1593,28 @@
                     }
                 }
 
-                // 物理接口与多媒体表格行
                 const portsRows = `
                     <tr><th>接口</th><td>${Array.isArray(data.ports) ? data.ports.join('、') : data.ports || '无'}</td></tr>
                     <tr><th>摄像头</th><td>${Array.isArray(data.camera) ? data.camera.join('、') : data.camera || '无'}</td></tr>
                     <tr><th>音频</th><td>${Array.isArray(data.audio) ? data.audio.join('<br>') : data.audio || 'N/A'}</td></tr>
                     <tr><th>键盘</th><td>${Array.isArray(data.keyboard) ? data.keyboard.join('<br>') : data.keyboard || 'N/A'}</td></tr>
-                    ${data['color calibration'] ? `
-                    <tr><th>校色仪</th><td>${Array.isArray(data['color calibration']) ? data['color calibration'].join('、') : data['color calibration']}</td></tr>
-                    ` : ''}
+                    ${data['color calibration'] ? `<tr><th>校色仪</th><td>${Array.isArray(data['color calibration']) ? data['color calibration'].join('、') : data['color calibration']}</td></tr>` : ''}
                 `;
 
-                // 附加信息行
                 const addOnTipsHtml = formatAddOnTips(data.add_on_tips);
                 const addOnTipsRow = addOnTipsHtml ? `<tr><th>附加信息</th><td>${addOnTipsHtml}</td></tr>` : '';
 
-                // 其他卡片表格行（含秘密提示）
                 const otherRows = `
                     <tr><th>尺寸</th><td>${data.physical?.dimensions || 'N/A'}</td></tr>
                     <tr><th>重量</th><td>${data.physical?.weight || 'N/A'}</td></tr>
                     <tr><th>材质</th><td>${physicalMaterial}</td></tr>
                     <tr><th>安全特性</th><td>${Array.isArray(data.security) ? data.security.join('<br>') : data.security || 'N/A'}</td></tr>
                     <tr><th>预装系统</th><td>${Array.isArray(data.system) ? data.system.join('<br>') : data.system || 'N/A'}</td></tr>
-                    ${data.ACadapter ? `
-                    <tr><th>电源适配器</th><td>${Array.isArray(data.ACadapter) ? data.ACadapter.join('、') : data.ACadapter}</td></tr>
-                    ` : ''}
+                    ${data.ACadapter ? `<tr><th>电源适配器</th><td>${Array.isArray(data.ACadapter) ? data.ACadapter.join('、') : data.ACadapter}</td></tr>` : ''}
                     ${addOnTipsRow}
                     ${secretTipsEnabled && data.secret_tips ? `<tr><th>秘密提示</th><td>${data.secret_tips}</td></tr>` : ''}
                 `;
 
-                // 物理接口与多媒体卡片
                 const portsCard = `
                     <div class="part-card foldable-card ${foldedClass}">
                         <div class="part-card-header" onclick="toggleCard(this)">
@@ -1630,14 +1622,11 @@
                             <span class="fold-icon">${icon}</span>
                         </div>
                         <div class="part-card-body">
-                            <table>
-                                ${portsRows}
-                            </table>
+                            <table>${portsRows}</table>
                         </div>
                     </div>
                 `;
 
-                // 其他卡片
                 const otherCard = `
                     <div class="part-card foldable-card ${foldedClass}">
                         <div class="part-card-header" onclick="toggleCard(this)">
@@ -1645,17 +1634,13 @@
                             <span class="fold-icon">${icon}</span>
                         </div>
                         <div class="part-card-body">
-                            <table>
-                                ${otherRows}
-                            </table>
+                            <table>${otherRows}</table>
                         </div>
                     </div>
                 `;
 
-                // 附加信息（标题下方的小字）
                 const addonsHtml = data.addons ? `<p class="addons-note">${data.addons}</p>` : '';
 
-                // 底部按钮（已移除导出PDF按钮）
                 const buttonsHtml = `
                     <div class="footer-buttons">
                         ${psrefUrl ? `<a href="${psrefUrl}" class="footer-btn" onclick="window.open('${psrefUrl}', '_blank', 'width=1200,height=800,scrollbars=yes,resizable=yes'); return false;">PSREF网站</a>` : ''}
@@ -1664,7 +1649,6 @@
                     </div>
                 `;
 
-                // 构建标题 HTML（包含切换按钮和收藏按钮）
                 const headerHtml = `
                     <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 4px;">
                         <h1 style="margin:0;">${data.model_name || '未知型号'}</h1>
@@ -1674,7 +1658,6 @@
                     </div>
                 `;
 
-                // 最终渲染
                 specDisplayEl.innerHTML = `
                     <div class="header">
                         ${headerHtml}
@@ -1706,13 +1689,11 @@
             }
         }
 
-        // ---------- 秘密提示功能（搜索框双击回车）----------
+        // ---------- 秘密提示 ----------
         searchModalInput.addEventListener('keydown', (e) => {
             if (e.key === 'Enter') {
                 const currentTime = Date.now();
-                const inputValue = searchModalInput.value.trim();
-                
-                if (inputValue === '我也不知道该写点啥') {
+                if (searchModalInput.value.trim() === '我也不知道写点啥') {
                     if (currentTime - lastEnterTime < 500) {
                         secretTipsEnabled = true;
                         const activeItem = document.querySelector('.nav-item.active');
@@ -1746,12 +1727,10 @@
             applyFilterAndRender();
         });
 
-        // 搜索按钮
         searchFloatBtn.addEventListener('click', openSearchModal);
         searchModalInput.addEventListener('input', (e) => renderSearchResults(e.target.value.trim()));
         searchModal.addEventListener('click', function(e) { if (e.target === this) closeSearchModal(); });
 
-        // 对比选择按钮
         compareFloatBtn.addEventListener('click', openCompareSelectModal);
 
         selectFilterFamilyBtn.addEventListener('click', () => {
@@ -1770,33 +1749,17 @@
             selectFamilyContainer.style.display = 'none';
             renderCompareSelectList();
         });
-        selectFamilySelect.addEventListener('change', (e) => {
-            selectFamilyValue = e.target.value;
-            renderCompareSelectList();
-        });
-        selectGenerationSelect.addEventListener('change', (e) => {
-            selectGenValue = e.target.value;
-            renderCompareSelectList();
-        });
-        compareSearchInput.addEventListener('input', (e) => {
-            selectSearchTerm = e.target.value.trim();
-            renderCompareSelectList();
-        });
+        selectFamilySelect.addEventListener('change', (e) => { selectFamilyValue = e.target.value; renderCompareSelectList(); });
+        selectGenerationSelect.addEventListener('change', (e) => { selectGenValue = e.target.value; renderCompareSelectList(); });
+        compareSearchInput.addEventListener('input', (e) => { selectSearchTerm = e.target.value.trim(); renderCompareSelectList(); });
 
         confirmCompareBtn.addEventListener('click', confirmCompare);
         clearSelectedBtn.addEventListener('click', clearSelectedModels);
+        compareSelectModal.addEventListener('click', function(e) { if (e.target === this) closeCompareSelectModal(); });
 
-        compareSelectModal.addEventListener('click', function(e) {
-            if (e.target === this) closeCompareSelectModal();
-        });
-
-        // 收藏按钮
         favoritesFloatBtn.addEventListener('click', openFavoritesModal);
-        favoritesModal.addEventListener('click', function(e) {
-            if (e.target === this) closeFavoritesModal();
-        });
+        favoritesModal.addEventListener('click', function(e) { if (e.target === this) closeFavoritesModal(); });
 
-        // 主题切换
         const currentTheme = localStorage.getItem('theme') || 'dark';
         if (currentTheme === 'light') {
             document.body.classList.add('light-mode');
