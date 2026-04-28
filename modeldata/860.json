@@ -1,22 +1,22 @@
 {
   "thinkpad_database": [
     {
-      "id": "thinkpad-850",
-      "model_name": "ThinkPad Power Series 850",
-      "model_family": "ThinkPad Power Series",  
-      "model_code":["6042"],
+      "id": "thinkpad-860",
+      "model_name": "IBM RS/6000 860",
+      "model_family": "RS/6000",  
+      "model_code":["7249-860"],
       "model_generation": "legacy",
-      "update_date": "Augest 1995",
+      "update_date": "1996",
       "processor_options": [
-        "603e_100"
+        "603e_166"
       ],
-      "graphics_options":["WD90C24A"],
+      "graphics_options":["86CM65"],
       "Display": {
         "max_resolution": {
-          "vga": "1024x768@75Hz",
-          "composite_out": "1024x768@75Hz"
+          "vga": "1280x1024x8bit@75Hz",
+          "composite_out": "1280x1024x8bit@75Hz"
         },
-        "multi_display": "Mirroring only"
+        "multi_display": "Supports dual independent displays"
       },
       "memory": {
         "max_capacity": "96MB max",
@@ -54,9 +54,7 @@
         "3.5mm Input jack & output jack & line in & line out",
         "SCSI-2 50 pin connector"
       ],
-      "camera": [
-        "CCD camera, white balance, iris, lens focus"
-      ],
+      "camera": [],
       "audio": [
         "CD quality audio, Crystal Semiconductor CS4231 / Internal stereo speakers 1W x 2"
       ],
@@ -65,8 +63,8 @@
         "TrackPoint III"
       ],
       "physical": {
-        "dimensions": "297.1mm x 259.0mm x 60.9mm / 11.7 x 10.2 x 2.4in",
-        "weight": "7.69 pounds (3.49kg)"
+        "dimensions": "297mm x 260mm x 61mm / 11.7 x 10.2 x 2.4in",
+        "weight": "8.5 lbs (3.8 Kg)"
       },
       "security": [
         "Power-on password",
