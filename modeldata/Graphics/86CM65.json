@@ -1,8 +1,7 @@
         {
           "model": "S3 Aurora64V+ (86CM65)",
           "Shading Units": "?",
-          "base_freq": "110 MHz",
-          "turbo_freq": "135 MHz",
+          "base_freq": "110 MHz@3.3V, 135 MHz@5V",
           "VRAM":"2MB EDO DRAM",
           "Generation": "Trio",
           "Feature":"VGA, OpenGL, MPEG-1, VESA® DDC, PCI, DuoView",
