@@ -1,0 +1,90 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-8",
+      "model_name": "ThinkPad 8",
+      "model_family": "Tablet",
+      "model_code":["20BN","20BQ"],
+      "model_generation": "xx40",
+      "update_date": "November 2014",
+      "processor_options": [
+        "Z3770",
+        "Z3795"
+      ],
+      "graphics_options":["HD_BTL"],
+      "Display": {
+        "max_resolution": {
+          "mini-HDMI": "1920x1080@60Hz"
+        },
+        "multi_display": "Supports dual independent displays"
+      },
+      "memory": {
+        "max_capacity": "4GB max",
+        "type": "LPDDR3 1067MHz",
+        "slots": "no sockets",
+        "features": "2GB or 4GB soldered to systemboard"
+      },
+      "display_options": [],
+      "storage": {
+        "ssd_sata": null,
+        "ssd_pcie": null,
+        "hdd": null,
+        "sshd": null,
+        "emmc": "64GB or 128GB eMMC flash memory on board"
+      },
+      "Ethernet": [],
+      "WLAN": [
+        "ThinkPad 11 a/b/g/n"
+      ],
+      "Bluetooth": [
+        {
+          "type": "Integrated",
+          "form": "Integrated in Wi-Fi + Bluetooth combo chip",
+          "feature": "Bluetooth 4.0 wireless"
+        }
+      ],
+      "WWAN": ["EM7345","N5321"],
+      "SIM_Card": [],
+      "Battary": [
+        {
+          "type": "Internal battery",
+          "capacity": "20.5Wh",
+          "form": "2-cell",
+          "tech": "Lithium Polymer"
+        }
+      ],
+      "ports": [
+        "1 x micro-USB 3.0",
+        "1 x micro-HDMI",
+        "1 x microSD Card slot",
+        "1 x Headphone/microphone combo jack"
+      ],
+      "camera": [
+        "Front camera: 2.0-megapixel, fixed focus",
+        "Rear camera: 8.0-megapixel, auto focus, flash LED"
+      ],
+      "audio": [
+        "HD Audio, Realtek ALC5672 codec / stereo speakers, 0.5 watt x 2"
+      ],
+      "keyboard": [],
+      "physical": {
+        "dimensions": "224.3mm x 132.0mm x 8.8mm / 8.83 x 5.20 x 0.35in",
+        "weight": "0.95 lb (0.43kg)",
+        "case_material": "ALuminium top cover, Edge Profile Rubber"
+      },
+      "security": [
+        "Power-on password",
+        "Hard disk password",
+        "Supervisor password"
+      ],
+      "system": [
+        "Windows 8.1 32",
+        "Windows 8.1 64 (for Z3795 SKUs only)",
+        "Windows 8.1 Pro 32",
+        "Windows 8.1 Pro 64(for Z3795 SKUs only)",
+        "Windows 8.1 with Bing 32",
+        "Windows 8.1 with Bing 64(for Z3795 SKUs only)"
+      ]
+    }
+  ]
+}

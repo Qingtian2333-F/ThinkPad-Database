@@ -1,0 +1,10 @@
+        {
+          "model": "Intel HD Graphics (Bay Trail)",
+          "Shading Units": "32",
+          "base_freq": "350~688 Mhz",
+          "turbo_freq": "400~896 MHz",
+          "VRAM":"-",
+          "Generation": "Gen 7.0",
+          "Feature":"DX 11.1 (11_0), OpenGL 4.0, OpenCL 1.2, Vulkan 1.0",
+          "iconfamily":"Intel_HD_Graphics"
+        }

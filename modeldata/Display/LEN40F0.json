@@ -1,0 +1,15 @@
+        {
+          "type": "WUXGA (1920x1200)",
+          "tech": "IPS, WLED backlight, Touch Screen",
+          "brightness": "370 nits",
+          "contrast": "800:1",
+          "viewing_angle": "160°",
+          "FRUs":[
+            {
+             "00HM112":"LD083WU1-SPA1"
+            }
+          ],
+          "color_gamut":"60% NTSC",
+          "refresh_rate":"60 Hz"
+
+        }
