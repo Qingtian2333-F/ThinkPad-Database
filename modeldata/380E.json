@@ -1,13 +1,14 @@
 {
   "thinkpad_database": [
     {
-      "id": "thinkpad-380",
-      "model_name": "ThinkPad 380",
-      "model_family": "380",
-      "model_generation": "1st Gen",
+      "id": "thinkpad-380e",
+      "model_name": "ThinkPad 380E",
+      "nickname":"ThinkPad 385E",
+      "model_family": "3",
+      "model_generation": "Legacy",
       "update_date": "May 1997",
       "model_code": ["2635"],
-      "processor_options": ["P54CSLM_150"],
+      "processor_options": ["P55CLM_150"],
       "L2_cache": "256 KB",
       "graphics_options": ["NM2093"],
       "Display": {
@@ -27,7 +28,7 @@
       ],
       "storage": {
         "hdd": "1.08GB / 13ms (380); 1.35GB / 13ms (380D); 2.1GB / 13ms (380D); 3.2GB / 13ms (380XD); 4.0GB / 13ms (380XD); 5.1GB / 12ms (380XD); 4.0GB / 13ms or 6.4GB / 12ms (380Z)",
-        "optical": "Optional 8x CD-ROM (380D/385D)",
+        "optical": "Optional 8x CD-ROM",
         "floppy": "1.44MB 3.5\" internal floppy drive"
       },
       "Ethernet": ["None onboard (option via port replicator or PC Card)"],

@@ -1,0 +1,7 @@
+        {
+          "model": "Neomagic MagicMedia256AV",
+          "base_freq": "100MHz",
+          "VRAM":"2.5MB SGRAM",
+          "Feature":" PCI 2.1 / 128-bit engine, 256-bit memory interface / DDC2B / Direct3D / motion compensation / color space conversion / interpolation in X and Y axis",
+          "iconfamily": "NeoMagic"
+        }

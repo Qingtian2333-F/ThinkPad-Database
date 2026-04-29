@@ -1,0 +1,18 @@
+ {
+      "model": "IBM ThinkPad Enhanced Port Replicator",
+      "ports": [
+        "PS/2 Keyboard",
+        "PS/2 Mouse",
+        "Serial (DB9-M)",
+        "Parallel (DB25-F)",
+        "(1) USB",
+        "MIDI/Joystick",
+        "Audio Line-In",
+        "Audio Line-Out",
+        "VGA",
+        "External Diskette drive",
+        "(2) Type III CardBus slots",
+        "Kensington Security hole"
+      ],
+          "power": "30W"
+        }

@@ -3,12 +3,13 @@
     {
       "id": "thinkpad-380xd",
       "model_name": "ThinkPad 380XD",
+      "nickname":"ThinkPad 385XD",
       "model_family": "380",
       "model_generation": "XD series",
       "update_date": "March 1998",
       "model_code": ["2635-8AU", "2635-BAU", "2635-9AU", "2635-AAU"],
-      "processor_options": ["Pentium MMX 233/66 MHz", "Pentium MMX 266/66 MHz"],
-      "graphics_options": ["NeoMagic MagicGraph128XD (NM2160B) 128-bit SVGA accelerator with 2MB iDRAM"],
+      "processor_options": ["P55CSLM_233", "P55CSLM_266","PII_233","PII_266"],
+      "graphics_options": ["NM2160B"],
       "Display": {
         "max_resolution": {
           "external": "1024x768 with 65,536 colors"
@@ -27,7 +28,8 @@
       ],
       "storage": {
         "hdd": "3.2GB / 13ms / PIO Mode 4 or 4.0GB / 13ms / PIO 4 or 5.1GB / 12ms / PIO Mode 4",
-        "optical": "24X-10X CD-ROM, bootable, not removable"
+        "optical": "24X-10X CD-ROM, bootable, not removable",
+        "floppy": "1.44MB 3.5\" internal floppy drive"
       },
       "Ethernet": ["Not supported onboard"],
       "WLAN": ["Not supported"],
@@ -52,6 +54,7 @@
       ],
       "ACadapter": ["56 watt Universal AC Adapter, barrel, 3-prong"],
       "ports": [
+        "CS96 standard docking Port",
         "1 x USB",
         "1 x Serial (16550A)",
         "1 x Parallel (IEEE P1284-A, EPP, ECP)",
@@ -85,6 +88,7 @@
         "Security keyhole",
         "Personalization screen at startup"
       ],
+      "dock_support":["46H4209","84G1316","11J8997"],
       "system": [
         "Windows 95 OSR2.1 (with Lotus SmartSuite 97)"
       ]

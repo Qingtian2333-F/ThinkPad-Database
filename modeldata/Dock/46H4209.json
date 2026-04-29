@@ -1,0 +1,13 @@
+ {
+      "model": "ThinkPad 560 Port Replicator",
+      "ports": [
+        "PS/2 Keyboard",
+        "PS/2 Mouse",
+        "Serial (DB9-M)",
+        "Parallel (DB25-F)",
+        "External Diskette drive (not supported on 380 and 385)",
+        "Kensington Security hole",
+        "VGA"
+      ],
+          "power": "30W"
+        }

@@ -7,8 +7,8 @@
       "model_generation": "Z series",
       "update_date": "September 1998",
       "model_code": ["2635-HGU", "2635-JGU", "2635-HBU", "2635-JBU", "2635-JCU"],
-      "processor_options": ["Mobile Pentium II 233MHz", "Mobile Pentium II 300MHz"],
-      "graphics_options": ["NeoMagic MagicMedia256AV (NM2200) 2.5MB SDRAM embedded"],
+      "processor_options": ["PII_233", "PII_300"],
+      "graphics_options": ["NM2200"],
       "Display": {
         "max_resolution": {
           "external": "1024x768 with 16.7 million colors at 85Hz"
@@ -26,7 +26,8 @@
       ],
       "storage": {
         "hdd": "4.0GB / 13ms read / 14ms write / SMART or 6.4GB / Ultra DMA/33",
-        "optical": "24X-10X CD-ROM, bootable, not removable"
+        "optical": "24X-10X CD-ROM, bootable, not removable",
+        "floppy": "1.44MB 3.5\" internal floppy drive"
       },
       "Ethernet": ["Not supported onboard"],
       "WLAN": ["Not supported"],
@@ -51,6 +52,7 @@
       ],
       "ACadapter": ["56 watt Universal AC Adapter, barrel, 3-prong"],
       "ports": [
+        "CS98 standard docking Port",
         "1 x USB",
         "1 x Serial (16550A)",
         "1 x Parallel (IEEE P1284-A, EPP, ECP)",
@@ -83,6 +85,7 @@
         "Security keyhole",
         "Personalization screen at startup"
       ],
+      "dock_support":["05K4872"],
       "system": [
         "Windows 98",
         "Windows NT 4.0"

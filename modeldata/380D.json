@@ -1,14 +1,15 @@
 {
   "thinkpad_database": [
     {
-      "id": "thinkpad-380d-385d",
-      "model_name": "ThinkPad 385D",
-      "model_family": "380",
-      "model_generation": "D series",
+      "id": "thinkpad-380d",
+      "model_name": "ThinkPad 380D",
+      "nickname":"ThinkPad 385D",
+      "model_family": "3",
+      "model_generation": "Legacy",
       "update_date": "May 1997",
-      "model_code": ["2635-2EU", "2635-3EU"],
-      "processor_options": ["Pentium 150/60 MHz", "Pentium 150/60 MHz with MMX technology"],
-      "graphics_options": ["NeoMagic MagicGraph128ZV (NM2093) 128-bit SVGA accelerator with 1.125MB iDRAM"],
+      "model_code": ["2635"],
+      "processor_options": ["P54CSLM_150", "P55CLM_150"],
+      "graphics_options": ["NM2093"],
       "Display": {
         "max_resolution": {
           "external": "1024x768 256 colors"
@@ -27,7 +28,8 @@
       ],
       "storage": {
         "hdd": "1.35GB / 13ms / PIO Mode 4 or 2.1GB / 13ms / PIO Mode 4",
-        "optical": "8x CD-ROM, 5.25\", multi-session, XA, ATAPI, not bootable, not removable"
+        "optical": "8x CD-ROM, 5.25\", multi-session, XA, ATAPI, not bootable, not removable",
+        "floppy": "1.44MB 3.5\" internal floppy drive"
       },
       "Ethernet": ["Not supported onboard"],
       "WLAN": ["Not supported"],
@@ -52,14 +54,14 @@
       ],
       "ACadapter": ["35 watt Universal AC Adapter, barrel connector"],
       "ports": [
+        "CS96 standard docking Port",
         "1 x Serial (16550A)",
         "1 x Parallel (IEEE P1284-A, EPP, ECP)",
         "2 x PCMCIA Type II (or 1 Type III, Zoomed Video support in lower slot)",
         "1 x External keyboard/mouse",
         "1 x Microphone in",
         "1 x Headphone out",
-        "1 x Infrared (IrDA 1.1, up to 4Mbps)",
-        "1 x USB (not on system, available via Enhanced Port Replicator)"
+        "1 x Infrared (IrDA 1.1, up to 4Mbps)"
       ],
       "camera": ["None"],
       "audio": [
@@ -81,6 +83,7 @@
         "Security keyhole",
         "Personalization screen at startup"
       ],
+      "dock_support":["46H4209","84G1316","11J8997"],
       "system": [
         "Windows 95 OSR2 (with Lotus SmartSuite 96 CD-ROM)"
       ]
