@@ -1,0 +1,90 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-365cd",
+      "model_name": "ThinkPad 365CD",
+      "model_family": "3",
+      "model_generation": "legacy",
+      "update_date": "November 1995",
+      "model_code": ["2625"],
+      "processor_options": ["Cx486DX4"],
+      "graphics_options": ["CT65545"],
+      "Display": {
+        "max_resolution": {
+          "external": "1024x768 256 colors up to 70Hz"
+        },
+        "multi_display": "Simultaneous LCD and CRT, 180 degree tilt"
+      },
+      "memory": {
+        "max_capacity": "24MB max",
+        "type": "Fast Page 70ns, non-parity, 3.3 volt",
+        "slots": "1 socket for one JEDEC 72 pin SO DIMM of 4 or 16 MB",
+        "features": "8MB standard"
+      },
+      "display_options": [
+        "10.4\" Black Matrix TFT VGA color 640x480, 262,144 colors, 100 to 1 contrast"
+      ],
+      "storage": {
+        "hdd": "340MB / 13ms / EIDE or 540MB / 13ms / EIDE",
+        "optical": "5.25\" CD-ROM / double speed / multi-session / XA / front loaded / ATAPI"
+      },
+      "Ethernet": ["None"],
+      "WLAN": ["None"],
+      "Bluetooth": [
+        {
+          "type": "None"
+        }
+      ],
+      "WWAN": ["No_WWAN"],
+      "SIM_Card": [
+        {
+          "type": "None"
+        }
+      ],
+      "Battery": [
+        {
+          "type": "NiMH",
+          "capacity": "Non-intelligent",
+          "form": "External, removable",
+          "tech": "NiMH"
+        }
+      ],
+      "ACadapter": ["35 watt Universal AC Adapter"],
+      "ports": [
+        "CS93 standard docking Port",
+        "1 x Serial (16550A)",
+        "1 x Parallel (IEEE P1284, EPP, ECP)",
+        "1 x External keyboard/mouse",
+        "2 x PCMCIA Type II (or 1 Type III)",
+        "1 x Headphone out",
+        "1 x Microphone in",
+        "1 x Joystick/MIDI port (includes Joystick/MIDI cable)"
+      ],
+      "camera": ["None"],
+      "audio": [
+        "16-bit audio chip, 18 voice MIDI FM Synthesis (ESS1688 with OPL3)",
+        "Internal speaker (0.5W), internal microphone"
+      ],
+      "keyboard": [
+        "Full-size 85-key keyboard with lift-up design",
+        "TrackPoint III"
+      ],
+      "physical": {
+        "dimensions": "11.7 x 8.3 x 2.0 inches (194 cubic inches)",
+        "weight": "6.3-6.4 pounds",
+        "case_material": "Not specified"
+      },
+      "security": [
+        "Power-on password",
+        "Supervisor password",
+        "Kensington lock slot",
+        "Keyboard lock (requires Kensington)"
+      ],
+      "dock_support":["66G3510","3545","3546"],
+      "system": [
+        "Windows 95 (model W11, W13)",
+        "SelectaSystem (DOS 7.0 / Windows 3.11 / OS/2 Warp 3.0) (model 203, 205)"
+      ]
+    }
+  ]
+}

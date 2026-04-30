@@ -1,0 +1,90 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-360",
+      "model_name": "ThinkPad 360",
+      "model_family": "360",
+      "model_generation": "1st Gen",
+      "update_date": "May 1994",
+      "model_code": ["2620"],
+      "processor_options": ["486SX_33MHz"],
+      "graphics_options": ["WD90C24A"],
+      "Display": {
+        "max_resolution": {
+          "external": "1024x768 256 colors"
+        },
+        "multi_display": "Simultaneous LCD and CRT, 180 degree tilt"
+      },
+      "memory": {
+        "max_capacity": "20MB max",
+        "type": "IC DRAM 70ns",
+        "slots": "1 socket (non-parity)",
+        "features": "4MB standard, available IC DRAM: 4, 8, 16 MB (5.0 volts)"
+      },
+      "display_options": [
+        "9.5\" Monochrome VGA 640x480, 64 grey scales, STN, backlit"
+      ],
+      "storage": {
+        "hdd": "170MB / 15ms or 340MB / 14ms, IDE, removable",
+        "floppy": "3.5\" 1.44MB"
+      },
+      "Ethernet": ["None"],
+      "WLAN": ["None"],
+      "Bluetooth": [
+        {
+          "type": "None"
+        }
+      ],
+      "WWAN": ["No_WWAN"],
+      "SIM_Card": [
+        {
+          "type": "None"
+        }
+      ],
+      "Battery": [
+        {
+          "type": "NiMH",
+          "capacity": "Not specified",
+          "form": "Intelligent, removable",
+          "tech": "NiMH"
+        }
+      ],
+      "ACadapter": ["30W wallmount AC adapter"],
+      "ports": [
+        "CS93 standard docking Port",
+        "1 x Serial (16550A)",
+        "1 x Parallel (EPP)",
+        "1 x External display (SVGA)",
+        "1 x Keyboard/mouse",
+        "2 x PCMCIA Type II (or 1 Type III)",
+        "1 x Headphone out",
+        "1 x Microphone in"
+      ],
+      "camera": ["None"],
+      "audio": [
+        "16-bit audio chip, internal speaker (0.5W), internal microphone"
+      ],
+      "keyboard": [
+        "Full-size 85-key keyboard with lift-up design",
+        "TrackPoint II"
+      ],
+      "physical": {
+        "dimensions": "11.7 x 8.3 x 1.7-2.1 inches (varies)",
+        "weight": "5.6 lbs (mono) - 6.8 lbs (pen/TFT)",
+        "case_material": "Not specified"
+      },
+      "security": [
+        "Power-on password",
+        "Hard disk password",
+        "Supervisor password",
+        "Hardware security loop",
+        "PCMCIA card lock",
+        "Optional security base"
+      ],
+      "dock_support":["66G3510","3545","3546"],
+      "system": [
+        "IBM DOS 6.3, Windows 3.1 (with preloaded applications)"
+      ]
+    }
+  ]
+}

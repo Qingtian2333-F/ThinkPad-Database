@@ -1,0 +1,16 @@
+ {
+      "model": "SelectaBase 770",
+      "ports": [
+        "PS/2 Keyboard",
+        "PS/2 Mouse",
+        "Serial (DB9-M)",
+        "Parallel (DB25-F)",
+        "MIDI/Game Port",
+        "USB (1 port)",
+        "External Diskette drive",
+        "VGA",
+        "Audio Line-In",
+        "SelectaDock Docking Port"
+      ],
+          "power": "30W"
+        }

@@ -1,0 +1,94 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-240x",
+      "model_name": "ThinkPad 240X",
+      "model_family": "2",
+      "model_generation": "Legacy",
+      "update_date": "June 2000",
+      "model_code": ["2609"],
+      "processor_options": ["Celeron_450_PIII", "PIII_500"],
+      "graphics_options": ["SM712"],
+      "Display": {
+        "max_resolution": {
+          "external": "1024x768"
+        },
+        "multi_display": "Simultaneous LCD and CRT"
+      },
+      "memory": {
+        "max_capacity": "192MB max",
+        "type": "SDRAM",
+        "slots": "1 available socket for JEDEC 144-pin SO DIMM",
+        "features": "64MB standard, non-parity, 66MHz"
+      },
+      "display_options": ["10.4\" TFT SVGA 800x600"],
+      "storage": {
+        "hdd": "6.4GB / 12.0GB / IDE"
+      },
+      "Ethernet": ["Not supported"],
+      "WLAN": ["Not supported"],
+      "Bluetooth": [
+        {
+          "type": "None"
+        }
+      ],
+      "WWAN": ["No_WWAN"],
+      "SIM_Card": [
+        {
+          "type": "None"
+        }
+      ],
+      "Battery": [
+        {
+          "type": "Internal battery",
+          "capacity": "Li-Ion 3-cell",
+          "form": "3-cell",
+          "tech": "Li-Ion"
+        },
+        {
+          "type": "External battery",
+          "capacity": "Li-Ion 6-cell",
+          "form": "6-cell",
+          "tech": "Li-Ion"
+        }
+      ],
+      "ACadapter": ["56W AC adapter"],
+      "ports": [
+        "1 x USB",
+        "1 x Serial",
+        "1 x Parallel",
+        "1 x FDD port",
+        "1 x RJ-11 modem port",
+        "IrDA port",
+        "1 Type I or 1 Type II / CardBus 32-bit / PCMCIA 2.1 / no Zoomed Video support",
+        "1 x Headphone/mic combo jack"
+      ],
+      "camera": ["None"],
+      "audio": [
+        "16-bit SoundBlaster Pro support / CS4281 PCI audio / CS4297A AC97 codec",
+        "One internal speaker (.5 watt)"
+      ],
+      "keyboard": [
+        "95% size of standard ThinkPad keyboards / 18mm key pitch",
+        "TrackPoint pointing device"
+      ],
+      "physical": {
+        "dimensions": "260mm x 202mm x 26.6mm",
+        "weight": "Starting at 1.35 kg (2.98 lbs)",
+        "case_material": "Top: carbon-fiber reinforced plastic; Bottom: glass-fiber reinforced plastic"
+      },
+      "security": [
+        "Power-on password",
+        "Setup password",
+        "Disk password",
+        "Security keyhole"
+      ],
+      "system": [
+        "Windows 98"
+      ],
+      "PSREF_link": ["https://psref.lenovo.com/syspool/Sys/PDF/withdrawnbook/twbook.pdf"],
+      "user_guide_link": [],
+      "HMM_link": []
+    }
+  ]
+}

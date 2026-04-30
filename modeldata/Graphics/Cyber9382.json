@@ -1,0 +1,7 @@
+        {
+          "model": "Trident Cyber9382",
+          "base_freq": "Unknown",
+          "VRAM":"1MB EDO DRAM",
+          "Feature":"PCI 2.1 / 32 bit / 32 bit path to memory / DCI, DirectDraw, EnDIVE support",
+          "iconfamily": "Trident"
+        }

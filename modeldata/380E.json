@@ -1,0 +1,96 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-380e",
+      "model_name": "ThinkPad 380E",
+      "nickname":"ThinkPad 385E",
+      "model_family": "3",
+      "model_generation": "Legacy",
+      "update_date": "May 1997",
+      "model_code": ["2635"],
+      "processor_options": ["P55CLM_150"],
+      "L2_cache": "256 KB",
+      "graphics_options": ["NM2093"],
+      "Display": {
+        "max_resolution": {
+          "external": "1024x768 256 colors (or 65,536 colors for 380XD)"
+        },
+        "multi_display": "Simultaneous LCD and CRT, 150 degree tilt"
+      },
+      "memory": {
+        "max_capacity": "96MB max",
+        "type": "EDO 60ns, non-parity, 3.3 volt",
+        "slots": "1 socket for one JEDEC 144 pin EDO SO DIMM of 8, 16, 32, or 64 MB",
+        "features": "16MB or 32MB standard; socket accessed from bottom via screw"
+      },
+      "display_options": [
+        "12.1\" DSTN SVGA color 800x600, 65,536 colors, 30 to 1 contrast"
+      ],
+      "storage": {
+        "hdd": "1.08GB / 13ms (380); 1.35GB / 13ms (380D); 2.1GB / 13ms (380D); 3.2GB / 13ms (380XD); 4.0GB / 13ms (380XD); 5.1GB / 12ms (380XD); 4.0GB / 13ms or 6.4GB / 12ms (380Z)",
+        "optical": "Optional 8x CD-ROM",
+        "floppy": "1.44MB 3.5\" internal floppy drive"
+      },
+      "Ethernet": ["None onboard (option via port replicator or PC Card)"],
+      "WLAN": ["Not supported"],
+      "Bluetooth": [
+        {
+          "type": "None"
+        }
+      ],
+      "WWAN": ["No_WWAN"],
+      "SIM_Card": [
+        {
+          "type": "None"
+        }
+      ],
+      "Battery": [
+        {
+          "type": "NiMH or Li-Ion",
+          "capacity": "Non-intelligent",
+          "form": "Removable, in front",
+          "tech": "NiMH (380/385D); Li-Ion (380XD/380Z)"
+        }
+      ],
+      "ACadapter": ["56 watt Universal AC Adapter, barrel, 3-prong"],
+      "ports": [
+        "CS96 standard docking Port",
+        "1 x Serial (16550A)",
+        "1 x Parallel (IEEE P1284-A, EPP, ECP)",
+        "2 x PCMCIA Type II (or 1 Type III)",
+        "1 x External keyboard/mouse",
+        "1 x Microphone in",
+        "1 x Headphone out",
+        "1 x Infrared (IrDA 1.1, up to 4Mbps)"
+      ],
+      "camera": ["None"],
+      "audio": [
+        "16-bit audio chip (Crystal CS4236/CS4237B), FM synthesis",
+        "Internal stereo speakers (0.5W)",
+        "Internal microphone"
+      ],
+      "keyboard": [
+        "Full-size 85-key keyboard",
+        "TrackPoint III / no drag lock keys"
+      ],
+      "physical": {
+        "dimensions": "11.8 x 9.2 x 2.4 inches (260 cubic inches)",
+        "weight": "6.9 lbs (3.1 kg) - 7.2 lbs (3.3 kg) depending on configuration",
+        "case_material": "Not specified"
+      },
+      "security": [
+        "Power-on password",
+        "Hard disk password",
+        "Supervisor password",
+        "Security keyhole",
+        "Personalization screen at startup"
+      ],
+      "dock_support":["46H4209","84G1316","11J8997"],
+      "system": [
+        "Windows 95 OSR2",
+        "Windows 98",
+        "Windows NT 4.0"
+      ]
+    }
+  ]
+}

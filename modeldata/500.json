@@ -1,0 +1,70 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-500",
+      "model_name": "ThinkPad 500",
+      "model_family": "500",
+      "model_generation": "Legacy",
+      "update_date": "1993",
+      "model_code": ["2603"],
+      "processor_options": ["IBM_486SLC2"],
+      "graphics_options": ["WD90C24A"],
+      "Display": {
+        "max_resolution": {
+          "external": "1024x768 256 colors"
+        },
+        "multi_display": "Simultaneous LCD and CRT"
+      },
+      "memory": {
+        "max_capacity": "12MB max",
+        "type": "IC DRAM",
+        "slots": "Proprietary slot",
+        "features": "2MB or 4MB standard on motherboard"
+      },
+      "display_options": [
+        "7.4\" Monochrome STN VGA 640x480, 32 grey scales (sub-notebook)"
+      ],
+      "storage": {
+        "hdd": "85MB or 170MB IDE (removable)",
+        "optical": "None"
+      },
+      "Ethernet": ["None"],
+      "WLAN": ["None"],
+      "Bluetooth": [{"type": "None"}],
+      "WWAN": ["No_WWAN"],
+      "SIM_Card": [{"type": "None"}],
+      "Battery": [
+        {
+          "type": "NiMH",
+          "capacity": "2-3 hours",
+          "form": "Removable",
+          "tech": "NiMH"
+        }
+      ],
+      "ACadapter": ["AC adapter"],
+      "ports": [
+        "1 x Serial (16550A)",
+        "1 x Parallel (EPP)",
+        "1 x External FDD port",
+        "2 x PCMCIA Type II (or 1 Type III)",
+        "1 x External keyboard/mouse",
+        "1 x External display"
+      ],
+      "camera": ["None"],
+      "audio": ["PC speaker only"],
+      "keyboard": [
+        "Sub-notebook size keyboard (approx 85% of full size)",
+        "TrackPoint II"
+      ],
+      "physical": {
+        "dimensions": "10.0 x 7.4 x 1.4 inches",
+        "weight": "3.4 lbs (with battery)",
+        "case_material": "Not specified"
+      },
+      "security": [
+        "Power-on password"
+      ],
+      "system": ["IBM DOS 6.0", "Windows 3.1"]
+    }
+  ]
+}

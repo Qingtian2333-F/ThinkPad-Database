@@ -1,0 +1,10 @@
+{
+  "model": "80386SL_25",
+  "cores_threads": "1 / 1",
+  "base_freq": "25 MHz",
+  "turbo_freq": "-",
+  "ext_freq": "25 MHz",
+  "cache": "None",
+  "iconfamily": "i386",
+  "ark": ""
+}

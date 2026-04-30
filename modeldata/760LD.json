@@ -1,0 +1,94 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-760ld",
+      "model_name": "ThinkPad 760LD",
+      "model_family": "760",
+      "model_generation": "LD series",
+      "update_date": "February 1996",
+      "model_code": ["9547-U31", "9547-U3A", "9547-U3R"],
+      "processor_options": ["P54LM_90"],
+      "graphics_options": ["Cyber9320"],
+      "Display": {
+        "max_resolution": {
+          "external": "1024x768 with 256 colors up to 75 Hz"
+        },
+        "multi_display": "Simultaneous LCD and CRT, 180 degree tilt"
+      },
+      "memory": {
+        "max_capacity": "64MB max",
+        "type": "EDO 70ns, non-parity, 3.3 volt",
+        "slots": "2 sockets for two JEDEC 88 pin EDO SO DIMMs of 8 or 16 MB",
+        "features": "8MB standard"
+      },
+      "display_options": [
+        "10.4\" TFT VGA color 640x480, 16.7 million simultaneous colors, Black Matrix TFT, 100 to 1 contrast ratio"
+      ],
+      "storage": {
+        "hdd": "810 MB / 12 ms / EIDE / PIO Mode 4, removable",
+        "optical": "5.25\" CD-ROM, 4x speed, multi-session, XA, play with eject button, EIDE/PIO Mode 3 (ATAPI)",
+        "floppy": "3.5\" 1.44 MB, removable"
+      },
+      "Ethernet": ["None"],
+      "WLAN": ["None"],
+      "Bluetooth": [
+        {
+          "type": "None"
+        }
+      ],
+      "WWAN": ["No_WWAN"],
+      "SIM_Card": [
+        {
+          "type": "None"
+        }
+      ],
+      "Battery": [
+        {
+          "type": "NiMH (intelligent, optional Lithium Ion)",
+          "capacity": "3 hours (1 batt), 6 hours (2 batts)",
+          "form": "Removable",
+          "tech": "NiMH / optional Li-Ion"
+        }
+      ],
+      "ACadapter": ["40 watt Universal adapter"],
+      "ports": [
+        "CS93 standard docking Port",
+        "1 x Serial (16550A)",
+        "1 x Parallel (IEEE P1284-A, EPP, ECP)",
+        "2 x Type I/II or 1 x Type III PCMCIA",
+        "1 x External FDD attach port",
+        "1 x Audio line-in jack (3.5mm)",
+        "1 x Audio line-out jack (3.5mm)",
+        "Infrared ports (front and back) with IrDA 1.0 up to 115 kbs"
+      ],
+      "camera": ["None"],
+      "audio": [
+        "16-bit audio chip, 18 voice MIDI FM synthesis (ESS1688)",
+        "Internal stereo speakers (0.5W), slide volume control, internal microphone"
+      ],
+      "keyboard": [
+        "Full-size 85-key keyboard, automated tilt up (5.5 degrees)",
+        "TrackPoint III, integrated palm rest"
+      ],
+      "physical": {
+        "dimensions": "11.7 x 8.3 x 1.96 inches (190 cubic inches)",
+        "weight": "7.11 pounds (with CD-ROM and battery)",
+        "case_material": "Not specified"
+      },
+      "security": [
+        "Power-on password",
+        "Hard disk password",
+        "Supervisor password",
+        "Kensington MicroSaver cable lock",
+        "Security latch for keyboard and DIMMs",
+        "PC Card lock"
+      ],
+      "dock_support": ["66G3510", "66G3520", "3545", "3546"],
+      "system": [
+        "SelectaSystem (DOS 7.0, Windows 3.11, OS/2 Warp 3.0)",
+        "Windows 95",
+        "Blank"
+      ]
+    }
+  ]
+}

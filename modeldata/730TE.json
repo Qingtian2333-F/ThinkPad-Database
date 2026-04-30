@@ -1,0 +1,62 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-730te",
+      "model_name": "ThinkPad 730TE",
+      "model_family": "730",
+      "model_generation": "Legacy",
+      "update_date": "October 1995",
+      "model_code": ["2524"],
+      "processor_options": ["486DX4_75"],
+      "graphics_options": ["WD90C24A"],
+      "Display": {
+        "max_resolution": {
+          "external": "External display is 640 x 480 with 16 colors, Simultaneous LCD and CRT"
+        },
+        "multi_display": "Simultaneous LCD and CRT"
+      },
+      "memory": {
+        "max_capacity": "24MB max",
+        "type": "IC DRAM, 70 ns, non-parity, 5.0 volt",
+        "slots": "1 socket available",
+        "features": "8MB standard; options: 4, 8, 16 MB ICs"
+      },
+      "display_options": ["9.5\" STN Transflective VGA 640 x 480 monochrome, 16 grey scales, 3 to 1 contrast ratio"],
+      "touch": ["Electromagnetic pen/digitizer/stylus, untethered, batteryless, realistic pen-to-paper feel"],
+      "pen": ["Untethered batteryless stylus stored in compartment on bottom"],
+      "storage": {
+        "hdd": "260 MB PCMCIA Type III, 12 ms, 4500 rpm, 16 MB/sec burst transfer rate (Model B0F preinstalled); Uses a specific Type III PCMCIA slot",
+        "optical": "None",
+        "diskette": "Optional 3.5\" 1.44 MB (same as ThinkPad 710T and 730T)"
+      },
+      "Ethernet": ["None"],
+      "WLAN": ["None"],
+      "Bluetooth": [{"type": "None"}],
+      "WWAN": ["No_WWAN"],
+      "SIM_Card": [{"type": "None"}],
+      "Battery": [
+        {
+          "type": "Nickel hydride (NiMH)",
+          "capacity": "Two batteries ship standard / can use one or two batteries",
+          "form": "1 battery: 1.65 to 5 hours; 2 battery: 3.3 to 10 hours",
+          "tech": "NiMH"
+        }
+      ],
+      "ACadapter": ["AC Adapter 20 watts"],
+      "ports": [
+        "Port Replicator (ships standard) includes: 15 pin external CRT port, 9 pin 16550A serial port, 25 pin EPP parallel port, diskette drive connector, keyboard port, DC port for AC connector",
+        "PCMCIA slots: 3 Type II or 2 Type III: 1st slot: 2 Type II or 1 Type III (any additional memory must go into this slot; adding IC DRAM memory will leave 1 Type II slot remaining); 2nd slot: 2 Type II or 1 Type III (260 MB PCMCIA disk in Model B0F is installed here)"
+      ],
+      "camera": ["None"],
+      "audio": ["None"],
+      "keyboard": ["No physical keyboard (uses electromagnetic pen/stylus for input; external IBM keyboard supported via Port Replicator)"],
+      "physical": {
+        "dimensions": "10.6 x 8.3 x 1.4 inches (123 cubic inches)",
+        "weight": "3.5 pounds (1 battery); 3.9 pounds (2 batteries)",
+        "case_material": "Not specified"
+      },
+      "security": ["Power-on password"],
+      "system": ["IBM DOS 7.0 with PenDOS 2.2", "OS/2 Warp with Pen for OS/2 1.03", "Windows for Pen Computing 1.0 with IBM DOS 7.0/Windows 3.11", "PenRight!"]
+    }
+  ]
+}

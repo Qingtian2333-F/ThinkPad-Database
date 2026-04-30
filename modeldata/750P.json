@@ -1,0 +1,82 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-750p",
+      "model_name": "ThinkPad 750P",
+      "model_family": "750",
+      "model_generation": "P series (pen)",
+      "update_date": "1994",
+      "model_code": [],
+      "processor_options": ["486DX2_50"],
+      "graphics_options": ["WD90C24A"],
+      "Display": {
+        "max_resolution": {
+          "external": "1024x768 256 colors"
+        },
+        "multi_display": "Simultaneous LCD and CRT"
+      },
+      "memory": {
+        "max_capacity": "36MB max",
+        "type": "IC DRAM, 70ns, non-parity, 5.0 volt",
+        "slots": "1 socket for IC DRAM memory card (proprietary)",
+        "features": "8MB standard; options: 2, 4, 8, 16, 32 MB ICs or 4, 8, 16 MB DIMMs via optional Memory Module Adapter"
+      },
+      "display_options": [
+        "9.5\" STN Transflective Monochrome VGA 640x480, 16 grey scales, 18 to 1 contrast ratio, pen enabled"
+      ],
+      "touch": ["Pen enabled screen, folds flat, electromagnetic pen/digitizer/stylus, untethered, batteryless"],
+      "pen": ["Untethered batteryless stylus, PenDOS / Pen Windows preinstalled"],
+      "storage": {
+        "hdd": "170MB or 340MB IDE (removable)",
+        "optical": "Optional CD-ROM via Dock I/II",
+        "floppy": "3.5\" 2.88MB (removable)"
+      },
+      "Ethernet": ["None"],
+      "WLAN": ["None"],
+      "Bluetooth": [{"type": "None"}],
+      "WWAN": ["No_WWAN"],
+      "SIM_Card": [{"type": "None"}],
+      "Battery": [
+        {
+          "type": "NiMH",
+          "capacity": "Intelligent",
+          "form": "Removable",
+          "tech": "NiMH"
+        }
+      ],
+      "ACadapter": ["40W Wallmount AC adapter"],
+      "ports": [
+        "CS93 standard docking Port",
+        "1 x Serial (16550A)",
+        "1 x Parallel (EPP)",
+        "1 x External display",
+        "2 x PCMCIA Type II or 1 Type III",
+        "1 x Headphone out",
+        "1 x Microphone in"
+      ],
+      "camera": ["None"],
+      "audio": [
+        "16-bit audio chip (Crystal CS4248)",
+        "Internal speaker and microphone"
+      ],
+      "keyboard": [
+        "Full-size 85-key lift-up keyboard",
+        "TrackPoint III"
+      ],
+      "physical": {
+        "dimensions": "11.7 x 8.3 x 2.0 inches",
+        "weight": "6.5 lbs (with battery)",
+        "case_material": "Not specified"
+      },
+      "security": [
+        "Power-on password",
+        "Hard disk password",
+        "Supervisor password",
+        "Hardware security loop",
+        "Kensington lock slot"
+      ],
+      "dock_support":["66G3510","66G3520","3545","3546"],
+      "system": ["IBM DOS 7.0", "Windows for Pen Computing 1.0", "PenDOS"]
+    }
+  ]
+}

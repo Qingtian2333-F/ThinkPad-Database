@@ -1,0 +1,7 @@
+        {
+          "model": "Chips & Technologies 65550 HiQV32",
+          "base_freq": "80 MHz @ 3.3V , 110 MHz @ 5.0V",
+          "VRAM":"1MB EDO DRAM",
+          "Feature":"Simultaneous LCD and CRT / 180 degree tilt / Zoomed Video support / External SVGA to 1024x768 with 256 colors",
+          "iconfamily": "CT"
+        }

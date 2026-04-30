@@ -1,0 +1,95 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-600e",
+      "model_name": "ThinkPad 600E",
+      "model_family": "600",
+      "model_generation": "Legacy",
+      "update_date": "March 1999",
+      "model_code": ["2645-3AU", "2645-4AU", "2645-5AU", "2645-8AU", "2645-AAU"],
+      "processor_options": ["PII_300","PII_300PE", "PII_366","PII_400"],
+      "graphics_options": ["NM2200"],
+      "Display": {
+        "max_resolution": {
+          "external": "1024x768 x 16.7M colors at 85Hz, 1280x1024 x 256 colors"
+        },
+        "multi_display": "Simultaneous LCD and CRT, 180 degree tilt, multiple-monitor support for Windows 98"
+      },
+      "memory": {
+        "max_capacity": "288MB max",
+        "type": "SDRAM, non-parity, 66MHz, 3.3V",
+        "slots": "Two 144-pin sockets (32MB on planar, 1 or 2 sockets available)",
+        "features": "32MB or 64MB standard; sockets accessed by removing screw on base"
+      },
+      "display_options": [
+        "13.3\" TFT XGA 1024x768, 16.7 million colors, Active Matrix, 100:1 contrast, 150 nits (AC) / 90 nits (battery), 75ms"
+      ],
+      "storage": {
+        "hdd": "4.0GB / 13/14ms / PIO4 or Ultra DMA/33 or 6.4GB / 13/14ms (removable, supports 2nd disk)",
+        "optical": "Standard: 24X-10X CD-ROM (removable from UltraslimBay); Optional: DVD-ROM (removable from UltraslimBay)"
+      },
+      "Ethernet": ["Not supported onboard (optional via PC Card or SelectaBase)"],
+      "WLAN": ["Not supported"],
+      "Bluetooth": [
+        {
+          "type": "None"
+        }
+      ],
+      "WWAN": ["No_WWAN"],
+      "SIM_Card": [
+        {
+          "type": "None"
+        }
+      ],
+      "Battery": [
+        {
+          "type": "Lithium Ion",
+          "capacity": "Intelligent, supports second battery in UltraslimBay",
+          "form": "Removable from base, locked with latch",
+          "tech": "Li-Ion"
+        }
+      ],
+      "ACadapter": ["Ultraslim 56 watt AC Adapter, barrel, 3-prong"],
+      "ports": [
+        "CS98 Slim docking Port",
+        "1 x USB",
+        "1 x Serial 9-pin 16550A",
+        "1 x Parallel (IEEE P1284-A, EPP, ECP)",
+        "2 x Type I/II/III PC Card slots (CardBus 32-bit, Zoomed Video)",
+        "1 x Video out (composite) with RCA jack cable (model 5AU)",
+        "1 x Input jack (3.5mm)",
+        "1 x Output jack (3.5mm)",
+        "Infrared port (on right) with IrDA 1.1, up to 4Mbps"
+      ],
+      "camera": ["None"],
+      "audio": [
+        "CS4239: ISA / SRS 3D audio / FM synthesis / 16-bit playback and record",
+        "CS4610: PCI / decodes AC3 into stereo / MPEG-2 audio decoding / acceleration of DirectX",
+        "Internal stereo speakers (front, 0.5W), volume control via Fn+PgUp/PgDn, internal microphone"
+      ],
+      "keyboard": [
+        "Full-size 85-key keyboard (10 Fn key functions), integrated palm rest, flat keyboard (does not lift up)",
+        "TrackPoint with Press-to-Select, Release-to-Select, center button for scrolling or magnifying glass"
+      ],
+      "physical": {
+        "dimensions": "11.8 x 9.4 x 1.4 inches (155 cubic inches); 300mm x 240mm x 36.5mm",
+        "weight": "4.99 lbs (2.26 kg) with travel cover and battery only",
+        "case_material": "Not specified"
+      },
+      "security": [
+        "Power-on password",
+        "Hard disk password",
+        "Supervisor password",
+        "Security keyhole",
+        "Personalization",
+        "Phillips-head screw on base for memory, optional Allen screw for disk"
+      ],
+      "dock_support": ["12J2467","3547-001","3547-002","3547-003"],
+      "system": [
+        "Windows 98",
+        "Windows NT 4.0 (with Service Pack 4a)",
+        "Blank (no disk)"
+      ]
+    }
+  ]
+}

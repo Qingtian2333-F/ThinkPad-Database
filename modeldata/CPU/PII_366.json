@@ -1,0 +1,10 @@
+{
+  "model": "Pentium Ⅱ 366MHz",
+  "cores_threads": "1 / 1",
+  "base_freq": "366 MHz",
+  "turbo_freq": "-",
+  "ext_freq": "66 MHz",
+  "cache": "16 + 16 KB L1 + 256 KB Full-Speed L2",
+  "iconfamily": "Pentium_II",
+  "ark": ""
+}

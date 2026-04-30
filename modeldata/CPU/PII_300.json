@@ -1,0 +1,10 @@
+{
+  "model": "Pentium Ⅱ 300MHz",
+  "cores_threads": "1 / 1",
+  "base_freq": "300 MHz",
+  "turbo_freq": "-",
+  "ext_freq": "66 MHz",
+  "cache": "16 + 16 KB L1 + 512 KB Half-Speed L2",
+  "iconfamily": "Pentium_II",
+  "ark": ""
+}

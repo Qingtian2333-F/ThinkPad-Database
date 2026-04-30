@@ -1,0 +1,7 @@
+        {
+          "model": "NeoMagic MagicMedia128XD",
+          "base_freq": "56MHz@3.3V, 68MHz@5V",
+          "VRAM":"2MB SGRAM",
+          "Feature":"Simultaneous LCD and CRT26 / 180 degree tilt / no multiple-monitor support / ext SVGA to 1024x768 with 65,536 colors",
+          "iconfamily": "NeoMagic"
+        }

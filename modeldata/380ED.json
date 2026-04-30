@@ -1,0 +1,92 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-380d",
+      "model_name": "ThinkPad 380D",
+        "nickname":"ThinkPad 385D",
+      "model_family": "3",
+      "model_generation": "Legacy",
+      "update_date": "May 1997",
+      "model_code": ["2635"],
+      "processor_options": ["P55CLM_166"],
+      "graphics_options": ["NM2093"],
+      "Display": {
+        "max_resolution": {
+          "external": "1024x768 256 colors"
+        },
+        "multi_display": "Simultaneous LCD and CRT, 150 degree tilt"
+      },
+      "memory": {
+        "max_capacity": "80MB max",
+        "type": "EDO, non-parity, 3.3 volt",
+        "slots": "1 socket for one JEDEC 144 pin EDO SO DIMM of 8, 16, 32, or 64 MB",
+        "features": "16MB standard; socket accessed from bottom via screw"
+      },
+      "display_options": [
+        "12.1\" DSTN SVGA color 800x600, 65,536 sim colors, 30 to 1 contrast",
+        "12.1\" TFT SVGA color 800x600, 65,536 simultaneous colors, 100 to 1 contrast (Black Matrix TFT)"
+      ],
+      "storage": {
+        "hdd": "1.35GB / 13ms / PIO Mode 4 or 2.1GB / 13ms / PIO Mode 4",
+        "optical": "8x CD-ROM, 5.25\", multi-session, XA, ATAPI, not bootable, not removable",
+        "floppy": "1.44MB 3.5\" internal floppy drive"
+      },
+      "Ethernet": ["Not supported onboard"],
+      "WLAN": ["Not supported"],
+      "Bluetooth": [
+        {
+          "type": "None"
+        }
+      ],
+      "WWAN": ["No_WWAN"],
+      "SIM_Card": [
+        {
+          "type": "None"
+        }
+      ],
+      "Battery": [
+        {
+          "type": "NiMH or Li-Ion",
+          "capacity": "Non-intelligent",
+          "form": "Removable, not user-accessible without lifting keyboard",
+          "tech": "NiMH (DSTN model) / Li-Ion (TFT model)"
+        }
+      ],
+      "ACadapter": ["35 watt Universal AC Adapter, barrel connector"],
+      "ports": [
+        "CS96 standard docking Port",
+        "1 x Serial (16550A)",
+        "1 x Parallel (IEEE P1284-A, EPP, ECP)",
+        "2 x PCMCIA Type II (or 1 Type III, Zoomed Video support in lower slot)",
+        "1 x External keyboard/mouse",
+        "1 x Microphone in",
+        "1 x Headphone out",
+        "1 x Infrared (IrDA 1.1, up to 4Mbps)"
+      ],
+      "camera": ["None"],
+      "audio": [
+        "16-bit audio chip (Crystal Semiconductor CS4236), 20 voice MIDI FM synthesis",
+        "Internal speaker (0.5W), internal microphone, full duplex"
+      ],
+      "keyboard": [
+        "Full-size 85-key keyboard (all-in-one design, does not lift up)",
+        "TrackPoint III"
+      ],
+      "physical": {
+        "dimensions": "11.8 x 9.2 x 2.4 inches (260 cubic inches)",
+        "weight": "7.1 pounds (3.2 kg) with battery and CD-ROM",
+        "case_material": "Not specified"
+      },
+      "security": [
+        "Power-on password",
+        "Hard disk password",
+        "Security keyhole",
+        "Personalization screen at startup"
+      ],
+      "dock_support":["46H4209","84G1316","11J8997"],
+      "system": [
+        "Windows 95 OSR2 (with Lotus SmartSuite 96 CD-ROM)"
+      ]
+    }
+  ]
+}

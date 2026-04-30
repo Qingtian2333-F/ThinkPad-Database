@@ -1,0 +1,91 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-560",
+      "model_name": "ThinkPad 560",
+      "model_family": "560",
+      "model_generation": "Legacy",
+      "update_date": "May 1996",
+      "model_code": ["2640"],
+      "processor_options": ["P54CSLM_100", "P54CSLM_120", "P54CSLM_133"],
+      "graphics_options": ["Cyber9382"],
+      "Display": {
+        "max_resolution": {
+          "external": "1024x768 256 colors"
+        },
+        "multi_display": "Simultaneous LCD and CRT, 135 degree tilt"
+      },
+      "memory": {
+        "max_capacity": "40MB max (72MB with ThinkPad Proven option)",
+        "type": "EDO 70ns, non-parity, 3.3 volt",
+        "slots": "1 socket for one JEDEC 144 pin EDO SO DIMM of 8, 16, or 32 MB",
+        "features": "8MB standard"
+      },
+      "display_options": [
+        "11.3\" Dual Scan SVGA 800x600, 256 colors, 30 to 1 contrast",
+        "12.1\" TFT SVGA 800x600, 65,536 colors, 100 to 1 contrast"
+      ],
+      "storage": {
+        "hdd": "810MB / 13ms or 1.08GB / 13ms, EIDE, non-removable",
+        "optical": "None (optional external via PCMCIA or parallel port)"
+      },
+      "Ethernet": ["Not onboard"],
+      "WLAN": ["Not supported"],
+      "Bluetooth": [
+        {
+          "type": "None"
+        }
+      ],
+      "WWAN": ["No_WWAN"],
+      "SIM_Card": [
+        {
+          "type": "None"
+        }
+      ],
+      "Battery": [
+        {
+          "type": "Lithium Ion",
+          "capacity": "Intelligent",
+          "form": "Removable",
+          "tech": "Li-Ion"
+        }
+      ],
+      "ACadapter": ["35 watt Universal AC Adapter, 2 prong, barrel connector"],
+      "ports": [
+        "CS96 standard docking port",
+        "1 x Serial (16550A)",
+        "1 x Parallel (IEEE P1284-A, EPP, ECP)",
+        "2 x PCMCIA Type II (or 1 Type III)",
+        "1 x External FDD port",
+        "1 x Audio line-in (3.5mm)",
+        "1 x Audio line-out (3.5mm)",
+        "1 x Infrared (IrDA 1.0, up to 115 Kbps)"
+      ],
+      "camera": ["None"],
+      "audio": [
+        "16-bit audio chip, 18 voice MIDI FM synthesis (ESS1688)",
+        "Internal stereo speakers (0.5W), internal microphone"
+      ],
+      "keyboard": [
+        "Full-size 85-key keyboard (flat, no slope without Port Replicator)",
+        "TrackPoint III"
+      ],
+      "physical": {
+        "dimensions": "11.7 x 8.7 x 1.22 inches (124 cubic inches)",
+        "weight": "4.12 lbs (1.87 kg) with battery",
+        "case_material": "Not specified"
+      },
+      "security": [
+        "Power-on password",
+        "Locking device keyhole (Kensington cable lock)",
+        "Personalization screen at startup"
+      ],
+      "dock_support": ["46H4209"],
+      "system": [
+        "Windows 95",
+        "OS/2 Warp Connect",
+        "Blank"
+      ]
+    }
+  ]
+}

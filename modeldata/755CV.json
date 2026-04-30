@@ -1,0 +1,90 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-755cv",
+      "model_name": "ThinkPad 755CV",
+      "model_family": "755",
+      "model_generation": "CV series",
+      "update_date": "September 1995",
+      "model_code": ["9545-8BJ", "9545-EBK", "9545-EBL"],
+      "processor_options": ["486DX4_100", "P54LM_75"],
+      "graphics_options": ["WD90C24A2"],
+      "Display": {
+        "max_resolution": {
+          "external": "1024x768 w/ 256 colors (up to 75 Hz)"
+        },
+        "multi_display": "Simultaneous LCD and CRT, 180 degree tilt"
+      },
+      "memory": {
+        "max_capacity": "40MB max",
+        "type": "IC DRAM / SO DIMM, 70ns, parity, 5 volt",
+        "slots": "1 socket (with Memory Module Adapter for DIMMs)",
+        "features": "8MB standard; options: 2, 4, 8, 16, 32 MB ICs or 4, 8, 16 MB DIMMs"
+      },
+      "display_options": ["10.4\" Black Matrix TFT VGA 640x480, 65,536 simultaneous colors, 100 to 1 contrast ratio"],
+      "storage": {
+        "hdd": "540MB / 14ms, 810MB / 14ms, or 1.2GB / 12ms (removable)",
+        "optical": "Optional CD-ROM via UltraBay"
+      },
+      "Ethernet": [],
+      "WLAN": [],
+      "Bluetooth": [
+        {
+          "type": "None"
+        }
+      ],
+      "WWAN": [],
+      "SIM_Card": [
+        {
+          "type": "None"
+        }
+      ],
+      "Battery": [
+        {
+          "type": "NiMH (also supports optional Lithium Ion)",
+          "capacity": "NiMH: 3.3 to 10 hours (DX4) / 2.6 to 8 hours (Pentium); Li-Ion available as option",
+          "form": "Intelligent, removable",
+          "tech": "NiMH / Li-Ion"
+        }
+      ],
+      "ACadapter": ["35 watt Universal AC adapter"],
+      "ports": [
+        "CS93 standard docking Port",
+        "2 x Type I/II or 1 x Type III PCMCIA",
+        "1 x Serial (16550A)",
+        "1 x Parallel (IEEE P1284-A, EPP, ECP)",
+        "1 x External Display",
+        "1 x Audio In/Out jacks",
+        "1 x Telephone jack",
+        "Infrared ports (front and back) with IrDA 1.0"
+      ],
+      "camera": [],
+      "audio": [
+        "Mwave MDSP2780 DSP with modem, fax, audio, telephony function",
+        "16-bit audio chip on planar with Mwave DSP",
+        "Internal speaker and microphone"
+      ],
+      "keyboard": [
+        "Full-size 85-key keyboard with lift-up design",
+        "TrackPoint III",
+        "Mind Path Remote Control IR55 F/X included"
+      ],
+      "physical": {
+        "dimensions": "11.7 x 8.3 x 1.96 inches (190 cubic inches)",
+        "weight": "6.6 pounds (with battery)",
+        "case_material": "Black"
+      },
+      "security": [
+        "Power-on password",
+        "Hard disk password",
+        "Supervisor password",
+        "Hardware security loop",
+        "Keyboard lock",
+        "Kensington MicroSaver cable lock",
+        "PCMCIA card lock"
+      ],
+      "dock_support":["66G3510","66G3520","3545","3546"],
+      "system": ["IBM DOS 7.0, Windows 3.11, OS/2 Warp Version 3 (dual boot)"]
+    }
+  ]
+}

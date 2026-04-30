@@ -65,6 +65,7 @@
         "OS/2 Warp (on DX4 models)"
       ],
       "HMM_link": ["https://download.lenovo.com/ibmdl/pub/pc/pccbbs/mobiles/tpvol2.pdf"],
+      "dock_support":["10H4021","3546"],
       "add_on_tips": [""],
       "secret_tips": [""]
     }

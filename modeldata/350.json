@@ -1,0 +1,78 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-350",
+      "model_name": "ThinkPad 350 / 350C",
+      "model_family": "300",
+      "model_generation": "1st Gen",
+      "update_date": "1993",
+      "model_code": [],
+      "processor_options": ["IBM 486SLC 25/25MHz"],
+      "graphics_options": ["WD90C20"],
+      "Display": {
+        "max_resolution": {
+          "external": "1024x768 16 colors"
+        },
+        "multi_display": "Simultaneous LCD and CRT (350C)"
+      },
+      "memory": {
+        "max_capacity": "16MB max",
+        "type": "IC DRAM cards, 70ns",
+        "slots": "2 sockets for proprietary IC DRAM cards",
+        "features": "4MB standard"
+      },
+      "display_options": [
+        "9.5\" Monochrome STN VGA 640x480, 32 grey scales (ThinkPad 350)",
+        "9.5\" Color STN VGA 640x480, 256 colors (ThinkPad 350C)"
+      ],
+      "storage": {
+        "hdd": "125MB or 250MB IDE (removable)",
+        "optical": "None"
+      },
+      "Ethernet": ["None"],
+      "WLAN": ["None"],
+      "Bluetooth": [{"type": "None"}],
+      "WWAN": ["No_WWAN"],
+      "SIM_Card": [{"type": "None"}],
+      "Battery": [
+        {
+          "type": "NiMH",
+          "capacity": "2-4 hours",
+          "form": "Intelligent, removable",
+          "tech": "NiMH"
+        }
+      ],
+      "ACadapter": ["35W AC adapter"],
+      "ports": [
+        "1 x Serial (16550A)",
+        "1 x Parallel (EPP)",
+        "1 x External diskette drive port",
+        "1 x External keyboard/mouse",
+        "1 x External display",
+        "2 x PCMCIA Type II (or 1 Type III)"
+      ],
+      "camera": ["None"],
+      "audio": [
+        "16-bit audio (Crystal CS4231)",
+        "Internal speaker (0.5W)",
+        "Internal microphone"
+      ],
+      "keyboard": [
+        "Full-size 85-key keyboard with lift-up design",
+        "TrackPoint II"
+      ],
+      "physical": {
+        "dimensions": "11.7 x 8.3 x 2.2 inches",
+        "weight": "6.5 lbs (350) / 6.8 lbs (350C)",
+        "case_material": "Not specified"
+      },
+      "security": [
+        "Power-on password",
+        "Hard disk password",
+        "Supervisor password",
+        "Kensington lock slot"
+      ],
+      "system": ["IBM DOS 5.0", "Windows 3.1", "OS/2 2.0"]
+    }
+  ]
+}

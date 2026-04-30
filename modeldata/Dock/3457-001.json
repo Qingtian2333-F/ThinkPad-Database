@@ -1,0 +1,13 @@
+ {
+      "model": "ThinkPad SelectaDock I",
+      "ports": [
+        "External SCSI connector",
+        "UltraBay Thick slot",
+        "1 ISA slot",
+        "1 PCI slot",
+        "MIDI/Joystick",
+        "Audio Out",
+        "(2) Type II, or (1) Type III PCMCIA slot"
+      ],
+          "power": "30W"
+        }

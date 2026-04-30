@@ -1,0 +1,97 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-380xd",
+      "model_name": "ThinkPad 380XD",
+      "nickname":"ThinkPad 385XD",
+      "model_family": "380",
+      "model_generation": "XD series",
+      "update_date": "March 1998",
+      "model_code": ["2635-8AU", "2635-BAU", "2635-9AU", "2635-AAU"],
+      "processor_options": ["P55CSLM_233", "P55CSLM_266","PII_233","PII_266"],
+      "graphics_options": ["NM2160B"],
+      "Display": {
+        "max_resolution": {
+          "external": "1024x768 with 65,536 colors"
+        },
+        "multi_display": "Simultaneous LCD and CRT, 150 degree tilt"
+      },
+      "memory": {
+        "max_capacity": "96MB max",
+        "type": "EDO 60ns, non-parity, 3.3 volt",
+        "slots": "1 socket for one JEDEC 144 pin EDO SO DIMM of 8, 16, 32, or 64MB",
+        "features": "32MB standard; socket accessed from bottom via screw"
+      },
+      "display_options": [
+        "12.1\" HPA color SVGA 800x600, 16 million sim colors, 50 to 1 contrast",
+        "12.1\" TFT color SVGA 800x600, 16.7 million simultaneous colors, 100 to 1 contrast"
+      ],
+      "storage": {
+        "hdd": "3.2GB / 13ms / PIO Mode 4 or 4.0GB / 13ms / PIO 4 or 5.1GB / 12ms / PIO Mode 4",
+        "optical": "24X-10X CD-ROM, bootable, not removable",
+        "floppy": "1.44MB 3.5\" internal floppy drive"
+      },
+      "Ethernet": ["Not supported onboard"],
+      "WLAN": ["Not supported"],
+      "Bluetooth": [
+        {
+          "type": "None"
+        }
+      ],
+      "WWAN": ["No_WWAN"],
+      "SIM_Card": [
+        {
+          "type": "None"
+        }
+      ],
+      "Battery": [
+        {
+          "type": "Li-Ion",
+          "capacity": "Non-intelligent",
+          "form": "Removable, in front",
+          "tech": "Li-Ion"
+        }
+      ],
+      "ACadapter": ["56 watt Universal AC Adapter, barrel, 3-prong"],
+      "ports": [
+        "CS96 standard docking Port",
+        "1 x USB",
+        "1 x Serial (16550A)",
+        "1 x Parallel (IEEE P1284-A, EPP, ECP)",
+        "2 x PCMCIA Type II (or 1 Type III, CardBus 32-bit PCI, Zoomed video)",
+        "1 x External keyboard/mouse",
+        "1 x Microphone in",
+        "1 x Headphone out",
+        "1 x Line in",
+        "1 x Infrared (IrDA 1.1, up to 4Mbps)"
+      ],
+      "camera": ["None"],
+      "audio": [
+        "16-bit audio chip (CS4237B), SRS 3D audio, FM synthesis",
+        "Two front stereo speakers (0.5W) + one subwoofer above keyboard (1W)",
+        "Internal microphone, full duplex speaker/mic"
+      ],
+      "keyboard": [
+        "Full-size 85-key keyboard (all-in-one design, does not lift up)",
+        "TrackPoint III",
+        "Software support for MPEG-1 in Windows 95"
+      ],
+      "physical": {
+        "dimensions": "11.8 x 9.2 x 2.4 inches (260 cubic inches)",
+        "weight": "7.1 pounds (3.2 kg) with battery and disk",
+        "case_material": "Not specified"
+      },
+      "security": [
+        "Power-on password",
+        "Supervisor password",
+        "Hard disk password",
+        "Security keyhole",
+        "Personalization screen at startup"
+      ],
+      "dock_support":["46H4209","84G1316","11J8997"],
+      "system": [
+        "Windows 95 OSR2.1 (with Lotus SmartSuite 97)"
+      ]
+    }
+  ]
+}

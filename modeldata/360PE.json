@@ -1,0 +1,82 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-360pe",
+      "model_name": "ThinkPad 360PE",
+      "model_family": "360",
+      "model_generation": "PE series (pen)",
+      "update_date": "April 1995",
+      "model_code": ["2620"],
+      "processor_options": ["80486 DX2 50/25 MHz 3.3 volt (SL Enhanced)"],
+      "graphics_options": ["Western Digital WD90C24A or A2 with 1 MB DRAM"],
+      "Display": {
+        "max_resolution": {
+          "external": "1024x768 with 256 colors (up to 75 Hz)"
+        },
+        "multi_display": "Simultaneous LCD and CRT, 180 degree tilt"
+      },
+      "memory": {
+        "max_capacity": "20MB max",
+        "type": "IC DRAM, 70ns, non-parity, 5.0 volt",
+        "slots": "1 socket",
+        "features": "4MB standard; options: 4, 8, 16 MB ICs"
+      },
+      "display_options": [
+        "9.5\" Dual scan color VGA 640x480, 256 simultaneous colors, 20 to 1 contrast ratio, Pen enabled screen folds flat"
+      ],
+      "touch": ["Pen enabled screen / folds flat / includes untethered batteryless stylus"],
+      "pen": ["Untethered batteryless stylus"],
+      "storage": {
+        "hdd": "340MB / 14ms or 540MB / 14ms (removable)",
+        "floppy": "3.5\" 1.44MB"
+      },
+      "Ethernet": ["None"],
+      "WLAN": ["None"],
+      "Bluetooth": [{"type": "None"}],
+      "WWAN": ["No_WWAN"],
+      "SIM_Card": [{"type": "None"}],
+      "Battery": [
+        {
+          "type": "Nickel hydride (NiMH)",
+          "capacity": "3 to 7 hours",
+          "form": "Removable, in Ultrabay or main bay",
+          "tech": "NiMH"
+        }
+      ],
+      "ACadapter": ["35 watt AC adapter, worldwide, not wallmount"],
+      "ports": [
+        "CS93 standard docking Port",
+        "1 x Serial (one 9 pin)",
+        "1 x Parallel (EPP)",
+        "2 x Type I/II or 1 x Type III PCMCIA",
+        "1 x Audio line-in jack",
+        "1 x Audio line-out jack"
+      ],
+      "camera": ["None"],
+      "audio": [
+        "16 bit audio codec on planar / Crystal Semiconductor CS4248",
+        "Internal speaker and microphone"
+      ],
+      "keyboard": [
+        "Full-size 85-key keyboard (8 Fn key functions), lift-up design",
+        "TrackPoint II"
+      ],
+      "physical": {
+        "dimensions": "11.7 x 8.3 x 2.1 inches (204 cubic inches)",
+        "weight": "6.8 pounds (with battery)",
+        "case_material": "Not specified"
+      },
+      "security": [
+        "Power-on password",
+        "Hard disk password",
+        "Hardware security loop (secures unit, prevents opening keyboard)",
+        "PCMCIA card lock",
+        "Optional Security Base"
+      ],
+      "dock_support":["66G3510","3545","3546"],
+      "system": [
+        "IBM DOS 6.3, Windows 3.11, PenDOS, Pen Windows, Monologue preinstalled"
+      ]
+    }
+  ]
+}

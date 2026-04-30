@@ -1,0 +1,71 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-300",
+      "model_name": "ThinkPad 300",
+      "model_family": "300",
+      "model_generation": "1st Gen",
+      "update_date": "1992",
+      "model_code": [],
+      "processor_options": ["386SL_25"],
+      "coprocessor_options": ["387SL"],
+      "onboard_L1": ["64KB"],
+      "graphics_options": ["WD90C24A"],
+      "Display": {
+        "max_resolution": {
+          "external": "640x480"
+        },
+        "multi_display": "Simultaneous LCD and CRT"
+      },
+      "memory": {
+        "max_capacity": "12MB max",
+        "type": "DRAM",
+        "slots": "2 slots, SIMM",
+        "features": "2MB or 4MB standard"
+      },
+      "display_options": [
+        "9.5\" Monochrome LCD VGA 640x480, 32 grey scales"
+      ],
+      "storage": {
+        "fdd": "3.5 inch 1.44 MB",
+        "hdd": "80MB or 120MB IDE",
+        "optical": "None"
+      },
+      "Ethernet": ["None"],
+      "WLAN": ["None"],
+      "Bluetooth": [{"type": "None"}],
+      "WWAN": ["No_WWAN"],
+      "SIM_Card": [{"type": "None"}],
+      "Battery": [
+        {
+          "type": "NiCad",
+          "capacity": "3-10 hours",
+          "form": "Removable",
+          "tech": "NiCad"
+        }
+      ],
+      "ACadapter": ["AC adapter"],
+      "ports": [
+        "1 x Serial",
+        "1 x Parallel",
+        "1 x External display port",
+        "1 x Keyboard/Mouse port",
+        "1 x Modem port"
+      ],
+      "camera": ["None"],
+      "audio": ["PC speaker only"],
+      "keyboard": [
+        "Full-size 85-key keyboard"
+      ],
+      "physical": {
+        "dimensions": "12.1 x 8.5 x 1.7 inches",
+        "weight": "5.9 lbs",
+        "case_material": "Not specified"
+      },
+      "security": [
+        "Power-on password"
+      ],
+      "system": ["IBM DOS 5.0", "Windows 3.1", "OS/2 2.0"]
+    }
+  ]
+}

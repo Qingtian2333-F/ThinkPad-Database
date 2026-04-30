@@ -1,0 +1,94 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-365x",
+      "model_name": "ThinkPad 365X",
+      "addons":"Model with CD-ROM drive was called 365XD",
+      "model_family": "3",
+      "model_generation": "Legacy",
+      "update_date": "May 1996",
+      "model_code": ["2625"],
+      "processor_options": ["P54CLSM_100", "P54CSLM_120", "P54CSLM_133"],
+      "graphics_options": ["Cyber9320"],
+      "Display": {
+        "max_resolution": {
+          "external": "1024x768 256 colors"
+        },
+        "multi_display": "Simultaneous LCD and CRT, 180 degree tilt"
+      },
+      "memory": {
+        "max_capacity": "40MB max",
+        "type": "EDO 70ns, non-parity, 3.3 volt",
+        "slots": "1 socket for one JEDEC 144 pin EDO SO DIMM of 8, 16, or 32 MB",
+        "features": "8MB standard"
+      },
+      "display_options": [
+        "10.4\" DSTN SVGA color 800x600, 256 colors, 25 to 1 contrast",
+        "10.4\" TFT SVGA color 800x600, 65,536 colors, 100 to 1 contrast",
+        "11.3\" DSTN SVGA color 800x600, 256 colors, 30 to 1 contrast"
+      ],
+      "storage": {
+        "hdd": "810MB / 13ms / PIO Mode 4 or 1.08GB / 13ms / PIO Mode 4",
+        "optical": "365XD: 4x or 8x CD-ROM (not customer installable)"
+      },
+      "Ethernet": ["None"],
+      "WLAN": ["None"],
+      "Bluetooth": [
+        {
+          "type": "None"
+        }
+      ],
+      "WWAN": ["No_WWAN"],
+      "SIM_Card": [
+        {
+          "type": "None"
+        }
+      ],
+      "Battery": [
+        {
+          "type": "NiMH",
+          "capacity": "Non-intelligent",
+          "form": "External, removable",
+          "tech": "NiMH"
+        }
+      ],
+      "ACadapter": ["35 watt Universal AC Adapter, 3 prong"],
+      "ports": [
+        "CS93 standard docking Port",
+        "1 x Serial (16550A)",
+        "1 x Parallel (IEEE P1284-A, EPP, ECP)",
+        "2 x PCMCIA Type II (or 1 Type III)",
+        "1 x Microphone in",
+        "1 x Line in",
+        "1 x Headphone out",
+        "1 x Infrared (IrDA 1.0, up to 115Kbps)"
+      ],
+      "camera": ["None"],
+      "audio": [
+        "16-bit audio chip, 18 voice MIDI FM Synthesis (ESS1688)",
+        "Internal speaker (0.5W), internal microphone"
+      ],
+      "keyboard": [
+        "Full-size 85-key keyboard with lift-up design",
+        "TrackPoint III"
+      ],
+      "physical": {
+        "dimensions": "11.7 x 8.3 x 1.9 inches (185 cubic inches)",
+        "weight": "6.0 pounds (2.7 kg) / 6.1 pounds (2.76 kg) / 6.4 pounds (2.9 kg) depending on configuration",
+        "case_material": "Not specified"
+      },
+      "security": [
+        "Power-on password",
+        "Hard disk password",
+        "Supervisor password",
+        "Kensington lock slot",
+        "Keyboard lock (requires Kensington)"
+      ],
+      "dock_support":["66G3510","3545","3546"],
+      "system": [
+        "Windows 95",
+        "OS/2 Warp Connect (2625-DEE)"
+      ]
+    }
+  ]
+}

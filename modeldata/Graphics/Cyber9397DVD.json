@@ -1,0 +1,7 @@
+        {
+          "model": "Trident Cyber9397DVD",
+          "base_freq": "83MHz",
+          "VRAM":"4MB or 8MB SGRAM",
+          "Feature":"AGP 1X / Direct3D, DirectDraw, DirectVideo, ActiveMovie support / ZV interface / 3D hardware accelerator / interpolation in X and Y axis / color space conversion",
+          "iconfamily": "Trident"
+        }

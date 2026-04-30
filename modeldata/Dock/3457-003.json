@@ -1,0 +1,21 @@
+ {
+      "model": "ThinkPad SelectaDock III",
+      "ports": [
+        "External SCSI-2 connector",
+        "internal FDD connector",
+        "internal IDE connector",
+        "internal SCSI-2 connector",
+        "1 inch slot with Ultrabay Thick tray",
+        "1 accessible half height bay",
+        "2 full size PCI/ISA shared slots",
+        "1 half size PCI slot",
+        "2 USB ports",
+        "MIDI/Joystick",
+        "Headphone jack",
+        "Audio-In",
+        "Audio Out",
+        "2x Type II (or 1x Type III) CardBus slot",
+        "Kensington Security hole"
+      ],
+          "power": "30W"
+        }

@@ -1,0 +1,83 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-345",
+      "model_name": "ThinkPad 345",
+      "model_family": "3",
+      "model_generation": "Legacy",
+      "update_date": "September 1995",
+      "model_code": ["2610"],
+      "processor_options": ["I486DX4_75"],
+      "graphics_options": ["WD90C24A"],
+      "Display": {
+        "max_resolution": {
+          "external": "1024x768, 256 colors"
+        },
+        "multi_display": "Simultaneous LCD and CRT"
+      },
+      "memory": {
+        "max_capacity": "20MB max",
+        "type": "IC DRAM, 70ns, non-parity",
+        "slots": "1 socket available",
+        "features": "4, 8, 16 MB IC DRAM options; 4MB standard"
+      },
+      "display_options": [
+        "10.4\" Dual Scan VGA color 640x480",
+        "10.4\" TFT VGA color 640x480"
+      ],
+      "storage": {
+        "hdd": "360MB / 13ms or 540MB / 13ms",
+        "optical": "None"
+      },
+      "Ethernet": ["None"],
+      "WLAN": ["None"],
+      "Bluetooth": [
+        {
+          "type": "None"
+        }
+      ],
+      "WWAN": ["No_WWAN"],
+      "SIM_Card": [
+        {
+          "type": "None"
+        }
+      ],
+      "Battery": [
+        {
+          "type": "NiMH",
+          "capacity": "Non-intelligent",
+          "form": "External, removable",
+          "tech": "NiMH"
+        }
+      ],
+      "ACadapter": ["35 watt AC Adapter"],
+      "ports": [
+        "1 x Serial (16550A)",
+        "1 x Parallel (EPP)",
+        "1 x External diskette drive",
+        "1 x PCMCIA Type III (or 2 Type II)",
+        "1 x Keyboard/Mouse port"
+      ],
+      "camera": ["None"],
+      "audio": [
+        "Audio beep only (no sound card)"
+      ],
+      "keyboard": [
+        "Full-size 85-key keyboard",
+        "TrackPoint III"
+      ],
+      "physical": {
+        "dimensions": "11.7 x 8.3 x 1.9 inches (dual scan) or 2.0 inches (TFT)",
+        "weight": "5.2 lbs (dual scan) / 5.5 lbs (TFT)",
+        "case_material": "Not specified"
+      },
+      "security": [
+        "Power-on password",
+        "Kensington lock slot"
+      ],
+      "system": [
+        "IBM DOS 7.0, Windows 3.11"
+      ]
+    }
+  ]
+}

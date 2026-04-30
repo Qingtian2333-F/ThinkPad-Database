@@ -1,0 +1,89 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-600x",
+      "model_name": "ThinkPad 600X",
+      "model_family": "600",
+      "model_generation": "Legacy",
+      "update_date": "December 1999",
+      "model_code": ["2645-3EU", "2645-7EU", "2645-4EU", "2645-8EU", "2645-5EU", "2645-9EU"],
+      "processor_options": ["PIII_450", "PIII_500"],
+      "graphics_options": ["NM2360"],
+      "Display": {
+        "max_resolution": {
+          "external": "Up to 1280x1024 with 256 colors"
+        },
+        "multi_display": "Multiple-monitor support, Simultaneous LCD and CRT"
+      },
+      "memory": {
+        "max_capacity": "576MB max",
+        "type": "SDRAM, non-parity, 100MHz",
+        "slots": "Two 144-pin sockets (64MB on planar, 2 sockets available)",
+        "features": "64MB standard"
+      },
+      "display_options": [
+        "13.3\" TFT XGA 1024x768, Active Matrix, 100 to 1 contrast ratio"
+      ],
+      "storage": {
+        "hdd": "6.0GB / 12ms or 12.0GB, S.M.A.R.T., removable",
+        "optical": "Standard: 24X-10X CD-ROM or 6X-2.3X DVD-ROM (UltraslimBay)"
+      },
+      "Ethernet": [],
+      "WLAN": [],
+      "Bluetooth": [
+        {
+          "type": "None"
+        }
+      ],
+      "WWAN": [],
+      "SIM_Card": [
+        {
+          "type": "None"
+        }
+      ],
+      "Battery": [
+        {
+          "type": "Lithium Ion",
+          "capacity": "Intelligent, supports 2nd battery in UltraslimBay",
+          "form": "Removable",
+          "tech": "Li-Ion"
+        }
+      ],
+      "ACadapter": ["Ultraslim 56W AC adapter"],
+      "ports": [
+        "CS98 Slim docking Port",
+        "1 x USB",
+        "1 x Serial 16550A",
+        "1 x Parallel EPP/ECP",
+        "2 x Type I/II/III PC Card slots (CardBus, Zoomed Video)",
+        "1 x Video out (Composite/S-Video on select models)",
+        "1 x Headphone/Mic/Line-in jacks",
+        "Infrared port (IrDA 1.1, up to 4Mbps)"
+      ],
+      "camera": [],
+      "audio": [
+        "CS4624/CS4297A AC97 codec, SoundBlaster Pro support",
+        "Internal stereo speakers, internal microphone"
+      ],
+      "keyboard": [
+        "Full-size 85-key keyboard, integrated palm rest",
+        "TrackPoint with Press-to-Select/Release-to-Select, center button for scrolling/magnifying glass"
+      ],
+      "physical": {
+        "dimensions": "11.8 x 9.4 x 1.4 inches (155 cubic inches)",
+        "weight": "5.0 lbs (2.25 kg) with travel cover and battery",
+        "case_material": "IBM ThinkPad UltraCarbon case"
+      },
+      "security": [
+        "Power-on password",
+        "Hard disk password",
+        "Supervisor password",
+        "Security keyhole",
+        "Personalization",
+        "Phillips-head screw on base for memory, optional Allen wrench for disk"
+      ],
+      "dock_support": ["12J2467","3547-001","3547-002","3547-003"],
+      "system": ["Windows 98 Second Edition", "Windows NT 4.0", "Windows 2000 Professional"]
+    }
+  ]
+}

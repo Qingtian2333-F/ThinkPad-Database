@@ -1,0 +1,7 @@
+        {
+          "model": "Silicon Motion Lynx EM+ ",
+          "base_freq": "86MHz",
+          "VRAM":"4MB SGRAM",
+          "Feature":"Simultaneous LCD and CRT26 / 180 degree tilt / no multiple-monitor support / ext SVGA to 1024x768 with 65,536 colors",
+          "iconfamily": "SM"
+        }

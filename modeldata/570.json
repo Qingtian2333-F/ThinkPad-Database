@@ -1,0 +1,99 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-570",
+      "model_name": "ThinkPad 570",
+      "model_family": "570",
+      "model_generation": "1st Gen",
+      "update_date": "April 1999",
+      "model_code": ["2644-1AU", "2644-1BU", "2644-2AU", "2644-3AU", "2644-3BU"],
+      "processor_options": ["PII_300PE", "PII_333", "PII_366"],
+      "graphics_options": ["NM2200"],
+      "Display": {
+        "max_resolution": {
+          "external": "Up to 1280x1024 with Virtual Screen mode"
+        },
+        "multi_display": "Simultaneous LCD and CRT, multiple-monitor support for Windows 98"
+      },
+      "memory": {
+        "max_capacity": "192MB max",
+        "type": "SDRAM, non-parity, 66MHz, 3.3V",
+        "slots": "One 144-pin SO-DIMM socket (64MB on planar, 1 socket available)",
+        "features": "64MB std; socket accessed by removing screw on base"
+      },
+      "display_options": [
+        "12.1\" TFT SVGA 800x600, 100 to 1 contrast ratio, 150 degree tilt, 125 nits (AC) / 70 nits (batt)",
+        "13.3\" TFT XGA 1024x768, 150 to 1 contrast ratio, 150 degree tilt, 125 nits (AC) / 70 nits (batt)"
+      ],
+      "storage": {
+        "hdd": "4.0GB / 13/14ms / PIO 4 or Ultra DMA/33 or 6.4GB / 13/14ms",
+        "optical": "Optional 24X-10X CD-ROM or DVD-ROM (via UltraBase)"
+      },
+      "Ethernet": ["Not supported onboard (optional via PC Card or UltraBase)"],
+      "WLAN": ["Not supported"],
+      "Bluetooth": [
+        {
+          "type": "None"
+        }
+      ],
+      "WWAN": ["No_WWAN"],
+      "SIM_Card": [
+        {
+          "type": "None"
+        }
+      ],
+      "Battery": [
+        {
+          "type": "Lithium Ion",
+          "capacity": "Intelligent, supports second battery in UltraBase",
+          "form": "Removable battery locked with a latch",
+          "tech": "Li-Ion"
+        }
+      ],
+      "ACadapter": ["Ultraslim 56 watt AC Adapter, barrel, 3-prong"],
+      "ports": [
+        "CS96 standard docking Port",
+        "RJ11",
+        "1 x USB",
+        "1 x Serial 9-pin 16550A",
+        "1 x Parallel (IEEE P1284-A, EPP, ECP)",
+        "2 x Type I/II/III PC Card slots (CardBus 32-bit, Zoomed Video)",
+        "1 x Headphone jack (stereo)",
+        "1 x Microphone jack (stereo)",
+        "1 x Line-in jack (stereo)",
+        "1 x Infrared port (IrDA 1.1, 4Mbps)"
+      ],
+      "camera": ["Not supported"],
+      "audio": [
+        "CS4280 + CS4287 (AC97) audio",
+        "Internal speaker (bottom, 0.5W)",
+        "Internal microphone",
+        "Volume control via Fn+PgUp/PgDn"
+      ],
+      "keyboard": [
+        "Full-size 85-key keyboard with 10 Fn functions, integrated palm rest, no lift-up keyboard",
+        "TrackPoint with Press-to-Select, Release-to-Select, center button for scrolling/magnifying glass"
+      ],
+      "physical": {
+        "dimensions": "11.8 x 9.4 x 1.0 inches (12.1\" models) / 11.8 x 9.4 x 1.1 inches (13.3\" models); 122 cubic inches",
+        "weight": "3.9 lbs (1.78 kg) for 12.1\" model; 4.0 lbs (1.83 kg) for 13.3\" models (with battery)",
+        "case_material": "Top: carbon-fiber reinforced plastic; Bottom: glass-fiber reinforced plastic"
+      },
+      "security": [
+        "Power-on password",
+        "Hard disk password",
+        "Supervisor password",
+        "Security keyhole",
+        "Phillips-head screw on base for memory, optional Allen screw for disk"
+      ],
+      "dock_support": ["10L2150"],
+      "system": [
+        "Windows 98",
+        "Windows NT 4.0"
+      ],
+      "PSREF_link": [],
+      "user_guide_link": [],
+      "HMM_link": []
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+ {
+      "model": "ThinkPad 380/385 Port Replicator",
+      "ports": [
+        "PS/2 Keyboard",
+        "PS/2 Mouse",
+        "Serial (DB9-M)",
+        "Parallel (DB25-F)",
+        "Audio Line-In",
+        "Audio Line-Out",
+        "External Diskette drive",
+        "Game Port/Midi Port",
+        "(2) Type III CardBus slots",
+        "VGA"
+      ],
+          "power": "30W"
+        }

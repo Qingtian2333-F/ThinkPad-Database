@@ -1,0 +1,94 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-760c",
+      "model_name": "ThinkPad 760C",
+      "model_family": "760",
+      "model_generation": "Legacy",
+      "update_date": "October 1995",
+      "model_code": ["9546"],
+      "processor_options": ["P54LM_90", "P54CSLM_120"],
+      "graphics_options": ["Cyber8320"],
+      "Display": {
+        "max_resolution": {
+          "external": "1024x768 with 256 colors up to 75 Hz"
+        },
+        "multi_display": "Simultaneous LCD and CRT, 180 degree tilt"
+      },
+      "memory": {
+        "max_capacity": "64MB max",
+        "type": "Fast Page 70ns, non-parity, 3.3 volt",
+        "slots": "2 sockets for two JEDEC 88 pin EDO SO DIMMs of 8 or 16 MB (acts like fast page)",
+        "features": "8MB standard"
+      },
+      "display_options": [
+        "10.4\" TFT SVGA color 800x600, 65,536 simultaneous colors, Black Matrix TFT, 100 to 1 contrast",
+        "12.1\" TFT SVGA color 800x600, 65,536 simultaneous colors, Black Matrix TFT, 100 to 1 contrast"
+      ],
+      "storage": {
+        "hdd": "720 MB / 13ms / EIDE (removable) or 1.08 GB / 13ms / EIDE (removable)",
+        "optical": "None (diskette bay is called UltraBay; cannot install internal CD-ROM)"
+      },
+      "Ethernet": ["None"],
+      "WLAN": ["None"],
+      "Bluetooth": [
+        {
+          "type": "None"
+        }
+      ],
+      "WWAN": ["No_WWAN"],
+      "SIM_Card": [
+        {
+          "type": "None"
+        }
+      ],
+      "Battery": [
+        {
+          "type": "Lithium Ion / intelligent (optional NiMH)",
+          "capacity": "10.4\" models: 3.8 hrs (1 batt), 7.6 hrs (2 batts); 12.1\" models: 3.5 hrs (1 batt), 7 hrs (2 batts)",
+          "form": "Removable",
+          "tech": "Li-Ion (optional NiMH)"
+        }
+      ],
+      "ACadapter": ["35 watt Universal AC adapter 3 prong"],
+      "ports": [
+        "CS93 standard docking Port",
+        "1 x Serial (16550A)",
+        "1 x Parallel (IEEE P1284-A, EPP, ECP)",
+        "2 x Type I/II or 1 x Type III PCMCIA",
+        "1 x Audio line-in jack (3.5mm)",
+        "1 x Audio line-out jack (3.5mm)",
+        "Infrared ports (front and back) with IrDA 1.0, up to 115 kbs",
+        "Telephone/answering machine/full duplex speakerphone (via Mwave DSP)"
+      ],
+      "camera": ["None"],
+      "audio": [
+        "Mwave MDSP2780 DSP with modem, fax, audio, telephony function",
+        "16-bit audio chip on planar with Mwave DSP",
+        "Internal stereo speakers (0.5W), slide volume control, internal microphone"
+      ],
+      "keyboard": [
+        "Full-size 85-key keyboard, automated tilt up keyboard (5.5 degrees)",
+        "TrackPoint III, integrated palm rest"
+      ],
+      "physical": {
+        "dimensions": "10.4\" models: 11.7 x 8.3 x 1.74 inches (169 cubic inches); 12.1\" models: 11.7 x 8.3 x 1.92 inches (186 cubic inches)",
+        "weight": "10.4\" models: 6.1 pounds; 12.1\" models: 6.8 pounds (with battery)",
+        "case_material": "Not specified"
+      },
+      "security": [
+        "Power-on password",
+        "Hard disk password",
+        "Supervisor password",
+        "Kensington MicroSaver cable lock",
+        "Security latch for keyboard and DIMMs",
+        "PC Card lock"
+      ],
+      "dock_support":["66G3510","66G3520","3545","3546"],
+      "system": [
+        "SelectaSystem (DOS 7.0, Windows 3.11, OS/2 Warp 3.0)",
+        "Windows 95"
+      ]
+    }
+  ]
+}

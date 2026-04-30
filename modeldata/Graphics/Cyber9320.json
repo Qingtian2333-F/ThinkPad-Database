@@ -1,0 +1,7 @@
+        {
+          "model": "Trident Cyber9320",
+          "base_freq": "Unknown",
+          "VRAM":"1MB EDO DRAM",
+          "Feature":"VGA, BitBLTs, 2D acceleration",
+          "iconfamily": "Trident"
+        }

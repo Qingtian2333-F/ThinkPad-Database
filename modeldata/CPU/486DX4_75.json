@@ -1,9 +1,10 @@
 {
-  "model": "Intel 80486DX2 75MHz",
+  "model": "Intel 80486DX4 75MHz",
   "cores_threads": "1 / 1",
   "base_freq": "75 MHz",
   "turbo_freq": "-",
-  "cache": "8KB",
+  "ext_freq": "25 MHz",
+  "cache": "16KB",
   "iconfamily": "i486",
   "ark": ""
 }

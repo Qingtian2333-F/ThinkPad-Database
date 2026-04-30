@@ -1,0 +1,12 @@
+ {
+      "model": "ThinkPad Port Replicator Model 1",
+      "ports": [
+        "PS/2 Keyboard",
+        "PS/2 Mouse",
+        "Serial (DB9-M)",
+        "Parallel (DB25-F)",
+        "External Diskette drive",
+        "VGA"
+      ],
+          "power": "30W"
+        }

@@ -1,0 +1,15 @@
+ {
+      "model": "ThinkPad UltraBase",
+      "ports": [
+        "Stereo speakers",
+        "(1) USB",
+        "MIDI/Joystick",
+        "Audio Line-Out",
+        "VGA",
+        "1.44MB Floppy disk drive, exchangeable with second battery",
+        "UltraslimBay",
+        "CS96 standard docking Port",
+        "Kensington Security hole"
+      ],
+          "power": "30W"
+        }

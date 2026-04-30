@@ -1,0 +1,97 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-770e-770ed",
+      "model_name": "ThinkPad 770E / 770ED",
+      "model_family": "770",
+      "model_generation": "E/ED series",
+      "update_date": "April 1998",
+      "model_code": ["9548-51U", "9548-52U", "9549-5AU", "9548-53U"],
+      "processor_options": ["PII_266"],
+      "graphics_options": ["Cyber9397E"],
+      "Display": {
+        "max_resolution": {
+          "external": "1280x1024 w/ 64K colors (85Hz) or 1024x768 w/ 16M colors"
+        },
+        "multi_display": "Simultaneous LCD and CRT, multiple-monitor support"
+      },
+      "memory": {
+        "max_capacity": "288MB max",
+        "type": "SDRAM 83 or 100MHz, non-parity, 3.3V",
+        "slots": "2 sockets available for two JEDEC 144 pin SDRAM SO-DIMMs",
+        "features": "32MB or 64MB standard; sockets accessed by removing screw on bottom"
+      },
+      "display_options": [
+        "14.1\" TFT XGA 1024x768, 16 million simultaneous colors, Active Matrix TFT, 150 nits (AC) / 90 nits (batt), 100:1 contrast, 180 degree tilt"
+      ],
+      "storage": {
+        "hdd": "5.1GB or 8.1GB, EIDE, removable, S.M.A.R.T., supports two internal disks (16.2GB max)",
+        "optical": "Standard or optional: 24X-10X CD-ROM, bootable, hot swap, EIDE (ATAPI); Standard or optional: DVD drive (8x-16x speed, requires DVD and Enhanced Video Adapter for movie playback)"
+      },
+      "Ethernet": ["None onboard"],
+      "WLAN": ["Not supported"],
+      "Bluetooth": [
+        {
+          "type": "None"
+        }
+      ],
+      "WWAN": ["No_WWAN"],
+      "SIM_Card": [
+        {
+          "type": "None"
+        }
+      ],
+      "Battery": [
+        {
+          "type": "Lithium Ion",
+          "capacity": "3.5 hrs (7 hrs with second battery in UltraBay II)",
+          "form": "Intelligent, removable from left side",
+          "tech": "Li-Ion"
+        }
+      ],
+      "ACadapter": ["56 watt AC Adapter, barrel, 3-prong"],
+      "ports": [
+        "CS97 standard docking Port",
+        "1 x USB",
+        "1 x Serial (16550A)",
+        "1 x Parallel (IEEE 1284-A, EPP, ECP)",
+        "2 x PC Card slots (Type I/II/III, CardBus, PCMCIA 2.1, Zoomed Video)",
+        "1 x External diskette port",
+        "1 x Video in/out (Composite and S-Video, standard on 5AU, optional on others)",
+        "1 x Dolby Digital AC-3 connector (with optional DVD and Enhanced Video Adapter)",
+        "1 x Input jack (3.5mm)",
+        "1 x Output jack (3.5mm)",
+        "Infrared ports (front and back) with IrDA 1.1, up to 4Mbps"
+      ],
+      "camera": ["None"],
+      "audio": [
+        "16-bit audio chip, SRS 3D audio, FM synthesis (CS4237B)",
+        "Software decodes AC3 into stereo, MPEG-2 audio decoding via software",
+        "Internal stereo speakers (front, 1W), rotary volume control (right), internal microphone"
+      ],
+      "keyboard": [
+        "Full-size 85-key keyboard, flat (does not lift up), rear legs pop up (5.5 degrees slope)",
+        "TrackPoint with Press-to-Select, Release-to-Select, center click button for scrolling/magnifying glass"
+      ],
+      "physical": {
+        "dimensions": "12.3 x 10 x 2.2 inches (270 cubic inches)",
+        "weight": "7.6 lbs (3.45 kg) with battery/diskette (5AU: 7.8 lbs/3.5 kg)",
+        "case_material": "Not specified"
+      },
+      "security": [
+        "Power-on password",
+        "Hard disk password",
+        "Supervisor password",
+        "Security keyhole",
+        "Personalization",
+        "Phillips-head screws on base for battery and UltraBay II bays"
+      ],
+      "dock_support": ["83H6735","3547-001","3547-002","3547-003"],
+      "system": [
+        "Windows 95 OSR2.1 (FAT16)",
+        "Windows NT 4.0 Workstation (FAT16) with Service Pack 3",
+        "Blank (no disk)"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+ {
+      "model": "SelectaBase 600",
+      "ports": [
+        "PS/2 Keyboard",
+        "PS/2 Mouse",
+        "Serial (DB9-M)",
+        "Parallel (DB25-F)",
+        "(1) USB",
+        "MIDI/Joystick",
+        "Audio Line-Out",
+        "VGA",
+        "External Diskette drive",
+        "CS98 slim docking Port",
+        "Kensington Security hole"
+      ],
+          "power": "30W"
+        }

@@ -1,0 +1,92 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-510cs",
+      "model_name": "ThinkPad 510CS",
+      "model_family": "5",
+      "model_generation": "Legacy",
+      "update_date": "1996",
+      "model_code": ["2604"],
+      "processor_options": ["486BL2_50"],
+      "graphics_options": ["WD90C24A"],
+      "Display": {
+        "max_resolution": {
+          "external": "1024x768 w/ 256 colors"
+        },
+        "multi_display": "Simultaneous LCD and CRT, 180 degree tilt"
+      },
+      "memory": {
+        "max_capacity": "20MB max",
+        "type": "EDO 70ns, non-parity, 3.3V",
+        "slots": "1 socket for ICS SO DIMMs, 4MB on board",
+        "features": "16MB standard"
+      },
+      "display_options": [
+        "7.7 inch STN display with 640x480 resolution"
+      ],
+      "storage": {
+        "hdd": "1.2 GB / 12 ms or 2.1 GB / 12 ms, DMA Mode",
+        "optical": "CD-ROM, 4x/6x/8x speed, multi-session, XA, bootable, EIDE (ATAPI), removable"
+      },
+      "Ethernet": ["None"],
+      "WLAN": ["None"],
+      "Bluetooth": [
+        {
+          "type": "None"
+        }
+      ],
+      "WWAN": ["No_WWAN"],
+      "SIM_Card": [
+        {
+          "type": "None"
+        }
+      ],
+      "Battery": [
+        {
+          "type": "NiMH",
+          "capacity": "2.5-8 hours (1 battery)",
+          "form": "Intelligent, removable",
+          "tech": " NiMH"
+        }
+      ],
+      "ACadapter": ["35W Slim AC Adapter, 2-prong (or 4-prong)"],
+      "ports": [
+        "1 x Serial (16550A)",
+        "1 x Parallel (IEEE P1284-A, EPP, ECP)",
+        "1 x PCMCIA Type II",
+        "1 x VGA",
+        "1 x Mic-in / Line-in / Line-out jacks",
+        "1 x External FDD port",
+        "Infrared ports (front and back) IrDA 1.0"
+      ],
+      "camera": ["None"],
+      "audio": [
+        "Mwave MDSP2780 DSP (modem, fax, audio, telephony)",
+        "16-bit audio chip with Mwave DSP",
+        "Internal stereo speakers, internal microphone"
+      ],
+      "keyboard": [
+        "90% size 81-key keyboard",
+        "TrackPoint II, integrated palm rest"
+      ],
+      "physical": {
+        "dimensions": "10.7 x 7.2 x 1.7 inches (208 cubic inches)",
+        "weight": "4.0 pounds (1.8 kg) with battery",
+        "case_material": "Not specified"
+      },
+      "security": [
+        "Power-on password",
+        "Hard disk password",
+        "Supervisor password",
+        "Kensington lock slot",
+        "Security latch for keyboard and DIMMs",
+        "PC Card lock",
+        "Personalization/Security Plate"
+      ],
+      "system": [
+        "Windows 95 OSR2",
+        "Windows NT Workstation 4.0"
+      ]
+    }
+  ]
+}

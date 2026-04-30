@@ -1,0 +1,30 @@
+ {
+      "model": "ThinkPad Dock II",
+      "ports": [
+        "PS/2 Keyboard",
+        "PS/2 Mouse",
+        "Serial (DB9-M)",
+        "Parallel (DB25-F)",
+        "Audio Line-In",
+        "Audio Line-Out",
+        "VGA",
+        "External Diskette drive (26pin)",
+        "Stereo Speakers",
+        "Audio-In (direct to speakers, no capture possible)",
+        "External SCSI II connector (50pin)",
+        "Optional Internal SCSI device",
+        "Optional Internal IDE device",
+        "(1) Type IV, or (1) Type III + (1) Type II, or (2) Type II PCMCIA slots",
+        "(2) Full size ISA 16 bit slots",
+        "Security Hook"
+      ],
+          "power": "About 84W (Configuration as shipped from IBM: 0.053 kv VA, Maximum configuration: 0.105 kv VA)"
+        }
+
+
+
+
+
+
+
+

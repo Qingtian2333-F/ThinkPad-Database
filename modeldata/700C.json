@@ -1,0 +1,88 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-700C",
+      "model_name": "ThinkPad 700C",
+      "model_family": "7",
+      "model_generation": "Legacy",
+      "update_date": "October 1992",
+      "model_code": ["9552"],
+      "processor_options": ["486SLC_25"],
+      "coprocessor_options": ["387SLC"],
+      "graphics_options": ["WD90C20A"],
+      "Display": {
+        "max_resolution": {
+          "external": "1024x768 16 colors"
+        },
+        "multi_display": "Simultaneous LCD and CRT"
+      },
+      "memory": {
+        "max_capacity": "16MB max",
+        "type": "IC DRAM cards, 70ns",
+        "slots": "2 sockets for IC DRAM cards",
+        "features": "4MB standard; options: 2, 4, 8 MB IC DRAM cards"
+      },
+      "display_options": [
+        "10.4\" TFT Active Matrix color VGA 640x480, 256 colors, 100:1 contrast"
+      ],
+      "touch": [],
+      "pen": [],
+      "storage": {
+        "fdd": "3.5 inch 1.44 MB",
+        "hdd": "80MB or 120MB IDE (removable)",
+        "optical": "None (optional external CD-ROM via PCMCIA)"
+      },
+      "Ethernet": ["None"],
+      "WLAN": ["None"],
+      "Bluetooth": [{"type": "None"}],
+      "WWAN": ["No_WWAN"],
+      "SIM_Card": [{"type": "None"}],
+      "Battery": [
+        {
+          "type": "NiMH",
+          "capacity": "3.8-7.5 hours (depending on usage)",
+          "form": "Intelligent, removable from front",
+          "tech": "NiMH"
+        }
+      ],
+      "ACadapter": ["35 watt AC adapter"],
+      "ports": [
+        "1 x Serial (16550A)",
+        "1 x Parallel (EPP)",
+        "1 x External diskette drive connector",
+        "1 x External keyboard/mouse port",
+        "1 x External display port (VGA)",
+        "2 x PCMCIA Type II slots (or 1 Type III)",
+        "1 x Modem port (RJ-11)"
+      ],
+      "camera": ["None"],
+      "audio": [
+        "16-bit audio chip (Crystal CS4231)",
+        "Internal speaker (0.5W)",
+        "Internal microphone"
+      ],
+      "keyboard": [
+        "Full-size 85-key keyboard with lift-up design (first ThinkPad with this iconic feature)",
+        "TrackPoint II pointing device "
+      ],
+
+      "physical": {
+        "dimensions": "11.7 x 8.3 x 2.2 inches",
+        "weight": "7.6 lbs with battery",
+        "case_material": "Blk nylon (option)"
+      },
+      "security": [
+        "Power-on password",
+        "Hard disk password",
+        "Supervisor password",
+        "Hardware security loop",
+        "Kensington lock slot"
+      ],
+      "system": [
+        "IBM DOS 5.0", 
+        "Windows 3.1", 
+        "OS/2 2.0"
+      ]
+    }
+  ]
+}

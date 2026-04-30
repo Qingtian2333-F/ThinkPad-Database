@@ -1,0 +1,90 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-370c",
+      "model_name": "ThinkPad 370C",
+      "model_family": "3",
+      "model_generation": "Legacy",
+      "update_date": "May 1995",
+      "model_code": ["9545"],
+      "processor_options": ["486DX4_75"],
+      "graphics_options": ["WD90C24A"],
+      "Display": {
+        "max_resolution": {
+          "external": "1024x768 256 colors (up to 75 Hz)"
+        },
+        "multi_display": "Simultaneous LCD and CRT, 180 degree tilt"
+      },
+      "memory": {
+        "max_capacity": "36MB max (with Memory Module Adapter)",
+        "type": "IC DRAM / DIMM, 70ns, non-parity, 5 volt",
+        "slots": "1 socket (IC DRAM cards) or 2 sockets via Memory Module Adapter (DIMMs)",
+        "features": "4MB standard; options: 2, 4, 8, 16 MB ICs or 4, 8, 16 MB DIMMs on adapter"
+      },
+      "display_options": [
+        "10.4\" Black Matrix TFT VGA color 640x480, 256 colors, 100 to 1 contrast"
+      ],
+      "storage": {
+        "hdd": "340MB / 14ms (removable) or 540MB / 14ms (removable)",
+        "optical": "None"
+      },
+      "Ethernet": ["None"],
+      "WLAN": ["None"],
+      "Bluetooth": [
+        {
+          "type": "None"
+        }
+      ],
+      "WWAN": ["No_WWAN"],
+      "SIM_Card": [
+        {
+          "type": "None"
+        }
+      ],
+      "Battery": [
+        {
+          "type": "NiMH",
+          "capacity": "Intelligent",
+          "form": "Removable",
+          "tech": "NiMH"
+        }
+      ],
+      "ACadapter": ["35 watt Universal AC Adapter"],
+      "ports": [
+        "CS93 standard docking Port",
+        "1 x Serial (16550B)",
+        "1 x Parallel (EPP)",
+        "1 x External keyboard/mouse",
+        "1 x External diskette drive",
+        "2 x PCMCIA Type II (or 1 Type III)",
+        "1 x Headphone out",
+        "1 x Microphone in"
+      ],
+      "camera": ["None"],
+      "audio": [
+        "Audio beep only"
+      ],
+      "keyboard": [
+        "Full-size 85-key keyboard with lift-up design",
+        "TrackPoint II"
+      ],
+      "physical": {
+        "dimensions": "11.7 x 8.3 x 2.0 inches (194 cubic inches)",
+        "weight": "6.3 pounds",
+        "case_material": "Not specified"
+      },
+      "security": [
+        "Power-on password",
+        "Hard disk password",
+        "Supervisor password",
+        "Hardware security loop",
+        "PCMCIA card lock",
+        "Optional Security Base"
+      ],
+      "dock_support":["66G3510","3545","3546"],
+      "system": [
+        "IBM DOS 7.0, Windows 3.11 (with Lotus Suite applications)"
+      ]
+    }
+  ]
+}

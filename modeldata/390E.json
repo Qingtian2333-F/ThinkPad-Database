@@ -1,0 +1,96 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-390e",
+      "model_name": "ThinkPad 390E",
+      "model_family": "390",
+      "model_generation": "Legacy",
+      "update_date": "March 1999",
+      "model_code": ["2626"],
+      "processor_options": ["PII_300PE", "PII_333", "Celeron_366_PII"],
+      "graphics_options": ["NM2200"],
+      "Display": {
+        "max_resolution": {
+          "external": "1024x768 16M colors at 75Hz or 1280x1024 256 colors"
+        },
+        "multi_display": "Simultaneous LCD and CRT, 150 degree tilt, multiple-monitor support"
+      },
+      "memory": {
+        "max_capacity": "256MB max",
+        "type": "SDRAM 66MHz, non-parity, 3.3V",
+        "slots": "2 sockets for JEDEC 144-pin SO DIMMs (one used by standard memory)",
+        "features": "32MB or 64MB standard; sockets accessed from bottom via screw"
+      },
+      "display_options": [
+        "12.1\" TFT SVGA 800x600, 16.7M colors, 150 nits",
+        "14.1\" TFT XGA 1024x768, 16.7M colors, 120 nits"
+      ],
+      "storage": {
+        "hdd": "3.2GB / 4.3GB / 6.4GB / 4.8GB (various models)",
+        "optical": "24X-10X CD-ROM (UltraBay FX) or optional DVD-ROM integrated with diskette drive",
+        "floppy": "1.44MB 3.5\" diskette drive (UltraBay FX)"
+      },
+      "Ethernet": ["Not onboard"],
+      "WLAN": ["Not supported"],
+      "Bluetooth": [
+        {
+          "type": "None"
+        }
+      ],
+      "WWAN": ["No_WWAN"],
+      "SIM_Card": [
+        {
+          "type": "None"
+        }
+      ],
+      "Battery": [
+        {
+          "type": "NiMH or Li-Ion",
+          "capacity": "NiMH: 3.0 hrs; Li-Ion: up to 4.0 hrs",
+          "form": "Intelligent, removable from left side",
+          "tech": "NiMH / Li-Ion"
+        }
+      ],
+      "ACadapter": ["56 watt Ultraslim AC adapter, barrel, 3-prong"],
+      "ports": [
+        "CS98 standard docking Port",
+        "1 x USB",
+        "1 x Serial 9-pin 16550A",
+        "1 x Parallel (IEEE P1284-A, EPP, ECP)",
+        "2 x PC Card slots (Type I/II/III, CardBus, Zoomed Video)",
+        "1 x S-Video out",
+        "1 x Microphone jack (stereo)",
+        "1 x Headphone jack (stereo)",
+        "1 x Line-in jack",
+        "1 x Infrared port (IrDA 1.1, 4Mbps)"
+      ],
+      "camera": ["Not supported"],
+      "audio": [
+        "16-bit SoundBlaster Pro compatible (ESS 1946)",
+        "Two Altec Lansing stereo speakers (1W each) on display",
+        "Internal microphone, volume control"
+      ],
+      "keyboard": [
+        "Full-size 85-key keyboard with 7 Fn key functions",
+        "TrackPoint pointing device with Internet Scroll Bar"
+      ],
+      "physical": {
+        "dimensions": "12.4 x 10.1 x 1.8 inches (225 cubic inches) for 12.1\" models; 12.4 x 10.2 x 1.8\" for 14.1\"",
+        "weight": "7.5 lbs (3.4 kg) Celeron models; 7.7 lbs (3.5 kg) Pentium models",
+        "case_material": "PC/ABS plastic"
+      },
+      "security": [
+        "Power-on password",
+        "Setup password",
+        "Disk password",
+        "Security keyhole",
+        "Security screw for UltraBay FX"
+      ],
+      "dock_support": ["05K4872"],
+      "system": [
+        "Windows 98",
+        "Windows NT 4.0"
+      ]
+    }
+  ]
+}
