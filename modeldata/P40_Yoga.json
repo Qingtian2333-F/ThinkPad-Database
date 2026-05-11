@@ -1,0 +1,94 @@
+{
+  "thinkpad_database": [
+    {
+      "id": "thinkpad-p40-yoga",
+      "model_name": "ThinkPad P40 Yoga",
+      "addons": "Based on ThinkPad Yoga 460",
+      "model_family": "P",  
+      "model_code":["20GR/20GQ"],
+      "model_generation": "xx60",
+      "update_date": "January 2016",
+      "processor_options": [
+        "6500U",
+	      "6600U"
+      ],
+      "graphics_options":["HD520","M500M"],      
+      "Display": {
+        "max_resolution": {
+          "hdmi": "1920x1080@60Hz",
+          "dp": "3840x2160@60Hz"
+        },
+        "multi_display": "Supports up to 3 independent displays"
+      },
+      "memory": {
+        "max_capacity": "16GB max",
+        "type": "DDR3L-1600",
+        "slots": "One DDR3L SO-DIMM sockets",
+        "features": "Single-channel capable"
+      },
+      "display_options": [],
+      "storage": {
+        "ssd_sata": "SATA 6.0Gb/s SSD, up to 512GB and M.2 2242 SATA SSD",
+        "ssd_pcie": null,
+        "hdd": "HDD / SATA 6.0Gb/s, 2.5\" wide, removable, upgradable, Active Protection System™",
+        "sshd": "SSHD with 8GB NAND flash memory"
+      },
+      "Ethernet": ["I219-V","l219-LM"],
+      "WLAN": ["8260AC"],
+      "Bluetooth": [
+        {
+          "type": "Integrated",
+          "form": "Integrated in Wi-Fi + Bluetooth combo adapter",
+          "feature": "Bluetooth 4.1 wireless"
+        }
+      ],
+      "WWAN": ["EM7455"],
+      "SIM_Card": [],
+      "Battery": [
+        {
+          "type": "Integrated",
+          "capacity": "53Wh",
+          "form": "3-cell",
+          "tech": "Li-Polymer"
+        }
+      ],
+      "ports": [
+        "3 x USB 3.0",
+        "Mini DisplayPort",
+        "HDMI",
+        "Lenovo OneLink+ connector",
+        "4-in-1 reader (MMC, SD, SDHC, SDXC)",
+        "Headphone/microphone combo jack",
+        "Kensington Security Slot"
+      ],
+      "camera": [
+        "HD 720p resolution, fixed focus"
+      ],
+      "audio": [
+        "HD Audio, Conexant® CX11852 codec, stereo speakers 1.5W x2, dual array microphone, combo audio/mic jack"
+      ],
+      "keyboard": [
+        "6-row, spill-resistant, multimedia Fn keys,  LED backlit",
+        "TrackPoint pointing device, buttonless Mylar surface multi-touch touchpad"
+      ],
+      "physical": {
+        "dimensions": "338.0mm x 236.0mm x 19.0mm",
+        "weight": "Starting at 1.80 kg (3.90 lbs)",
+        "case_material": "PC/ABS plastic"
+      },
+      "security": [
+        "Power-on password",
+        "Hard disk password",
+        "Supervisor password",
+        "Security keyhole",
+        "dTPM 2.0",
+        "Optional fingerprint reader"
+      ],
+      "dock_support":["40A4"],
+      "system": [
+        "Windows 10 Home 64",
+        "Windows 10 Professional 64"
+      ]
+    }
+  ]
+}

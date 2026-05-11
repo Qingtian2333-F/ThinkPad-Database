@@ -1,0 +1,10 @@
+        {
+          "model": "NVIDIA GeForce 940M",
+          "Shading Units": "384",
+          "base_freq": "1072 Mhz",
+          "turbo_freq": "1116 MHz",
+          "VRAM":"2GB DDR3 64bits",
+          "Generation": "Maxwell",
+          "Feature":"DX 12.0 (11_0), OpenGL 4.6, OpenCL 3.0, Vulkan 1.3, CUDA 5.0",
+          "iconfamily":"Geforce"
+        }
