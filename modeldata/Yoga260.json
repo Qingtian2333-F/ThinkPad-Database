@@ -22,7 +22,7 @@
       },
       "memory": {
         "max_capacity": "16GB max For None WWAN models, or 8GB 2133MHz DDR4 soldered to systemboard for WWAN models",
-        "type": "2133MHz DDR4 ",
+        "type": "2133MHz DDR4",
         "slots": "One DDR4 SO-DIMM sockets For None WWAN models, or soldered to systemboard for WWAN models",
         "features": "Single-channel capable, non-parity"
       },
@@ -73,7 +73,7 @@
         "HD Audio, Conexant® CX11852 codec, Dolby® Home Theater® v4 / stereo speakers, 2W x 2 / dual array microphone, combo audio / microphone jack"
       ],
       "keyboard": [
-        "6-row, spill-resistant, multimedia Fn keys, optional LED backlight",
+        "6-row, spill-resistant, multimedia Fn keys, LED backlight",
         "TrackPoint pointing device and buttonless Mylar surface multi-touch touchpad"
       ],
       "physical": {
@@ -97,7 +97,7 @@
       "PSREF_link":["https://psref.lenovo.com/WDProduct/ThinkPad/ThinkPad_Yoga_260"],
       "user_guide_link":["https://download.lenovo.com/pccbbs/mobiles_pdf/yoga260_ug_zh-cn.pdf"],
       "HMM_link":["https://download.lenovo.com/pccbbs/mobiles_pdf/yoga260_ug_zh-cn.pdf"],
-      "dock_support":["40A0","40A1","40A2","40A6"],
+      "dock_support":["40A4","40A6"],
       "add_on_tips":["本机的WWAN和Wigig不共存","支持WWAN的机型没有内存插槽，固定搭配Core i5/i7处理器，FHD屏幕和板载8GB内存","本机的WWAN无法安装M.2 2242 SSD"]
     }
   ]

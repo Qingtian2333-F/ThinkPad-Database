@@ -1,0 +1,13 @@
+ {
+      "model": "ThinkPad OneLink+ Dock",
+      "ports": [
+        "4x USB 3.0 (Type-A) port, one as 'always-on' charging port",
+        "2x USB 2.0 (Type-A) port, one keyboard poweron port",
+        "1x Ethernet (RJ-45) port",
+        "1x VGA-out (DE-15) port",
+        "2x DisplayPort 1.2 out port",
+        "1x DC-in (slim-tip) socket",
+        "2x Kensington security lock slot"
+      ],
+          "power": "65W / 90W"
+        }

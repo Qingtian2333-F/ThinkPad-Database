@@ -91,6 +91,7 @@
         "dTPM 2.0",
         "Optional fingerprint reader"
       ],
+      "dock_support":["40A4"],
       "system": [
         "Windows 10 Home 64",
         "Windows 10 Professional 64"
