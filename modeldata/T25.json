@@ -15,7 +15,7 @@
         "discrete": "NVIDIA GeForce 940MX (2GB GDDR5)",
         "max_resolution": {
           "hdmi": "1920x1080@60Hz",
-          "thunderbolt": "3840x2160@60Hz"
+          "usb_c_tbt": "3840x2160@60Hz"
         },
         "multi_display": "Supports up to 3 independent displays"
       },
@@ -25,7 +25,7 @@
         "slots": "Two DDR4 SO-DIMM sockets",
         "features": "Dual-channel capable, single-channel config from factory"
       },
-      "display_options": [],
+      "display_options": ["LEN40A9_Touch"],
       "storage": {
         "ssd_pcie": "512GB PCIe NVMe SSD (M.2 2280)",
         "ssd_sata": null,
@@ -36,7 +36,7 @@
         "I219-V"
       ],
       "WLAN": [
-        "Intel Dual Band Wireless-AC 8265"
+        "8265AC"
       ],
       "Bluetooth": [
         {
@@ -46,7 +46,7 @@
         }
       ],
       "WWAN": [
-        "Qualcomm Sierra EM7455 (4G LTE, GPS)"
+        "EM7455"
       ],
       "SIM_Card": [
         {
