@@ -44,7 +44,7 @@
       ],
       "WWAN": ["EM7455"],
       "SIM_Card": [],
-      "Battery": [
+      "Battary": [
         {
           "type": "Integrated",
           "capacity": "53Wh",
