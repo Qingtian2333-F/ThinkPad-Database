@@ -39,6 +39,13 @@ var currentSearchKeyword = '';
     } catch (e) {}
 })();
 
+// 对比页筛选状态
+let currentCompareFamily = '';
+let currentCompareGen = '';
+let compareFiltersInitialized = false;
+
+let hideLegacyModels = localStorage.getItem('tp_hide_legacy') === 'true';
+
 // ========== DOM 快捷选择 ==========
 function $(sel) { return document.querySelector(sel); }
 function $$(sel) { return document.querySelectorAll(sel); }
@@ -196,6 +203,40 @@ function handleResponsive() {
 window.addEventListener('resize', handleResponsive);
 handleResponsive();
 
+// 获取过滤后的机型列表（根据“不浏览旧机型”设置）
+function getFilteredModelList() {
+    if (!hideLegacyModels) return masterModelList;
+    return masterModelList.filter(model => {
+        const gen = (model.model_generation || '');
+        return !gen.toLowerCase().includes('legacy');
+    });
+}
+
+// 刷新所有依赖机型列表的界面
+function refreshAllModelLists() {
+    // 重新填充筛选器
+    populateFilters();
+    // 刷新型号选择面板列表（如果打开中）
+    if ($modelPanel && $modelPanel.classList.contains('show')) {
+        renderModelPanelList($modelPanelSearch ? $modelPanelSearch.value.toLowerCase() : '');
+    }
+    // 刷新对比页列表（如果当前在对比页）
+    if (currentPage === 'compare') {
+        renderComparePageGrid($comparePageSearch ? $comparePageSearch.value.trim() : '');
+    }
+    // 刷新收藏页（如果当前在收藏页）
+    if (currentPage === 'favorites') {
+        renderFavoritesPage();
+    }
+    // 刷新主页欢迎页的统计数字
+    if (currentPage === 'detail' && $display && $display.querySelector('.welcome-page')) {
+        const statsSpan = $display.querySelector('.welcome-stats span');
+        if (statsSpan) statsSpan.textContent = getFilteredModelList().length;
+    }
+    // 更新筛选摘要（如果有）
+    updateFilterSummary();
+}
+
 // ========== 主题 ==========
 function applyTheme(isLight) {
     document.body.classList.toggle('light-mode', isLight);
@@ -251,31 +292,73 @@ if ($translateToggle) {
     });
 }
 window.openSettingsPanel = function() { if ($settingsOverlay) $settingsOverlay.classList.add('show'); };
+// 初始化“不浏览旧机型”开关
+const hideLegacyToggle = document.getElementById('settingsHideLegacyToggle');
+if (hideLegacyToggle) {
+    hideLegacyToggle.checked = hideLegacyModels;
+    hideLegacyToggle.addEventListener('change', (e) => {
+        hideLegacyModels = e.target.checked;
+        localStorage.setItem('tp_hide_legacy', hideLegacyModels);
+        refreshAllModelLists();
+    });
+}
 window.closeSettingsPanel = function() { if ($settingsOverlay) $settingsOverlay.classList.remove('show'); };
 if ($settingsBtn) $settingsBtn.addEventListener('click', window.openSettingsPanel);
 
 // ========== 页面切换 ==========
-window.showDetailPage = function() {
+window.showDetailPage = function () {
     currentPage = 'detail';
+    
+    // 隐藏其他页面
     if ($detailPage) $detailPage.classList.remove('hidden');
     if ($comparePage) $comparePage.classList.remove('active');
     if ($favoritesPage) $favoritesPage.classList.remove('active');
-    var genPage = document.getElementById('generatorPage');
-    if (genPage) genPage.classList.remove('active');
-    var articlesListPage = document.getElementById('articlesListPage');
-    var articleDetailPage = document.getElementById('articleDetailPage');
+    if (document.getElementById('generatorPage')) document.getElementById('generatorPage').classList.remove('active');
+    
+    // 关闭所有浮动面板
+    const modelPanel = document.getElementById('modelSelectOverlay');
+    if (modelPanel) modelPanel.classList.remove('show');
+    const settingsPanel = document.getElementById('settingsOverlay');
+    if (settingsPanel) settingsPanel.classList.remove('show');
+    
+    // 隐藏文章页面
+    const articlesListPage = document.getElementById('articlesListPage');
+    const articleDetailPage = document.getElementById('articleDetailPage');
     if (articlesListPage) articlesListPage.style.display = 'none';
     if (articleDetailPage) articleDetailPage.style.display = 'none';
+    
     setActiveSidebarItem('sidebarHome');
-    var activeModelEl = document.querySelector('.nav-item.active');
-    var hasActiveModel = activeModelEl && activeModelEl.dataset && activeModelEl.dataset.modelId;
-    if (!hasActiveModel && $display && $display.querySelector('.welcome-page')) {
-        setHomeOnlyElementsVisible(true);
-    } else {
-        setHomeOnlyElementsVisible(false);
+    
+    // 重置主内容为欢迎页
+    if ($display) {
+        $display.innerHTML = `
+            <div class="welcome-page">
+                <div class="welcome-icon">💻</div>
+                <div class="welcome-title">ThinkPad Specs</div>
+                <div class="welcome-subtitle">ThinkPad 型号规格查询工具</div>
+                <div class="welcome-actions">
+                    <button class="btn btn-accent" onclick="openModelPanel()">选择型号</button>
+                    <button class="btn" onclick="showComparePage()">型号对比</button>
+                    <button class="btn" onclick="showFavoritesPage()">我的收藏</button>
+                </div>
+                <div class="welcome-stats">
+                    已收录 <span>${getFilteredModelList().length}</span> 个型号
+                </div>
+            </div>`;
     }
+    
+    // 清除当前型号数据和高亮
+    currentModelData = null;
+    const activeModelItem = document.querySelector('.nav-item.active');
+    if (activeModelItem) activeModelItem.classList.remove('active');
+    
+    // 显示主页专属元素（背景图、语录栏）
+    setHomeOnlyElementsVisible(true);
 };
-window.showHome = function() { window.showDetailPage(); };
+
+window.showHome = function () {
+    showDetailPage();
+};
 
 window.showComparePage = function() {
     currentPage = 'compare';
@@ -292,6 +375,7 @@ window.showComparePage = function() {
     if ($sidebarCompare) $sidebarCompare.classList.add('compare-active');
     setHomeOnlyElementsVisible(false);
     window.closeSearchModal();
+    initCompareFilters();
     if (comparePending) {
         if ($comparePageResult) $comparePageResult.innerHTML = '';
         renderComparePageGrid($comparePageSearch ? $comparePageSearch.value.trim() : '');
@@ -318,30 +402,11 @@ window.showFavoritesPage = function() {
 };
 
 function renderFavoritesPage() {
-    var list = masterModelList.filter(function(m) {
-        return favorites.indexOf(m.model_name) !== -1;
-    });
-    if ($favoritesPageSubtitle) {
-        $favoritesPageSubtitle.textContent = '已收藏 ' + list.length + ' 个型号';
-    }
+    const filteredList = getFilteredModelList();
+    const list = filteredList.filter(m => favorites.includes(m.model_name));
+    if ($favoritesPageSubtitle) $favoritesPageSubtitle.textContent = `已收藏 ${list.length} 个型号`;
     if ($favoritesPageGrid) {
-        var html = '';
-        if (list.length === 0) {
-            html = '<div class="loading-text" style="grid-column:1/-1;">暂无收藏型号</div>';
-        } else {
-            for (var i = 0; i < list.length; i++) {
-                var m = list[i];
-                html += '<div class="compare-card" onclick="selectFavoriteFromPage(\'' + m.model_name.replace(/'/g, "\\'") + '\')">' +
-                        '<div class="compare-card-info">' +
-                        '<div class="compare-card-name">' + m.model_name + '</div>' +
-                        '<div class="compare-card-meta">' +
-                        '<span>' + (m.model_family || '系列未知') + '</span>' +
-                        '<span class="compare-part-arch" style="margin-left:6px;">' + (m.model_generation || '代数未知') + '</span>' +
-                        '</div></div>' +
-                        '<button class="favorite-remove" onclick="event.stopPropagation(); removeFavoriteFromPage(\'' + m.model_name.replace(/'/g, "\\'") + '\')" title="取消收藏">×</button>' +
-                        '</div>';
-            }
-        }
+        let html = list.length === 0 ? '<div class="loading-text" style="grid-column:1/-1;">暂无收藏型号</div>' : list.map(m => `<div class="compare-card" onclick="selectFavoriteFromPage('${m.model_name.replace(/'/g, "\\'")}')"><div class="compare-card-info"><div class="compare-card-name">${m.model_name}</div><div class="compare-card-meta"><span>${m.model_family || '系列未知'}</span><span class="compare-part-arch" style="margin-left:6px;">${m.model_generation || '代数未知'}</span></div></div><button class="favorite-remove" onclick="event.stopPropagation(); removeFavoriteFromPage('${m.model_name.replace(/'/g, "\\'")}')" title="取消收藏">×</button></div>`).join('');
         html = window.globalTranslateHTML ? window.globalTranslateHTML(html) : html;
         $favoritesPageGrid.innerHTML = html;
     }
@@ -626,11 +691,11 @@ function syncPanelFilters() {
     if ($panelGenerationSel) $panelGenerationSel.value = currentGenValue;
 }
 function getPanelFiltered() {
-    var list = masterModelList.slice();
+    let list = getFilteredModelList();
     if (currentFilterType === 'family' && currentFamilyValue) {
-        list = list.filter(function(m) { return m.model_family === currentFamilyValue; });
+        list = list.filter(m => m.model_family === currentFamilyValue);
     } else if (currentFilterType === 'generation' && currentGenValue) {
-        list = list.filter(function(m) { return m.model_generation === currentGenValue; });
+        list = list.filter(m => m.model_generation === currentGenValue);
     }
     return list;
 }
@@ -750,9 +815,22 @@ function loadIndex() {
         updateFavCount();
         updateWelcomeStats();
         var randomImg = Math.floor(Math.random() * 9) + 1;
-        if ($display) {
-            $display.innerHTML = '<div class="welcome-page"><div class="welcome-icon">💻</div><div class="welcome-title">ThinkPad Specs</div><div class="welcome-subtitle">ThinkPad 型号规格查询工具</div><div class="welcome-actions"><button class="btn btn-accent" onclick="openModelPanel()">选择型号</button><button class="btn" onclick="showComparePage()">型号对比</button><button class="btn" onclick="showFavoritesPage()">我的收藏</button></div><div class="welcome-stats">已收录 <span>' + masterModelList.length + '</span> 个型号</div></div>';
-        }
+if ($display) {
+    $display.innerHTML = `
+        <div class="welcome-page">
+            <div class="welcome-icon">💻</div>
+            <div class="welcome-title">ThinkPad Specs</div>
+            <div class="welcome-subtitle">ThinkPad 型号规格查询工具</div>
+            <div class="welcome-actions">
+                <button class="btn btn-accent" onclick="openModelPanel()">选择型号</button>
+                <button class="btn" onclick="showComparePage()">型号对比</button>
+                <button class="btn" onclick="showFavoritesPage()">我的收藏</button>
+            </div>
+            <div class="welcome-stats">
+                已收录 <span>${getFilteredModelList().length}</span> 个型号
+            </div>
+        </div>`;
+}
         return loadTricksAndDisplay();
     }).then(function() {
         initHomeBackgroundImage();
@@ -761,45 +839,22 @@ function loadIndex() {
 }
 
 function populateFilters() {
+    const filteredList = getFilteredModelList();
     if ($familySel) {
-        var families = [];
-        for (var i = 0; i < masterModelList.length; i++) {
-            var f = masterModelList[i].model_family;
-            if (f && families.indexOf(f) === -1) families.push(f);
-        }
-        families.sort();
+        const families = [...new Set(filteredList.map(m => m.model_family).filter(Boolean))].sort();
         $familySel.innerHTML = '<option value="">全部系列</option>';
-        for (var j = 0; j < families.length; j++) {
-            var o = document.createElement('option');
-            o.value = families[j];
-            o.textContent = families[j];
-            $familySel.appendChild(o);
-        }
+        families.forEach(f => { const o = document.createElement('option'); o.value = f; o.textContent = f; $familySel.appendChild(o); });
     }
     if ($genSel) {
-        var gens = [];
-        for (var k = 0; k < masterModelList.length; k++) {
-            var g = masterModelList[k].model_generation;
-            if (g && gens.indexOf(g) === -1) gens.push(g);
-        }
-        gens.sort(function(a, b) {
-            var getPriority = function(s) {
-                if (s.length === 3) return 1;
-                if (s.length === 4) return 2;
-                if (s.toLowerCase().indexOf('gen') === 0) return 3;
-                return 4;
-            };
+        const gens = [...new Set(filteredList.map(m => m.model_generation).filter(Boolean))].sort((a, b) => {
+            const getPriority = (s) => { if (s.length === 3) return 1; if (s.length === 4) return 2; if (s.toLowerCase().startsWith('gen')) return 3; return 4; };
             return getPriority(a) - getPriority(b) || a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' });
         });
         $genSel.innerHTML = '<option value="">全部代数</option>';
-        for (var l = 0; l < gens.length; l++) {
-            var o2 = document.createElement('option');
-            o2.value = gens[l];
-            o2.textContent = gens[l];
-            $genSel.appendChild(o2);
-        }
+        gens.forEach(g => { const o = document.createElement('option'); o.value = g; o.textContent = g; $genSel.appendChild(o); });
     }
 }
+
 function updateWelcomeStats() {
     var el = $('#welcomeModelCount');
     if (el) el.textContent = masterModelList.length;
@@ -895,19 +950,92 @@ if (searchModalEl) searchModalEl.addEventListener('click', function(e) { if (e.t
 window.closeCompareSelectModal = function() { var modal = $('#compareSelectModal'); if (modal) modal.classList.remove('show'); };
 window.toggleSelectModel = function(name, checked) { var model = masterModelList.find(function(m) { return m.model_name === name; }); if (!model) return; if (checked) { if (!selectedModels.some(function(m) { return m.model_name === name; })) selectedModels.push(model); } else selectedModels = selectedModels.filter(function(m) { return m.model_name !== name; }); };
 window.clearSelectedModels = function() { selectedModels = []; };
+function initCompareFilters() {
+    if (compareFiltersInitialized) return;
+    
+    const toolbar = document.querySelector('#comparePage .compare-toolbar');
+    if (!toolbar) return;
+    
+    // 获取所有唯一的系列和代数
+    const families = [...new Set(masterModelList.map(m => m.model_family).filter(Boolean))].sort();
+    const gens = [...new Set(masterModelList.map(m => m.model_generation).filter(Boolean))].sort((a, b) => {
+        // 按数字或字母排序
+        return a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' });
+    });
+    
+    // 创建系列筛选下拉框
+    const familySelect = document.createElement('select');
+    familySelect.id = 'compareFamilyFilter';
+    familySelect.className = 'filter-select';
+    familySelect.innerHTML = '<option value="">全部系列</option>';
+    families.forEach(f => {
+        const opt = document.createElement('option');
+        opt.value = f;
+        opt.textContent = f;
+        familySelect.appendChild(opt);
+    });
+    
+    // 创建代数筛选下拉框
+    const genSelect = document.createElement('select');
+    genSelect.id = 'compareGenFilter';
+    genSelect.className = 'filter-select';
+    genSelect.innerHTML = '<option value="">全部代数</option>';
+    gens.forEach(g => {
+        const opt = document.createElement('option');
+        opt.value = g;
+        opt.textContent = g;
+        genSelect.appendChild(opt);
+    });
+    
+    // 插入到搜索框之前
+    const searchInput = document.getElementById('comparePageSearch');
+    if (searchInput && searchInput.parentNode) {
+        searchInput.parentNode.insertBefore(familySelect, searchInput);
+        searchInput.parentNode.insertBefore(genSelect, searchInput);
+        // 添加一些间距
+        familySelect.style.marginRight = '8px';
+        genSelect.style.marginRight = '8px';
+    } else {
+        toolbar.appendChild(familySelect);
+        toolbar.appendChild(genSelect);
+    }
+    
+    // 绑定事件
+    familySelect.addEventListener('change', (e) => {
+        currentCompareFamily = e.target.value;
+        renderComparePageGrid($comparePageSearch ? $comparePageSearch.value.trim() : '');
+    });
+    genSelect.addEventListener('change', (e) => {
+        currentCompareGen = e.target.value;
+        renderComparePageGrid($comparePageSearch ? $comparePageSearch.value.trim() : '');
+    });
+    
+    compareFiltersInitialized = true;
+}
 function resetComparePage() { compareModels = []; comparePending = true; selectedModels = []; if ($comparePageSearch) $comparePageSearch.value = ''; if ($comparePageResult) $comparePageResult.innerHTML = ''; renderComparePageGrid(''); updateCompareActionBtn(); }
 function updateCompareActionBtn() { var btn = $('#runCompareBtn'); if (!btn) return; if (comparePending) { btn.textContent = compareModels.length >= 2 ? '开始对比' : '已选 ' + compareModels.length + ' 个'; btn.classList.add('btn-accent'); btn.disabled = compareModels.length < 2; } else { btn.textContent = '重新选择'; btn.classList.remove('btn-accent'); btn.disabled = false; } }
 function renderComparePageGrid(q) {
     if (!$comparePageGrid) return;
     q = (q || '').toLowerCase();
-    var filtered = masterModelList.filter(function(m) { return m.model_name.toLowerCase().indexOf(q) !== -1; });
-    if (filtered.length === 0) { $comparePageGrid.innerHTML = '<div class="loading-text">未找到匹配的型号</div>'; return; }
-    var html = '';
-    for (var i = 0; i < filtered.length; i++) {
-        var m = filtered[i];
-        var selected = compareModels.indexOf(m.model_name) !== -1;
-        html += '<div class="compare-card ' + (selected ? 'selected' : '') + '" onclick="toggleComparePageModel(\'' + m.model_name.replace(/'/g, "\\'") + '\')"><input type="checkbox" ' + (selected ? 'checked' : '') + ' onclick="event.stopPropagation(); toggleComparePageModel(\'' + m.model_name.replace(/'/g, "\\'") + '\')"><div class="compare-card-info"><div class="compare-card-name">' + m.model_name + '</div><div class="compare-card-meta">' + (m.model_family || '') + ' · ' + (m.model_generation || '') + '</div></div></div>';
+    let filtered = getFilteredModelList().filter(m => m.model_name.toLowerCase().includes(q));
+    
+    // 系列筛选
+    if (currentCompareFamily) {
+        filtered = filtered.filter(m => m.model_family === currentCompareFamily);
     }
+    // 代数筛选
+    if (currentCompareGen) {
+        filtered = filtered.filter(m => m.model_generation === currentCompareGen);
+    }
+    
+    if (filtered.length === 0) {
+        $comparePageGrid.innerHTML = '<div class="loading-text">未找到匹配的型号</div>';
+        return;
+    }
+    let html = filtered.map(m => {
+        const selected = compareModels.includes(m.model_name);
+        return `<div class="compare-card ${selected ? 'selected' : ''}" onclick="toggleComparePageModel('${m.model_name.replace(/'/g, "\\'")}')"><input type="checkbox" ${selected ? 'checked' : ''} onclick="event.stopPropagation(); toggleComparePageModel('${m.model_name.replace(/'/g, "\\'")}')"><div class="compare-card-info"><div class="compare-card-name">${m.model_name}</div><div class="compare-card-meta">${m.model_family || ''} · ${m.model_generation || ''}</div></div></div>`;
+    }).join('');
     html = window.globalTranslateHTML ? window.globalTranslateHTML(html) : html;
     $comparePageGrid.innerHTML = html;
 }
