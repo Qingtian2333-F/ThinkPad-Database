@@ -230,13 +230,16 @@ window.selectRecentModel = async function(name) {
 
 window.showRecentPage = function() {
     currentPage = 'recent';
-    if ($detailPage) $detailPage.classList.add('hidden');
-    if ($comparePage) $comparePage.classList.remove('active');
-    if ($favoritesPage) $favoritesPage.classList.remove('active');
-    if (document.getElementById('generatorPage')) document.getElementById('generatorPage').classList.remove('active');
-    if (document.getElementById('articlesListPage')) document.getElementById('articlesListPage').style.display = 'none';
-    if (document.getElementById('articleDetailPage')) document.getElementById('articleDetailPage').style.display = 'none';
     
+    // 隐藏所有其他页面
+    document.getElementById('detailPage').classList.add('hidden');
+    document.getElementById('comparePage').classList.remove('active');
+    document.getElementById('favoritesPage').classList.remove('active');
+    document.getElementById('generatorPage').classList.remove('active');
+    document.getElementById('articlesListPage').style.display = 'none';
+    document.getElementById('articleDetailPage').style.display = 'none';
+    
+    // 显示最近浏览页
     const recentPage = document.getElementById('recentPage');
     if (recentPage) recentPage.style.display = 'block';
     
@@ -245,7 +248,6 @@ window.showRecentPage = function() {
     renderRecentPage();
     initViewToggle('recentPage', 'recent_view_mode', renderRecentPage);
 };
-
 // ========== 视图切换 ==========
 function initViewToggle(containerId, storageKey, callback) {
     const container = document.getElementById(containerId);
@@ -668,17 +670,22 @@ async function openArticle(fileId) {
             <span style="margin-left: 20px;">描述：${escapeHtml(articleMeta?.description || '')}</span>
         `;
         document.getElementById('articleContent').innerHTML = htmlContent;
+        
         const articleImages = document.querySelectorAll('#articleContent img');
         articleImages.forEach(img => {
             img.style.cursor = 'pointer';
             img.onclick = () => openImageModal(img.src);
         });
+        
+        // 切换页面显示：隐藏所有其他页面，显示文章详情
+        document.getElementById('recentPage').style.display = 'none';
         document.getElementById('articlesListPage').style.display = 'none';
         document.getElementById('articleDetailPage').style.display = 'block';
         document.getElementById('detailPage').classList.add('hidden');
         document.getElementById('comparePage').classList.remove('active');
         document.getElementById('favoritesPage').classList.remove('active');
         document.getElementById('generatorPage').classList.remove('active');
+        
         document.querySelector('main').scrollTop = 0;
     } catch (e) {
         console.error('加载文章失败:', e);
@@ -687,20 +694,29 @@ async function openArticle(fileId) {
 }
 
 window.showArticlesPage = function() {
+    currentPage = 'articles';
+    
+    // 隐藏所有其他页面容器
     document.getElementById('detailPage').classList.add('hidden');
     document.getElementById('comparePage').classList.remove('active');
     document.getElementById('favoritesPage').classList.remove('active');
     document.getElementById('generatorPage').classList.remove('active');
+    document.getElementById('recentPage').style.display = 'none';
+    
+    // 显示文章页面
     document.getElementById('articlesListPage').style.display = 'block';
     document.getElementById('articleDetailPage').style.display = 'none';
+    
     setActiveSidebarItem('sidebarArticles');
     if (typeof setHomeOnlyElementsVisible === 'function') setHomeOnlyElementsVisible(false);
+    
     const familySelect = document.getElementById('articlesFamilyFilter');
     const searchInput = document.getElementById('articlesSearchInput');
     if (familySelect) familySelect.value = '';
     if (searchInput) searchInput.value = '';
     currentFamilyFilter = '';
     currentSearchKeyword = '';
+    
     if (articlesList.length === 0) {
         loadArticlesIndex();
     } else {

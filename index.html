@@ -5,7 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title>ThinkPad Specs</title>
     <link rel="preconnect" href="https://rawiic.github.io">
-    <link rel="stylesheet" href="css\style.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- 浏览器兼容性检测（不支持 ES6+ 则跳转到升级页面） -->
+<script>
+(function() {
+    var isSupported = true;
+    try {
+        // 1. 检测 Promise 和 fetch（EdgeHTML 18 已支持）
+        if (typeof Promise === 'undefined' || typeof fetch === 'undefined') {
+            isSupported = false;
+        }
+        // 2. 检测箭头函数语法支持（通过 Function 构造器测试）
+        new Function('() => {}');
+        // 3. 检测 Symbol（ES6 基础特性）
+        if (typeof Symbol === 'undefined') {
+            isSupported = false;
+        }
+    } catch(e) {
+        isSupported = false;
+    }
+
+    // 如果特性检测失败，说明浏览器过于陈旧（例如 IE11 或更早版本）
+    // 重定向到升级提示页面（请确保 upgrade.html 存在）
+    if (!isSupported) {
+        window.location.replace('upgrade.html');
+    }
+})();
+</script>
 </head>
 <body>
     <div id="sidebar-overlay" class="modal-overlay" style="z-index:99;">
@@ -38,7 +65,7 @@
                 <span class="item-label">最近浏览</span>
                 <span class="item-badge" id="recentCount">0</span>
             </button>
-            <button class="sidebar-item" id="sidebarArticles" onclick="showArticlesPage()">
+                        <button class="sidebar-item" id="sidebarArticles" onclick="showArticlesPage()">
                 <span class="item-icon">📖</span>
                 <span class="item-label">文章阅览</span>
             </button>
@@ -57,7 +84,6 @@
         </div>
 
         <div class="sidebar-section nav-section">
-
         </div>
 
         <div class="sidebar-section settings-section">
@@ -313,8 +339,8 @@
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.0/marked.min.js"></script>
-    <script src="js\translator.js"></script>
-    <script src="js\script.js"></script>
-    <script src="js\generator.js"></script>
+    <script src="js/translator.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/generator.js"></script>
 </body>
 </html>
