@@ -6,5 +6,5 @@
           "VRAM":"128MB DDR2 128bits",
           "Generation": "M54",
           "Feature":"DX 9.0c (9_3), OpenGL 2.1, HyperMemory",
-		  "iconfamily":"Radeon_old"
+		  "iconfamily":"ati_old"
         }
