@@ -1,0 +1,9 @@
+{
+  "model": "Core Duo T2600",
+  "cores_threads": "2 / 2",
+  "base_freq": "2.166 GHz",
+  "turbo_freq": "-",
+  "cache": "2MB",
+  "iconfamily": "Core_Duo",
+  "ark": ""
+}

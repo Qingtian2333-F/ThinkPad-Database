@@ -1,0 +1,9 @@
+{
+  "model": "Core Duo T1300",
+  "cores_threads": "1 / 1",
+  "base_freq": "1.66 GHz",
+  "turbo_freq": "-",
+  "cache": "2MB",
+  "iconfamily": "Core_Solo",
+  "ark": ""
+}
