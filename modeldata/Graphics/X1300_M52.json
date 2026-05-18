@@ -1,0 +1,10 @@
+        {
+          "model": "ATI Mobility Radeon X1300",
+          "Shading Units": "4 / 2",
+          "base_freq": "445 Mhz",
+          "turbo_freq": "-",
+          "VRAM":"64MB DDR2 64bits",
+          "Generation": "M52",
+          "Feature":"DX 9.0c (9_3), OpenGL 2.1, HyperMemory",
+		  "iconfamily":"Radeon_old"
+        }

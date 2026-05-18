@@ -1,0 +1,10 @@
+        {
+          "model": "Intel Graphics Media Accelerator 950",
+          "Shading Units": "4 / 0",
+          "base_freq": "250 Mhz",
+          "turbo_freq": "-",
+          "VRAM":"DDR2",
+          "Generation": "Generation 3.5",
+          "Feature":"DX 9.0c (9_3), OpenGL 2.0",
+		  "iconfamily":"Intel_HD_Graphics"
+        }

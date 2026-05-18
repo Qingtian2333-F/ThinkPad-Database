@@ -1,0 +1,10 @@
+        {
+          "model": "ATI Mobility Radeon X1400",
+          "Shading Units": "4 / 2",
+          "base_freq": "550 Mhz",
+          "turbo_freq": "-",
+          "VRAM":"128MB DDR2 128bits",
+          "Generation": "M64",
+          "Feature":"DX 9.0c (9_3), OpenGL 2.1, HyperMemory",
+		  "iconfamily":"Radeon_old"
+        }
