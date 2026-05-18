@@ -1014,6 +1014,12 @@
         "generation": "xx70"
     },
     {
+        "file": "T60.json",
+        "name": "ThinkPad T60",
+        "family": "T",
+        "generation": "x60"
+    },
+    {
         "file": "T430.json",
         "name": "ThinkPad T430",
         "family": "T",
