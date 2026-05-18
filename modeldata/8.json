@@ -24,7 +24,7 @@
         "slots": "no sockets",
         "features": "2GB or 4GB soldered to systemboard"
       },
-      "display_options": [],
+      "display_options": ["LEN40F0"],
       "storage": {
         "ssd_sata": null,
         "ssd_pcie": null,
