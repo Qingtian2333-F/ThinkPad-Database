@@ -1309,9 +1309,9 @@
     },
     {
         "file": "X13D_Gen1.json",
-        "model_name": "ThinkPad X13 Detachable Gen 1",
-        "model_family": "X",
-        "model_generation": "Gen 7"
+        "name": "ThinkPad X13 Detachable Gen 1",
+        "family": "X",
+        "generation": "Gen 7"
     },
     {
         "file": "Yoga260.json",
